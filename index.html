@@ -736,13 +736,37 @@ footer .logo { font-size: 24px; }
 }
 
 @media (max-width: 768px) {
-  section { padding: 100px 6%; }
-  .header { padding: 16px 6%; }
+  body { overflow-x: hidden; }
+  html, body { max-width: 100vw; }
+  section { padding: 80px 24px; }
+  .header { padding: 16px 24px; }
+  .divider { padding: 0 24px; }
   .nav { display: none; }
+  footer { padding: 40px 24px; }
   .profile { grid-template-columns: 1fr; gap: 40px; }
+  .profile-img-wrap { max-width: 320px; margin: 0 auto; }
   .company-info { grid-template-columns: 1fr; }
   .company-info dt { padding-bottom: 4px; border-bottom: none; }
   .company-info dd { padding-top: 4px; border-top: none; padding-bottom: 20px; }
+  .blob { width: 320px; height: 320px; filter: blur(80px); }
+  .hero h1 { font-size: clamp(24px, 6vw, 36px); white-space: normal; }
+  .hero-visual { width: 100%; max-width: 100%; }
+  .stats { grid-template-columns: 1fr; gap: 40px; }
+  .results-imgs { grid-template-columns: 1fr; }
+  .service-cards { grid-template-columns: 1fr; }
+  .business-cards { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact h2 { font-size: clamp(36px, 9vw, 56px); }
+  h2 { font-size: clamp(28px, 7vw, 40px); }
+}
+
+@media (max-width: 480px) {
+  section { padding: 60px 18px; }
+  .header { padding: 14px 18px; }
+  .divider { padding: 0 18px; }
+  footer { padding: 30px 18px; }
+  .hero h1 { font-size: 28px; line-height: 1.25; white-space: normal; }
+  .stat-num { font-size: 56px; }
 }
 </style>
 </head>
