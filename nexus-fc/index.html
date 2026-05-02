@@ -134,12 +134,17 @@ section {
 }
 .header a { color: #fff; text-decoration: none; }
 .logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 26px;
-  letter-spacing: 0.2em;
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   background: linear-gradient(90deg, #fff, var(--gym));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .logo { font-size: 11px; letter-spacing: 0.02em; }
 }
 .back-link {
   font-family: 'Poppins', sans-serif;
@@ -790,7 +795,7 @@ footer {
 <body>
 
 <header class="header">
-  <div class="logo">WITHJ × NEXUS</div>
+  <div class="logo">NEXUSパーソナルジムFC 加盟開発本部</div>
   <a href="../" class="back-link">← BACK TO TOP</a>
 </header>
 
@@ -1255,7 +1260,7 @@ footer {
 </section>
 
 <footer>
-  <div class="logo">WITHJ × NEXUS</div>
+  <div class="logo">NEXUSパーソナルジムFC 加盟開発本部</div>
   <div>© 2026 株式会社WITHJ All Rights Reserved.</div>
 </footer>
 
