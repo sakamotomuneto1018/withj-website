@@ -42,51 +42,62 @@
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=Poppins:wght@400;700;800;900&family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #050507;
-  --accent1: #00f0ff;
-  --accent2: #ff00aa;
-  --gym: #00ffa0;
-  --orange: #ff7a45;
+  --bg: #faf7f4;
+  --bg2: #fff;
+  --ink: #1a1612;
+  --ink-soft: #5c544c;
+  --ink-faint: #8a8077;
+  --rose: #d4a3a0;
+  --gold: #c5a572;
+  --champagne: #f0e6d8;
+  --line: #ece4d9;
+  --accent: #b8868a;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: #fff;
+  color: var(--ink);
   font-family: 'Noto Sans JP', sans-serif;
   overflow-x: hidden;
-  line-height: 1.7;
+  line-height: 1.85;
   -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
+/* 背景の薄いテクスチャ */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(0,255,160,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,160,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background:
+    radial-gradient(ellipse at top right, rgba(212,163,160,0.10), transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(197,165,114,0.08), transparent 60%);
   z-index: 0;
   pointer-events: none;
-  mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 80%);
 }
 
 h1, h2, h3 {
-  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Serif JP', 'Cormorant Garamond', serif;
   letter-spacing: 0.02em;
-  font-weight: 900;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.serif-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
 }
 
 section {
-  padding: 120px 8%;
+  padding: 110px 8%;
   position: relative;
   z-index: 1;
 }
@@ -97,275 +108,455 @@ section {
   padding: 18px 8%;
   display: flex; justify-content: space-between; align-items: center;
   z-index: 100;
-  background: rgba(5,5,7,0.6);
+  background: rgba(250,247,244,0.85);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid var(--line);
 }
-.header a { color: #fff; text-decoration: none; }
+.header a { color: var(--ink); text-decoration: none; }
 .logo {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 26px;
-  letter-spacing: 0.2em;
-  background: linear-gradient(90deg, #fff, var(--gym));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  font-style: italic;
+  color: var(--ink);
 }
+.logo .accent { color: var(--accent); }
 .back-link {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.2em;
-  opacity: 0.7;
+  color: var(--ink-soft);
   transition: 0.3s;
 }
-.back-link:hover { opacity: 1; }
-
-.grad {
-  background: linear-gradient(90deg, var(--gym), var(--accent1));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.grad-warm {
-  background: linear-gradient(90deg, var(--orange), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+.back-link:hover { color: var(--accent); }
 
 /* HERO */
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   align-items: center;
-  gap: 60px;
-  padding-top: 120px;
+  gap: 80px;
+  padding-top: 130px;
+  padding-bottom: 80px;
 }
 .hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 18px;
-  border: 1px solid rgba(0,255,160,0.4);
-  border-radius: 50px;
+  gap: 12px;
   font-size: 11px;
-  letter-spacing: 0.2em;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 30px;
-  background: rgba(0,255,160,0.05);
+  letter-spacing: 0.3em;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 28px;
 }
 .hero-tag::before {
   content: '';
-  width: 8px; height: 8px;
-  background: var(--gym);
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--gym);
-  animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-  0%,100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.3); }
+  width: 30px; height: 1px;
+  background: var(--accent);
 }
 .hero h1 {
-  font-size: clamp(36px, 5.5vw, 72px);
-  line-height: 1.15;
-  font-weight: 900;
+  font-size: clamp(34px, 4.6vw, 60px);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
+.hero h1 .accent {
+  color: var(--accent);
+  font-style: italic;
+  font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+}
+.hero h1 .gold { color: var(--gold); }
 .hero .sub {
-  color: #aaa;
-  margin-top: 30px;
-  font-size: 16px;
-  max-width: 600px;
+  color: var(--ink-soft);
+  margin-top: 32px;
+  font-size: 15px;
+  max-width: 540px;
+  line-height: 2;
 }
+.hero .sub strong { color: var(--ink); font-weight: 700; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 44px; }
 .hero-visual {
+  position: relative;
   aspect-ratio: 4/5;
-  border-radius: 24px;
+  border-radius: 4px;
   overflow: hidden;
-  background: url("../images/NEXUSパーソナルジム乃木坂・赤坂店.jpg") center/cover;
-  box-shadow: 0 30px 80px rgba(0,255,160,0.25), 0 0 0 1px rgba(255,255,255,0.1);
+  box-shadow: 30px 40px 80px -20px rgba(120,90,70,0.25);
 }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.15));
+}
+.hero-visual img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  bottom: -12px; right: -12px;
+  width: 60%; height: 60%;
+  border: 1px solid var(--rose);
+  z-index: -1;
+}
 
+/* ボタン */
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px 40px;
+  gap: 14px;
+  padding: 18px 38px;
   border-radius: 50px;
-  background: linear-gradient(90deg, var(--gym), var(--accent1));
-  color: #000;
-  font-weight: 800;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 14px;
-  letter-spacing: 0.1em;
+  font-size: 13px;
+  letter-spacing: 0.2em;
   transition: 0.3s;
   border: none;
   cursor: pointer;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0,255,160,0.4);
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(184,134,138,0.35);
 }
-.btn::after { content: '→'; font-size: 18px; transition: 0.3s; }
-.btn:hover::after { transform: translateX(5px); }
+.btn::after { content: '→'; font-size: 16px; transition: 0.3s; }
+.btn:hover::after { transform: translateX(4px); }
 .btn.outline {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--ink);
+  border: 1px solid var(--ink);
 }
-.btn.outline:hover { border-color: var(--gym); color: var(--gym); box-shadow: none; }
+.btn.outline:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 
+/* 余韻 */
 .divider {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 24px;
   padding: 0 8%;
-  color: rgba(255,255,255,0.1);
-  font-family: 'Bebas Neue', sans-serif;
+  color: var(--ink-faint);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
   letter-spacing: 0.3em;
   font-size: 12px;
 }
 .divider::before, .divider::after {
-  content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.08);
+  content: ''; flex: 1; height: 1px; background: var(--line);
 }
 
 .section-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
   letter-spacing: 0.3em;
-  color: var(--gym);
-  margin-bottom: 16px;
+  color: var(--accent);
+  margin-bottom: 18px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
-.section-num::before { content: ''; width: 24px; height: 1px; background: var(--gym); }
+.section-num::before { content: ''; width: 30px; height: 1px; background: var(--accent); }
 
 h2 {
-  font-size: clamp(32px, 4.5vw, 56px);
-  margin: 0 0 30px;
-  line-height: 1.2;
+  font-size: clamp(30px, 3.6vw, 48px);
+  margin: 0 0 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
+h2 .accent { color: var(--accent); font-style: italic; }
+h2 .gold { color: var(--gold); }
 .lead {
-  color: #999;
-  max-width: 700px;
-  margin-bottom: 50px;
-  font-size: 15px;
+  color: var(--ink-soft);
+  max-width: 720px;
+  margin-bottom: 60px;
+  font-size: 14.5px;
+  line-height: 2;
+}
+
+/* 統計バー */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 8%;
+  background: var(--champagne);
+  position: relative;
+  z-index: 2;
+}
+.hero-stat {
+  text-align: center;
+  border-right: 1px solid rgba(120,90,70,0.1);
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4.2vw, 56px);
+  line-height: 1;
+  color: var(--ink);
+  font-weight: 500;
+  font-style: italic;
+}
+.hero-stat .num small {
+  font-size: 0.4em;
+  font-style: normal;
+  color: var(--ink-soft);
+  margin-left: 4px;
+  letter-spacing: 0;
+}
+.hero-stat .lbl {
+  font-size: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0.3em;
+  color: var(--accent);
+  margin-top: 10px;
 }
 
 /* 特徴 */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  gap: 50px 36px;
 }
 .feature {
-  padding: 36px 28px;
-  border-radius: 20px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: 0.3s;
+  position: relative;
+  padding: 44px 32px 36px;
+  background: var(--bg2);
+  border-radius: 2px;
+  box-shadow: 0 1px 0 var(--line);
+  transition: 0.4s;
+  border-top: 2px solid transparent;
 }
-.feature:hover { transform: translateY(-6px); border-color: rgba(0,255,160,0.3); }
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -20px rgba(120,90,70,0.18);
+  border-top-color: var(--accent);
+}
 .feature .num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  color: var(--gym);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 36px;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.feature h3 {
+  font-size: 19px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.feature p { color: var(--ink-soft); font-size: 13.5px; line-height: 1.9; }
+
+/* 写真フィーチャー */
+.photo-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.photo-feature.reverse { direction: rtl; }
+.photo-feature.reverse > * { direction: ltr; }
+.photo-feature .pf-img {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 20px 30px 60px -20px rgba(120,90,70,0.25);
+}
+.photo-feature .pf-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.photo-feature .pf-img::before {
+  content: '';
+  position: absolute;
+  bottom: -10px; right: -10px;
+  width: 50%; height: 50%;
+  border: 1px solid var(--gold);
+  z-index: -1;
+}
+.photo-feature.reverse .pf-img::before {
+  right: auto; left: -10px;
+  border-color: var(--rose);
+}
+.photo-feature .pf-text h3 {
+  font-size: clamp(24px, 2.4vw, 32px);
+  margin-bottom: 18px;
+  line-height: 1.45;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.photo-feature .pf-text h3 .accent { color: var(--accent); font-style: italic; }
+.photo-feature .pf-text p { color: var(--ink-soft); font-size: 14.5px; margin-bottom: 14px; line-height: 2; }
+.photo-feature .pf-tag {
+  display: inline-block;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
   letter-spacing: 0.3em;
+  color: var(--accent);
   margin-bottom: 16px;
 }
-.feature h3 { font-size: 22px; margin-bottom: 14px; line-height: 1.3; }
-.feature p { color: #aaa; font-size: 14px; }
 
-/* 料金 */
+/* 料金プラン */
 .plans {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 .plan {
-  padding: 40px 32px;
-  border-radius: 24px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.08);
+  padding: 50px 36px 44px;
+  background: var(--bg2);
+  border-radius: 4px;
+  border: 1px solid var(--line);
   position: relative;
   transition: 0.3s;
 }
-.plan:hover { transform: translateY(-6px); border-color: rgba(0,255,160,0.4); }
-.plan.popular { border-color: rgba(0,255,160,0.5); background: linear-gradient(145deg, rgba(0,255,160,0.08), rgba(0,240,255,0.03)); }
+.plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -20px rgba(120,90,70,0.2);
+}
+.plan.popular {
+  background: linear-gradient(180deg, var(--champagne), var(--bg2));
+  border: 1px solid var(--gold);
+}
 .plan.popular::before {
-  content: 'POPULAR';
+  content: 'MOST POPULAR';
   position: absolute;
-  top: -12px; left: 32px;
-  background: linear-gradient(90deg, var(--gym), var(--accent1));
-  color: #000;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 13px;
-  padding: 4px 14px;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 12px;
+  padding: 4px 18px;
   border-radius: 20px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
 }
 .plan h3 {
   font-size: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }
-.plan .plan-desc { color: #999; font-size: 13px; margin-bottom: 24px; }
+.plan .plan-desc {
+  color: var(--ink-faint);
+  font-size: 12px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0.2em;
+  margin-bottom: 28px;
+}
 .plan .price {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 56px;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--ink);
 }
-.plan .price small { font-size: 0.4em; opacity: 0.7; margin-left: 4px; }
-.plan .duration { color: #888; font-size: 12px; margin-bottom: 28px; }
-.plan ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.plan .price small {
+  font-size: 0.32em;
+  color: var(--ink-soft);
+  margin-left: 6px;
+}
+.plan .duration {
+  color: var(--ink-soft);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+}
+.plan ul { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
 .plan li {
-  font-size: 14px;
-  color: #ccc;
+  font-size: 13.5px;
+  color: var(--ink-soft);
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  line-height: 1.7;
 }
 .plan li::before {
-  content: '✓';
-  color: var(--gym);
-  font-weight: bold;
+  content: '';
+  width: 12px; height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 12px;
 }
-.plan .btn { width: 100%; justify-content: center; }
-
+.plan .btn {
+  width: 100%;
+  justify-content: center;
+}
 .note {
   margin-top: 30px;
-  font-size: 12px;
-  color: #777;
+  font-size: 11.5px;
+  color: var(--ink-faint);
   text-align: center;
+  letter-spacing: 0.05em;
 }
 
 /* お客様の声 */
 .voices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  gap: 30px;
 }
 .voice {
-  padding: 32px 28px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
+  padding: 44px 32px 36px;
+  background: var(--bg2);
+  border-radius: 4px;
+  position: relative;
+  transition: 0.3s;
+}
+.voice:hover { transform: translateY(-4px); }
+.voice::before {
+  content: '"';
+  position: absolute;
+  top: 6px; left: 22px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  color: var(--rose);
+  line-height: 1;
+  font-weight: 500;
 }
 .voice .quote {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 16px;
-  line-height: 1.5;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  margin-top: 28px;
+  line-height: 1.7;
+  color: var(--ink);
 }
-.voice p { color: #aaa; font-size: 13px; line-height: 1.7; margin-bottom: 16px; }
+.voice p { color: var(--ink-soft); font-size: 13.5px; line-height: 1.9; margin-bottom: 22px; }
 .voice .person {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 13px;
+  font-size: 12px;
+  color: var(--ink-faint);
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
 }
 .voice .avatar {
-  width: 40px; height: 40px;
+  width: 36px; height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gym), var(--accent1));
+  background: linear-gradient(135deg, var(--rose), var(--gold));
 }
 
 /* ステップ */
@@ -373,23 +564,27 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0;
+  border-top: 1px solid var(--line);
 }
 .step {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 30px;
-  padding: 32px 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  grid-template-columns: 100px 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
 }
-.step:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
 .step-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 32px;
-  color: var(--gym);
-  letter-spacing: 0.1em;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 48px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  font-weight: 500;
 }
-.step h3 { font-size: 22px; margin-bottom: 8px; }
-.step p { color: #aaa; font-size: 14px; }
+.step h3 { font-size: 20px; margin-bottom: 10px; font-weight: 500; }
+.step p { color: var(--ink-soft); font-size: 14px; }
 
 /* 店舗 */
 .shops {
@@ -398,66 +593,109 @@ h2 {
   gap: 24px;
 }
 .shop {
-  padding: 32px 28px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 32px;
+  background: var(--bg2);
+  border-radius: 4px;
+  border: 1px solid var(--line);
   transition: 0.3s;
 }
-.shop:hover { border-color: rgba(0,255,160,0.3); transform: translateY(-4px); }
-.shop h3 { font-size: 20px; margin-bottom: 8px; }
-.shop p { color: #aaa; font-size: 13px; margin-bottom: 14px; }
+.shop:hover { border-color: var(--accent); transform: translateY(-4px); }
+.shop h3 { font-size: 18px; margin-bottom: 10px; font-weight: 500; }
+.shop p { color: var(--ink-soft); font-size: 13px; margin-bottom: 18px; }
 .shop a {
-  display: inline-flex; align-items: center; gap: 6px;
-  color: var(--gym); font-size: 12px; font-family: 'Poppins', sans-serif;
-  letter-spacing: 0.2em; font-weight: 700; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--accent); font-size: 12px; font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.2em; font-style: italic; text-decoration: none;
+  transition: 0.3s;
 }
-.shop a:hover { gap: 10px; }
+.shop a:hover { gap: 14px; }
+
+/* ギャラリー */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.gallery-img {
+  aspect-ratio: 4/5;
+  border-radius: 4px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: 0.4s;
+  position: relative;
+}
+.gallery-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 70%, rgba(0,0,0,0.1));
+}
+.gallery-img:hover { transform: scale(1.02); box-shadow: 0 20px 40px -10px rgba(120,90,70,0.25); }
 
 /* FAQ */
 .faq-list { display: flex; flex-direction: column; gap: 12px; }
 .faq {
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  background: rgba(255,255,255,0.02);
-  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg2);
+  padding: 0 4px;
+  transition: 0.3s;
 }
 .faq summary {
-  padding: 22px 26px;
+  padding: 26px 4px;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 16px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   list-style: none;
+  font-family: 'Noto Serif JP', serif;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::before {
   content: 'Q';
-  font-family: 'Bebas Neue', sans-serif;
-  color: var(--gym);
-  font-size: 18px;
-  letter-spacing: 0.1em;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--accent);
+  font-size: 22px;
+  font-weight: 500;
 }
-.faq[open] summary { border-bottom: 1px solid rgba(255,255,255,0.06); }
-.faq-body { padding: 22px 26px 26px 60px; color: #bbb; font-size: 14px; }
+.faq summary::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 22px;
+  color: var(--accent);
+  transition: 0.3s;
+}
+.faq[open] summary::after { transform: rotate(45deg); }
+.faq-body { padding: 8px 4px 30px 44px; color: var(--ink-soft); font-size: 14px; line-height: 1.9; }
 
 /* CTA */
 .cta {
   text-align: center;
-  border-radius: 28px;
-  background: linear-gradient(135deg, rgba(0,255,160,0.08), rgba(0,240,255,0.05));
-  border: 1px solid rgba(0,255,160,0.2);
-  padding: 80px 40px;
+  background: linear-gradient(180deg, var(--champagne), var(--bg2));
+  padding: 100px 40px;
   margin: 0 8%;
+  border-radius: 4px;
+  position: relative;
 }
-.cta h2 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 20px; }
-.cta p { color: #ccc; margin-bottom: 30px; }
+.cta::before, .cta::after {
+  content: '';
+  position: absolute;
+  width: 60px; height: 1px;
+  background: var(--accent);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cta::before { top: 40px; }
+.cta::after { bottom: 40px; }
+.cta h2 { font-size: clamp(28px, 3.6vw, 44px); margin-bottom: 18px; }
+.cta p { color: var(--ink-soft); margin-bottom: 30px; font-size: 14.5px; }
 
 /* フォーム */
 .contact-form {
-  max-width: 720px;
+  max-width: 640px;
   margin: 0 auto;
   text-align: left;
   display: flex;
@@ -467,64 +705,68 @@ h2 {
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
 .form-group { display: flex; flex-direction: column; gap: 8px; }
 .form-group label {
-  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
-  font-size: 13px; font-weight: 700; letter-spacing: 0.1em; color: #ccc;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  color: var(--ink-soft);
 }
-.required { color: var(--accent2); margin-left: 4px; }
+.required { color: var(--accent); margin-left: 4px; }
 .form-group input, .form-group select, .form-group textarea {
   width: 100%;
-  padding: 14px 18px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  color: #fff;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: var(--ink);
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 15px;
+  font-size: 14.5px;
   transition: 0.3s;
   -webkit-appearance: none; appearance: none;
 }
 .form-group select {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ffa0'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23b8868a'><path d='M7 10l5 5 5-5z'/></svg>");
   background-repeat: no-repeat;
   background-position: right 14px center;
   padding-right: 44px;
 }
-.form-group select option { background: #050507; color: #fff; }
+.form-group select option { background: #fff; color: var(--ink); }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  outline: none; border-color: var(--gym);
-  background: rgba(0,255,160,0.05);
-  box-shadow: 0 0 0 4px rgba(0,255,160,0.08);
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(184,134,138,0.10);
 }
-.form-group textarea { resize: vertical; min-height: 140px; font-family: 'Noto Sans JP', sans-serif; }
-.datetime-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.datetime-row input[type=date] { color-scheme: dark; }
+.form-group textarea { resize: vertical; min-height: 120px; font-family: 'Noto Sans JP', sans-serif; }
 .contact-form .btn { margin: 16px auto 0; }
+.datetime-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .form-success {
   padding: 30px;
-  border-radius: 16px;
-  background: rgba(0,255,160,0.08);
-  border: 1px solid rgba(0,255,160,0.3);
-  color: var(--gym);
+  background: var(--champagne);
+  border: 1px solid var(--gold);
+  color: var(--ink);
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
+  border-radius: 4px;
 }
 
 footer {
-  padding: 40px 8%;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 50px 8% 40px;
+  border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
   font-size: 12px;
-  color: #555;
-  z-index: 1;
-  position: relative;
+  color: var(--ink-faint);
+  background: var(--bg2);
 }
 
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-visual { aspect-ratio: 16/12; max-width: 500px; }
+  .hero { grid-template-columns: 1fr; gap: 50px; }
+  .hero-visual { aspect-ratio: 4/3; max-width: 500px; margin: 0 auto; }
+  .photo-feature, .photo-feature.reverse { grid-template-columns: 1fr; gap: 40px; direction: ltr; }
+  .photo-feature .pf-img { max-width: 500px; aspect-ratio: 4/3; }
+  .hero-stats { grid-template-columns: 1fr 1fr; gap: 24px 0; padding: 28px 24px; }
+  .hero-stat:nth-child(2) { border-right: none; }
 }
 @media (max-width: 768px) {
   body { overflow-x: hidden; }
@@ -533,8 +775,9 @@ footer {
   .header { padding: 14px 24px; }
   .divider { padding: 0 24px; }
   footer { padding: 30px 24px; }
-  .cta { margin: 0 24px; padding: 60px 24px; }
-  .step { grid-template-columns: 60px 1fr; gap: 16px; }
+  .cta { margin: 0 24px; padding: 70px 24px; }
+  .step { grid-template-columns: 60px 1fr; gap: 20px; padding: 28px 0; }
+  .step-num { font-size: 36px; }
   .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
@@ -542,89 +785,132 @@ footer {
   .header { padding: 12px 18px; }
   .divider { padding: 0 18px; }
   footer { padding: 30px 18px; }
-  .cta { margin: 0 18px; padding: 50px 20px; }
+  .cta { margin: 0 18px; padding: 60px 20px; }
+  .hero-stats { grid-template-columns: 1fr 1fr; padding: 24px 18px; }
+  .hero-stat .num { font-size: 36px; }
 }
 </style>
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">WITHJ × NEXUS</div>
-  <a href="../" class="back-link">← BACK TO TOP</a>
+  <a href="../" class="logo">NEXUS<span class="accent"> Personal Gym</span></a>
+  <a href="../" class="back-link">← Back to Top</a>
 </header>
 
 <section class="hero">
   <div>
-    <div class="hero-tag">NEXUS PERSONAL GYM — FOR WOMEN 30s & 40s</div>
+    <div class="hero-tag">Personal Gym for Women in 30s & 40s</div>
     <h1>
-      <span class="grad">人目を気にせず</span>、<br>
-      自分だけの<br>隠れ家ジムへ。
+      <span class="accent">人目を気にせず、</span><br>
+      自分だけの<br>
+      隠れ家ジムへ。
     </h1>
     <p class="sub">
-      会員の<strong style="color:#fff">85%が30〜40代女性</strong>。<br>
-      マンション型・完全個室のNEXUSは、<br>
-      「綺麗になったね」と言われたい大人の女性のための隠れ家パーソナルジムです。
+      会員の<strong>85%が30〜40代女性</strong>。<br>
+      マンション一室・完全個室のNEXUSは、<br>
+      「綺麗になったね」と言われたい大人の女性のための、<br>
+      静かで上質な隠れ家パーソナルジムです。
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn">無料カウンセリング予約</a>
       <a href="#plans" class="btn outline">料金を見る</a>
     </div>
   </div>
-  <div class="hero-visual"></div>
+  <div class="hero-visual">
+    <img src="../images/nexus/gym-bright.jpg" alt="NEXUS パーソナルジム 完全個室の上質な空間">
+  </div>
 </section>
 
-<div class="divider">— 01 / FEATURES</div>
+<div class="hero-stats">
+  <div class="hero-stat"><div class="num">85<small>%</small></div><div class="lbl">Female 30-40s</div></div>
+  <div class="hero-stat"><div class="num">65<small>店舗</small></div><div class="lbl">Locations</div></div>
+  <div class="hero-stat"><div class="num">100<small>%</small></div><div class="lbl">Private Room</div></div>
+  <div class="hero-stat"><div class="num">10<small>ヶ月</small></div><div class="lbl">Avg. Member</div></div>
+</div>
+
+<div class="divider">— Why NEXUS</div>
 
 <section>
-  <div class="section-num">FEATURES</div>
-  <h2>大人の女性が<br><span class="grad">本音で選ぶ理由</span></h2>
-  <p class="lead">「人目が気になる」「無理なくキレイになりたい」<br>そんな大人の女性のリアルな声から設計された、新しい形のパーソナルジムです。</p>
+  <div class="section-num">Why NEXUS</div>
+  <h2>大人の女性が<br><span class="accent">本音で選ぶ理由</span></h2>
+  <p class="lead">「人目が気になる」「無理なくキレイになりたい」<br>そんな大人の女性のリアルな声から逆算して設計された、新しい形のパーソナルジム。<br>あなたが続けられる、上質な空間がここにあります。</p>
   <div class="features">
     <div class="feature">
-      <div class="num">01 / HIDEAWAY</div>
+      <div class="num">01</div>
       <h3>マンション型の隠れ家空間</h3>
       <p>住宅街のマンション一室を完全個室化。看板も目立たないので、ご近所や職場の人にバッタリ会う心配もありません。</p>
     </div>
     <div class="feature">
-      <div class="num">02 / PRIVATE</div>
+      <div class="num">02</div>
       <h3>トレーニング姿を見られない</h3>
       <p>マシン・シャワー・ロッカーすべて個室で完結。「他人にトレーニング姿を見られたくない」という声に徹底的に応えました。</p>
     </div>
     <div class="feature">
-      <div class="num">03 / EXPERT</div>
+      <div class="num">03</div>
       <h3>専属トレーナーが寄り添う</h3>
       <p>担当が毎回変わらない専属制。あなたの体・性格・ライフスタイルを理解したうえで、無理なく続く計画を一緒に作ります。</p>
     </div>
     <div class="feature">
-      <div class="num">04 / LIFESTYLE</div>
+      <div class="num">04</div>
       <h3>共働き女性のリズムに合う</h3>
       <p>都心勤務 × 郊外在住の方が通いやすい立地に出店。平日夜・昼間の予約も取りやすく、忙しい毎日でも続きます。</p>
     </div>
     <div class="feature">
-      <div class="num">05 / GENTLE</div>
+      <div class="num">05</div>
       <h3>運動経験ゼロでも怖くない</h3>
       <p>会員の多くが「運動経験は少なめ」からのスタート。ストレッチ・姿勢改善から無理なく始められます。</p>
     </div>
     <div class="feature">
-      <div class="num">06 / SELFCARE</div>
+      <div class="num">06</div>
       <h3>自分への投資にふさわしい質</h3>
       <p>結果はもちろん、「自分を大切にしている時間」と思える上質な空間と接客。週2の通いが、自己投資のごほうび時間になります。</p>
     </div>
   </div>
 </section>
 
-<div class="divider">— 02 / PLANS</div>
+<div class="divider">— The Space</div>
+
+<section>
+  <div class="photo-feature">
+    <div class="pf-img">
+      <img src="../images/nexus/gym-mirror.jpg" alt="NEXUS 完全個室の落ち着いた空間">
+    </div>
+    <div class="pf-text">
+      <div class="pf-tag">— The Sanctuary</div>
+      <h3>毎日忙しいあなたへ。<br><span class="accent">週2の"自分時間"</span>を。</h3>
+      <p>家族のため、仕事のため、いつも誰かのために走り続けるあなたへ。NEXUSの完全個室は、自分のためだけに過ごせる60分。</p>
+      <p>マシンの音、植物の緑、差し込む光。トレーニングが終わる頃には、心まで整っているはずです。</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top: 0;">
+  <div class="photo-feature reverse">
+    <div class="pf-img">
+      <img src="../images/nexus/trainer-session.jpg" alt="NEXUS 専属トレーナーによるマンツーマン指導">
+    </div>
+    <div class="pf-text">
+      <div class="pf-tag">— Personal Coach</div>
+      <h3>あなたの<span class="accent">"理想"</span>を、<br>誰よりも理解する一人。</h3>
+      <p>毎回担当が変わらない専属トレーナー制。「いつもの方」が、あなたの体・気持ち・生活を理解した上で、毎週のメニューを設計します。</p>
+      <p>運動が苦手でも、フォームから丁寧に。叱るのではなく、寄り添い、伴走するパートナーです。</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider">— Plans</div>
 
 <section id="plans">
-  <div class="section-num">PLANS</div>
+  <div class="section-num">Plans</div>
   <h2>料金プラン</h2>
-  <p class="lead">目標と期間に合わせて選べる3プラン。すべて入会金・カウンセリング無料です。</p>
+  <p class="lead">目標と期間に合わせて選べる3プラン。<br>すべて入会金・カウンセリング無料です。</p>
   <div class="plans">
     <div class="plan">
       <h3>STARTER</h3>
-      <p class="plan-desc">まずは試してみたい方へ</p>
+      <p class="plan-desc">— 2 Months</p>
       <div class="price">¥98,000<small>/月</small></div>
-      <div class="duration">2ヶ月コース・全16回</div>
+      <div class="duration">全16回 / まず試したい方へ</div>
       <ul>
         <li>週2回 × 60分セッション</li>
         <li>専属トレーナー</li>
@@ -635,9 +921,9 @@ footer {
     </div>
     <div class="plan popular">
       <h3>STANDARD</h3>
-      <p class="plan-desc">最も選ばれているプラン</p>
+      <p class="plan-desc">— 3 Months</p>
       <div class="price">¥138,000<small>/月</small></div>
-      <div class="duration">3ヶ月コース・全24回</div>
+      <div class="duration">全24回 / 最も選ばれているプラン</div>
       <ul>
         <li>週2回 × 60分セッション</li>
         <li>専属トレーナー</li>
@@ -649,9 +935,9 @@ footer {
     </div>
     <div class="plan">
       <h3>PREMIUM</h3>
-      <p class="plan-desc">本気で変わりたい方へ</p>
+      <p class="plan-desc">— 6 Months</p>
       <div class="price">¥198,000<small>/月</small></div>
-      <div class="duration">6ヶ月コース・全48回</div>
+      <div class="duration">全48回 / 本気で変わりたい方へ</div>
       <ul>
         <li>週2回 × 75分セッション</li>
         <li>専属トレーナー</li>
@@ -665,14 +951,14 @@ footer {
   <p class="note">※料金は税込表記。店舗・キャンペーンにより変動する場合があります。詳細はお問い合わせください。</p>
 </section>
 
-<div class="divider">— 03 / VOICES</div>
+<div class="divider">— Voices</div>
 
 <section>
-  <div class="section-num">VOICES</div>
-  <h2>お客様の声</h2>
+  <div class="section-num">Voices</div>
+  <h2>会員さまの声</h2>
   <div class="voices">
     <div class="voice">
-      <div class="quote">「夫に"綺麗になったね"と言われました」</div>
+      <div class="quote">夫に "綺麗になったね" と言われました。</div>
       <p>共働きで時間がない中、駅近のマンション一室というのが決め手でした。3ヶ月で体型が明らかに変わり、夫から久しぶりに褒められて泣きそうになりました。週2のトレーニングが、自分を取り戻す大切な時間です。</p>
       <div class="person">
         <div class="avatar"></div>
@@ -680,7 +966,7 @@ footer {
       </div>
     </div>
     <div class="voice">
-      <div class="quote">「人目が気にならないから続けられる」</div>
+      <div class="quote">人目が気にならないから、続けられる。</div>
       <p>過去にスポーツジムに入会したものの、周りの目が気になって3回で行かなくなった経験あり。NEXUSは完全個室で他のお客さんと顔を合わせないので、すっぴんでも気軽に通えます。運動が苦手な私でも続けられています。</p>
       <div class="person">
         <div class="avatar"></div>
@@ -688,7 +974,7 @@ footer {
       </div>
     </div>
     <div class="voice">
-      <div class="quote">「自分への投資の時間ができた」</div>
+      <div class="quote">自分への投資の時間ができた。</div>
       <p>仕事と家庭で自分の時間が全くなく、気づけば体型も気持ちも疲れ切っていました。週2の通いを始めてから、トレーニングが「自分のためだけの時間」になり、心まで前向きに。トレーナーさんとの会話も楽しみのひとつです。</p>
       <div class="person">
         <div class="avatar"></div>
@@ -698,10 +984,28 @@ footer {
   </div>
 </section>
 
-<div class="divider">— 04 / FLOW</div>
+<div class="divider">— Gallery</div>
 
 <section>
-  <div class="section-num">FLOW</div>
+  <div class="section-num">Gallery</div>
+  <h2>店舗の<span class="accent">空気</span>を、<br>写真でお伝えします</h2>
+  <p class="lead">隠れ家のような完全個室空間。<br>マンション一室を、上質なプライベートサロンへ。</p>
+  <div class="gallery">
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-bright.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-mirror.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-interior-1.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-interior-2.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-interior-3.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-interior-4.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-interior-5.jpg')"></div>
+    <div class="gallery-img" style="background-image:url('../images/nexus/gym-shower.jpg')"></div>
+  </div>
+</section>
+
+<div class="divider">— Flow</div>
+
+<section>
+  <div class="section-num">Flow</div>
   <h2>入会までの流れ</h2>
   <div class="steps">
     <div class="step">
@@ -722,7 +1026,7 @@ footer {
       <div class="step-num">03</div>
       <div>
         <h3>プラン選択・契約</h3>
-        <p>納得いただけたら入会手続き。クーリングオフ制度もあるので安心してご決断ください。</p>
+        <p>納得いただけたら入会手続き。クーリングオフ制度もあるので、安心してご決断ください。</p>
       </div>
     </div>
     <div class="step">
@@ -735,12 +1039,12 @@ footer {
   </div>
 </section>
 
-<div class="divider">— 05 / SHOPS</div>
+<div class="divider">— Shops</div>
 
 <section>
-  <div class="section-num">SHOPS</div>
+  <div class="section-num">Shops</div>
   <h2>店舗一覧</h2>
-  <p class="lead">全国65店舗展開中。お近くの店舗にてご来店をお待ちしております。</p>
+  <p class="lead">全国65店舗以上を展開中。お近くの店舗にてご来店をお待ちしております。</p>
   <div class="shops">
     <div class="shop">
       <h3>NEXUS 乃木坂・赤坂店</h3>
@@ -755,7 +1059,7 @@ footer {
   </div>
 </section>
 
-<div class="divider">— 06 / FAQ</div>
+<div class="divider">— FAQ</div>
 
 <section>
   <div class="section-num">FAQ</div>
@@ -784,12 +1088,12 @@ footer {
   </div>
 </section>
 
-<div class="divider">— 07 / CONTACT</div>
+<div class="divider">— Contact</div>
 
 <section id="contact">
   <div class="cta">
-    <div class="section-num" style="justify-content:center; color: var(--gym);">CONTACT</div>
-    <h2>まずは<span class="grad">無料カウンセリング</span>から</h2>
+    <div class="section-num" style="justify-content:center;">Contact</div>
+    <h2>まずは<span class="accent">無料カウンセリング</span>から</h2>
     <p>「私にも続けられるかな」と感じている方こそ、一度お話を聞かせてください。<br>無理な勧誘は一切いたしません。すっぴん・運動着なしでもOK。</p>
     <form action="https://formspree.io/f/mnjwqyjd" method="POST" class="contact-form" id="memberForm">
       <input type="hidden" name="_subject" value="【NEXUS会員】無料カウンセリング申込">
@@ -805,87 +1109,87 @@ footer {
       <div class="form-group">
         <label>ご希望店舗 <span class="required">*</span></label>
         <select name="shop" required>
-            <option value="">選択してください</option>
-            <optgroup label="東京 / 23区">
-              <option value="赤坂">赤坂</option>
-              <option value="渋谷">渋谷</option>
-              <option value="上野">上野</option>
-              <option value="月島">月島</option>
-              <option value="清澄白河">清澄白河</option>
-              <option value="東日本橋">東日本橋</option>
-              <option value="千駄木">千駄木</option>
-              <option value="白山">白山</option>
-              <option value="三田">三田</option>
-              <option value="白金台">白金台</option>
-              <option value="太子堂">太子堂</option>
-              <option value="池ノ上">池ノ上</option>
-              <option value="奥沢">奥沢</option>
-              <option value="明大前">明大前</option>
-              <option value="笹塚">笹塚</option>
-              <option value="新中野">新中野</option>
-              <option value="中野">中野</option>
-              <option value="中野新橋">中野新橋</option>
-              <option value="中野富士見">中野富士見</option>
-              <option value="沼袋">沼袋</option>
-              <option value="新江古田">新江古田</option>
-              <option value="練馬">練馬</option>
-              <option value="上板橋">上板橋</option>
-              <option value="西荻窪">西荻窪</option>
-              <option value="西葛西">西葛西</option>
-              <option value="蒲田・蓮沼">蒲田・蓮沼</option>
-              <option value="馬込">馬込</option>
-              <option value="西馬込">西馬込</option>
-              <option value="西馬込ANNEX">西馬込ANNEX</option>
-              <option value="菊川">菊川</option>
-              <option value="久が原">久が原</option>
-              <option value="長原">長原</option>
-              <option value="石川台">石川台</option>
-              <option value="北千束">北千束</option>
-              <option value="雪が谷大塚">雪が谷大塚</option>
-              <option value="千鳥町">千鳥町</option>
-              <option value="池上橋">池上橋</option>
-              <option value="武蔵新田">武蔵新田</option>
-              <option value="雑色">雑色</option>
-              <option value="鮫洲・大井町">鮫洲・大井町</option>
-              <option value="大森北口山王">大森北口山王</option>
-            </optgroup>
-            <optgroup label="神奈川">
-              <option value="横浜元町">横浜元町</option>
-              <option value="岸根公園">岸根公園</option>
-              <option value="綱島">綱島</option>
-              <option value="弘明寺">弘明寺</option>
-              <option value="十日市場">十日市場</option>
-              <option value="市が尾">市が尾</option>
-              <option value="三ツ境">三ツ境</option>
-              <option value="大口">大口</option>
-              <option value="高田駅前">高田駅前</option>
-              <option value="鹿島田・新川崎">鹿島田・新川崎</option>
-            </optgroup>
-            <optgroup label="埼玉">
-              <option value="大宮">大宮</option>
-            </optgroup>
-            <optgroup label="大阪">
-              <option value="大阪本町">大阪本町</option>
-              <option value="大阪福島">大阪福島</option>
-              <option value="大阪豊中">大阪豊中</option>
-              <option value="大阪曽根">大阪曽根</option>
-              <option value="大阪総持寺">大阪総持寺</option>
-              <option value="大阪服部天神">大阪服部天神</option>
-              <option value="大阪緑地公園">大阪緑地公園</option>
-            </optgroup>
-            <optgroup label="愛知">
-              <option value="名古屋今池">名古屋今池</option>
-              <option value="本山">本山</option>
-            </optgroup>
-            <optgroup label="福岡">
-              <option value="福岡天神南">福岡天神南</option>
-              <option value="福岡平尾">福岡平尾</option>
-            </optgroup>
-            <optgroup label="沖縄">
-              <option value="沖縄豊崎">沖縄豊崎</option>
-            </optgroup>
-            <option value="未定・近くの店舗を相談">未定・近くの店舗を相談</option>
-          </select>
+          <option value="">選択してください</option>
+          <optgroup label="東京 / 23区">
+            <option value="赤坂">赤坂</option>
+            <option value="渋谷">渋谷</option>
+            <option value="上野">上野</option>
+            <option value="月島">月島</option>
+            <option value="清澄白河">清澄白河</option>
+            <option value="東日本橋">東日本橋</option>
+            <option value="千駄木">千駄木</option>
+            <option value="白山">白山</option>
+            <option value="三田">三田</option>
+            <option value="白金台">白金台</option>
+            <option value="太子堂">太子堂</option>
+            <option value="池ノ上">池ノ上</option>
+            <option value="奥沢">奥沢</option>
+            <option value="明大前">明大前</option>
+            <option value="笹塚">笹塚</option>
+            <option value="新中野">新中野</option>
+            <option value="中野">中野</option>
+            <option value="中野新橋">中野新橋</option>
+            <option value="中野富士見">中野富士見</option>
+            <option value="沼袋">沼袋</option>
+            <option value="新江古田">新江古田</option>
+            <option value="練馬">練馬</option>
+            <option value="上板橋">上板橋</option>
+            <option value="西荻窪">西荻窪</option>
+            <option value="西葛西">西葛西</option>
+            <option value="蒲田・蓮沼">蒲田・蓮沼</option>
+            <option value="馬込">馬込</option>
+            <option value="西馬込">西馬込</option>
+            <option value="西馬込ANNEX">西馬込ANNEX</option>
+            <option value="菊川">菊川</option>
+            <option value="久が原">久が原</option>
+            <option value="長原">長原</option>
+            <option value="石川台">石川台</option>
+            <option value="北千束">北千束</option>
+            <option value="雪が谷大塚">雪が谷大塚</option>
+            <option value="千鳥町">千鳥町</option>
+            <option value="池上橋">池上橋</option>
+            <option value="武蔵新田">武蔵新田</option>
+            <option value="雑色">雑色</option>
+            <option value="鮫洲・大井町">鮫洲・大井町</option>
+            <option value="大森北口山王">大森北口山王</option>
+          </optgroup>
+          <optgroup label="神奈川">
+            <option value="横浜元町">横浜元町</option>
+            <option value="岸根公園">岸根公園</option>
+            <option value="綱島">綱島</option>
+            <option value="弘明寺">弘明寺</option>
+            <option value="十日市場">十日市場</option>
+            <option value="市が尾">市が尾</option>
+            <option value="三ツ境">三ツ境</option>
+            <option value="大口">大口</option>
+            <option value="高田駅前">高田駅前</option>
+            <option value="鹿島田・新川崎">鹿島田・新川崎</option>
+          </optgroup>
+          <optgroup label="埼玉">
+            <option value="大宮">大宮</option>
+          </optgroup>
+          <optgroup label="大阪">
+            <option value="大阪本町">大阪本町</option>
+            <option value="大阪福島">大阪福島</option>
+            <option value="大阪豊中">大阪豊中</option>
+            <option value="大阪曽根">大阪曽根</option>
+            <option value="大阪総持寺">大阪総持寺</option>
+            <option value="大阪服部天神">大阪服部天神</option>
+            <option value="大阪緑地公園">大阪緑地公園</option>
+          </optgroup>
+          <optgroup label="愛知">
+            <option value="名古屋今池">名古屋今池</option>
+            <option value="本山">本山</option>
+          </optgroup>
+          <optgroup label="福岡">
+            <option value="福岡天神南">福岡天神南</option>
+            <option value="福岡平尾">福岡平尾</option>
+          </optgroup>
+          <optgroup label="沖縄">
+            <option value="沖縄豊崎">沖縄豊崎</option>
+          </optgroup>
+          <option value="未定・近くの店舗を相談">未定・近くの店舗を相談</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -950,7 +1254,7 @@ footer {
 </section>
 
 <footer>
-  <div class="logo">WITHJ × NEXUS</div>
+  <div class="logo">NEXUS<span class="accent" style="color:var(--accent)"> Personal Gym</span></div>
   <div>© 2026 株式会社WITHJ All Rights Reserved.</div>
 </footer>
 
