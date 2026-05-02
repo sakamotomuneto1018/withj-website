@@ -605,6 +605,57 @@ h2 {
 
 .profile p { color: #bbb; font-size: 15px; }
 
+/* ブログ */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.blog-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s;
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,240,255,0.3);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.blog-card-img {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+.blog-card-body { padding: 26px 28px 30px; }
+.blog-card-meta {
+  display: flex;
+  gap: 14px;
+  font-size: 11px;
+  font-family: 'Poppins', sans-serif;
+  color: #888;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+}
+.blog-card-cat { color: var(--accent1); font-weight: 700; }
+.blog-card h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 800;
+}
+.blog-more { text-align: center; }
+.btn.outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.btn.outline:hover { border-color: var(--accent1); color: var(--accent1); box-shadow: none; }
+
 /* 会社概要 */
 .company-info {
   display: grid;
@@ -785,7 +836,7 @@ footer .logo { font-size: 24px; }
     <a href="#results">RESULTS</a>
     <a href="#business">BUSINESS</a>
     <a href="#ceo">CEO</a>
-    <a href="#company">COMPANY</a>
+    <a href="blog/">BLOG</a>
     <a href="#contact">CONTACT</a>
   </nav>
 </header>
@@ -924,7 +975,31 @@ footer .logo { font-size: 24px; }
   </dl>
 </section>
 
-<div class="divider">— 06 / CONTACT</div>
+<div class="divider">— 06 / BLOG</div>
+
+<!-- ブログ -->
+<section id="blog">
+  <div class="section-num">BLOG</div>
+  <h2>WITHJの記録</h2>
+  <p class="lead">営業BPO・FC加盟開発・パーソナルジム経営の現場から。<br>事例・知見・お知らせをお届けします。</p>
+  <div class="blog-cards">
+    <a href="blog/sample-post/" class="blog-card">
+      <div class="blog-card-img" style="background-image:url('images/NEXUSパーソナルジム65店舗出店実績.png')"></div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">FC ACQUISITION</span>
+          <span>2026.05.02</span>
+        </div>
+        <h3>3年で65店舗。NEXUSパーソナルジムが急成長できた3つの理由</h3>
+      </div>
+    </a>
+  </div>
+  <div class="blog-more">
+    <a href="blog/" class="btn outline">すべての記事を見る</a>
+  </div>
+</section>
+
+<div class="divider">— 07 / CONTACT</div>
 
 <!-- お問い合わせ -->
 <section id="contact" class="contact">
