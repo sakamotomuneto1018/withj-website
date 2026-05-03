@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://withj-website.vercel.app/sitemap.xml
+Sitemap: https://withj-inc.com/sitemap.xml
