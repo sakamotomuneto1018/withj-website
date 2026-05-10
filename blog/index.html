@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WITHJ Blog | 営業BPO・FC加盟・パーソナルジム経営の実践記</title>
+<title>WITHJ Blog | フランチャイズ加盟開発・パーソナルジム経営・健康ライフスタイル</title>
 
-<meta name="description" content="株式会社WITHJの公式ブログ。営業BPO、フランチャイズ加盟開発、パーソナルジム経営の現場で得たリアルな知見と加盟事例をお届けします。">
+<meta name="description" content="株式会社WITHJの公式ブログ。フランチャイズ加盟開発の事例・ノウハウ、NEXUSパーソナルジム会員向けの健康/ダイエット情報をお届けします。">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://withj-inc.com/blog/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="WITHJ Blog | 営業BPO・FC加盟・パーソナルジム経営の実践記">
+<meta property="og:title" content="WITHJ Blog | フランチャイズ加盟開発・パーソナルジム経営・健康ライフスタイル">
 <meta property="og:url" content="https://withj-inc.com/blog/">
 <meta property="og:image" content="https://withj-inc.com/images/熱狂画像.png">
 
@@ -29,20 +29,51 @@
 
 <section class="bl-list-hero">
   <h1>WITHJ Blog</h1>
-  <p>営業BPO・FC加盟開発・パーソナルジム経営の現場から。</p>
+  <p>フランチャイズ加盟開発・パーソナルジム経営・健康ライフスタイル<br>事例と知見をお届けします。</p>
 </section>
 
-<section class="bl-grid">
+<nav class="bl-tabs" aria-label="カテゴリーフィルター">
+  <button class="bl-tab active" data-cat="all">All</button>
+  <button class="bl-tab" data-cat="fc-case">FC事例</button>
+  <button class="bl-tab" data-cat="fc-knowledge">FCブログ</button>
+  <button class="bl-tab" data-cat="member">会員向け</button>
+</nav>
 
-  <a href="sample-post/" class="bl-card">
-    <div class="bl-card-img" style="background-image:url('../images/NEXUSパーソナルジム65店舗出店実績.png')"></div>
+<section class="bl-grid" id="blGrid">
+
+  <a href="fc-case/nexus-65-stores/" class="bl-card" data-cat="fc-case">
+    <div class="bl-card-img"><img src="../images/NEXUSパーソナルジム65店舗出店実績.png" alt="NEXUSパーソナルジム 65店舗出店実績" loading="lazy"></div>
     <div class="bl-card-body">
       <div class="bl-card-meta">
-        <span class="bl-card-cat">FC ACQUISITION</span>
+        <span class="bl-card-cat">FC事例</span>
         <span>2026.05.02</span>
       </div>
       <h2>3年で65店舗。NEXUSパーソナルジムが急成長できた3つの理由</h2>
-      <p>WITHJが伴走するNEXUSパーソナルジムは、創業3年で65店舗まで拡大しました。本記事ではその裏側にあった3つの戦略を公開します。</p>
+      <p>WITHJが伴走するNEXUSパーソナルジムは、創業3年で65店舗まで拡大しました。その裏側にあった戦略を公開します。</p>
+    </div>
+  </a>
+
+  <a href="fc-knowledge/why-residential-gym-wins/" class="bl-card" data-cat="fc-knowledge">
+    <div class="bl-card-img"><img src="../images/nexus/gym-bright.jpg" alt="住宅街型パーソナルジムの店舗イメージ" loading="lazy"></div>
+    <div class="bl-card-body">
+      <div class="bl-card-meta">
+        <span class="bl-card-cat">FCブログ</span>
+        <span>2026.05.10</span>
+      </div>
+      <h2>なぜ「住宅街マンション一室型」のパーソナルジムが勝てるのか</h2>
+      <p>駅前大型ジムが過熱する中、なぜ住宅街マンション型が勝ち続けるのか。立地・固定費・ターゲットの3軸で整理します。</p>
+    </div>
+  </a>
+
+  <a href="member/30s-40s-diet-routine/" class="bl-card" data-cat="member">
+    <div class="bl-card-img"><img src="../images/nexus/gym-mirror.jpg" alt="完全個室パーソナルジム" loading="lazy"></div>
+    <div class="bl-card-body">
+      <div class="bl-card-meta">
+        <span class="bl-card-cat">会員向け</span>
+        <span>2026.05.12</span>
+      </div>
+      <h2>30〜40代女性のための「無理なく続く」ダイエットルーティン</h2>
+      <p>共働き・家事・子なし。忙しい毎日でも無理なく続けられるダイエット習慣を、NEXUSのトレーナー監修でお届けします。</p>
     </div>
   </a>
 
@@ -52,6 +83,19 @@
   <div>WITHJ</div>
   <div>© 2026 株式会社WITHJ All Rights Reserved.</div>
 </footer>
+
+<script>
+document.querySelectorAll('.bl-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.bl-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const cat = tab.dataset.cat;
+    document.querySelectorAll('#blGrid .bl-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+  });
+});
+</script>
 
 </body>
 </html>
