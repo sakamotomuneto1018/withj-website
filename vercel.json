@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/blog/member/30s-40s-diet-routine",
+      "destination": "/gym-blog/diet-bodymake/30s-40s-diet-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/member/30s-40s-diet-routine/",
+      "destination": "/gym-blog/diet-bodymake/30s-40s-diet-routine/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/member",
+      "destination": "/gym-blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/member/",
+      "destination": "/gym-blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sample-post",
+      "destination": "/blog/fc-case/nexus-65-stores/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sample-post/",
+      "destination": "/blog/fc-case/nexus-65-stores/",
+      "permanent": true
+    }
+  ]
+}
