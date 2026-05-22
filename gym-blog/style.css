@@ -703,19 +703,44 @@ img { max-width: 100%; height: auto; display: block; }
   .gb-hero-img { max-width: 460px; margin: 0 auto; aspect-ratio: 4/3; }
 }
 @media (max-width: 768px) {
-  .gb-header { padding: 16px 24px; }
-  .gb-nav { gap: 20px; font-size: 11px; letter-spacing: 0.15em; }
-  .gb-breadcrumb { padding: 26px 24px 0; }
-  .gb-hero { padding: 50px 24px 40px; }
-  .gb-section { padding: 50px 24px; }
-  .gb-article-wrap { padding: 30px 20px 70px; }
-  .gb-footer { padding: 40px 24px; }
-}
-@media (max-width: 480px) {
-  .gb-header { padding: 14px 18px; }
-  .gb-hero h1 { font-size: 26px; }
-  .gb-section { padding: 40px 18px; }
+  .gb-header { padding: 14px 18px; gap: 12px; }
+  .gb-logo { font-size: 16px; letter-spacing: 0.1em; white-space: nowrap; }
+  .gb-nav { gap: 14px; font-size: 10px; letter-spacing: 0.1em; }
+  .gb-breadcrumb { padding: 22px 18px 0; font-size: 10px; }
+  .gb-hero { padding: 40px 18px 36px; gap: 32px; }
+  .gb-hero .tag { font-size: 10px; letter-spacing: 0.15em; padding: 6px 14px; margin-bottom: 20px; }
+  .gb-hero h1 { font-size: clamp(24px, 6.5vw, 32px); line-height: 1.35; margin-bottom: 20px; }
+  .gb-hero p { font-size: 14px; line-height: 1.95; }
+  .gb-hero-img { aspect-ratio: 4/3; max-width: 100%; }
+  .gb-section { padding: 50px 18px; }
+  .gb-section h2.gb-heading { font-size: 24px; margin-bottom: 24px; }
+  .gb-cat-card { padding: 28px 22px 48px; min-height: 200px; }
+  .gb-cat-card .num { font-size: 26px; margin-bottom: 12px; }
+  .gb-cat-card h2 { font-size: 19px; }
+  .gb-cat-card p { font-size: 13px; }
+  .gb-cat-card .arrow { bottom: 18px; right: 22px; }
   .gb-article-wrap { padding: 24px 18px 60px; }
-  .gb-cta { padding: 36px 22px; margin: 0 auto 30px; }
-  .gb-body h2 { font-size: 21px; }
+  .gb-article-title { font-size: 24px; line-height: 1.4; margin-bottom: 22px; }
+  .gb-article-meta { gap: 12px; font-size: 10px; letter-spacing: 0.12em; }
+  .gb-body { font-size: 15px; }
+  .gb-body h2 { font-size: 20px; margin: 40px 0 16px; padding-left: 14px; }
+  .gb-body h3 { font-size: 17px; margin: 28px 0 12px; }
+  .gb-disclosure { padding: 16px 18px; font-size: 12px; }
+  .gb-author { padding: 18px; gap: 14px; }
+  .gb-author-img { width: 52px; height: 52px; }
+  .gb-toc { padding: 18px 20px; }
+  .gb-toc a { font-size: 13px; }
+  .gb-cta { padding: 36px 22px; margin: 40px auto 24px; }
+  .gb-cta h3 { font-size: 19px; margin-bottom: 12px; }
+  .gb-cta p { font-size: 13px; margin-bottom: 18px; }
+  .gb-cta-btn { padding: 14px 28px; font-size: 12px; }
+  .gb-footer { padding: 36px 18px; flex-direction: column; gap: 8px; }
+  .gb-footer-logo { font-size: 18px; }
+}
+@media (max-width: 380px) {
+  .gb-logo { font-size: 14px; letter-spacing: 0.08em; }
+  .gb-nav { gap: 10px; font-size: 9px; }
+  .gb-hero h1 { font-size: 22px; }
+  .gb-section h2.gb-heading { font-size: 22px; }
+  .gb-article-title { font-size: 21px; }
 }
