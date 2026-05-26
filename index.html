@@ -561,26 +561,13 @@ h2 {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 24px;
-  background: url("images/代表取締役CEOの画像.jpg") center/cover, linear-gradient(135deg, #1a1a2e, #16213e);
+  object-fit: cover;
+  object-position: center top;
   border: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  overflow: hidden;
+  display: block;
   transition: 0.4s;
 }
 .profile-img:hover { transform: scale(1.02); }
-.profile-img::after {
-  content: 'CEO';
-  position: absolute;
-  bottom: 20px; left: 20px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.3em;
-  padding: 6px 14px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-  border: 1px solid rgba(255,255,255,0.2);
-}
 
 .profile-name-en {
   font-family: 'Bebas Neue', sans-serif;
@@ -953,7 +940,7 @@ footer .logo { font-size: 24px; }
   <h2>代表紹介</h2>
   <div class="profile">
     <div class="profile-img-wrap">
-      <div class="profile-img"></div>
+      <img class="profile-img" src="images/代表取締役CEOの画像.jpg" alt="坂本 宗瞳 / 株式会社WITHJ 代表取締役CEO">
     </div>
     <div>
       <div class="profile-name-en">MUNETO SAKAMOTO</div>
