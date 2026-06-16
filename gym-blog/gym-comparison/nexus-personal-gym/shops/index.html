@@ -276,7 +276,7 @@
     <p class="nx-lead">東京都41・神奈川県17・大阪府6店舗ほか、全国71店舗を展開中。エリアの「＋」をタップすると各店舗の住所・営業時間・電話番号が表示されます。完全個室・駅近の隠れ家パーソナルジムです。</p>
     <p style="margin-top:16px"><a class="nx-ilink" href="../">NEXUSパーソナルジムの特徴・料金を見る</a></p>
 
-      <div class="pref-block">
+      <div class="pref-block" id="tokyo">
         <h3 class="pref-name">東京都</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="東京都-港区2">
@@ -653,7 +653,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="kanagawa">
         <h3 class="pref-name">神奈川県</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="神奈川県-横浜市15">
@@ -774,7 +774,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="saitama">
         <h3 class="pref-name">埼玉県</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="埼玉県-さいたま市1">
@@ -791,7 +791,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="gunma">
         <h3 class="pref-name">群馬県</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="群馬県-太田市1">
@@ -808,7 +808,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="tochigi">
         <h3 class="pref-name">栃木県</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="栃木県-足利市1">
@@ -825,7 +825,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="osaka">
         <h3 class="pref-name">大阪府</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="大阪府-大阪市1">
@@ -896,7 +896,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="aichi">
         <h3 class="pref-name">愛知県</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="愛知県-名古屋市2">
@@ -919,7 +919,7 @@
           </div>
         </div>
       </div>
-      <div class="pref-block">
+      <div class="pref-block" id="fukuoka">
         <h3 class="pref-name">福岡県</h3>
         <div class="area">
           <button class="area-toggle" aria-expanded="false" aria-controls="福岡県-中央区2">
@@ -966,6 +966,25 @@
       if(body) body.hidden = open;
     });
   });
+
+  // URLの#（例: #tokyo）でその都道府県を自動展開してスクロール
+  function openPrefFromHash(){
+    var id = decodeURIComponent((location.hash || '').replace('#',''));
+    if(!id) return;
+    var block = document.getElementById(id);
+    if(!block) return;
+    block.querySelectorAll('.area-toggle').forEach(function(btn){
+      var body = document.getElementById(btn.getAttribute('aria-controls'));
+      btn.setAttribute('aria-expanded','true');
+      if(body) body.hidden = false;
+    });
+    var header = document.querySelector('.gb-header');
+    var offset = (header ? header.offsetHeight : 0) + 16;
+    var y = block.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
+  window.addEventListener('hashchange', openPrefFromHash);
+  if(location.hash) setTimeout(openPrefFromHash, 60);
 })();
 </script>
 <!-- ========== LP CONTENT END ========== -->

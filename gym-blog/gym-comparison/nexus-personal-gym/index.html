@@ -179,6 +179,13 @@
   }
   .nx-ilink::after { content: "→"; }
   .nx-ilink:hover { color: var(--pink); border-color: rgba(240,48,155,.5); }
+  .nx-pref-link {
+    background: var(--bg2); border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 14px; font-size: 14px; font-weight: 700; color: var(--text);
+    text-decoration: none; transition: border-color .15s, background .15s;
+  }
+  .nx-pref-link:hover { border-color: var(--cyan); background: var(--bg3); }
+  .nx-pref-link b { color: var(--cyan); }
 
   /* CTA */
   .nx-cta {
@@ -489,14 +496,14 @@
     <h2>店舗一覧 <span class="ac">全71店舗</span></h2>
     <p class="nx-lead">東京都・神奈川を中心に全国71店舗を展開中。完全個室・駅近の隠れ家パーソナルジムです。</p>
     <div style="display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px">
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">東京都 <b style="color:var(--cyan)">41</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">神奈川県 <b style="color:var(--cyan)">17</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">埼玉県 <b style="color:var(--cyan)">1</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">群馬県 <b style="color:var(--cyan)">1</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">栃木県 <b style="color:var(--cyan)">1</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">大阪府 <b style="color:var(--cyan)">6</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">愛知県 <b style="color:var(--cyan)">2</b></span>
-      <span style="background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700">福岡県 <b style="color:var(--cyan)">2</b></span>
+      <a class="nx-pref-link" href="shops/#tokyo">東京都 <b>41</b></a>
+      <a class="nx-pref-link" href="shops/#kanagawa">神奈川県 <b>17</b></a>
+      <a class="nx-pref-link" href="shops/#saitama">埼玉県 <b>1</b></a>
+      <a class="nx-pref-link" href="shops/#gunma">群馬県 <b>1</b></a>
+      <a class="nx-pref-link" href="shops/#tochigi">栃木県 <b>1</b></a>
+      <a class="nx-pref-link" href="shops/#osaka">大阪府 <b>6</b></a>
+      <a class="nx-pref-link" href="shops/#aichi">愛知県 <b>2</b></a>
+      <a class="nx-pref-link" href="shops/#fukuoka">福岡県 <b>2</b></a>
     </div>
     <div class="nx-cta-wrap" style="margin-top:24px">
       <a class="nx-cta" href="shops/">全71店舗の詳細を見る</a>
