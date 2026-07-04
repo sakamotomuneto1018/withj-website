@@ -305,7 +305,7 @@ def gen_store_page(s):
     p.append('<a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>')
     p.append(f'<div class="st-cta"><h3>{esc(area)}で、こっそり綺麗になりませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="{booking}" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>')
     p.append('</main>')
-    p.append(f'<div class="st-sticky"><a href="{booking}" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する（勧誘なし）</a></div>')
+    p.append(f'<div class="st-sticky"><a href="{booking}" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>')
     p.append('<footer class="gb-footer"><div class="gb-footer-logo">WITHJ</div><nav style="display:flex;gap:24px;flex-wrap:wrap;"><a href="../" style="color:var(--ink-faint);font-size:12px;">店舗一覧</a><a href="../../gym-blog/" style="color:var(--ink-faint);font-size:12px;">パーソナルジムブログ</a><a href="../../faq/" style="color:var(--ink-faint);font-size:12px;">よくある質問</a><a href="../../privacy/" style="color:var(--ink-faint);font-size:12px;">プライバシーポリシー</a></nav><div>© 2026 株式会社WITHJ All Rights Reserved.</div></footer>')
     p.append('</body>\n</html>')
     outdir=os.path.join(ROOT,"shops",slug)
