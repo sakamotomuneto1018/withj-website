@@ -56,6 +56,18 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 .sh-store .meta .tel { color: var(--ink-faint); }
 .sh-ilink { display:inline-flex; gap:6px; margin-top:22px; color:var(--accent1); font-size:14px; font-weight:700; text-decoration:none; border-bottom:1px solid var(--line-accent); padding-bottom:2px; }
 .sh-ilink::after { content:"→"; }
+/* Coming soon banner */
+.sh-soon { position:relative; overflow:hidden; margin:22px 0 6px; padding:22px 22px; border-radius:16px; border:1px solid var(--line-accent); background:linear-gradient(135deg, rgba(0,240,255,.10), rgba(255,0,170,.10)); }
+.sh-soon .tag { display:inline-flex; align-items:center; gap:8px; font-family:'Bebas Neue',sans-serif; letter-spacing:.18em; font-size:13px; color:var(--accent1); }
+.sh-soon .tag::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--accent2); box-shadow:0 0 0 0 rgba(255,0,170,.5); animation:shPulse 1.8s infinite; }
+@keyframes shPulse { 0%{box-shadow:0 0 0 0 rgba(255,0,170,.5);} 70%{box-shadow:0 0 0 10px rgba(255,0,170,0);} 100%{box-shadow:0 0 0 0 rgba(255,0,170,0);} }
+.sh-soon h2 { border:none!important; padding:0!important; margin:8px 0 4px!important; font-size:clamp(19px,5vw,26px); font-weight:900; }
+.sh-soon h2 b { background:linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.sh-soon p { color:var(--ink-soft); font-size:13.5px; margin:0; }
+.sh-bar { margin-top:14px; height:12px; border-radius:999px; background:var(--bg-card); border:1px solid var(--line); overflow:hidden; }
+.sh-bar span { display:block; height:100%; width:88.75%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); border-radius:999px; }
+.sh-bar-lbl { display:flex; justify-content:space-between; margin-top:6px; font-size:12px; color:var(--ink-faint); }
+.sh-bar-lbl b { color:var(--ink); }
 @media (max-width:768px){ .sh-wrap { padding:8px 18px 80px; } }
 </style>
 </head>
@@ -67,6 +79,14 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 <h1>NEXUSパーソナルジム 全国店舗一覧｜<span class="ac">全国71店舗</span>（80店舗までオープン予定）</h1>
 <p class="sh-lead">住宅街のマンションの一室にある完全個室の隠れ家パーソナルジム「NEXUS」。女性会員85%・手ぶらOK・1回4,500円〜。東京都・神奈川県を中心に全国71店舗を展開中です。都道府県から、お近くの店舗をお探しください。</p>
 <div class="sh-pillnav"><a href="#tokyo">東京都 <b>41</b></a><a href="#kanagawa">神奈川県 <b>17</b></a><a href="#saitama">埼玉県 <b>1</b></a><a href="#gunma">群馬県 <b>1</b></a><a href="#tochigi">栃木県 <b>1</b></a><a href="#osaka">大阪府 <b>6</b></a><a href="#aichi">愛知県 <b>2</b></a><a href="#fukuoka">福岡県 <b>2</b></a></div>
+
+<div class="sh-soon">
+  <span class="tag">COMING SOON</span>
+  <h2>まもなく<b>全国80店舗</b>へ。</h2>
+  <p>現在71店舗。80店舗のオープンに向けて、続々と新店舗を準備中です。あなたの街にも、こっそり通える隠れ家ジムが増えていきます。</p>
+  <div class="sh-bar"><span></span></div>
+  <div class="sh-bar-lbl"><span>71店舗オープン</span><b>目標 80店舗</b></div>
+</div>
 <section class="sh-pref" id="tokyo"><h2>東京都</h2><div class="cnt">41店舗</div>
 <a class="sh-store" href="nogizaka-akasaka/"><div class="nm">NEXUS 乃木坂・赤坂店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒107-0052 東京都港区赤坂8-12-16 NOZY赤坂601 ／ <span class="tel">TEL 050-1790-8488</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 三田店</div><div class="meta">〒108-0073 東京都港区三田3-2-12 ウィンコーポ三田202 ／ <span class="tel">TEL 050-1790-8486</span></div></div>
