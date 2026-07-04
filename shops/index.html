@@ -56,7 +56,6 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 .sh-store .meta .tel { color: var(--ink-faint); }
 .sh-ilink { display:inline-flex; gap:6px; margin-top:22px; color:var(--accent1); font-size:14px; font-weight:700; text-decoration:none; border-bottom:1px solid var(--line-accent); padding-bottom:2px; }
 .sh-ilink::after { content:"→"; }
-/* Coming soon banner */
 .sh-soon { position:relative; overflow:hidden; margin:22px 0 6px; padding:22px 22px; border-radius:16px; border:1px solid var(--line-accent); background:linear-gradient(135deg, rgba(0,240,255,.10), rgba(255,0,170,.10)); }
 .sh-soon .tag { display:inline-flex; align-items:center; gap:8px; font-family:'Bebas Neue',sans-serif; letter-spacing:.18em; font-size:13px; color:var(--accent1); }
 .sh-soon .tag::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--accent2); box-shadow:0 0 0 0 rgba(255,0,170,.5); animation:shPulse 1.8s infinite; }
@@ -65,7 +64,7 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 .sh-soon h2 b { background:linear-gradient(90deg,var(--accent1),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
 .sh-soon p { color:var(--ink-soft); font-size:13.5px; margin:0; }
 .sh-bar { margin-top:14px; height:12px; border-radius:999px; background:var(--bg-card); border:1px solid var(--line); overflow:hidden; }
-.sh-bar span { display:block; height:100%; width:88.75%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); border-radius:999px; }
+.sh-bar span { display:block; height:100%; background:linear-gradient(90deg,var(--accent1),var(--accent2)); border-radius:999px; }
 .sh-bar-lbl { display:flex; justify-content:space-between; margin-top:6px; font-size:12px; color:var(--ink-faint); }
 .sh-bar-lbl b { color:var(--ink); }
 @media (max-width:768px){ .sh-wrap { padding:8px 18px 80px; } }
@@ -79,14 +78,7 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 <h1>NEXUSパーソナルジム 全国店舗一覧｜<span class="ac">全国71店舗</span>（80店舗までオープン予定）</h1>
 <p class="sh-lead">住宅街のマンションの一室にある完全個室の隠れ家パーソナルジム「NEXUS」。女性会員85%・手ぶらOK・1回4,500円〜。東京都・神奈川県を中心に全国71店舗を展開中です。都道府県から、お近くの店舗をお探しください。</p>
 <div class="sh-pillnav"><a href="#tokyo">東京都 <b>41</b></a><a href="#kanagawa">神奈川県 <b>17</b></a><a href="#saitama">埼玉県 <b>1</b></a><a href="#gunma">群馬県 <b>1</b></a><a href="#tochigi">栃木県 <b>1</b></a><a href="#osaka">大阪府 <b>6</b></a><a href="#aichi">愛知県 <b>2</b></a><a href="#fukuoka">福岡県 <b>2</b></a></div>
-
-<div class="sh-soon">
-  <span class="tag">COMING SOON</span>
-  <h2>まもなく<b>全国80店舗</b>へ。</h2>
-  <p>現在71店舗。80店舗のオープンに向けて、続々と新店舗を準備中です。あなたの街にも、こっそり通える隠れ家ジムが増えていきます。</p>
-  <div class="sh-bar"><span></span></div>
-  <div class="sh-bar-lbl"><span>71店舗オープン</span><b>目標 80店舗</b></div>
-</div>
+<div class="sh-soon"><span class="tag">COMING SOON</span><h2>まもなく<b>全国80店舗</b>へ。</h2><p>現在71店舗。80店舗のオープンに向けて、続々と新店舗を準備中です。あなたの街にも、こっそり通える隠れ家ジムが増えていきます。</p><div class="sh-bar"><span style="width:88.75%"></span></div><div class="sh-bar-lbl"><span>71店舗オープン</span><b>目標 80店舗</b></div></div>
 <section class="sh-pref" id="tokyo"><h2>東京都</h2><div class="cnt">41店舗</div>
 <a class="sh-store" href="nogizaka-akasaka/"><div class="nm">NEXUS 乃木坂・赤坂店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒107-0052 東京都港区赤坂8-12-16 NOZY赤坂601 ／ <span class="tel">TEL 050-1790-8488</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 三田店</div><div class="meta">〒108-0073 東京都港区三田3-2-12 ウィンコーポ三田202 ／ <span class="tel">TEL 050-1790-8486</span></div></div>
@@ -105,19 +97,19 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 <div class="sh-store"><div class="nm">NEXUS 大森北口山王店</div><div class="meta">〒143-0023 東京都大田区山王2丁目1−8 山王アーバンライフ 519号室 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 池上店</div><div class="meta">〒146-0082 東京都大田区池上2丁目15−1 レザンドール 104 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 千鳥町店</div><div class="meta">〒146-0083 東京都大田区千鳥1丁目18−4 ライオンズマンション千鳥町 113号室 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 雪が谷大塚店</div><div class="meta">〒145-0066 東京都大田区南雪谷4丁目6−16 2F ／ <span class="tel">TEL 050-1790-8499</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 雑色店</div><div class="meta">〒144-0055 東京都大田区仲六郷1丁目36−12 ナークニク 101号 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
+<a class="sh-store" href="yukigaya-otsuka/"><div class="nm">NEXUS 雪が谷大塚店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒145-0066 東京都大田区南雪谷4丁目6−16 2F ／ <span class="tel">TEL 050-1790-8499</span></div></a>
+<a class="sh-store" href="zoshiki/"><div class="nm">NEXUS 雑色店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒144-0055 東京都大田区仲六郷1丁目36−12 ナークニク 101号 ／ <span class="tel">TEL 050-1790-8499</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 清澄白河店</div><div class="meta">〒135-0024 東京都江東区清澄2丁目13−2 ニューディレクトレジデンス清澄 203 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 東日本橋店</div><div class="meta">〒103-0002 東京都中央区日本橋馬喰町1丁目13−8 リレント日本橋 802 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 月島店</div><div class="meta">〒104-0052 東京都中央区月島2丁目2−10 クエスト正徳 502号 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 新中野店</div><div class="meta">〒164-0012 東京都中野区本町6丁目21−15 アクセス新中野 II 2F ／ <span class="tel">TEL 050-1790-8493</span></div></div>
+<a class="sh-store" href="shin-nakano/"><div class="nm">NEXUS 新中野店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒164-0012 東京都中野区本町6丁目21−15 アクセス新中野 II 2F ／ <span class="tel">TEL 050-1790-8493</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 中野店</div><div class="meta">〒164-0001 東京都中野区中野5丁目24−16 中野第二コーポ 207号室 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 沼袋店</div><div class="meta">〒165-0025 東京都中野区沼袋1丁目38−8 CONTEL NAKANO 101号 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 中野富士見町店</div><div class="meta">〒164-0012 東京都中野区本町5丁目45−2 サングレース B01号 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 中野新橋店</div><div class="meta">〒164-0013 東京都中野区弥生町2丁目12−1 商住宅 中野新橋 204号 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 菊川店</div><div class="meta">〒130-0023 東京都墨田区立川3-6-12 ルーチェヴィラ菊川303 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 上野店</div><div class="meta">〒110-0015 東京都台東区東上野3丁目26−10 ファーストコート 501 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 西荻窪店</div><div class="meta">〒167-0053 東京都杉並区西荻南3丁目7−6 サンパレス西荻 partII 303号室 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
+<a class="sh-store" href="nishi-ogikubo/"><div class="nm">NEXUS 西荻窪店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒167-0053 東京都杉並区西荻南3丁目7−6 サンパレス西荻 partII 303号室 ／ <span class="tel">TEL 050-1790-8493</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 太子堂店</div><div class="meta">〒154-0004 東京都世田谷区太子堂5-6-3 メゾン・ド・太子堂103 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 池ノ上店</div><div class="meta">〒155-0032 東京都世田谷区代沢2丁目39−21 テラス002 ／ <span class="tel">TEL 050-1790-8487</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 明大前店</div><div class="meta">〒156-0043 東京都世田谷区松原2丁目46−9 第一力蔵ビル 605 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
@@ -125,7 +117,7 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 <div class="sh-store"><div class="nm">NEXUS 白山店</div><div class="meta">〒113-0001 東京都文京区白山5-36-14 マガザン白山 B100 3階 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 千駄木店</div><div class="meta">〒113-0022 東京都文京区千駄木3丁目34−10 シンシア千駄木 906 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 西葛西店</div><div class="meta">〒134-0088 東京都江戸川区西葛西6丁目15−11 シンエイ第9西葛西マンション 205 ／ <span class="tel">TEL 050-1790-8488</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 練馬店</div><div class="meta">〒176-0001 東京都練馬区練馬1丁目22−5 セラユートヨタマキタ 303号室 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
+<a class="sh-store" href="nerima/"><div class="nm">NEXUS 練馬店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒176-0001 東京都練馬区練馬1丁目22−5 セラユートヨタマキタ 303号室 ／ <span class="tel">TEL 050-1790-8493</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 新江古田店</div><div class="meta">〒176-0012 東京都練馬区豊玉北1丁目1−5 エルパティオ 102号 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 上板橋店</div><div class="meta">〒174-0076 東京都板橋区上板橋2-3-6 MIZUKI HOME301 ／ <span class="tel">TEL 050-1790-8493</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 梅島/西新井店</div><div class="meta">〒123-0852 東京都足立区関原2丁目46-8 1階 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
@@ -138,11 +130,11 @@ a.sh-store .arrow { margin-left:auto; color: var(--accent1); font-weight:800; }
 <div class="sh-store"><div class="nm">NEXUS 弘明寺店</div><div class="meta">〒232-0061 神奈川県横浜市南区大岡2丁目3−2 弘明寺センタービル 3F ／ <span class="tel">TEL 050-1790-8486</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 高田駅前店</div><div class="meta">〒223-0065 神奈川県横浜市港北区高田東3丁目1−21 反田ビル 203号室 ／ <span class="tel">TEL 050-1790-8486</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 十日市場店</div><div class="meta">〒226-0025 神奈川県横浜市緑区十日市場町854番地4 石井ビル 301号 ／ <span class="tel">TEL 050-1790-8487</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 大口店</div><div class="meta">〒221-0002 神奈川県横浜市神奈川区大口通137-9 第一山内ビル201 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
+<a class="sh-store" href="oguchi/"><div class="nm">NEXUS 大口店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒221-0002 神奈川県横浜市神奈川区大口通137-9 第一山内ビル201 ／ <span class="tel">TEL 050-1790-8499</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 三ツ境店</div><div class="meta">〒246-0022 神奈川県横浜市瀬谷区三ツ境5-32 ten-five三ツ境301号室 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 大船店</div><div class="meta">〒247-0006 神奈川県横浜市栄区笠間2丁目20−7 K.C笠間1階 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 仲町台店</div><div class="meta">〒224-0041 神奈川県横浜市都筑区仲町台1丁目28−10 コンフォート仲町台201 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
-<div class="sh-store"><div class="nm">NEXUS 白楽店</div><div class="meta">〒221-0802 神奈川県横浜市神奈川区六角橋2丁目14番23号 BLA横浜白楽マンション105号室 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
+<a class="sh-store" href="hakuraku/"><div class="nm">NEXUS 白楽店<span class="badge">店舗ページ</span><span class="arrow">→</span></div><div class="meta">〒221-0802 神奈川県横浜市神奈川区六角橋2丁目14番23号 BLA横浜白楽マンション105号室 ／ <span class="tel">TEL 050-1790-8499</span></div></a>
 <div class="sh-store"><div class="nm">NEXUS 日吉店</div><div class="meta">〒223-0062 神奈川県横浜市港北区日吉本町1丁目6-21 クロダ日吉ビル402号 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 希望ヶ丘店</div><div class="meta">〒241-0825 神奈川県横浜市旭区中希望が丘106-12 KKビル 301 ／ <span class="tel">TEL 050-1790-8499</span></div></div>
 <div class="sh-store"><div class="nm">NEXUS 三ツ沢上町店</div><div class="meta">〒221-0856 神奈川県横浜市神奈川区三ツ沢上町5-1 ロードアトランタビル201号 ／ <span class="tel">TEL 050-1790-8499</span></div></div>

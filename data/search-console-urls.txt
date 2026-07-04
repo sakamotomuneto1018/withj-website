@@ -1,0 +1,11 @@
+# Search Console インデックス登録リクエスト用 URL（第1週・公開済み）
+# 上から順に「URL検査 → インデックス登録をリクエスト」してください
+https://www.withj-inc.com/shops/
+https://www.withj-inc.com/shops/nogizaka-akasaka/
+https://www.withj-inc.com/shops/yukigaya-otsuka/
+https://www.withj-inc.com/shops/zoshiki/
+https://www.withj-inc.com/shops/shin-nakano/
+https://www.withj-inc.com/shops/nishi-ogikubo/
+https://www.withj-inc.com/shops/nerima/
+https://www.withj-inc.com/shops/oguchi/
+https://www.withj-inc.com/shops/hakuraku/
