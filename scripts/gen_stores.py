@@ -143,6 +143,19 @@ STORE_CSS="""
 .st-note { color: var(--ink-faint); font-size:12px; margin-top:12px; }
 .st-ilink { display:inline-flex; align-items:center; gap:6px; margin-top:16px; color: var(--accent1); font-size:14px; font-weight:700; text-decoration:none; border-bottom:1px solid var(--line-accent); padding-bottom:2px; }
 .st-ilink::after { content:"→"; }
+.st-rev-avg { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:6px 0 4px; }
+.st-rev-avg b { font-size:22px; color:var(--ink); }
+.st-rev-avg .cnt { color:var(--ink-soft); font-size:13px; }
+.st-rev-avg .asof { color:var(--ink-faint); font-size:12px; }
+.st-stars { color:#FBBF24; letter-spacing:1px; font-size:16px; }
+.st-stars .empty { color: rgba(255,255,255,.20); }
+.st-rev-src { color:var(--ink-faint); font-size:12px; margin:0 0 14px; }
+.st-rev-src a { color:var(--accent1); }
+.st-rev-list { display:grid; gap:12px; grid-template-columns:1fr; }
+.st-rev-card { background:var(--bg-soft); border:1px solid var(--line); border-radius:14px; padding:18px 18px; }
+.st-rev-card .st-rev-stars { margin-bottom:8px; }
+.st-rev-card .txt { color:var(--ink); font-size:14px; line-height:1.9; margin:0 0 10px; }
+.st-rev-card .who { color:var(--ink-faint); font-size:12.5px; }
 .st-cta { text-align:center; margin-top:24px; background: var(--bg-card); border:1px solid var(--line); border-radius:18px; padding:30px 22px; }
 .st-cta h3 { font-size:19px; font-weight:800; margin:0 0 8px; }
 .st-cta p { margin:0 0 18px; }
@@ -151,6 +164,51 @@ STORE_CSS="""
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } }
 """
+
+def star_html(rating):
+    try: full=max(0,min(5,int(round(float(rating)))))
+    except (TypeError,ValueError): full=0
+    s='<span class="st-stars">'+('★'*full)
+    if full<5: s+='<span class="empty">'+('★'*(5-full))+'</span>'
+    return s+'</span>'
+
+def reviews_section(s):
+    """Googleマップ口コミの引用セクション。
+    - google フィールドが無ければ非表示（空文字）
+    - rating のみ / reviews 空 → 評価+件数+リンクの簡易表示
+    - 口コミ本文は原文のまま（HTMLエスケープのみ）。出典必須。Schema には出さない。
+    """
+    g=s.get("google")
+    if not g: return ""
+    place=g.get("place_url"); rating=g.get("rating"); count=g.get("review_count")
+    as_of=g.get("rating_as_of"); reviews=g.get("reviews") or []
+    asof_label=""
+    if as_of:
+        m=re.match(r'(\d{4})-(\d{1,2})', as_of)
+        if m: asof_label=f"※{int(m.group(1))}年{int(m.group(2))}月時点"
+    parts=['<h2>Googleマップの口コミ</h2>']
+    if rating:
+        avg=f'<div class="st-rev-avg">{star_html(rating)}<b>{esc(str(rating))}</b>'
+        if count: avg+=f'<span class="cnt">（{esc(str(count))}件）</span>'
+        if asof_label: avg+=f'<span class="asof">{asof_label}</span>'
+        avg+='</div>'
+        parts.append(avg)
+    if place:
+        parts.append(f'<p class="st-rev-src">出典：<a href="{esc(place)}" target="_blank" rel="noopener">Google マップ</a></p>')
+    else:
+        parts.append('<p class="st-rev-src">出典：Google マップ</p>')
+    if reviews:
+        cards=[]
+        for r in reviews:
+            txt=esc(r.get("text") or "").replace("\n","<br>")
+            who=esc(r.get("author_initial") or "Googleユーザー")
+            date=esc(r.get("date") or "")
+            meta=who+(" ・ "+date if date else "")
+            cards.append(f'<div class="st-rev-card"><div class="st-rev-stars">{star_html(r.get("rating") or 0)}</div><p class="txt">{txt}</p><div class="who">{meta}</div></div>')
+        parts.append('<div class="st-rev-list">'+"\n".join(cards)+'</div>')
+    if place:
+        parts.append(f'<a class="st-ilink" href="{esc(place)}" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>')
+    return "\n".join(parts)
 
 def gen_store_page(s):
     slug=s["slug"]; name=s["name"]; full=f"NEXUSパーソナルジム {name}"
@@ -240,6 +298,8 @@ def gen_store_page(s):
      f'<div class="row"><dt>営業時間</dt><dd>{hours}</dd></div>'
      f'<div class="row"><dt>電話番号</dt><dd>{tel}</dd></div></dl>'
      f'<div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q={map_q}&z=16&output=embed" title="{esc(full)}の地図"></iframe></div>')
+    revs=reviews_section(s)
+    if revs: p.append(revs)
     p.append(f'<h2>{name}のよくある質問</h2>\n{sfaq_html}')
     p.append('<h2 style="font-size:17px;margin-top:36px">よくある質問（全店共通）</h2><p style="font-size:13px;color:var(--ink-faint);margin:0 0 4px">料金・制度などNEXUS全店に共通するご質問です。さらに詳しくは110問のFAQをご覧ください。</p>\n'+cfaq_html)
     p.append('<a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>')

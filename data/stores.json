@@ -47,7 +47,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 1,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "mita",
@@ -71,7 +72,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "shibuya-shinsen",
@@ -95,7 +97,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "sasazuka",
@@ -119,7 +122,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "shirokanedai-takanawadai",
@@ -143,7 +147,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nishi-magome",
@@ -167,7 +172,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nishi-magome-annex",
@@ -191,7 +197,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "magome",
@@ -215,7 +222,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kamata-hasunuma",
@@ -239,7 +247,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kugahara",
@@ -263,7 +272,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kita-senzoku",
@@ -287,7 +297,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nagahara",
@@ -311,7 +322,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ishikawadai",
@@ -335,7 +347,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "musashi-nitta",
@@ -359,7 +372,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "omori-kitaguchi-sanno",
@@ -383,7 +397,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ikegami",
@@ -407,7 +422,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "chidoricho",
@@ -431,7 +447,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "yukigaya-otsuka",
@@ -467,7 +484,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "zoshiki",
@@ -503,7 +521,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "kiyosumi-shirakawa",
@@ -527,7 +546,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "higashi-nihonbashi",
@@ -551,7 +571,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "tsukishima",
@@ -575,7 +596,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "shin-nakano",
@@ -611,7 +633,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "nakano",
@@ -635,7 +658,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "numabukuro",
@@ -659,7 +683,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nakano-fujimicho",
@@ -683,7 +708,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nakano-shimbashi",
@@ -707,7 +733,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kikukawa",
@@ -731,7 +758,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ueno",
@@ -755,7 +783,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nishi-ogikubo",
@@ -791,7 +820,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "taishido",
@@ -815,7 +845,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ikenoue",
@@ -839,7 +870,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "meidaimae",
@@ -863,7 +895,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "okusawa",
@@ -887,7 +920,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "hakusan",
@@ -911,7 +945,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "sendagi",
@@ -935,7 +970,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nishi-kasai",
@@ -959,7 +995,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nerima",
@@ -1000,7 +1037,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "shin-egota",
@@ -1024,7 +1062,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kami-itabashi",
@@ -1048,7 +1087,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "umejima-nishiarai",
@@ -1072,7 +1112,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "yokohama",
@@ -1096,7 +1137,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kishinekoen",
@@ -1120,7 +1162,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "tsunashima",
@@ -1144,7 +1187,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ichigao",
@@ -1168,7 +1212,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "gumyoji",
@@ -1192,7 +1237,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "takata-ekimae",
@@ -1216,7 +1262,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "tokaichiba",
@@ -1240,7 +1287,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "oguchi",
@@ -1276,7 +1324,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "mitsukyo",
@@ -1300,7 +1349,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ofuna",
@@ -1324,7 +1374,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nakamachidai",
@@ -1348,7 +1399,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "hakuraku",
@@ -1389,7 +1441,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": true,
       "priority": 2,
-      "published": true
+      "published": true,
+      "google": null
     },
     {
       "slug": "hiyoshi",
@@ -1413,7 +1466,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kibogaoka",
@@ -1437,7 +1491,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "mitsuzawa-kamicho",
@@ -1461,7 +1516,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "kashimada-shinkawasaki",
@@ -1485,7 +1541,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "noborito",
@@ -1509,7 +1566,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "omiya",
@@ -1533,7 +1591,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ota",
@@ -1557,7 +1616,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "fukui",
@@ -1581,7 +1641,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "fukushima",
@@ -1605,7 +1666,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "toyonaka",
@@ -1629,7 +1691,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "sone",
@@ -1653,7 +1716,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "hattori-tenjin",
@@ -1677,7 +1741,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "sojiji",
@@ -1701,7 +1766,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "ryokuchi-koen",
@@ -1725,7 +1791,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "nagoya-imaike",
@@ -1749,7 +1816,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "motoyama",
@@ -1773,7 +1841,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "tenjin",
@@ -1797,7 +1866,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     },
     {
       "slug": "hirao",
@@ -1821,7 +1891,8 @@
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
       "has_page": false,
       "priority": null,
-      "published": false
+      "published": false,
+      "google": null
     }
   ]
 }
