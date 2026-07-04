@@ -412,11 +412,15 @@ def update_sitemap(store_urls):
     blocks=re.split(r'(?=<url>)', xml)
     kept=[b for b in blocks if keep(b)]
     xml="".join(kept)
-    # insert fresh store entries right before </urlset>
+    # strip the closing tag (it may have been removed with a trailing store block)
+    # so we can always re-append exactly one, keeping the sitemap valid.
+    xml=re.sub(r'\s*</urlset>\s*$', '\n', xml)
+    xml=xml.rstrip()+'\n'
+    # append fresh store entries then the closing tag
     entries="".join(
         f'  <url>\n    <loc>{u}</loc>\n    <lastmod>2026-06-16</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>\n'
         for u in store_urls)
-    xml=xml.replace('</urlset>', entries+'</urlset>')
+    xml=xml+entries+'</urlset>\n'
     open(SITEMAP,"w",encoding="utf-8").write(xml)
 
 def main():
