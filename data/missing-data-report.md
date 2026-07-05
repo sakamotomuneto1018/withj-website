@@ -63,7 +63,7 @@
 | `osaka-fukushima` | 大阪福島店 | 大阪府大阪市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `toyonaka` | 大阪豊中店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `sone` | 大阪豊中・曽根店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
-| `hattori-tenjin` | 服部天神店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
+| `hattori-tenjin` | 大阪服部天神店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `sojiji` | 総持寺店 | 大阪府茨木市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `ryokuchi-koen` | 緑地公園店 | 大阪府吹田市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `nagoya-imaike` | 名古屋今池店 | 愛知県名古屋市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |

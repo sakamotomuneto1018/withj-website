@@ -1865,7 +1865,7 @@
     },
     {
       "slug": "hattori-tenjin",
-      "name": "服部天神店",
+      "name": "大阪服部天神店",
       "prefecture": "大阪府",
       "city": "豊中市",
       "postal": "〒561-0853",
@@ -1873,7 +1873,7 @@
       "stations": null,
       "area_keywords": null,
       "tel": "050-1790-8496",
-      "hours": "8:00〜23:00（不定休）",
+      "hours": "8:00〜23:00",
       "features": [
         "完全個室",
         "手ぶら通いOK",
@@ -1883,9 +1883,9 @@
       ],
       "nearby_landmarks": null,
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
-      "has_page": false,
+      "has_page": true,
       "priority": null,
-      "published": false,
+      "published": true,
       "google": null
     },
     {
