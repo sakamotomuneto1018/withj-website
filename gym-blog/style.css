@@ -624,6 +624,79 @@ img { max-width: 100%; height: auto; display: block; }
 .gb-cta-btn::after { content: '→'; font-size: 16px; transition: 0.3s; }
 .gb-cta-btn:hover::after { transform: translateX(5px); }
 
+/* ========== 注釈・コールアウト・本文内画像 ========== */
+.gb-note-mark {
+  color: var(--accent3);
+  font-weight: 700;
+  font-size: 0.85em;
+  vertical-align: super;
+}
+.gb-annotation {
+  font-size: 12px;
+  color: var(--ink-faint);
+  line-height: 1.7;
+  padding: 12px 16px;
+  border-left: 2px solid var(--line-accent);
+  background: var(--line-soft);
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0 28px;
+}
+.gb-callout {
+  margin: 28px 0;
+  padding: 22px 26px;
+  background: linear-gradient(135deg, rgba(0,240,255,0.06), rgba(255,0,170,0.04));
+  border: 1px solid var(--line-accent);
+  border-radius: 14px;
+}
+.gb-callout p { margin: 0; }
+.gb-inline-img {
+  margin: 30px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.gb-inline-img img { display: block; width: 100%; height: auto; }
+
+/* ========== 口コミ要約カード ========== */
+.gb-voice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 28px 0;
+}
+.gb-voice-card {
+  padding: 22px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.gb-voice-source {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent1);
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.gb-voice-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.gb-voice-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent1);
+  align-self: flex-start;
+}
+.gb-voice-link:hover { color: var(--accent2); }
+@media (max-width: 720px) {
+  .gb-voice-grid { grid-template-columns: 1fr; }
+}
+
 /* ========== 関連記事 ========== */
 .gb-related {
   margin-top: 60px;
