@@ -11,7 +11,7 @@
 <meta property="og:title" content="NEXUSパーソナルジム 乃木坂・赤坂店｜乃木坂・赤坂の完全個室・隠れ家ジム">
 <meta property="og:description" content="乃木坂・赤坂のパーソナルジムならNEXUS乃木坂・赤坂店。東京メトロ千代田線・乃木坂駅・赤坂駅が最寄り、港区の住宅街のマンションの一室にある完全個室の隠れ家ジム。女性会員85%・手ぶらOK・1回4,500円〜。無料体験実施中。">
 <meta property="og:url" content="https://www.withj-inc.com/shops/nogizaka-akasaka/">
-<meta property="og:image" content="https://www.withj-inc.com/images/nexus/gym-bright.jpg">
+<meta property="og:image" content="https://www.withj-inc.com/images/shops/nogizaka-akasaka/nogizaka-akasaka-hidden-gym-interior.webp">
 <meta property="og:site_name" content="株式会社WITHJ">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
   "@context": "https://schema.org",
   "@type": "ExerciseGym",
   "name": "NEXUSパーソナルジム 乃木坂・赤坂店",
-  "image": "https://www.withj-inc.com/images/nexus/gym-bright.jpg",
+  "image": "https://www.withj-inc.com/images/shops/nogizaka-akasaka/nogizaka-akasaka-hidden-gym-interior.webp",
   "address": {
     "@type": "PostalAddress",
     "postalCode": "107-0052",
@@ -179,37 +179,62 @@
 .st-rev-src { color:var(--ink-faint); font-size:12px; margin:0 0 14px; }
 .st-rev-src a { color:var(--accent1); }
 .st-rev-list { display:grid; gap:12px; grid-template-columns:1fr; }
+.st-rev-solo { margin:6px 0 2px; }
 .st-rev-card { background:var(--bg-soft); border:1px solid var(--line); border-radius:14px; padding:18px 18px; }
 .st-rev-card .st-rev-stars { margin-bottom:8px; }
 .st-rev-card .txt { color:var(--ink); font-size:14px; line-height:1.9; margin:0 0 10px; }
 .st-rev-card .who { color:var(--ink-faint); font-size:12.5px; }
+.st-rev-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--accent1); background:var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:3px 10px; margin-bottom:10px; }
+.st-rev-summary { display:flex; align-items:baseline; flex-wrap:wrap; gap:10px 12px; margin:6px 0 12px; padding:16px 18px; background:var(--bg-card); border:1px solid var(--line); border-radius:16px; }
+.st-rev-summary .big { font-size:34px; font-weight:900; color:var(--ink); line-height:1; }
+.st-rev-summary .st-stars { font-size:20px; }
+.st-rev-summary .cnt { color:var(--ink-soft); font-size:14px; font-weight:700; }
+.st-rev-summary .asof { color:var(--ink-faint); font-size:12px; }
 .st-cta { text-align:center; margin-top:24px; background: var(--bg-card); border:1px solid var(--line); border-radius:18px; padding:30px 22px; }
 .st-cta h3 { font-size:19px; font-weight:800; margin:0 0 8px; }
 .st-cta p { margin:0 0 18px; }
 .st-cta-btn { display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:16px; padding:16px 34px; border-radius:999px; text-decoration:none; }
 .st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
-@media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } }
+/* --- 画像（ビジュアル強化） --- */
+.st-hero-fig { margin:12px 0 4px; }
+.st-hero-fig img { width:100%; height:auto; max-height:460px; object-fit:cover; object-position:center; border-radius:16px; display:block; border:1px solid var(--line); }
+.st-fig { margin:20px 0 6px; }
+.st-fig img { width:100%; height:auto; border-radius:14px; display:block; border:1px solid var(--line); }
+.st-fig figcaption { color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:8px; text-align:center; }
+.st-fig--portrait img { max-width:400px; margin:0 auto; }
+.st-fig-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0 6px; }
+.st-fig-2 img { width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; border-radius:14px; display:block; border:1px solid var(--line); }
+.st-fig-2 figcaption { grid-column:1/-1; color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:2px; text-align:center; }
+@media (max-width:600px){ .st-fig-2 { grid-template-columns:1fr; } .st-fig-2 img { aspect-ratio:16/10; } }
+@media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } }
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">乃木坂・赤坂店</li></ol></nav>
 <main class="st-wrap">
+<figure class="st-hero-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-hidden-gym-interior.webp" width="1200" height="2122" alt="乃木坂・赤坂の完全個室パーソナルジムNEXUS乃木坂・赤坂店の、マンションの一室にある隠れ家のような静かな内観" loading="eager" fetchpriority="high"></figure>
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都港区</p>
 <h1>NEXUSパーソナルジム 乃木坂・赤坂店｜<span class="ac">乃木坂・赤坂</span>の完全個室・隠れ家ジム</h1>
 <p class="st-lead">東京メトロ千代田線・乃木坂駅・赤坂駅が最寄り。港区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。女性会員85%、運動初心者の30〜40代女性がこっそり通っています。</p>
 <ul class="st-feature-list"><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>運動初心者歓迎</li><li>AI食事指導</li></ul>
 <h2>この店舗の特徴</h2>
 <p>NEXUS乃木坂・赤坂店は、東京都港区の落ち着いた住宅街に佇む完全個室のパーソナルジム。大きな看板を出していないため、乃木坂・赤坂・港区・六本木エリアで「人目を気にせず綺麗になりたい」という30〜40代女性に選ばれています。エリアには国立新美術館、東京ミッドタウン、赤坂サカスなどがあり、ウェア・タオル・プロテインまで無料提供の手ぶら通いOKで、忙しい毎日でもバッグひとつで続けられます。</p>
+<figure class="st-fig-2"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-first-visit.webp" width="1200" height="678" alt="乃木坂・赤坂の完全個室パーソナルジムに初めて来店した女性をトレーナーが笑顔で出迎える様子" loading="lazy"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-counseling.webp" width="800" height="1415" alt="乃木坂・赤坂店の完全個室でトレーナーが女性会員に丁寧にカウンセリングする様子" loading="lazy"><figcaption>初めての来店も、完全個室だから安心。まずはカウンセリングからじっくりと。</figcaption></figure>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">最初は緊張していましたが、トレーナーが話をよく聞いてくれて心地よい距離感でした。清潔で落ち着いた雰囲気の完全個室なので、女性でも通いやすいと感じています。</p><div class="who">乃木坂・赤坂店に通う女性会員 ・ Google口コミより（内容を要約）</div></div></div>
 <h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-couple-semi-personal.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムで夫婦セミパーソナルトレーニングを受ける様子" loading="lazy"><figcaption>ご夫婦・パートナーと一緒に通えるセミパーソナルも人気です。</figcaption></figure>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">夫婦で無料体験に参加して、そのまま入会しました。トレーナーが丁寧で話しやすく、信頼関係ができたので、二人とも無理なく通い続けられています。</p><div class="who">ご夫婦で利用 ・ Google口コミより（内容を要約）</div></div></div>
+<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-tebura-checkin.webp" width="1100" height="622" alt="乃木坂・赤坂店で無料レンタルのウェアやタオルを受け取り、仕事帰りに手ぶらで来店する女性" loading="lazy"><figcaption>ウェア・タオル・プロテインまで無料。仕事帰りに手ぶらでどうぞ。</figcaption></figure>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">通って半年でベンチプレス90kgを達成しました。トレーニングと食事管理の両立で身体が引き締まり、自信がつきました。ウェアも無料で、仕事帰りに手ぶらで通えるのが便利です。</p><div class="who">30代男性・通って半年 ・ Google口コミより（内容を要約）</div></div></div>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 乃木坂・赤坂店</dd></div><div class="row"><dt>住所</dt><dd>〒107-0052<br>東京都港区赤坂8-12-16 NOZY赤坂601</dd></div><div class="row"><dt>最寄り駅</dt><dd>東京メトロ千代田線　乃木坂駅・赤坂駅</dd></div><div class="row"><dt>営業時間</dt><dd>7:00〜23:00（不定休）</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8488</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E8%B5%A4%E5%9D%828-12-16%20NOZY%E8%B5%A4%E5%9D%82601&z=16&output=embed" title="NEXUSパーソナルジム 乃木坂・赤坂店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
-<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">初めてパーソナルジムに行きましたが、丁寧に教えていただけたので、初心者の私でも筋トレを継続でき、ダイエットに成功しました。痩せたいけど筋肉はつけすぎたくない、、という女性の悩みに正確なアドバイスをしてくださるジムでした。ウェアも無料レンタルできるので、仕事帰りに手ぶらで通えるのが非常に便利でおすすめです！<br>赤坂駅からも乃木坂駅からも近くてアクセスも良かったです！</p><div class="who">H.さん ・ 2025-01</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">通い始めてしばらく経ちますが、今も継続してお世話になっています。最初は少し緊張していましたが、トレーナーさんがこちらの話を丁寧に聞いてくれて、無理のない距離感で接してくれたので安心して任せることができました。トレーニング内容も分かりやすく、その日の体調に合わせて調整してくれるのがありがたいです。清潔感があり落ち着いた雰囲気なので、女性でも通いやすいジムだと思います。今では通うのが生活の一部になっています。</p><div class="who">Y.K.さん</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">産後なかなか痩せず通い始めました。親身になって的確なアドバイスも嬉しいポイントです！少しずつですが、変化も見られてきました。通うのが楽しみになっています。これからも通いたいと思っています。</p><div class="who">Y.N.さん ・ 2024-03</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+<h2>お客様の声（Google口コミ）</h2>
+<p>NEXUS乃木坂・赤坂店はGoogle口コミ★5.0（102件）。手ぶらで通える利便性と、女性が通いやすい完全個室の環境が、赤坂・乃木坂エリアの会員から評価されています。</p>
+<div class="st-rev-summary"><span class="big">5.0</span><span class="st-stars">★★★★★</span><span class="cnt">Google口コミ 102件</span><span class="asof">（2026年7月時点）</span></div>
+<p class="st-rev-src">実際のGoogleマップの口コミを内容を忠実に要約して掲載しています。原文と件数・評価は<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">Googleビジネスプロフィール</a>でご確認いただけます。個々の口コミは、このページの各セクションの直下に掲載しています。</p>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">口コミをすべて見る（Googleマップ）</a>
+<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-postpartum-mom.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムで産後の女性がお子さま連れでトレーニングする様子" loading="lazy"><figcaption>産後のママも、お子さま連れで無理なく通えます。</figcaption></figure>
 <h2>乃木坂・赤坂店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店はどこにありますか？最寄り駅は？<span class="ic">+</span></summary><div class="st-faq-a">住所は〒107-0052 東京都港区赤坂8-12-16 NOZY赤坂601です。最寄りは東京メトロ千代田線の乃木坂駅・赤坂駅。港区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂エリアで初心者向けのパーソナルジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">乃木坂・赤坂店は、運動が初めての30〜40代女性が中心の店舗です。会員の約6割が運動経験ほぼゼロからのスタート。完全個室でトレーナーがマンツーマン指導するので、周りの目を気にせず自分のペースで始められます。</div></details>
@@ -218,6 +243,8 @@
   <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の予約はどうやって取りますか？<span class="ic">+</span></summary><div class="st-faq-a">まずはWEBから無料体験をご予約ください。体験ではカウンセリング・姿勢チェック・実際のトレーニングを行います。入会後の各セッションも予約制で、6時間前まで無料でキャンセル・変更が可能です。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂周辺で女性が通いやすいジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">乃木坂・赤坂店は女性会員85%。港区の住宅街にあり、乃木坂・赤坂エリアにお住まい・お勤めの女性がこっそり通っています。完全個室・手ぶらOKで、女性が通いやすい環境を整えています。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の周辺には何がありますか？<span class="ic">+</span></summary><div class="st-faq-a">エリアには国立新美術館、東京ミッドタウン、赤坂サカスなどがあります。港区の落ち着いた住宅街に位置する、看板を控えめにした隠れ家ジムです。</div></details>
+<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-window-break.webp" width="1100" height="622" alt="乃木坂・赤坂店の窓辺の植物のそばでドリンク休憩する女性会員とトレーナー" loading="lazy"></figure>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">運動不足の解消を目的に通い始めました。肩周りがスッキリして体力も向上し、日常生活で疲れにくくなったのを実感しています。</p><div class="who">健康維持・運動不足解消が目的の会員 ・ Google口コミより（内容を要約）</div></div></div>
 <h2 style="font-size:17px;margin-top:36px">よくある質問（全店共通）</h2><p style="font-size:13px;color:var(--ink-faint);margin:0 0 4px">料金・制度などNEXUS全店に共通するご質問です。さらに詳しくは110問のFAQをご覧ください。</p>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>料金はいくらですか？<span class="ic">+</span></summary><div class="st-faq-a">ライト（30分）月4回18,000円〜、ベーシック（60分）月4回34,000円〜など。1回あたり4,500円〜から始められます（すべて税込）。詳しくは料金プランをご覧ください。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>手ぶらで通えますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェア・水・タオル・プロテインまで無料提供で手ぶら通いOK。仕事帰りにバッグひとつで通えます。</div></details>
@@ -227,6 +254,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。30〜40代女性を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-after-training.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムでトレーニング後にプロテインで乾杯し達成感を分かち合う様子" loading="lazy"><figcaption>「できた」を、一緒に。乃木坂・赤坂で、こっそり綺麗に。</figcaption></figure>
 <div class="st-cta"><h3>乃木坂・赤坂で、こっそり綺麗になりませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>
