@@ -65,7 +65,7 @@
 | `sone` | 大阪豊中・曽根店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `hattori-tenjin` | 大阪服部天神店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `sojiji` | 大阪茨木市・総持寺店 | 大阪府茨木市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
-| `ryokuchi-koen` | 緑地公園店 | 大阪府吹田市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
+| `ryokuchi-koen` | 大阪緑地公園店 | 大阪府吹田市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `nagoya-imaike` | 名古屋今池店 | 愛知県名古屋市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `motoyama` | 本山店 | 愛知県名古屋市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `tenjin` | 天神店 | 福岡県中央区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
