@@ -15,15 +15,21 @@
 <meta property="og:title" content="パーソナルジムのよくある質問 | NEXUS Personal Gym">
 <meta property="og:description" content="隠れ家ジム「NEXUS Personal Gym」が、30〜40代女性のパーソナルジムの料金・通い方・続け方など気になる質問110問に正直にお答え。女性会員比率85%の現場感覚で解説します。">
 <meta property="og:url" content="https://www.withj-inc.com/faq/">
-<meta property="og:image" content="https://www.withj-inc.com/images/nexus/gym-bright.jpg">
+<meta property="og:image" content="https://www.withj-inc.com/images/faq/hero-faq.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="株式会社WITHJ">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.withj-inc.com/images/faq/hero-faq.jpg">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "name": "パーソナルジムのよくある質問",
+  "url": "https://www.withj-inc.com/faq/",
+  "dateModified": "2026-07-05",
   "mainEntity": [
     {
       "@type": "Question",
@@ -630,7 +636,7 @@
       "name": "朝何時から通えますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ジムによりますが、朝7時オープンが一般的です。早朝6時台から営業しているジムもあり、出勤前トレーニングをする30〜40代女性は増えています。NEXUS Personal Gymは朝8時〜夜23時まで予約でき、住宅街のマンションの一室にある「隠れ家ジム」として生活圏内で無理なく通える時間設計。店舗ごとに営業時間が異なるので、近隣店舗を直接確認してください。"
+        "text": "ジムによりますが、朝7時オープンが一般的です。早朝6時台から営業しているジムもあり、出勤前トレーニングをする30〜40代女性は増えています。NEXUS Personal Gymは朝8時〜夜23時まで予約でき、住宅街のマンションの一室にある「隠れ家ジム」として生活圏内で無理なく通える時間設計。NEXUSは全店舗共通で毎日朝8時〜夜23時まで営業していますので、朝活にも仕事帰りにも安心して通えます。"
       }
     },
     {
@@ -830,7 +836,7 @@
       "name": "NEXUS Personal Gymの営業時間は？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "朝8時〜夜23時まで予約可能です。早朝の出勤前、仕事帰りの夜間、どちらも対応します。住宅街のマンションの一室にある「隠れ家ジム」として、生活圏内で無理なく通える時間設計です。共働きの女性・残業の多い方にも続けやすい仕組みになっています。"
+        "text": "全店舗共通で毎日朝8時〜夜23時まで営業（年中無休）、予約も同時間帯で可能です。早朝の出勤前、仕事帰りの夜間、どちらも対応します。住宅街のマンションの一室にある「隠れ家ジム」として、生活圏内で無理なく通える時間設計です。共働きの女性・残業の多い方にも続けやすい仕組みになっています。"
       }
     },
     {
@@ -970,6 +976,35 @@
   max-width: 820px;
   margin: 0 0 22px;
 }
+/* Hero & category banner images */
+.faq-hero-img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 26px 0 8px;
+}
+.faq-cat-banner {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 0 22px;
+}
+/* Category-end internal link */
+.faq-cat-links {
+  margin: 4px 0 8px;
+  padding: 14px 18px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+.faq-cat-links a { color: var(--accent1); font-weight: 700; }
 
 /* Category jump nav */
 .faq-cat-nav {
@@ -1221,6 +1256,8 @@
   .faq-section-title { font-size: 17px; }
   .faq-item summary { font-size: 14px; }
   .faq-item-body { padding-left: 38px; font-size: 13.5px; }
+  .faq-hero-img { height: 180px; border-radius: 12px; }
+  .faq-cat-banner { height: 130px; }
   /* Category chips: horizontal scroll on mobile */
   .faq-cat-nav-inner { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 12px 14px; gap: 8px; }
   .faq-cat-nav-inner::-webkit-scrollbar { display: none; }
@@ -1251,6 +1288,11 @@
 <section class="faq-hero">
   <div class="tag">FAQ — 110 Questions</div>
   <h1>パーソナルジムの<br><span class="accent">よくある質問</span></h1>
+  <picture>
+    <source srcset="../images/faq/hero-faq.webp" type="image/webp">
+    <img src="../images/faq/hero-faq.jpg" alt="NEXUSパーソナルジムのよくある質問 完全個室でのトレーニング風景" class="faq-hero-img" width="1200" height="630" loading="eager" fetchpriority="high">
+  </picture>
+  <p class="faq-freshness" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.15em;font-size:12px;color:var(--ink-faint);margin:0 0 14px;">110 QUESTIONS ・ 最終更新: 2026年7月</p>
   <p>30〜40代女性が気になる質問を、業界の中の人が正直にお答えします。<br>
   NEXUS Personal Gymは住宅街のマンションの一室で営業する「隠れ家ジム」。全国71店舗（80店舗までオープン予定）の地域密着型パーソナルジムで実際によく聞かれた質問から、女性会員比率85%の現場感覚を交えて110問を厳選。業界でも珍しい顧客本位のNEXUSの姿勢を、各回答に込めています。</p>
 </section>
@@ -1288,6 +1330,10 @@
     <div class="faq-section-count">15 Questions</div>
   </div>
 
+  <picture>
+    <source srcset="../images/faq/cat-a-basic.webp" type="image/webp">
+    <img src="../images/faq/cat-a-basic.jpg" alt="パーソナルジム初回来店時のカウンセリングの様子" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
   <p class="faq-section-lead">パーソナルジムを初めて検討する30〜40代女性の方に向けて、業界の中の人として正直にお答えします。NEXUS Personal Gymは「隠れ家ジム」として、住宅街のマンションの一室で、地域の皆様にこっそり通っていただけるパーソナルジムです。</p>
 
   <details class="faq-item" id="q1">
@@ -1376,6 +1422,11 @@
     <div class="faq-section-count">10 Questions</div>
   </div>
 
+  <picture>
+    <source srcset="../images/faq/cat-b-price.webp" type="image/webp">
+    <img src="../images/faq/cat-b-price.jpg" alt="パーソナルジムの料金プラン相談" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
+
   <details class="faq-item" id="q16">
     <summary><span class="q-label">Q</span><span class="q-text">パーソナルジムの料金相場はいくらですか？</span><span class="q-icon">+</span></summary>
     <div class="faq-item-body">2026年現在、東京エリアのパーソナルジム相場は<strong>月額3万〜10万円が中心</strong>です。例えばNEXUS Personal Gymの場合、1回60分のベーシックコース月4回で34,000円、月8回で64,800円（税込）。30分の短時間コースなら月4回18,000円から始められます。<strong>ご近所の住宅街の一角にある「街に溶け込む小さなジム」</strong>として固定費を抑え、地域密着型で通いやすい価格を実現しています。</div>
@@ -1425,6 +1476,8 @@
     <summary><span class="q-label">Q</span><span class="q-text">複数店舗ある場合、いつもと違う店舗で受けられますか？</span><span class="q-icon">+</span></summary>
     <div class="faq-item-body">ジムによります。フランチャイズ展開している大規模ジムなら相互利用OKのところがあります。例えばNEXUS Personal Gymは<strong>全国71店舗（80店舗までオープン予定）で相互利用が可能</strong>。地域密着型パーソナルジムでありながら、出張先や旅行先でも同じ料金でトレーニングが受けられる仕組みです。</div>
   </details>
+
+  <p class="faq-cat-links">▶ 料金プラン・割引が気になる方は、まずは<a href="https://www.nexus-gym.com/adp/?cid=c01ksgx8pvtpejjv0hhhc2k5v7s&p=pidbwutz6pb9" target="_blank" rel="noopener">NEXUSパーソナルジムの無料体験を予約</a>して、実際の料金や契約内容を確認するのがおすすめです（手ぶらOK・勧誘なし）。</p>
 </section>
 
 <!-- C. 初心者の不安 -->
@@ -1434,6 +1487,11 @@
     <div><div class="faq-section-title">初心者の不安</div></div>
     <div class="faq-section-count">15 Questions</div>
   </div>
+
+  <picture>
+    <source srcset="../images/faq/cat-c-beginner.webp" type="image/webp">
+    <img src="../images/faq/cat-c-beginner.jpg" alt="運動初心者向けのマンツーマンストレッチ指導" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
 
   <details class="faq-item" id="q26">
     <summary><span class="q-label">Q</span><span class="q-text">運動経験ゼロでも大丈夫ですか？</span><span class="q-icon">+</span></summary>
@@ -1519,9 +1577,14 @@
     <div class="faq-section-count">10 Questions</div>
   </div>
 
+  <picture>
+    <source srcset="../images/faq/cat-d-diet.webp" type="image/webp">
+    <img src="../images/faq/cat-d-diet.jpg" alt="ダイエット目的のヒップアップトレーニング" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
+
   <details class="faq-item" id="q41">
     <summary><span class="q-label">Q</span><span class="q-text">3ヶ月で何kg痩せられますか？</span><span class="q-icon">+</span></summary>
-    <div class="faq-item-body">30〜40代女性で現実的な減量は<strong>3ヶ月で-3〜5kg</strong>です。「3ヶ月で-10kg」を打ち出すジムもありますが、リバウンドリスクが高く、おすすめしません。-3kgでも見た目はしっかり変わります。NEXUS Personal Gymは<strong>マイペースに続けられる方針</strong>方針で、続けながら綺麗になる現実的な目標を一緒に設定します。</div>
+    <div class="faq-item-body">30〜40代女性で現実的な減量は<strong>3ヶ月で-3〜5kg</strong>です。「3ヶ月で-10kg」を打ち出すジムもありますが、リバウンドリスクが高く、おすすめしません。-3kgでも見た目はしっかり変わります。NEXUS Personal Gymは<strong>マイペースに続けられる方針</strong>で、続けながら綺麗になる現実的な目標を一緒に設定します。</div>
   </details>
 
   <details class="faq-item" id="q42">
@@ -1577,6 +1640,11 @@
     <div><div class="faq-section-title">食事・生活</div></div>
     <div class="faq-section-count">15 Questions</div>
   </div>
+
+  <picture>
+    <source srcset="../images/faq/cat-e-meal.webp" type="image/webp">
+    <img src="../images/faq/cat-e-meal.jpg" alt="無理のない食事指導による健康的な食事例" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
 
   <details class="faq-item" id="q51">
     <summary><span class="q-label">Q</span><span class="q-text">食事制限はありますか？どのくらい厳しいですか？</span><span class="q-icon">+</span></summary>
@@ -1662,6 +1730,10 @@
     <div class="faq-section-count">10 Questions</div>
   </div>
 
+  <picture>
+    <source srcset="../images/faq/cat-f-mama.webp" type="image/webp">
+    <img src="../images/faq/cat-f-mama.jpg" alt="子連れで通える完全個室ジムでのトレーニング" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
   <p class="faq-section-lead">30〜40代の働くママ・育休中のママに人気のNEXUS Personal Gym。住宅街のマンションの一室で、生活圏内で無理なく通える「隠れ家ジム」として、産後のママに支持されています。</p>
 
   <details class="faq-item" id="q66">
@@ -1713,6 +1785,8 @@
     <summary><span class="q-label">Q</span><span class="q-text">仕事復帰までの3ヶ月でどこまで変われますか？</span><span class="q-icon">+</span></summary>
     <div class="faq-item-body">週1〜2回ペースで、<strong>体重-3〜5kg・体脂肪率-3〜5%が現実的なライン</strong>です。「復帰時にデニムが似合う」「ジャケットが綺麗に着られる」レベルの変化なら、3ヶ月で十分達成可能。NEXUS Personal Gymは街に溶け込む立地にある「隠れ家ジム」で、育休復帰前にこっそり通われる方が増えています。</div>
   </details>
+
+  <p class="faq-cat-links">▶ 子連れOK・産後ママに人気の店舗例: <a href="../shops/yukigaya-otsuka/">雪が谷大塚店（東京・大田区）のパーソナルジム詳細</a>をチェック。ベビーカーでこっそり通える隠れ家ジムです。</p>
 </section>
 
 <!-- G. 通い方・時間帯 -->
@@ -1723,9 +1797,14 @@
     <div class="faq-section-count">10 Questions</div>
   </div>
 
+  <picture>
+    <source srcset="../images/faq/cat-g-schedule.webp" type="image/webp">
+    <img src="../images/faq/cat-g-schedule.jpg" alt="仕事帰りのトレーニング後の休憩" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
+
   <details class="faq-item" id="q76">
     <summary><span class="q-label">Q</span><span class="q-text">朝何時から通えますか？</span><span class="q-icon">+</span></summary>
-    <div class="faq-item-body">ジムによりますが、<strong>朝7時オープンが一般的</strong>です。早朝6時台から営業しているジムもあり、出勤前トレーニングをする30〜40代女性は増えています。NEXUS Personal Gymは朝8時〜夜23時まで予約でき、住宅街のマンションの一室にある「隠れ家ジム」として生活圏内で無理なく通える時間設計。店舗ごとに営業時間が異なるので、近隣店舗を直接確認してください。</div>
+    <div class="faq-item-body">ジムによりますが、<strong>朝7時オープンが一般的</strong>です。早朝6時台から営業しているジムもあり、出勤前トレーニングをする30〜40代女性は増えています。NEXUS Personal Gymは朝8時〜夜23時まで予約でき、住宅街のマンションの一室にある「隠れ家ジム」として生活圏内で無理なく通える時間設計。<strong>NEXUSは全店舗共通で毎日朝8時〜夜23時まで営業しています</strong>ので、朝活にも仕事帰りにも安心して通えます。</div>
   </details>
 
   <details class="faq-item" id="q77">
@@ -1782,6 +1861,10 @@
     <div class="faq-section-count">20 Questions</div>
   </div>
 
+  <picture>
+    <source srcset="../images/faq/cat-h-nexus.webp" type="image/webp">
+    <img src="../images/faq/cat-h-nexus.jpg" alt="NEXUSパーソナルジムのマンツーマン指導風景" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
   <p class="faq-section-lead">NEXUS Personal Gymは、全国71店舗（80店舗までオープン予定）を展開する「隠れ家ジム」。住宅街のマンションの一室で、地域密着型のパーソナルジムとして、30〜40代女性を中心に通っていただいています。業界でも珍しく顧客本位の設計で、女性会員比率85%を誇ります。</p>
   <p style="margin:2px 0 8px"><a href="../shops/" style="display:inline-flex;align-items:center;gap:6px;color:var(--accent1);font-size:14px;font-weight:700;text-decoration:none;border-bottom:1px solid var(--line-accent);padding-bottom:2px">お近くのNEXUS店舗を探す（全国71店舗）→</a></p>
 
@@ -1862,7 +1945,7 @@
 
   <details class="faq-item" id="q106">
     <summary><span class="q-label">Q</span><span class="q-text">NEXUS Personal Gymの営業時間は？</span><span class="q-icon">+</span></summary>
-    <div class="faq-item-body">朝8時〜夜23時まで予約可能です。早朝の出勤前、仕事帰りの夜間、どちらも対応します。住宅街のマンションの一室にある「隠れ家ジム」として、<strong>生活圏内で無理なく通える</strong>時間設計です。共働きの女性・残業の多い方にも続けやすい仕組みになっています。</div>
+    <div class="faq-item-body"><strong>全店舗共通で毎日朝8時〜夜23時まで営業（年中無休）</strong>、予約も同時間帯で可能です。早朝の出勤前、仕事帰りの夜間、どちらも対応します。住宅街のマンションの一室にある「隠れ家ジム」として、<strong>生活圏内で無理なく通える</strong>時間設計です。共働きの女性・残業の多い方にも続けやすい仕組みになっています。</div>
   </details>
 
   <details class="faq-item" id="q107">
@@ -1884,6 +1967,8 @@
     <summary><span class="q-label">Q</span><span class="q-text">NEXUS Personal Gymはどんな人に向いていませんか？</span><span class="q-icon">+</span></summary>
     <div class="faq-item-body">正直にお答えすると、<strong>筋トレガチ勢の方には向かないかもしれません</strong>。バーベルを使った高負荷トレーニングや、ボディビル系の本格的なメニューを求める方は、24時間ジム+パーソナルトレーニング併用の方がフィットします。NEXUSは住宅街のマンションの一室にある「隠れ家ジム」として、「無理なく続けて綺麗になりたい」30〜40代女性向けに設計されているジムです。</div>
   </details>
+
+  <p class="faq-cat-links">▶ NEXUSパーソナルジムをもっと知りたい方へ: <a href="../shops/">全国71店舗の店舗一覧</a> ／ <a href="../gym-blog/experience/">会員の体験談・口コミ記事</a> をご覧ください。全店舗の口コミまとめ記事も順次公開予定です。</p>
 </section>
 
 <!-- I. その他 -->
@@ -1893,6 +1978,11 @@
     <div><div class="faq-section-title">その他</div></div>
     <div class="faq-section-count">5 Questions</div>
   </div>
+
+  <picture>
+    <source srcset="../images/faq/cat-i-other.webp" type="image/webp">
+    <img src="../images/faq/cat-i-other.jpg" alt="トレーニング後の無料プロテインサービス" class="faq-cat-banner" width="1200" height="400" loading="lazy">
+  </picture>
 
   <details class="faq-item" id="q96">
     <summary><span class="q-label">Q</span><span class="q-text">服装はジャージで大丈夫ですか？</span><span class="q-icon">+</span></summary>
