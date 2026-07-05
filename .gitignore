@@ -3,3 +3,6 @@
 node_modules/
 .env
 *.log
+
+# 画像素材の原本置き場（作業用ローカルのみ・本番はimages/配下の最適化webpを使用）
+nexus-sozai/
