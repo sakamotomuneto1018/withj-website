@@ -1789,8 +1789,8 @@
       "google": null
     },
     {
-      "slug": "fukushima",
-      "name": "福島店",
+      "slug": "osaka-fukushima",
+      "name": "大阪福島店",
       "prefecture": "大阪府",
       "city": "大阪市",
       "postal": "〒553-0003",
@@ -1798,7 +1798,7 @@
       "stations": null,
       "area_keywords": null,
       "tel": "050-1790-8496",
-      "hours": "8:00〜23:00（不定休）",
+      "hours": "8:00〜23:00",
       "features": [
         "完全個室",
         "手ぶら通いOK",
@@ -1808,9 +1808,9 @@
       ],
       "nearby_landmarks": null,
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
-      "has_page": false,
+      "has_page": true,
       "priority": null,
-      "published": false,
+      "published": true,
       "google": null
     },
     {

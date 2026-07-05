@@ -60,7 +60,7 @@
 | `omiya` | 大宮店 | 埼玉県さいたま市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `ota` | 太田店 | 群馬県太田市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `fukui` | 福居店 | 栃木県足利市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
-| `fukushima` | 福島店 | 大阪府大阪市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
+| `osaka-fukushima` | 大阪福島店 | 大阪府大阪市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `toyonaka` | 豊中店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `sone` | 曽根店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `hattori-tenjin` | 服部天神店 | 大阪府豊中市 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
