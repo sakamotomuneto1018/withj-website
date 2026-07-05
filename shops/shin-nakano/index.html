@@ -11,7 +11,7 @@
 <meta property="og:title" content="NEXUSパーソナルジム 新中野店｜新中野の完全個室・隠れ家ジム">
 <meta property="og:description" content="新中野のパーソナルジムならNEXUS新中野店。東京メトロ丸ノ内線・新中野駅が最寄り、中野区の住宅街のマンションの一室にある完全個室の隠れ家ジム。女性会員85%・手ぶらOK・1回4,500円〜。無料体験実施中。">
 <meta property="og:url" content="https://www.withj-inc.com/shops/shin-nakano/">
-<meta property="og:image" content="https://www.withj-inc.com/images/nexus/gym-bright.jpg">
+<meta property="og:image" content="https://www.withj-inc.com/images/shops/shin-nakano/og-shin-nakano.jpg">
 <meta property="og:site_name" content="株式会社WITHJ">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +20,7 @@
   "@context": "https://schema.org",
   "@type": "ExerciseGym",
   "name": "NEXUSパーソナルジム 新中野店",
-  "image": "https://www.withj-inc.com/images/nexus/gym-bright.jpg",
+  "image": "https://www.withj-inc.com/images/shops/shin-nakano/og-shin-nakano.jpg",
   "address": {
     "@type": "PostalAddress",
     "postalCode": "164-0012",
@@ -37,7 +37,26 @@
     "name": "NEXUS Personal Gym",
     "description": "全国71店舗（80店舗までオープン予定）の完全個室パーソナルジム"
   },
-  "openingHours": "Mo-Su 08:00-23:00"
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "08:00",
+      "closes": "13:00"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -71,10 +90,10 @@
     },
     {
       "@type": "Question",
-      "name": "新中野店の営業時間は？仕事帰りでも通えますか？",
+      "name": "新中野店の営業時間は？朝や夜も通えますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "営業時間は8:00〜23:00です。朝の出勤前も、仕事帰りの夜間も通えます。手ぶら通いOKなので、バッグひとつで立ち寄れます。"
+        "text": "営業時間は曜日で異なります。月・火・木・金は8:00〜23:00、土曜は8:00〜17:00、日曜は8:00〜13:00で、水曜は定休日です。平日は朝8時から夜23時まで対応しているので、出社前の朝トレも、丸ノ内線で新宿方面から戻ってからの夜トレも通えます。"
       }
     },
     {
@@ -91,6 +110,30 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "新中野店は女性会員85%。中野区の住宅街にあり、新中野・中野エリアにお住まい・お勤めの女性がこっそり通っています。完全個室・手ぶらOKで、女性が通いやすい環境を整えています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新宿で通うジムが続かなかったのですが、新中野店との違いは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "新中野は丸ノ内線で新宿からわずか5分。新宿の大型ジムは器具の順番待ちや人の多さで通わなくなりがちですが、新中野店は完全個室・完全予約制のマンツーマンなので、待ち時間ゼロで自分のためだけの時間に集中できます。会員の約6割が運動経験ほぼゼロからのスタートで、大型ジムで続かなかった方が「これなら続く」と乗り換えています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新中野で30分だけの短時間パーソナルはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。ライトコースは30分×月4回で18,000円（税込・1回4,500円）。1回30分に絞った時短トレーニングなので、忙しい方でも予定を組みやすく、月4回のペースで無理なく身体づくりを続けられます。フォームを見ながらの完全マンツーマンなので、短時間でも効率よく効かせられます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "出社前の朝8時からトレーニングできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。月・火・木・金・土・日はいずれも朝8:00から営業しています（水曜定休）。丸ノ内線で新宿方面へ出勤する前に、朝一番でトレーニングしてから出社する女性会員も多くいらっしゃいます。手ぶら通いOKなので、そのまま出社できます。"
       }
     }
   ]
@@ -181,35 +224,63 @@
 .st-cta-btn { display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:16px; padding:16px 34px; border-radius:999px; text-decoration:none; }
 .st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
-@media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } }
+/* --- 画像（ビジュアル強化） --- */
+.st-hero-fig { margin:12px 0 4px; }
+.st-hero-fig img { width:100%; height:auto; max-height:460px; object-fit:cover; object-position:center; border-radius:16px; display:block; border:1px solid var(--line); }
+.st-hero-fig figcaption { color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:8px; text-align:center; }
+.st-fig { margin:20px 0 6px; }
+.st-fig img { width:100%; height:auto; border-radius:14px; display:block; border:1px solid var(--line); }
+.st-fig figcaption { color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:8px; text-align:center; }
+/* --- 口コミ強化 --- */
+.st-rev-solo { margin:6px 0 2px; }
+.st-rev-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--accent1); background:var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:3px 10px; margin-bottom:10px; }
+.st-rev-summary-txt { color:var(--ink-soft); font-size:14.5px; line-height:1.95; margin:0 0 10px; }
+@media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } }
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">新中野店</li></ol></nav>
 <main class="st-wrap">
+<figure class="st-hero-fig"><picture><source srcset="../../images/shops/shin-nakano/hero-hideaway.webp" type="image/webp"><img src="../../images/shops/shin-nakano/hero-hideaway.jpg" width="1200" height="2122" alt="新中野駅近くのNEXUSパーソナルジム完全個室内観" loading="eager" fetchpriority="high"></picture><figcaption>新宿まで丸ノ内線5分の新中野に、大型ジムとは真逆の完全個室。</figcaption></figure>
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都中野区</p>
 <h1>NEXUSパーソナルジム 新中野店｜<span class="ac">新中野</span>の完全個室・隠れ家ジム</h1>
 <p class="st-lead">東京メトロ丸ノ内線・新中野駅が最寄り。中野区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。女性会員85%、運動初心者の30〜40代女性がこっそり通っています。</p>
 <ul class="st-feature-list"><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>運動初心者歓迎</li><li>AI食事指導</li></ul>
 <h2>この店舗の特徴</h2>
 <p>NEXUS新中野店は、東京都中野区の落ち着いた住宅街に佇む完全個室のパーソナルジム。大きな看板を出していないため、新中野・中野・本町・中野坂上エリアで「人目を気にせず綺麗になりたい」という30〜40代女性に選ばれています。ウェア・タオル・プロテインまで無料提供の手ぶら通いOKで、忙しい毎日でもバッグひとつで続けられます。</p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">駅からすぐで職場からも近く、通いやすい立地が続けられる理由です。完全個室で人目を気にせず集中でき、フォームも丁寧に見てもらえます。少しずつお腹まわりがすっきりしてきて、通うのが楽しみになりました。</p><div class="who">新中野店に通う女性会員 ・ Google口コミより（内容を要約）</div></div></div>
+<h2>新宿の大型ジムで続かなかった方へ</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shin-nakano/bench-press.webp" type="image/webp"><img src="../../images/shops/shin-nakano/bench-press.jpg" width="1200" height="679" alt="完全個室でのマンツーマン・ウェイトトレーニング" loading="lazy"></picture><figcaption>器具の順番待ちゼロ。あなただけのための完全個室・完全予約制。</figcaption></figure>
+<p>新中野は東京メトロ丸ノ内線で<strong>新宿までわずか5分</strong>。新宿の大型ジムに入会したものの、器具の順番待ちや人の多さ、周りの目が気になって足が遠のいた——そんな方が新中野店に乗り換えています。ここは完全個室・完全予約制のマンツーマン。<strong>大型ジムとは真逆の環境</strong>で、待ち時間ゼロ・あなたのためだけの時間に集中できます。会員の約6割が運動経験ほぼゼロからのスタートです。</p>
+<h2>30分×月4回の時短ボディメイク</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shin-nakano/quick-30min.webp" type="image/webp"><img src="../../images/shops/shin-nakano/quick-30min.jpg" width="1200" height="1607" alt="30分の時短パーソナルトレーニング" loading="lazy"></picture><figcaption>ライトコースは30分×月4回。忙しくても予定に組み込みやすい。</figcaption></figure>
+<p>「まとまった時間が取れない」という方には、<strong>30分×月4回のライトコース（18,000円・1回4,500円）</strong>。完全マンツーマンでフォームを見ながら効かせるので、短時間でも密度の高いトレーニングができます。新宿へ出勤する前の朝トレにも、帰りに新中野で降りての夜トレにも組み込みやすく、無理なく続くペースを一緒に設計します。</p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">30分コースを月4回で通っています。短時間でも毎回しっかり追い込んでもらえて、忙しくても続けられています。終わったあとのプロテインも無料で、身体づくりのモチベーションになっています。</p><div class="who">30分コースの女性会員 ・ Google口コミより（内容を要約）</div></div></div>
+<h2>身体が変わった実例</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shin-nakano/body-make-result.webp" type="image/webp"><img src="../../images/shops/shin-nakano/body-make-result.jpg" width="1200" height="872" alt="トレーニングによる体重・ウエスト・体脂肪率の変化事例" loading="lazy"></picture><figcaption>継続で身体は変わります。数字で見える変化がモチベーションに。</figcaption></figure>
+<p>完全個室でトレーナーがマンツーマン指導し、一人ひとりの目標に合わせてメニューを組み立てます。運動未経験からのスタートでも、正しいフォームと適切な強度で続けることで、体重・ウエスト・体脂肪率にしっかり変化が表れます。数字で見える成果が、次の一歩のモチベーションになります。</p>
+<h2>セッション風景</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shin-nakano/drink-break.webp" type="image/webp"><img src="../../images/shops/shin-nakano/drink-break.jpg" width="1200" height="679" alt="トレーニング中のドリンク休憩の様子" loading="lazy"></picture><figcaption>合間の休憩もリラックス。会話しながら無理のないペースで。</figcaption></figure>
+<p>セッション中はトレーナーと会話しながら、休憩も挟んで無理のないペースで進めます。「自己流だとどうしても追い込めない」「フォームが合っているか分からない」という方も、その場で細かく矯正。周りの目を気にせず、自分のペースで取り組めるのが完全個室の良さです。</p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">自己流ではどうしても追い込めなかったのですが、マンツーマンで強度もフォームもしっかり見てもらえるので、毎回きちんと効いている実感があります。完全個室で人に見られないのも、続けられている大きな理由です。</p><div class="who">新中野店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
 <h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
-<h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 新中野店</dd></div><div class="row"><dt>住所</dt><dd>〒164-0012<br>東京都中野区本町6丁目21−15 アクセス新中野 II 2F</dd></div><div class="row"><dt>最寄り駅</dt><dd>東京メトロ丸ノ内線　新中野駅</dd></div><div class="row"><dt>営業時間</dt><dd>8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8493</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E9%87%8E%E5%8C%BA%E6%9C%AC%E7%94%BA6%E4%B8%81%E7%9B%AE21%E2%88%9215%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%96%B0%E4%B8%AD%E9%87%8E%20II%202F&z=16&output=embed" title="NEXUSパーソナルジム 新中野店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
+<h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 新中野店</dd></div><div class="row"><dt>住所</dt><dd>〒164-0012<br>東京都中野区本町6丁目21−15 アクセス新中野 II 2F</dd></div><div class="row"><dt>最寄り駅</dt><dd>東京メトロ丸ノ内線　新中野駅</dd></div><div class="row"><dt>営業時間</dt><dd>月・火・木・金 8:00〜23:00<br>土 8:00〜17:00 ／ 日 8:00〜13:00<br>水曜定休</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8493</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E9%87%8E%E5%8C%BA%E6%9C%AC%E7%94%BA6%E4%B8%81%E7%9B%AE21%E2%88%9215%20%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E6%96%B0%E4%B8%AD%E9%87%8E%20II%202F&z=16&output=embed" title="NEXUSパーソナルジム 新中野店の地図"></iframe></div>
+<h2>お客様の声（Google口コミ）</h2>
 <div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>4.9</b><span class="cnt">（91件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E6%96%B0%E4%B8%AD%E9%87%8E%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">パーソナルジム初経験どころか生まれてこのかた運動をした経験ほぼゼロのアラフィフです。筋力の衰えや体力の低下を感じ思い切って入会しました。継続して筋肉を鍛えるということができるのか、不安しかありませんでしたがとても親切であたたかいトレーナーさんのおかげで楽しく通えています。ジムに行った翌日、翌翌日は筋肉痛の洗礼に合いますが、それも効いている証拠かと思うと頑張ろうと思います。始めてまだ一ヶ月ですが、地道に続けていきたいと思います。</p><div class="who">R.F.さん</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">本日、無料体験を受けてからそのまま入会を決めました！体験ではカウンセリングから始まり、自分の体の状態や悩みをしっかり聞いてくれたのが印象的でした。トレーニングも完全にマンツーマンで、フォームや動かし方を丁寧に教えてくれるので初心者でも安心できます。ジム内は清潔感があり、設備も充実していて居心地が良かったです。無理な勧誘もなく、納得できる説明だったので信頼できました。これから理想の体づくりに向けて通うのが楽しみです！</p><div class="who">T.さん</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">ワンルーム一室貸切のようなパーソナルジム！他の人とすれ違うこともありません！楽しくお話ししながらフォームも見てくださって、筋トレしたことない私でも続けられてます！</p><div class="who">S.さん</div></div></div>
+<p class="st-rev-summary-txt">新中野駅からすぐ、新宿から丸ノ内線5分。Google口コミ★4.9・91件のNEXUS新中野店は、30分の時短トレーニングと通いやすい立地が高く評価されているパーソナルジムです。</p>
+<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。</p>
 <a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E6%96%B0%E4%B8%AD%E9%87%8E%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
 <h2>新中野店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>新中野店はどこにありますか？最寄り駅は？<span class="ic">+</span></summary><div class="st-faq-a">住所は〒164-0012 東京都中野区本町6丁目21−15 アクセス新中野 II 2Fです。最寄りは東京メトロ丸ノ内線の新中野駅。中野区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>新中野・中野エリアで初心者向けのパーソナルジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">新中野店は、運動が初めての30〜40代女性が中心の店舗です。会員の約6割が運動経験ほぼゼロからのスタート。完全個室でトレーナーがマンツーマン指導するので、周りの目を気にせず自分のペースで始められます。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>新中野・中野で完全個室のパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。新中野店は中野区の住宅街のマンションの一室にある完全個室のパーソナルジムです。すっぴん・部屋着感覚で通っても他の会員に会うことがなく、人目を気にせずトレーニングに集中できます。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>新中野店の営業時間は？仕事帰りでも通えますか？<span class="ic">+</span></summary><div class="st-faq-a">営業時間は8:00〜23:00です。朝の出勤前も、仕事帰りの夜間も通えます。手ぶら通いOKなので、バッグひとつで立ち寄れます。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>新中野店の営業時間は？朝や夜も通えますか？<span class="ic">+</span></summary><div class="st-faq-a">営業時間は曜日で異なります。月・火・木・金は8:00〜23:00、土曜は8:00〜17:00、日曜は8:00〜13:00で、水曜は定休日です。平日は朝8時から夜23時まで対応しているので、出社前の朝トレも、丸ノ内線で新宿方面から戻ってからの夜トレも通えます。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>新中野店の予約はどうやって取りますか？<span class="ic">+</span></summary><div class="st-faq-a">まずはWEBから無料体験をご予約ください。体験ではカウンセリング・姿勢チェック・実際のトレーニングを行います。入会後の各セッションも予約制で、6時間前まで無料でキャンセル・変更が可能です。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>新中野・中野周辺で女性が通いやすいジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">新中野店は女性会員85%。中野区の住宅街にあり、新中野・中野エリアにお住まい・お勤めの女性がこっそり通っています。完全個室・手ぶらOKで、女性が通いやすい環境を整えています。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>新宿で通うジムが続かなかった…新中野店との違いは？<span class="ic">+</span></summary><div class="st-faq-a">新中野は丸ノ内線で新宿からわずか5分。新宿の大型ジムは器具の順番待ちや人の多さで通わなくなりがちですが、新中野店は完全個室・完全予約制のマンツーマンなので、待ち時間ゼロで自分のためだけの時間に集中できます。会員の約6割が運動経験ほぼゼロからのスタートで、大型ジムで続かなかった方が「これなら続く」と乗り換えています。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>新中野で30分だけの短時間パーソナルはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ライトコースは30分×月4回で18,000円（税込・1回4,500円）。1回30分に絞った時短トレーニングなので、忙しい方でも予定を組みやすく、月4回のペースで無理なく身体づくりを続けられます。フォームを見ながらの完全マンツーマンなので、短時間でも効率よく効かせられます。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>出社前の朝8時からトレーニングできますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。月・火・木・金・土・日はいずれも朝8:00から営業しています（水曜定休）。丸ノ内線で新宿方面へ出勤する前に、朝一番でトレーニングしてから出社する女性会員も多くいらっしゃいます。手ぶら通いOKなので、そのまま出社できます。</div></details>
 <h2 style="font-size:17px;margin-top:36px">よくある質問（全店共通）</h2><p style="font-size:13px;color:var(--ink-faint);margin:0 0 4px">料金・制度などNEXUS全店に共通するご質問です。さらに詳しくは110問のFAQをご覧ください。</p>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>料金はいくらですか？<span class="ic">+</span></summary><div class="st-faq-a">ライト（30分）月4回18,000円〜、ベーシック（60分）月4回34,000円〜など。1回あたり4,500円〜から始められます（すべて税込）。詳しくは料金プランをご覧ください。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>手ぶらで通えますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェア・水・タオル・プロテインまで無料提供で手ぶら通いOK。仕事帰りにバッグひとつで通えます。</div></details>
