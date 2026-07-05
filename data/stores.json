@@ -1112,9 +1112,9 @@
       ],
       "nearby_landmarks": null,
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
-      "has_page": false,
+      "has_page": true,
       "priority": null,
-      "published": false,
+      "published": true,
       "google": null
     },
     {
