@@ -10,7 +10,7 @@
 | `mita` | 三田店 | 東京都港区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `shibuya-shinsen` | 渋谷・神泉店 | 東京都渋谷区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `sasazuka` | 笹塚店 | 東京都渋谷区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
-| `shirokanedai-takanawadai` | 白金台・高輪台店 | 東京都品川区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
+| `shirokanedai` | 白金台・高輪台店 | 東京都品川区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `nishi-magome` | 西馬込店 | 東京都大田区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `nishi-magome-annex` | 西馬込 ANNEX店 | 東京都大田区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
 | `magome` | 馬込店 | 東京都大田区 | ✅揃 | stations(最寄り駅・路線)、area_keywords(周辺エリア3〜5)、nearby_landmarks(任意) |
