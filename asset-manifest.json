@@ -1,0 +1,1550 @@
+{
+  "generated": "2026-07-07",
+  "source_dir": "nexus-sozai",
+  "rule": "PNG->webp q80 longedge<=1600 <=200KB; existing webp copied unless >200KB (recompressed)",
+  "assets": [
+    {
+      "original": "AI食事指導.webp",
+      "normalized": "images/counseling/ai_diet_01.webp",
+      "category": "counseling",
+      "alt_base": "写真を送るだけのAI食事指導のイメージ",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 157846,
+      "out_dims": [
+        1280,
+        2264
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "カウンセリング.webp",
+      "normalized": "images/counseling/counseling_01.webp",
+      "category": "counseling",
+      "alt_base": "入会前の丁寧なカウンセリングの様子",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 148252,
+      "out_dims": [
+        1195,
+        1600
+      ],
+      "action": "recompress q80"
+    },
+    {
+      "original": "カウンセリング_黒髪２.webp",
+      "normalized": "images/counseling/counseling_02.webp",
+      "category": "counseling",
+      "alt_base": "黒髪女性が受ける目標設定カウンセリング",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 106110,
+      "out_dims": [
+        905,
+        1600
+      ],
+      "action": "recompress q80"
+    },
+    {
+      "original": "カウンセリング_黒髪黒髪③.png",
+      "normalized": "images/counseling/counseling_03.webp",
+      "category": "counseling",
+      "alt_base": "トレーナーと目標を共有するカウンセリング",
+      "src_format": "PNG image data",
+      "out_bytes": 114162,
+      "out_dims": [
+        905,
+        1600
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "カウンセリング１.png",
+      "normalized": "images/counseling/counseling_04.webp",
+      "category": "counseling",
+      "alt_base": "完全個室での丁寧なヒアリングカウンセリング",
+      "src_format": "PNG image data",
+      "out_bytes": 87754,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "カウンセリング２.png",
+      "normalized": "images/counseling/counseling_05.webp",
+      "category": "counseling",
+      "alt_base": "一人ひとりに寄り添うカウンセリング",
+      "src_format": "PNG image data",
+      "out_bytes": 89262,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "食事指導.png",
+      "normalized": "images/counseling/diet_advice_01.webp",
+      "category": "counseling",
+      "alt_base": "無理のない食べ方を教える食事指導",
+      "src_format": "PNG image data",
+      "out_bytes": 58154,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "食事指導①.png",
+      "normalized": "images/counseling/diet_advice_02.webp",
+      "category": "counseling",
+      "alt_base": "トレーナーによる丁寧な食事指導",
+      "src_format": "PNG image data",
+      "out_bytes": 87176,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "食事指導②.png",
+      "normalized": "images/counseling/diet_advice_03.webp",
+      "category": "counseling",
+      "alt_base": "日々の食事をサポートする栄養アドバイス",
+      "src_format": "PNG image data",
+      "out_bytes": 85386,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "健康的な食事.png",
+      "normalized": "images/counseling/healthy_meal_01.webp",
+      "category": "counseling",
+      "alt_base": "バランスのとれた健康的な食事",
+      "src_format": "PNG image data",
+      "out_bytes": 147762,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "健康的な食事②.png",
+      "normalized": "images/counseling/healthy_meal_02.webp",
+      "category": "counseling",
+      "alt_base": "ボディメイクを支える健康的な食事メニュー",
+      "src_format": "PNG image data",
+      "out_bytes": 108578,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "夫婦同士のカウンセリング.png",
+      "normalized": "images/couple/couple_counseling_01.webp",
+      "category": "couple",
+      "alt_base": "夫婦一緒に受けるカウンセリング",
+      "src_format": "PNG image data",
+      "out_bytes": 100660,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "夫婦同士の合同トレ.png",
+      "normalized": "images/couple/couple_joint_training_01.webp",
+      "category": "couple",
+      "alt_base": "夫婦で並んで行う合同トレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 159752,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "夫婦同士のセミパーソナル.png",
+      "normalized": "images/couple/couple_semi_personal_01.webp",
+      "category": "couple",
+      "alt_base": "夫婦で通えるセミパーソナルトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 120698,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "夫婦同士のペアストレッチ.png",
+      "normalized": "images/couple/couple_stretch_01.webp",
+      "category": "couple",
+      "alt_base": "夫婦で行うペアストレッチ",
+      "src_format": "PNG image data",
+      "out_bytes": 122672,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "夫婦同士のペアストレッチ②.png",
+      "normalized": "images/couple/couple_stretch_02.webp",
+      "category": "couple",
+      "alt_base": "二人で身体をほぐす夫婦のペアストレッチ",
+      "src_format": "PNG image data",
+      "out_bytes": 152258,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "夫婦同士のペアトレ.png",
+      "normalized": "images/couple/couple_training_01.webp",
+      "category": "couple",
+      "alt_base": "夫婦一緒に取り組むペアトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 105774,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ペアトレ①.webp",
+      "normalized": "images/couple/pair_training_01.webp",
+      "category": "couple",
+      "alt_base": "カップルで一緒に取り組むペアトレーニング",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 129158,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "ペアトレ②.webp",
+      "normalized": "images/couple/pair_training_02.webp",
+      "category": "couple",
+      "alt_base": "二人で励まし合うペアトレーニング",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 124278,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "来店の様子.png",
+      "normalized": "images/facility/arrive_01.webp",
+      "category": "facility",
+      "alt_base": "手ぶらで気軽に来店する様子",
+      "src_format": "PNG image data",
+      "out_bytes": 46994,
+      "out_dims": [
+        1376,
+        768
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ドリンク休憩①.png",
+      "normalized": "images/facility/drink_break_01.webp",
+      "category": "facility",
+      "alt_base": "トレーニングの合間のドリンク休憩",
+      "src_format": "PNG image data",
+      "out_bytes": 106692,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ドリンク休憩②.png",
+      "normalized": "images/facility/drink_break_02.webp",
+      "category": "facility",
+      "alt_base": "水分補給で一息つくドリンク休憩",
+      "src_format": "PNG image data",
+      "out_bytes": 105422,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "初めての来店①.png",
+      "normalized": "images/facility/first_visit_01.webp",
+      "category": "facility",
+      "alt_base": "初めての来店で受付する様子",
+      "src_format": "PNG image data",
+      "out_bytes": 113490,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "初めての来店②.png",
+      "normalized": "images/facility/first_visit_02.webp",
+      "category": "facility",
+      "alt_base": "初回来店時の明るい受付の様子",
+      "src_format": "PNG image data",
+      "out_bytes": 95802,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "隠れ家ジム.png",
+      "normalized": "images/facility/hideaway_01.webp",
+      "category": "facility",
+      "alt_base": "人目を気にせず通える隠れ家のようなジム",
+      "src_format": "PNG image data",
+      "out_bytes": 162570,
+      "out_dims": [
+        905,
+        1600
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ジムの内装イメージ①.png",
+      "normalized": "images/facility/interior_01.webp",
+      "category": "facility",
+      "alt_base": "清潔感のある完全個室ジムの内装",
+      "src_format": "PNG image data",
+      "out_bytes": 150480,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ジムのイメージ②.png",
+      "normalized": "images/facility/interior_02.webp",
+      "category": "facility",
+      "alt_base": "落ち着いた雰囲気のパーソナルジム内装",
+      "src_format": "PNG image data",
+      "out_bytes": 114866,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "退店の様子.png",
+      "normalized": "images/facility/leave_01.webp",
+      "category": "facility",
+      "alt_base": "トレーニングを終えて身軽に退店する様子",
+      "src_format": "PNG image data",
+      "out_bytes": 44976,
+      "out_dims": [
+        1376,
+        768
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "トレーニング後のプロテイン無料.png",
+      "normalized": "images/facility/protein_free_01.webp",
+      "category": "facility",
+      "alt_base": "トレーニング後に無料提供されるプロテイン",
+      "src_format": "PNG image data",
+      "out_bytes": 143050,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "トレ後のプロテイン乾杯.png",
+      "normalized": "images/facility/protein_toast_01.webp",
+      "category": "facility",
+      "alt_base": "トレーニング後のプロテインで乾杯する様子",
+      "src_format": "PNG image data",
+      "out_bytes": 124856,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ウェア.png",
+      "normalized": "images/facility/wear_01.webp",
+      "category": "facility",
+      "alt_base": "無料レンタルのトレーニングウェア",
+      "src_format": "PNG image data",
+      "out_bytes": 89122,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ウェアレンタル無料_黒髪女性.png",
+      "normalized": "images/facility/wear_rental_01.webp",
+      "category": "facility",
+      "alt_base": "ウェアレンタル無料で手ぶら通いできる様子",
+      "src_format": "PNG image data",
+      "out_bytes": 96110,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ウェアレンタル無料②.png",
+      "normalized": "images/facility/wear_rental_02.webp",
+      "category": "facility",
+      "alt_base": "清潔なレンタルウェアで手ぶら通いOK",
+      "src_format": "PNG image data",
+      "out_bytes": 94760,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "追い込んだ後の達成感１.png",
+      "normalized": "images/lifestyle/achievement_01.webp",
+      "category": "lifestyle",
+      "alt_base": "トレーニングをやり切った後の達成感",
+      "src_format": "PNG image data",
+      "out_bytes": 87628,
+      "out_dims": [
+        1376,
+        768
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "達成感②.png",
+      "normalized": "images/lifestyle/achievement_02.webp",
+      "category": "lifestyle",
+      "alt_base": "目標を達成した爽やかな笑顔",
+      "src_format": "PNG image data",
+      "out_bytes": 67146,
+      "out_dims": [
+        1376,
+        768
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "押し付けず、今日の体調に合わせる１.png",
+      "normalized": "images/lifestyle/adapt_condition_01.webp",
+      "category": "lifestyle",
+      "alt_base": "その日の体調に合わせて無理なく進める指導",
+      "src_format": "PNG image data",
+      "out_bytes": 86260,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "押し付けず、今日の体調に合わせる２.png",
+      "normalized": "images/lifestyle/adapt_condition_02.webp",
+      "category": "lifestyle",
+      "alt_base": "体調に寄り添い押し付けないトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 70012,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "服をおしゃれに着られる体型へ・姿勢改善１.png",
+      "normalized": "images/lifestyle/fashion_body_01.webp",
+      "category": "lifestyle",
+      "alt_base": "服をおしゃれに着こなせる体型と姿勢へ",
+      "src_format": "PNG image data",
+      "out_bytes": 105966,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "服をおしゃれに着られる体型へ・姿勢改善２.png",
+      "normalized": "images/lifestyle/fashion_body_02.webp",
+      "category": "lifestyle",
+      "alt_base": "姿勢が整い服が似合う体型を目指す女性",
+      "src_format": "PNG image data",
+      "out_bytes": 53698,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "自宅でのストレッチまで教えてくれる１.png",
+      "normalized": "images/lifestyle/home_stretch_01.webp",
+      "category": "lifestyle",
+      "alt_base": "自宅でのストレッチまで教えてくれる指導",
+      "src_format": "PNG image data",
+      "out_bytes": 50470,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "自宅でのストレッチまで教えてくれる２.png",
+      "normalized": "images/lifestyle/home_stretch_02.webp",
+      "category": "lifestyle",
+      "alt_base": "自宅ケアまでサポートするアフターフォロー",
+      "src_format": "PNG image data",
+      "out_bytes": 61822,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "子連れOK①.png",
+      "normalized": "images/lifestyle/kids_ok_01.webp",
+      "category": "lifestyle",
+      "alt_base": "子連れでも通えるママ歓迎のパーソナルジム",
+      "src_format": "PNG image data",
+      "out_bytes": 126712,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "子連れOK②.png",
+      "normalized": "images/lifestyle/kids_ok_02.webp",
+      "category": "lifestyle",
+      "alt_base": "子育て中でも通いやすい環境",
+      "src_format": "PNG image data",
+      "out_bytes": 137764,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "理屈で納得できるロジカル指導１.png",
+      "normalized": "images/lifestyle/logical_01.webp",
+      "category": "lifestyle",
+      "alt_base": "理屈で納得できるロジカルな指導",
+      "src_format": "PNG image data",
+      "out_bytes": 67326,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "理屈で納得できるロジカル指導２.png",
+      "normalized": "images/lifestyle/logical_02.webp",
+      "category": "lifestyle",
+      "alt_base": "根拠を説明する論理的なトレーニング指導",
+      "src_format": "PNG image data",
+      "out_bytes": 62078,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "姿勢改善①.png",
+      "normalized": "images/lifestyle/posture_01.webp",
+      "category": "lifestyle",
+      "alt_base": "姿勢改善で美しいラインを目指すトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 105392,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "姿勢改善②.png",
+      "normalized": "images/lifestyle/posture_02.webp",
+      "category": "lifestyle",
+      "alt_base": "猫背を整える姿勢改善エクササイズ",
+      "src_format": "PNG image data",
+      "out_bytes": 113064,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "挫折からの再挑戦・プロがメニューを組んでくれる１.png",
+      "normalized": "images/lifestyle/pro_menu_01.webp",
+      "category": "lifestyle",
+      "alt_base": "プロが一人ひとりにメニューを組む再挑戦のサポート",
+      "src_format": "PNG image data",
+      "out_bytes": 66498,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "挫折からの再挑戦・プロがメニューを組んでくれる２.png",
+      "normalized": "images/lifestyle/pro_menu_02.webp",
+      "category": "lifestyle",
+      "alt_base": "挫折しても続けられるプロ設計のメニュー",
+      "src_format": "PNG image data",
+      "out_bytes": 81042,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": " トレーニング後のプロテインの爽快感１.png",
+      "normalized": "images/lifestyle/protein_refresh_01.webp",
+      "category": "lifestyle",
+      "alt_base": "トレーニング後のプロテインで感じる爽快感",
+      "src_format": "PNG image data",
+      "out_bytes": 62900,
+      "out_dims": [
+        1376,
+        768
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": " トレーニング後のプロテインの爽快感２.png",
+      "normalized": "images/lifestyle/protein_refresh_02.webp",
+      "category": "lifestyle",
+      "alt_base": "運動後のプロテインでリフレッシュする女性",
+      "src_format": "PNG image data",
+      "out_bytes": 35312,
+      "out_dims": [
+        1376,
+        768
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "⑨ 睡眠の質・朝の体調が変わる（QOL軸）１.png",
+      "normalized": "images/lifestyle/sleep_quality_01.webp",
+      "category": "lifestyle",
+      "alt_base": "運動で睡眠の質が上がり朝の体調が変わる",
+      "src_format": "PNG image data",
+      "out_bytes": 49734,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "⑨ 睡眠の質・朝の体調が変わる（QOL軸）２.png",
+      "normalized": "images/lifestyle/sleep_quality_02.webp",
+      "category": "lifestyle",
+      "alt_base": "質の良い睡眠で快適な朝を迎える女性",
+      "src_format": "PNG image data",
+      "out_bytes": 40364,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "⑦ お腹・下半身など気になる部位を中心に１.png",
+      "normalized": "images/lifestyle/target_area_01.webp",
+      "category": "lifestyle",
+      "alt_base": "お腹や下半身など気になる部位を中心に鍛える",
+      "src_format": "PNG image data",
+      "out_bytes": 60514,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "⑦ お腹・下半身など気になる部位を中心に２.png",
+      "normalized": "images/lifestyle/target_area_02.webp",
+      "category": "lifestyle",
+      "alt_base": "気になる部位を集中的に引き締めるトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 64558,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "背中.png",
+      "normalized": "images/training/back_01.webp",
+      "category": "training",
+      "alt_base": "ドレスで映える背中を鍛えるトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 77854,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "背中２.png",
+      "normalized": "images/training/back_02.webp",
+      "category": "training",
+      "alt_base": "美しい背中を目指す女性のトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 59644,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ベンチプレス_黒髪女性.png",
+      "normalized": "images/training/bench_press_01.webp",
+      "category": "training",
+      "alt_base": "黒髪女性がベンチプレスで上半身を鍛えるトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 131104,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ボディメイク事例.png",
+      "normalized": "images/training/bodymake_example_01.webp",
+      "category": "training",
+      "alt_base": "ボディメイクで理想の体型に近づいた事例",
+      "src_format": "PNG image data",
+      "out_bytes": 54974,
+      "out_dims": [
+        1472,
+        1070
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "デッドリフト１.png",
+      "normalized": "images/training/deadlift_01.webp",
+      "category": "training",
+      "alt_base": "正しいフォームでデッドリフトを行う女性",
+      "src_format": "PNG image data",
+      "out_bytes": 56364,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "デッドリフト２.png",
+      "normalized": "images/training/deadlift_02.webp",
+      "category": "training",
+      "alt_base": "デッドリフトで背中と下半身を鍛える様子",
+      "src_format": "PNG image data",
+      "out_bytes": 60440,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "デッドリフト３.png",
+      "normalized": "images/training/deadlift_03.webp",
+      "category": "training",
+      "alt_base": "トレーナー指導でデッドリフトに取り組む女性",
+      "src_format": "PNG image data",
+      "out_bytes": 54184,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "デッドリフト４.png",
+      "normalized": "images/training/deadlift_04.webp",
+      "category": "training",
+      "alt_base": "デッドリフトで全身を使うトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 73072,
+      "out_dims": [
+        1200,
+        896
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "女性ダンベル.png",
+      "normalized": "images/training/dumbbell_02.webp",
+      "category": "training",
+      "alt_base": "ダンベルを使って上半身を鍛える女性",
+      "src_format": "PNG image data",
+      "out_bytes": 61066,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ダンベルカール_黒髪女性.png",
+      "normalized": "images/training/dumbbell_curl_01.webp",
+      "category": "training",
+      "alt_base": "黒髪女性がダンベルカールで二の腕を引き締めるトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 85036,
+      "out_dims": [
+        896,
+        1200
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ヒップリフト_黒髪女性.png",
+      "normalized": "images/training/hip_lift_01.webp",
+      "category": "training",
+      "alt_base": "黒髪の女性がヒップリフトでお尻を引き締めるトレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 137042,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ヒップリフト_黒髪女性②.png",
+      "normalized": "images/training/hip_lift_02.webp",
+      "category": "training",
+      "alt_base": "ヒップリフトで下半身を鍛える黒髪女性",
+      "src_format": "PNG image data",
+      "out_bytes": 111928,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ケトルトレーニング.png",
+      "normalized": "images/training/kettlebell_01.webp",
+      "category": "training",
+      "alt_base": "ケトルベルを使った全身トレーニング",
+      "src_format": "PNG image data",
+      "out_bytes": 108822,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "サイドレイズ_黒髪女性.webp",
+      "normalized": "images/training/side_raise_01.webp",
+      "category": "training",
+      "alt_base": "黒髪の女性がサイドレイズで肩を鍛えるトレーニング",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 108238,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "サイドレイズ_黒髪女性②.webp",
+      "normalized": "images/training/side_raise_02.webp",
+      "category": "training",
+      "alt_base": "ダンベルでサイドレイズを行う黒髪女性",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 142298,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "スクワット_ショートカット.webp",
+      "normalized": "images/training/squat_01.webp",
+      "category": "training",
+      "alt_base": "ショートカットの女性がスクワットで下半身を鍛える様子",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 148788,
+      "out_dims": [
+        1280,
+        1714
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "スクワット縦型１.png",
+      "normalized": "images/training/squat_02.webp",
+      "category": "training",
+      "alt_base": "正しいフォームでスクワットを行う女性",
+      "src_format": "PNG image data",
+      "out_bytes": 55136,
+      "out_dims": [
+        896,
+        1200
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "スクワット縦型②.png",
+      "normalized": "images/training/squat_03.webp",
+      "category": "training",
+      "alt_base": "トレーナー指導のもとスクワットに取り組む女性",
+      "src_format": "PNG image data",
+      "out_bytes": 64112,
+      "out_dims": [
+        896,
+        1200
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "女性スクワット画像.png",
+      "normalized": "images/training/squat_04.webp",
+      "category": "training",
+      "alt_base": "完全個室でスクワットに取り組む女性",
+      "src_format": "PNG image data",
+      "out_bytes": 93224,
+      "out_dims": [
+        905,
+        1600
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "ストレッチ_黒髪女性.png",
+      "normalized": "images/training/stretch_01.webp",
+      "category": "training",
+      "alt_base": "黒髪の女性が身体をほぐすストレッチ",
+      "src_format": "PNG image data",
+      "out_bytes": 104470,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "女性_ストレッチ.png",
+      "normalized": "images/training/stretch_02.webp",
+      "category": "training",
+      "alt_base": "トレーニング前後にストレッチをする女性",
+      "src_format": "PNG image data",
+      "out_bytes": 117082,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "バージンロードを、最高の自分で歩く.png",
+      "normalized": "images/wedding/wedding_aisle_01.webp",
+      "category": "wedding",
+      "alt_base": "バージンロードを最高の自分で歩くウェディングドレスの花嫁",
+      "src_format": "PNG image data",
+      "out_bytes": 66184,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "バージンロードを、最高の自分で歩く２.png",
+      "normalized": "images/wedding/wedding_aisle_02.webp",
+      "category": "wedding",
+      "alt_base": "挙式当日バージンロードを歩く自信に満ちた花嫁",
+      "src_format": "PNG image data",
+      "out_bytes": 68566,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚後のアルバム.webp",
+      "normalized": "images/wedding/wedding_album_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚後に二人で見返すウェディングアルバム",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 72502,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　後ろ姿.webp",
+      "normalized": "images/wedding/wedding_back_01.webp",
+      "category": "wedding",
+      "alt_base": "ウェディングドレスの美しい背中の後ろ姿",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 127132,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚が祝福された2人.png",
+      "normalized": "images/wedding/wedding_blessed_couple_01.webp",
+      "category": "wedding",
+      "alt_base": "ゲストに祝福される笑顔の新郎新婦",
+      "src_format": "PNG image data",
+      "out_bytes": 174892,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q72"
+    },
+    {
+      "original": "結婚式　ブーケ.webp",
+      "normalized": "images/wedding/wedding_bouquet_01.webp",
+      "category": "wedding",
+      "alt_base": "花嫁が手にするウェディングブーケ",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 117808,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　ブーケ２.webp",
+      "normalized": "images/wedding/wedding_bouquet_02.webp",
+      "category": "wedding",
+      "alt_base": "色鮮やかなウェディングブーケを持つ花嫁",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 121912,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　ケーキ.webp",
+      "normalized": "images/wedding/wedding_cake_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式のウェディングケーキ入刀",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 111076,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "お姫様抱っこ１.webp",
+      "normalized": "images/wedding/wedding_carry_01.webp",
+      "category": "wedding",
+      "alt_base": "挙式後に新郎がお姫様抱っこする幸せそうな新婦",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 148958,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "お姫様抱っこ２.webp",
+      "normalized": "images/wedding/wedding_carry_02.webp",
+      "category": "wedding",
+      "alt_base": "結婚式でお姫様抱っこされ笑顔を見せる新婦",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 157656,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "ドレスを着るためのコミット.webp",
+      "normalized": "images/wedding/wedding_commit_01.webp",
+      "category": "wedding",
+      "alt_base": "ウェディングドレスを着るために目標へコミットする女性",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 94358,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "ドレスを着るためにみんなで頑張るコミット.webp",
+      "normalized": "images/wedding/wedding_commit_group_01.webp",
+      "category": "wedding",
+      "alt_base": "ドレスのために仲間と一緒に頑張ると誓う花嫁",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 92828,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　このドレスが着たいカウンセリング.webp",
+      "normalized": "images/wedding/wedding_dress_counseling_01.webp",
+      "category": "wedding",
+      "alt_base": "このドレスを着たいと相談するブライダルカウンセリング",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 78678,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "ドレスが入って嬉しい.webp",
+      "normalized": "images/wedding/wedding_dress_fit_01.webp",
+      "category": "wedding",
+      "alt_base": "理想のウェディングドレスが入って嬉しそうな花嫁",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 45380,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "ドレスがきつくて悔しい.webp",
+      "normalized": "images/wedding/wedding_dress_tight_01.webp",
+      "category": "wedding",
+      "alt_base": "ウェディングドレスがきつく悔しい表情の花嫁",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 36220,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式に向けて2人で頑張る１.png",
+      "normalized": "images/wedding/wedding_effort_couple_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式に向けて二人で一緒にトレーニングを頑張るカップル",
+      "src_format": "PNG image data",
+      "out_bytes": 79012,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式に向けて2人で頑張る２.png",
+      "normalized": "images/wedding/wedding_effort_couple_02.webp",
+      "category": "wedding",
+      "alt_base": "挙式に向け二人三脚でボディメイクに励むカップル",
+      "src_format": "PNG image data",
+      "out_bytes": 80882,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式前日にに綺麗になった2人.png",
+      "normalized": "images/wedding/wedding_eve_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式前日にボディメイクを達成し綺麗になったカップル",
+      "src_format": "PNG image data",
+      "out_bytes": 48950,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式前日に理想の大家になった2人.png",
+      "normalized": "images/wedding/wedding_eve_02.webp",
+      "category": "wedding",
+      "alt_base": "挙式前日に理想の体型になった新郎新婦",
+      "src_format": "PNG image data",
+      "out_bytes": 63420,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式　写真立て３.webp",
+      "normalized": "images/wedding/wedding_frame_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式の思い出を飾る写真立て",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 77096,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　写真立て４.webp",
+      "normalized": "images/wedding/wedding_frame_02.webp",
+      "category": "wedding",
+      "alt_base": "新郎新婦の写真を収めたフォトフレーム",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 73838,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式での思い出ムービ.webp",
+      "normalized": "images/wedding/wedding_movie_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式の思い出を振り返るムービー上映",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 166482,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚後の写真立て.webp",
+      "normalized": "images/wedding/wedding_photo_frame_01.webp",
+      "category": "wedding",
+      "alt_base": "新婚の暮らしに飾る結婚写真のフォトフレーム",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 95578,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式指輪交換１.png",
+      "normalized": "images/wedding/wedding_ring_exchange_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚指輪を交換するセレモニーの手元",
+      "src_format": "PNG image data",
+      "out_bytes": 49342,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式　指輪交換２.png",
+      "normalized": "images/wedding/wedding_ring_exchange_02.webp",
+      "category": "wedding",
+      "alt_base": "挙式で指輪を交換する新郎新婦の手元",
+      "src_format": "PNG image data",
+      "out_bytes": 60598,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚指輪とグローブ１.webp",
+      "normalized": "images/wedding/wedding_ring_glove_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚指輪とトレーニンググローブを並べたイメージ",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 99860,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚指輪とグローブ２.webp",
+      "normalized": "images/wedding/wedding_ring_glove_02.webp",
+      "category": "wedding",
+      "alt_base": "ブライダルとトレーニングを象徴する指輪とグローブ",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 92270,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式に向けての体重計のる.webp",
+      "normalized": "images/wedding/wedding_scale_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式に向けて体重計に乗り目標を確認する花嫁",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 78662,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式の笑顔.png",
+      "normalized": "images/wedding/wedding_smile_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式で幸せそうに微笑む花嫁",
+      "src_format": "PNG image data",
+      "out_bytes": 94114,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式で笑顔の2人.png",
+      "normalized": "images/wedding/wedding_smile_couple_01.webp",
+      "category": "wedding",
+      "alt_base": "挙式で満面の笑みを見せる新郎新婦",
+      "src_format": "PNG image data",
+      "out_bytes": 180032,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式　スピーチ.webp",
+      "normalized": "images/wedding/wedding_speech_01.webp",
+      "category": "wedding",
+      "alt_base": "披露宴でスピーチをする新婦",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 66610,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　乾杯.webp",
+      "normalized": "images/wedding/wedding_toast_01.webp",
+      "category": "wedding",
+      "alt_base": "披露宴で乾杯する新郎新婦とゲスト",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 132706,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　乾杯２.webp",
+      "normalized": "images/wedding/wedding_toast_02.webp",
+      "category": "wedding",
+      "alt_base": "結婚式の乾杯シーン",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 97248,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚がしきで2人で歩く.png",
+      "normalized": "images/wedding/wedding_walk_couple_01.webp",
+      "category": "wedding",
+      "alt_base": "結婚式で寄り添って歩く新郎新婦",
+      "src_format": "PNG image data",
+      "out_bytes": 154050,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式　2人で歩く.png",
+      "normalized": "images/wedding/wedding_walk_couple_02.webp",
+      "category": "wedding",
+      "alt_base": "挙式で手を取り合って歩く新郎新婦",
+      "src_format": "PNG image data",
+      "out_bytes": 146514,
+      "out_dims": [
+        1600,
+        905
+      ],
+      "action": "png->webp q80"
+    },
+    {
+      "original": "結婚式ウェルカムスペース.webp",
+      "normalized": "images/wedding/wedding_welcome_01.webp",
+      "category": "wedding",
+      "alt_base": "挙式会場のウェルカムスペースの飾り付け",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 113800,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    },
+    {
+      "original": "結婚式　ウェルカムスペース２.webp",
+      "normalized": "images/wedding/wedding_welcome_02.webp",
+      "category": "wedding",
+      "alt_base": "結婚式のウェルカムスペースの装花と写真",
+      "src_format": "RIFF (little-endian) data",
+      "out_bytes": 133162,
+      "out_dims": [
+        1280,
+        724
+      ],
+      "action": "copy"
+    }
+  ],
+  "discarded": [
+    {
+      "original": "ドレスがきつくて悔しい.png",
+      "kept": "wedding_dress_tight_01",
+      "reason": "png重複・webp版採用"
+    },
+    {
+      "original": "結婚式ドレスが入って嬉しい.webp",
+      "kept": "wedding_dress_fit_01",
+      "reason": "同一内容の重複"
+    },
+    {
+      "original": "結婚式でこのドレスが着たいと言っているカウンセリング.webp",
+      "kept": "wedding_dress_counseling_01",
+      "reason": "同一内容の重複"
+    },
+    {
+      "original": "結婚式ケーキ.webp",
+      "kept": "wedding_cake_01",
+      "reason": "同一内容の重複"
+    },
+    {
+      "original": "結婚式　乾杯３.webp",
+      "kept": "wedding_toast_02",
+      "reason": "乾杯２とサイズ一致・重複"
+    },
+    {
+      "original": "結婚式後の思い出ムービー.webp",
+      "kept": "wedding_movie_01",
+      "reason": "思い出ムービ重複・大きい方採用"
+    },
+    {
+      "original": "結婚式に向けて体重計に乗る.webp",
+      "kept": "wedding_scale_01",
+      "reason": "体重計重複・大きい方採用"
+    },
+    {
+      "original": "結婚後アルバム.webp",
+      "kept": "wedding_album_01",
+      "reason": "アルバム重複・大きい方採用"
+    },
+    {
+      "original": "結婚後の写真たて.webp",
+      "kept": "wedding_photo_frame_01",
+      "reason": "写真立て重複・大きい方採用"
+    },
+    {
+      "original": "夫婦同士のペアトレのコピー.png",
+      "kept": "couple_training_01",
+      "reason": "「のコピー」重複"
+    },
+    {
+      "original": "夫婦同士の合同とれ.png",
+      "kept": "couple_joint_training_01",
+      "reason": "「とれ」表記ゆれ重複"
+    }
+  ],
+  "uncategorized": [
+    {
+      "original": "ChatGPT Image 2026年6月16日 11_14_21.png",
+      "bytes": 2087397,
+      "note": "要確認: 内容不明/バナー。コンテンツプールから除外"
+    },
+    {
+      "original": "hf_20260704_151348_170bf9ca-1a98-4bb4-a668-fcb3b14137dd.png",
+      "bytes": 9830706,
+      "note": "要確認: 内容不明/バナー。コンテンツプールから除外"
+    },
+    {
+      "original": "nexus_freetrial_banner.png",
+      "bytes": 1522352,
+      "note": "要確認: 内容不明/バナー。コンテンツプールから除外"
+    }
+  ]
+}
