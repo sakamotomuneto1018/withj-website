@@ -1,0 +1,34 @@
+{
+  "_comment": "素材割り当て台帳。割り当てルールv2に基づき2026-07-07に初期化。source=nexus-sozai内の元ファイル名。以降の店舗ページ制作で割り当てるたびに追記・countを更新する。",
+  "initialized": "2026-07-07",
+  "assets": [
+    {
+      "source": "スクワット_ショートカット.webp",
+      "count": 1,
+      "stores": [
+        { "slug": "ofuna", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "ドリンク休憩①.png",
+      "count": 1,
+      "stores": [
+        { "slug": "ofuna", "usage": "section1 commute" }
+      ]
+    },
+    {
+      "source": "サイドレイズ_黒髪女性②.webp",
+      "count": 1,
+      "stores": [
+        { "slug": "ofuna", "usage": "section2 opening" }
+      ]
+    },
+    {
+      "source": "トレーニング後のプロテイン無料.png",
+      "count": 1,
+      "stores": [
+        { "slug": "ofuna", "usage": "section3 amenity" }
+      ]
+    }
+  ]
+}
