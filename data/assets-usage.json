@@ -29,6 +29,34 @@
       "stores": [
         { "slug": "ofuna", "usage": "section3 amenity" }
       ]
+    },
+    {
+      "source": "女性_ストレッチ.png",
+      "count": 1,
+      "stores": [
+        { "slug": "nakamachidai", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "夫婦同士のカウンセリング.png",
+      "count": 1,
+      "stores": [
+        { "slug": "nakamachidai", "usage": "section1 counseling" }
+      ]
+    },
+    {
+      "source": "ストレッチ_黒髪女性.png",
+      "count": 1,
+      "stores": [
+        { "slug": "nakamachidai", "usage": "section2 walking" }
+      ]
+    },
+    {
+      "source": "ドリンク休憩②.png",
+      "count": 1,
+      "stores": [
+        { "slug": "nakamachidai", "usage": "section3 opening" }
+      ]
     }
   ]
 }
