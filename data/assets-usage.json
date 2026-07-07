@@ -11,10 +11,11 @@
     },
     {
       "source": "ドリンク休憩①.png",
-      "count": 2,
+      "count": 3,
       "stores": [
         { "slug": "ofuna", "usage": "section1 commute" },
-        { "slug": "hiyoshi", "usage": "section3 clean" }
+        { "slug": "hiyoshi", "usage": "section3 clean" },
+        { "slug": "kibogaoka", "usage": "section2 opening" }
       ]
     },
     {
@@ -26,9 +27,10 @@
     },
     {
       "source": "トレーニング後のプロテイン無料.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "ofuna", "usage": "section3 amenity" }
+        { "slug": "ofuna", "usage": "section3 amenity" },
+        { "slug": "kibogaoka", "usage": "section3 amenity" }
       ]
     },
     {
@@ -78,6 +80,20 @@
       "count": 1,
       "stores": [
         { "slug": "hiyoshi", "usage": "section2 trainer" }
+      ]
+    },
+    {
+      "source": "ヒップリフト_黒髪女性.png",
+      "count": 1,
+      "stores": [
+        { "slug": "kibogaoka", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "女性スクワット画像.png",
+      "count": 1,
+      "stores": [
+        { "slug": "kibogaoka", "usage": "section1 motivation" }
       ]
     }
   ]
