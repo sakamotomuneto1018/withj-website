@@ -11,9 +11,10 @@
     },
     {
       "source": "ドリンク休憩①.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "ofuna", "usage": "section1 commute" }
+        { "slug": "ofuna", "usage": "section1 commute" },
+        { "slug": "hiyoshi", "usage": "section3 clean" }
       ]
     },
     {
@@ -56,6 +57,27 @@
       "count": 1,
       "stores": [
         { "slug": "nakamachidai", "usage": "section3 opening" }
+      ]
+    },
+    {
+      "source": "ダンベルカール_黒髪女性.png",
+      "count": 1,
+      "stores": [
+        { "slug": "hiyoshi", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "ケトルトレーニング.png",
+      "count": 1,
+      "stores": [
+        { "slug": "hiyoshi", "usage": "section1 concentration" }
+      ]
+    },
+    {
+      "source": "サイドレイズ_黒髪女性.webp",
+      "count": 1,
+      "stores": [
+        { "slug": "hiyoshi", "usage": "section2 trainer" }
       ]
     }
   ]
