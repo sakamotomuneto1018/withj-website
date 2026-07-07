@@ -12,26 +12,29 @@
     },
     {
       "source": "ドリンク休憩①.png",
-      "count": 3,
+      "count": 4,
       "stores": [
         { "slug": "ofuna", "usage": "section1 commute" },
         { "slug": "hiyoshi", "usage": "section3 clean" },
-        { "slug": "kibogaoka", "usage": "section2 opening" }
+        { "slug": "kibogaoka", "usage": "section2 opening" },
+        { "slug": "kashimada-shinkawasaki", "usage": "section1 intensity" }
       ]
     },
     {
       "source": "サイドレイズ_黒髪女性②.webp",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "ofuna", "usage": "section2 opening" }
+        { "slug": "ofuna", "usage": "section2 opening" },
+        { "slug": "kashimada-shinkawasaki", "usage": "hero + og" }
       ]
     },
     {
       "source": "トレーニング後のプロテイン無料.png",
-      "count": 2,
+      "count": 3,
       "stores": [
         { "slug": "ofuna", "usage": "section3 amenity" },
-        { "slug": "kibogaoka", "usage": "section3 amenity" }
+        { "slug": "kibogaoka", "usage": "section3 amenity" },
+        { "slug": "kashimada-shinkawasaki", "usage": "section3 amenity" }
       ]
     },
     {
@@ -98,6 +101,13 @@
       "stores": [
         { "slug": "kibogaoka", "usage": "section1 motivation" },
         { "slug": "mitsuzawa-kamicho", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "食事指導①.png",
+      "count": 1,
+      "stores": [
+        { "slug": "kashimada-shinkawasaki", "usage": "section2 counseling" }
       ]
     }
   ]
