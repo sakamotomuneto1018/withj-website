@@ -4,9 +4,10 @@
   "assets": [
     {
       "source": "スクワット_ショートカット.webp",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "ofuna", "usage": "hero + og" }
+        { "slug": "ofuna", "usage": "hero + og" },
+        { "slug": "mitsuzawa-kamicho", "usage": "section2 legs" }
       ]
     },
     {
@@ -56,9 +57,10 @@
     },
     {
       "source": "ドリンク休憩②.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "nakamachidai", "usage": "section3 opening" }
+        { "slug": "nakamachidai", "usage": "section3 opening" },
+        { "slug": "mitsuzawa-kamicho", "usage": "section3 opening" }
       ]
     },
     {
@@ -70,9 +72,10 @@
     },
     {
       "source": "ケトルトレーニング.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "hiyoshi", "usage": "section1 concentration" }
+        { "slug": "hiyoshi", "usage": "section1 concentration" },
+        { "slug": "mitsuzawa-kamicho", "usage": "section1 observe" }
       ]
     },
     {
@@ -91,9 +94,10 @@
     },
     {
       "source": "女性スクワット画像.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "kibogaoka", "usage": "section1 motivation" }
+        { "slug": "kibogaoka", "usage": "section1 motivation" },
+        { "slug": "mitsuzawa-kamicho", "usage": "hero + og" }
       ]
     }
   ]
