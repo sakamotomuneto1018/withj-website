@@ -53,9 +53,10 @@
     },
     {
       "source": "ストレッチ_黒髪女性.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "nakamachidai", "usage": "section2 walking" }
+        { "slug": "nakamachidai", "usage": "section2 walking" },
+        { "slug": "noborito", "usage": "section1 recovery" }
       ]
     },
     {
@@ -108,6 +109,34 @@
       "count": 1,
       "stores": [
         { "slug": "kashimada-shinkawasaki", "usage": "section2 counseling" }
+      ]
+    },
+    {
+      "source": "ベンチプレス_黒髪女性.png",
+      "count": 1,
+      "stores": [
+        { "slug": "noborito", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "ジムの内装イメージ①.png",
+      "count": 1,
+      "stores": [
+        { "slug": "noborito", "usage": "section2 opening" }
+      ]
+    },
+    {
+      "source": "来店の様子.png",
+      "count": 1,
+      "stores": [
+        { "slug": "noborito", "usage": "section3 arrive" }
+      ]
+    },
+    {
+      "source": "退店の様子.png",
+      "count": 1,
+      "stores": [
+        { "slug": "noborito", "usage": "section3 leave" }
       ]
     }
   ]
