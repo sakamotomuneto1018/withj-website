@@ -1739,28 +1739,31 @@
       "google": null
     },
     {
-      "slug": "ota",
+      "slug": "ota-gunma",
       "name": "太田店",
       "prefecture": "群馬県",
       "city": "太田市",
       "postal": "〒373-0057",
       "address": "群馬県太田市本町20-11 ハウズマンション101",
-      "stations": null,
-      "area_keywords": null,
+      "stations": ["東武伊勢崎線 太田駅"],
+      "area_keywords": ["太田", "伊勢崎", "足利", "館林", "ものづくり", "ブライダル"],
       "tel": "050-1790-8499",
-      "hours": "9:00〜22:00",
+      "hours": "8:00〜23:00",
       "features": [
         "完全個室",
         "手ぶら通いOK",
         "女性会員85%",
         "運動初心者歓迎",
+        "群馬県初出店",
+        "ブライダル対応",
+        "立ち仕事の腰肩ケア",
         "AI食事指導"
       ],
       "nearby_landmarks": null,
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
-      "has_page": false,
-      "priority": null,
-      "published": false,
+      "has_page": true,
+      "priority": 0.7,
+      "published": true,
       "google": null
     },
     {

@@ -120,9 +120,10 @@
     },
     {
       "source": "ジムの内装イメージ①.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "noborito", "usage": "section2 opening" }
+        { "slug": "noborito", "usage": "section2 opening" },
+        { "slug": "ota-gunma", "usage": "section3 facility（オープン直後の通いやすさ）" }
       ]
     },
     {
@@ -160,6 +161,27 @@
       "stores": [
         { "slug": "noborito", "usage": "section3 arrive" },
         { "slug": "omiya", "usage": "section3 arrive（仕事帰りも買い物ついでもペア）" }
+      ]
+    },
+    {
+      "source": "女性ダンベル.png",
+      "count": 1,
+      "stores": [
+        { "slug": "ota-gunma", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "デッドリフト１.png",
+      "count": 1,
+      "stores": [
+        { "slug": "ota-gunma", "usage": "section1 method（ものづくりの街に身体づくり）" }
+      ]
+    },
+    {
+      "source": "姿勢改善①.png",
+      "count": 1,
+      "stores": [
+        { "slug": "ota-gunma", "usage": "section2 posture（立ち仕事の腰肩ケア）" }
       ]
     }
   ]
