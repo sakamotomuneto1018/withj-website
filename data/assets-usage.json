@@ -22,10 +22,11 @@
     },
     {
       "source": "サイドレイズ_黒髪女性②.webp",
-      "count": 2,
+      "count": 3,
       "stores": [
         { "slug": "ofuna", "usage": "section2 opening" },
-        { "slug": "kashimada-shinkawasaki", "usage": "hero + og" }
+        { "slug": "kashimada-shinkawasaki", "usage": "hero + og" },
+        { "slug": "nogizaka-akasaka", "usage": "hero + og（明るいトーン改修）" }
       ]
     },
     {
@@ -205,6 +206,27 @@
       "count": 1,
       "stores": [
         { "slug": "fukui-ashikaga", "usage": "section3 arrive（手ぶらで通える気軽さ）" }
+      ]
+    },
+    {
+      "source": "カウンセリング_黒髪２.webp",
+      "count": 1,
+      "stores": [
+        { "slug": "nogizaka-akasaka", "usage": "bridal album① counseling（明るいトーン改修）" }
+      ]
+    },
+    {
+      "source": "ドレスが入って嬉しい.webp",
+      "count": 1,
+      "stores": [
+        { "slug": "nogizaka-akasaka", "usage": "bridal album② dress（明るいトーン改修）" }
+      ]
+    },
+    {
+      "source": "結婚式で笑顔の2人.png",
+      "count": 1,
+      "stores": [
+        { "slug": "nogizaka-akasaka", "usage": "bridal album③ wedding（明るいトーン改修）" }
       ]
     }
   ]

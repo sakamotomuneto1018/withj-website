@@ -11,7 +11,7 @@
 <meta property="og:title" content="NEXUSパーソナルジム 乃木坂・赤坂店｜乃木坂・赤坂の完全個室・隠れ家ジム">
 <meta property="og:description" content="乃木坂・赤坂のパーソナルジムならNEXUS乃木坂・赤坂店。東京メトロ千代田線・乃木坂駅・赤坂駅が最寄り、港区の住宅街のマンションの一室にある完全個室の隠れ家ジム。女性会員85%・手ぶらOK・1回4,500円〜。無料体験実施中。挙式日から逆算する結婚式前のブライダルボディメイクにも対応。">
 <meta property="og:url" content="https://www.withj-inc.com/shops/nogizaka-akasaka/">
-<meta property="og:image" content="https://www.withj-inc.com/images/shops/nogizaka-akasaka/nogizaka-akasaka-hidden-gym-interior.webp">
+<meta property="og:image" content="https://www.withj-inc.com/images/shops/nogizaka-akasaka/bright-hero-training.webp">
 <meta property="og:site_name" content="株式会社WITHJ">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
@@ -295,6 +295,58 @@
 .st-gallery img { width:100%; height:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; display:block; border:1px solid var(--line); }
 @media (max-width:600px){ .st-fig-2 { grid-template-columns:1fr; } .st-fig-2 img { aspect-ratio:16/10; } }
 @media (max-width:768px) { .st-wrap { padding:8px 20px 100px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } .st-band { padding:40px 20px; } }
+
+/* ============ 乃木坂・赤坂店 限定：明るいヒーロー＆ブライダルアルバム ============ */
+/* このページ専用の上書き。full-bleed の明るい帯を .st-wrap の外側に配置する */
+.nz-bright { position:relative; background:linear-gradient(180deg,#ffffff 0%,#faf7f2 55%,#f6efe6 100%); color:#2b2b30; }
+.nz-bright-inner { max-width:860px; margin:0 auto; padding:26px 6% 8px; }
+/* HERO */
+.nz-hero { }
+.nz-eyebrow { color:#0fa9bd; font-weight:800; font-size:11px; letter-spacing:.28em; text-transform:uppercase; margin:6px 0 10px; }
+.nz-hero-fig { margin:0 0 18px; position:relative; }
+.nz-hero-fig img { width:100%; height:auto; max-height:460px; object-fit:cover; object-position:center 30%; border-radius:22px; display:block; box-shadow:0 20px 50px rgba(120,100,70,.16); }
+.nz-badge { position:absolute; top:14px; left:14px; display:inline-flex; align-items:center; gap:6px; background:rgba(255,255,255,.92); border:1px solid rgba(224,57,155,.35); color:#c02c86; font-weight:800; font-size:12px; letter-spacing:.02em; padding:7px 13px; border-radius:999px; box-shadow:0 6px 18px rgba(224,57,155,.16); backdrop-filter:blur(4px); }
+.nz-badge::before { content:""; width:7px; height:7px; border-radius:50%; background:#e0399b; }
+.nz-hero h1 { font-size:clamp(24px,6vw,37px); font-weight:900; line-height:1.34; margin:0 0 14px; letter-spacing:.01em; color:#23232a; }
+.nz-hero h1 .ac { color:#0fa9bd; }
+.nz-lead { font-size:15px; line-height:1.85; color:#5b5750; border-left:3px solid #3dd6e8; padding-left:16px; margin:0 0 16px; }
+.nz-feature-list { list-style:none; padding:0; margin:0 0 4px; display:flex; flex-wrap:wrap; gap:8px; }
+.nz-feature-list li { background:#ffffff; border:1px solid #ecdfce; border-radius:999px; padding:7px 15px; font-size:13px; color:#4a463f; }
+.nz-feature-list li::before { content:"✓ "; color:#0fa9bd; font-weight:800; }
+.nz-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:20px 0 4px; }
+.nz-stat { background:#ffffff; border:1px solid #ecdfce; border-radius:16px; padding:16px 8px; text-align:center; box-shadow:0 6px 16px rgba(120,100,70,.06); }
+.nz-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:#0fa9bd; letter-spacing:.02em; }
+.nz-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.nz-stat .c { font-size:10.5px; color:#8a8378; margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .nz-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+/* ブライダルアルバム */
+.nz-album { padding-top:34px; padding-bottom:20px; }
+.nz-album-h { text-align:center; margin:0 0 6px; }
+.nz-album-h .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:#e0399b; margin-bottom:4px; }
+.nz-album-h h2 { font-size:clamp(22px,5.4vw,30px); font-weight:900; line-height:1.32; margin:0; color:#23232a; }
+.nz-album-sub { text-align:center; font-size:14px; line-height:1.8; color:#6b6659; max-width:620px; margin:10px auto 4px; }
+.nz-frames { display:flex; justify-content:center; align-items:flex-start; flex-wrap:nowrap; gap:6px; margin:26px auto 8px; max-width:760px; }
+.nz-frame { background:#fff; padding:12px 12px 40px; border-radius:4px; box-shadow:0 12px 30px rgba(120,100,70,.20); position:relative; width:33%; transition:transform .28s ease, box-shadow .28s ease; }
+.nz-frame img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; background:#eee; }
+.nz-frame .cap { position:absolute; left:0; right:0; bottom:12px; text-align:center; font-size:11.5px; font-weight:700; color:#8a8378; letter-spacing:.02em; }
+.nz-frame::before { content:""; position:absolute; top:-11px; left:50%; width:78px; height:22px; transform:translateX(-50%) rotate(-2deg); background:rgba(212,175,122,.42); border:1px dashed rgba(160,120,60,.35); border-radius:2px; }
+.nz-frame:nth-child(1){ transform:rotate(-4deg); z-index:1; }
+.nz-frame:nth-child(2){ transform:rotate(2deg); z-index:3; margin-top:-6px; }
+.nz-frame:nth-child(3){ transform:rotate(4deg); z-index:2; }
+@media (hover:hover){ .nz-frame:hover{ transform:translateY(-10px) rotate(0deg); box-shadow:0 22px 44px rgba(120,100,70,.28); z-index:5; } }
+.nz-album-link { text-align:center; margin-top:22px; }
+.nz-album-link a { display:inline-flex; align-items:center; gap:6px; color:#c02c86; font-size:14px; font-weight:800; text-decoration:none; border-bottom:1px solid rgba(224,57,155,.4); padding-bottom:2px; }
+.nz-album-link a::after { content:"→"; }
+/* 明→暗 のロングトランジション */
+.nz-fade { height:140px; background:linear-gradient(180deg,#f6efe6 0%, #d8cbb8 24%, #8a7d6c 48%, #4a4038 70%, #201d1a 86%, #050507 100%); }
+@media (max-width:560px){
+  .nz-frames { flex-wrap:wrap; gap:10px 8px; max-width:340px; }
+  .nz-frame { width:44%; padding:9px 9px 30px; }
+  .nz-frame .cap { bottom:9px; font-size:10.5px; }
+  .nz-frame:nth-child(1){ transform:rotate(-4deg); }
+  .nz-frame:nth-child(2){ transform:rotate(3deg); margin-top:0; }
+  .nz-frame:nth-child(3){ width:60%; margin:-10px auto 0; transform:rotate(-2deg); }
+}
 </style>
 </head>
 <body>
@@ -305,20 +357,36 @@
      セクション順: 1.Hero 2.Bridalストーリー+FAQ3 3.CTA① 4.Price(4)
      5.CTA② 6.Reviews 7.Studio 8.Access 9.FAQ統合 10.最終CTA
      ============================================================ -->
-<main class="st-wrap" data-template="bridal">
-<!-- 1. HERO（ブライダル訴求を前面に） -->
-<figure class="st-hero-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-hidden-gym-interior.webp" width="1200" height="2122" alt="乃木坂・赤坂の完全個室パーソナルジムNEXUS乃木坂・赤坂店の、マンションの一室にある隠れ家のような静かな内観" loading="eager" fetchpriority="high"></figure>
-<p class="st-eyebrow">NEXUS Personal Gym ／ 東京都港区</p>
-<h1>NEXUSパーソナルジム 乃木坂・赤坂店｜<span class="ac">乃木坂・赤坂</span>の完全個室・隠れ家ジム</h1>
-<p class="st-lead">乃木坂・赤坂駅すぐ、港区の隠れ家。挙式日から逆算するブライダルボディメイクに対応する、看板のない完全個室ジムです。</p>
-<ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>挙式日から逆算</li><li>AI食事指導</li></ul>
-<div class="st-stats">
-<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
-<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
-<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
-<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+<!-- 1. HERO（明るいトーン・full-bleed）＋ 2. ブライダルアルバム -->
+<section class="nz-bright">
+<div class="nz-bright-inner nz-hero">
+<p class="nz-eyebrow">NEXUS Personal Gym ／ 東京都港区</p>
+<figure class="nz-hero-fig"><span class="nz-badge">ブライダルプラン対応</span><img src="../../images/shops/nogizaka-akasaka/bright-hero-training.webp" width="1280" height="724" alt="自然光の入る明るい完全個室でトレーナーとサイドレイズに取り組む乃木坂・赤坂店の女性会員" loading="eager" fetchpriority="high"></figure>
+<h1>NEXUSパーソナルジム 乃木坂・赤坂店｜<span class="ac">乃木坂・赤坂</span>の完全個室パーソナルジム</h1>
+<p class="nz-lead">港区の落ち着いた住宅街に佇む、看板のない完全個室ジム。自然光の入る明るいスタジオで、トレーナーとマンツーマン。女性会員85%・手ぶら通いOK・毎日8:00〜23:00で、無理なく続けられます。</p>
+<ul class="nz-feature-list"><li>完全個室</li><li>女性会員85%</li><li>手ぶら通いOK</li><li>8:00〜23:00</li><li>1回4,500円〜</li><li>AI食事指導</li></ul>
+<div class="nz-stats">
+<div class="nz-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="nz-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="nz-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="nz-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
 </div>
-<!-- 2. ブライダルストーリー（圧縮版）＋ブライダルFAQ3問 -->
+</div>
+<!-- ブライダルアルバム（明るいトーン・フォトフレーム） -->
+<div class="nz-bright-inner nz-album">
+<div class="nz-album-h"><span class="en">Bridal Album</span><h2>一生に一度の日を、最高の私で。</h2></div>
+<p class="nz-album-sub">「このドレスが着たい」から、挙式当日まで。挙式日から逆算したプログラムで、背中・二の腕・デコルテ・ウエストを整えます。物語は、一枚のカウンセリングから始まります。</p>
+<div class="nz-frames">
+<div class="nz-frame"><img src="../../images/shops/nogizaka-akasaka/album-counseling.webp" width="622" height="1100" alt="乃木坂・赤坂店の明るい完全個室でカウンセリングを受ける黒髪の女性会員" loading="lazy"><span class="cap">① まずは相談から</span></div>
+<div class="nz-frame"><img src="../../images/shops/nogizaka-akasaka/album-dress.webp" width="1200" height="678" alt="ドレスの試着で理想のラインに近づき笑顔になる乃木坂・赤坂エリアの花嫁" loading="lazy"><span class="cap">② ドレスが似合う私へ</span></div>
+<div class="nz-frame"><img src="../../images/shops/nogizaka-akasaka/album-wedding.webp" width="1280" height="724" alt="自信を持って挙式当日を迎えた明るい笑顔の新郎新婦" loading="lazy"><span class="cap">③ 最高の一日</span></div>
+</div>
+<div class="nz-album-link"><a href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a></div>
+</div>
+<div class="nz-fade" aria-hidden="true"></div>
+</section>
+<main class="st-wrap" data-template="bridal">
+<!-- 3. ブライダルストーリー（圧縮版）＋ブライダルFAQ3問 -->
 <section class="st-band">
 <h2><span class="en">Bridal Body-make</span>結婚式前のボディメイクを、乃木坂・赤坂で</h2>
 <p class="st-lead">挙式日から逆算。背中・二の腕・デコルテ・ウエストを、完全個室で。</p>
