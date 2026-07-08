@@ -259,29 +259,53 @@
 .st-gallery img { width:100%; height:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; display:block; border:1px solid var(--line); }
 @media (max-width:600px){ .st-fig-2 { grid-template-columns:1fr; } .st-fig-2 img { aspect-ratio:16/10; } }
 @media (max-width:768px) { .st-wrap { padding:8px 20px 100px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } .st-band { padding:40px 20px; } }
+/* ============ 明るいヒーロー：.st-wrap の外側に置く full-bleed の明るい帯（明→暗はグラデーションで接続） ============ */
+.nz-bright { position:relative; background:linear-gradient(180deg,#ffffff 0%,#faf7f2 55%,#f6efe6 100%); color:#2b2b30; }
+.nz-bright-inner { max-width:860px; margin:0 auto; padding:26px 6% 8px; }
+.nz-eyebrow { color:#0fa9bd; font-weight:800; font-size:11px; letter-spacing:.28em; text-transform:uppercase; margin:6px 0 10px; }
+.nz-hero-fig { margin:0 0 18px; position:relative; }
+.nz-hero-fig img { width:100%; height:auto; max-height:460px; object-fit:cover; object-position:center 30%; border-radius:22px; display:block; box-shadow:0 20px 50px rgba(120,100,70,.16); }
+.nz-hero h1 { font-size:clamp(24px,6vw,37px); font-weight:900; line-height:1.34; margin:0 0 14px; letter-spacing:.01em; color:#23232a; }
+.nz-hero h1 .ac { color:#0fa9bd; }
+.nz-lead { font-size:15px; line-height:1.85; color:#5b5750; border-left:3px solid #3dd6e8; padding-left:16px; margin:0 0 16px; }
+.nz-feature-list { list-style:none; padding:0; margin:0 0 4px; display:flex; flex-wrap:wrap; gap:8px; }
+.nz-feature-list li { background:#ffffff; border:1px solid #ecdfce; border-radius:999px; padding:7px 15px; font-size:13px; color:#4a463f; }
+.nz-feature-list li::before { content:"✓ "; color:#0fa9bd; font-weight:800; }
+.nz-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:20px 0 4px; }
+.nz-stat { background:#ffffff; border:1px solid #ecdfce; border-radius:16px; padding:16px 8px; text-align:center; box-shadow:0 6px 16px rgba(120,100,70,.06); }
+.nz-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:#0fa9bd; letter-spacing:.02em; }
+.nz-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.nz-stat .c { font-size:10.5px; color:#8a8378; margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .nz-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.nz-fade { height:140px; background:linear-gradient(180deg,#f6efe6 0%, #d8cbb8 24%, #8a7d6c 48%, #4a4038 70%, #201d1a 86%, #050507 100%); }
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">乃木坂・赤坂店</li></ol></nav>
 <!-- ============================================================
-     TEMPLATE: standard   （店舗ページ・通常型）
-     セクション順: 1.Hero 2.Price 3.Reviews 4.Studio 5.Access 6.FAQ 7.最終CTA
+     TEMPLATE: standard   （店舗ページ・通常型：明るいヒーロー＋暗いボディ）
+     セクション順: 1.Hero(明) 2.Price 3.Reviews 4.Studio 5.Access 6.FAQ 7.最終CTA
+     CTAは「下部固定バー＋最終クロージング」の2箇所のみ（中間CTAなし）
      ============================================================ -->
-<main class="st-wrap" data-template="standard">
-<!-- 1. HERO（ヒーロー画像1枚＋店名＋キャッチ＋CTA） -->
-<p class="st-eyebrow">NEXUS Personal Gym ／ 東京都港区</p>
+<!-- 1. HERO（明るいトーン・full-bleed：店名＋キャッチ＋数値） -->
+<section class="nz-bright">
+<div class="nz-bright-inner nz-hero">
+<p class="nz-eyebrow">NEXUS Personal Gym ／ 東京都港区</p>
+<figure class="nz-hero-fig"><img src="../../images/shops/nogizaka-akasaka/bright-hero-training.webp" width="1280" height="724" alt="乃木坂・赤坂のNEXUSパーソナルジムでトレーナーとマンツーマンでサイドレイズに取り組む女性会員" loading="eager" fetchpriority="high"></figure>
 <h1>NEXUSパーソナルジム 乃木坂・赤坂店｜<span class="ac">乃木坂・赤坂</span>の完全個室パーソナルジム</h1>
-<figure class="st-hero-fig"><img src="../../images/shops/nogizaka-akasaka/bright-hero-training.webp" width="1280" height="724" alt="乃木坂・赤坂のNEXUSパーソナルジムでトレーナーとマンツーマンでサイドレイズに取り組む女性会員" loading="eager" fetchpriority="high"><figcaption>港区赤坂の完全個室で、トレーナーとマンツーマン。人目を気にせず、こっそり綺麗に。</figcaption></figure>
-<p class="st-lead">港区の落ち着いた住宅街に佇む、大きな看板のない完全個室のパーソナルジムです。東京メトロ千代田線・乃木坂駅／赤坂駅が最寄りで、赤坂・乃木坂・六本木エリアにお住まい・お勤めの方にご利用いただけます。完全個室のマンツーマンだから、すっぴん・部屋着感覚で通っても他の会員に会うことがなく、人目を気にせずトレーニングに集中できます。会員の約85%が女性で、運動が初めての30〜40代を中心に通われています。ウェア・水・タオル・プロテインまで無料でご用意する手ぶら通いOK。毎日8:00〜23:00の営業で、朝の出勤前も仕事帰りの夜間も、生活の動線に自然に組み込めます。</p>
-<ul class="st-feature-list"><li>完全個室</li><li>女性会員85%</li><li>手ぶら通いOK</li><li>8:00〜23:00</li><li>1回4,500円〜</li><li>AI食事指導</li></ul>
-<div class="st-stats">
-<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
-<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
-<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
-<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+<p class="nz-lead">港区の落ち着いた住宅街に佇む、看板のない完全個室ジム。自然光の入る明るいスタジオで、トレーナーとマンツーマン。女性会員85%・手ぶら通いOK・毎日8:00〜23:00で、無理なく続けられます。</p>
+<ul class="nz-feature-list"><li>完全個室</li><li>女性会員85%</li><li>手ぶら通いOK</li><li>8:00〜23:00</li><li>1回4,500円〜</li><li>AI食事指導</li></ul>
+<div class="nz-stats">
+<div class="nz-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="nz-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="nz-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="nz-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
 </div>
-<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+</div>
+<div class="nz-fade" aria-hidden="true"></div>
+</section>
+<main class="st-wrap" data-template="standard">
 <!-- 2. 料金プラン（4プラン・カード型グリッド） -->
 <section>
 <h2><span class="en">Price</span>料金プラン</h2>
