@@ -128,10 +128,11 @@
     },
     {
       "source": "退店の様子.png",
-      "count": 2,
+      "count": 3,
       "stores": [
         { "slug": "noborito", "usage": "section3 leave" },
-        { "slug": "omiya", "usage": "section3 leave（仕事帰りも買い物ついでもペア）" }
+        { "slug": "omiya", "usage": "section3 leave（仕事帰りも買い物ついでもペア）" },
+        { "slug": "fukui-ashikaga", "usage": "section3 leave（手ぶらで通える気軽さ）" }
       ]
     },
     {
@@ -150,9 +151,10 @@
     },
     {
       "source": "ジムのイメージ②.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "omiya", "usage": "section2 facility（オープン直後の通いやすさ）" }
+        { "slug": "omiya", "usage": "section2 facility（オープン直後の通いやすさ）" },
+        { "slug": "fukui-ashikaga", "usage": "section2 facility（オープン直後の通いやすさ）" }
       ]
     },
     {
@@ -182,6 +184,27 @@
       "count": 1,
       "stores": [
         { "slug": "ota-gunma", "usage": "section2 posture（立ち仕事の腰肩ケア）" }
+      ]
+    },
+    {
+      "source": "デッドリフト２.png",
+      "count": 1,
+      "stores": [
+        { "slug": "fukui-ashikaga", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "理屈で納得できるロジカル指導１.png",
+      "count": 1,
+      "stores": [
+        { "slug": "fukui-ashikaga", "usage": "section1 method（学びの街で身体を学び直す・フォーム指導）" }
+      ]
+    },
+    {
+      "source": "初めての来店①.png",
+      "count": 1,
+      "stores": [
+        { "slug": "fukui-ashikaga", "usage": "section3 arrive（手ぶらで通える気軽さ）" }
       ]
     }
   ]
