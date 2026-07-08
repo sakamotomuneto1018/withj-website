@@ -132,6 +132,14 @@
 | kashimada-shinkawasaki | dress_counseling_01 | ring_glove_01 | eve_02 | smile_couple_01 | frame_01 |
 | noborito | commit_01 | ring_glove_02 | dress_fit_01 | blessed_couple_01 | frame_02 |
 
+### 埼玉
+
+| 店舗 | ①悩み | ②決意 | ③達成 | ④当日 | ⑤その後 |
+|---|---|---|---|---|---|
+| omiya | dress_tight_01 | commit_01 | dress_fit_01 | aisle_01 | smile_couple_01 |
+
+> omiya=埼玉県初出店・近接NEXUS店なし（カニバリ無関係）。ブライダルは st-band で本文昇格（統合版）。②はcommit_01（決意）を採用。
+
 ### 大阪
 
 | 店舗 | ①悩み | ②決意 | ③達成 | ④当日 | ⑤その後 |

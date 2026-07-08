@@ -203,46 +203,79 @@
 .st-fig figcaption { font-size:12.5px; color:var(--ink-faint); padding:9px 13px; background:var(--bg-soft); }
 .st-rev-summary { background:var(--bg-card); border:1px solid var(--line-accent); border-left:3px solid var(--accent1); border-radius:12px; padding:16px 18px; margin:4px 0 16px; font-size:14px; line-height:1.9; color:var(--ink); }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">渋谷・神泉店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="bridal">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都渋谷区</p>
 <h1>NEXUSパーソナルジム 渋谷・神泉店｜<span class="ac">渋谷・神泉</span>で、しなやかに絞る完全個室ジム</h1>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/hero-training.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/hero-training.jpg" width="896" height="1200" alt="渋谷神泉のNEXUSパーソナルジムでのストレッチ指導" loading="eager" fetchpriority="high"></picture><figcaption>渋谷・神泉で、鍛えすぎずしなやかに絞る。道玄坂の喧騒から一本入った、人目ゼロの完全個室ジム。</figcaption></figure>
 <p class="st-lead">渋谷駅から徒歩10分・神泉駅からすぐ、道玄坂の喧騒から一本入った完全個室の隠れ家パーソナルジムです。自重中心のファンクショナルトレーニングで、筋肉をつけすぎずにしなやかなシルエットを目指します。「ムキムキになりたくない」という女性に選ばれる店舗。毎日8:00〜23:00・手ぶらOK・LINE予約だから、渋谷勤務の忙しい毎日でも続けやすい。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>ムキムキにならない</li><li>手ぶら通いOK</li><li>毎日8:00〜23:00</li><li>LINEで簡単予約</li></ul>
-<h2>この店舗の特徴</h2>
-<p>NEXUS渋谷・神泉店は、大型ジムがひしめく渋谷にありながら、道玄坂から一本入った神泉エリアに佇む完全個室のパーソナルジム。あえて喧騒から距離を置いた立地で、「人目を気にせず、しなやかに身体を絞りたい」という20〜30代の女性に選ばれています。得意とするのは、自重中心のファンクショナルトレーニング。重いウェイトでゴツく鍛えるのではなく、身体の使い方を整えながら、細く引き締まったシルエットへと導きます。ウェア・タオル・ドリンク・プロテインまで無料提供の手ぶら通いOK、予約はLINEでサッと完結。毎日8:00〜23:00営業で、渋谷での仕事帰りにも無理なく組み込めます。</p>
-
-<h2>ムキムキにならないトレーニング</h2>
-<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/functional.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/functional.jpg" width="1200" height="678" alt="自重を使ったしなやかなファンクショナルトレーニング" loading="lazy"></picture><figcaption>重いウェイトで固めるのではなく、自重で身体を整える。だからゴツくならず、しなやかに絞れる。</figcaption></figure>
-<p>「筋トレを始めたらゴツくなりそう」——これは女性が抱きがちな大きな誤解です。実際には、女性がホルモンの関係でボディビルダーのような身体になることはほぼありません。渋谷・神泉店では、重量を追い込む筋肥大メニューではなく、自重中心のファンクショナルトレーニングを軸にしています。自分の体重を使って身体の使い方を整えることで、筋肉をつけすぎずにスリムなシルエットを目指せる。会員からも「自重中心のトレーニングで、ムキムキにならずスリムなシルエットになれた」という声をいただいています。「細く引き締めたい、でもゴツくはなりたくない」という方にこそ向いた通い方です。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">ムキムキになるのが嫌でパーソナルを避けていましたが、ここは自重中心でゴツくならないと聞いて入会。実際、筋肉で大きくなるのではなく、スッと細く引き締まってきました。理想のしなやかなシルエットに近づけています。</p><div class="who">Google口コミより</div></div></div>
-
-<h2>シルエットから変えるボディライン</h2>
-<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/body-line.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/body-line.jpg" width="1200" height="678" alt="ボディラインを整えるヒップアップトレーニング" loading="lazy"></picture><figcaption>体重の数字より、鏡に映るシルエット。ヒップや姿勢から見た目の印象を変えていく。</figcaption></figure>
-<p>目指すのは、体重計の数字ではなく「鏡に映るシルエット」の変化です。渋谷・神泉店では、ヒップアップや姿勢改善といった、見た目の印象を大きく左右する部位のトレーニングを重視。同じ体重でも、ボディラインが整うだけで細く見え、服のシルエットも変わります。自重ベースのファンクショナルな種目で、日常の動きにつながる「使える身体」をつくりながら、しなやかで引き締まった印象へと近づけていきます。極端な減量ではなく、続けられる範囲でシルエットを磨くアプローチです。</p>
-
-<h2>外食も間食もOKの食事指導</h2>
-<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/flexible-meal.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/flexible-meal.jpg" width="1200" height="678" alt="外食や間食も楽しみながら続ける食事指導" loading="lazy"></picture><figcaption>渋谷でのランチも、たまの間食も。禁止ではなく、続けられる食べ方を一緒に見つける。</figcaption></figure>
-<p>渋谷はおいしいお店が多く、付き合いの外食も避けられないエリア。だからこそ渋谷・神泉店では、「あれもこれも禁止」という食事指導はしません。会員からも「無理のない範囲の食事アドバイスで、外食も間食もしながらストレスなく続けられる」という声をいただいています。何をどう選べば良いかを一緒に考え、渋谷での外食も間食も楽しみながら、それでも変化を積み上げていく。ガマンで一時的に落とすのではなく、生活に無理なく溶け込む食べ方だから、リバウンドしにくく長く続きます。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">食事も外食も我慢しなきゃいけないと思っていましたが、ここは無理のない範囲でアドバイスしてくれます。外食も間食もしながら続けられているのに、ちゃんと身体は変わってきていて、ストレスなく通えています。</p><div class="who">Google口コミより</div></div></div>
-
-<h2>手ぶらで渋谷帰りに</h2>
-<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/amenity.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/amenity.jpg" width="1200" height="678" alt="トレーニング後の無料プロテイン" loading="lazy"></picture><figcaption>ウェアもタオルもドリンクも用意ゼロ。LINEでサッと予約して、渋谷帰りに手ぶらで寄れる。</figcaption></figure>
-<p>渋谷・神泉店は渋谷駅から徒歩10分・神泉駅からすぐ。ウェア・タオル・ドリンク・プロテインまで揃っているので、特別な準備はゼロ、仕事帰りにバッグひとつで立ち寄れます。予約はLINEで完結。トークから希望日時を送るだけなので、忙しい合間にもサッと予約・変更ができます。会員からも「LINEでサッと予約できて、手ぶらで寄れるので仕事帰りに続いている」という声。準備のハードルをとことん下げることが、渋谷勤務の忙しい毎日でも通い続けられる理由です。</p>
-
-<h2>道玄坂の喧騒から一本入った隠れ家</h2>
-<p>渋谷は大型ジムやフィットネスクラブがひしめくエリア。そのなかで渋谷・神泉店は、道玄坂の喧騒から一本入った神泉に、あえて完全個室・人目ゼロという逆張りのポジションを取っています。大勢の視線のなかで汗をかくのが苦手な方、すっぴんや部屋着感覚で気楽に通いたい方にとって、「誰にも見られない」環境は大きな安心材料。トレーニング中は担当トレーナーと二人だけの空間なので、フォームの細かい部分まで気兼ねなく質問できます。渋谷の便利さと、隠れ家の落ち着き。その両方を手に入れられるのが、この店舗の立地の強みです。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">渋谷から徒歩10分で通いやすいのに、一歩入ると静かで落ち着いた雰囲気。完全個室なので人目を気にせず集中できます。LINEで予約が手軽なのも助かっていて、仕事帰りに無理なく続けられています。</p><div class="who">Google口コミより</div></div></div>
-
-<h2>まずは無料体験から</h2>
-<p>初回は60分程度の無料体験。カウンセリングで「どこを・どんなシルエットに変えたいか」をうかがい、姿勢チェックと実際のファンクショナルトレーニングまで体験できます。「ムキムキになりたくない」「細く引き締めたい」といった希望も、遠慮なくお伝えください。渋谷・神泉店なら、その目標に合わせて自重中心の無理のないプランを設計します。無理な勧誘は一切ありません。まずは話だけでも、気軽に来てください。予約はLINEからサッとどうぞ。</p>
-
-<h2>結婚式前のボディメイクを、渋谷・神泉で</h2>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section class="st-band">
+<h2><span class="en">Bridal Body-make</span>結婚式前のボディメイクを、渋谷・神泉店で</h2>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_01.webp" width="1280" height="724" alt="渋谷・神泉エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。渋谷・神泉店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_effort_couple_02.webp" width="1600" height="905" alt="渋谷・神泉エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -256,9 +289,29 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">渋谷・神泉店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
-<h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 渋谷・神泉店</dd></div><div class="row"><dt>住所</dt><dd>〒150-0043<br>東京都渋谷区道玄坂1-17-7 いちのビル 5階</dd></div><div class="row"><dt>最寄り駅</dt><dd>京王井の頭線　神泉駅すぐ／JR・東急・東京メトロ　渋谷駅 徒歩10分</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8493</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%821-17-7%20%E3%81%84%E3%81%A1%E3%81%AE%E3%83%93%E3%83%AB&z=16&output=embed" title="NEXUSパーソナルジム 渋谷・神泉店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
+<div class="st-bridal-faq"><p class="st-mini-h">ブライダルのよくある質問</p>
+
+  <details class="st-faq-item"><summary><span class="q">Q</span>挙式まで3ヶ月ですが、結婚式に間に合いますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。渋谷・神泉店では、挙式日から逆算した90日プラン・60日プランをご用意しています。まず挙式日とドレスのデザインをうかがい、背中・二の腕・デコルテ・ウエストなど、ドレスで見える部位から優先順位をつけて計画します。3ヶ月あれば体のラインは十分に変えられます。極端な食事制限ではなく、その日のコンディションから逆算した無理のない指導で、式当日にピークを合わせます。まずは無料体験で残り日数に合わせたプランをご提案します。<a class="st-ilink" href="../../bridal/">ブライダル専用ページで挙式前ボディメイクを詳しく見る</a></div></details>
+
+  <details class="st-faq-item"><summary><span class="q">Q</span>ドレスで気になる背中や二の腕を集中的に絞れますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェディングドレスは背中・二の腕・デコルテ・ウエストが特に目立つデザインが多いため、渋谷・神泉店ではこれらの部位を優先的に整えるメニューを組みます。完全個室のマンツーマンで、体に不必要に触れないノータッチ指導を基本としているので、女性の方も安心してトレーニングに集中できます。会員の約85%が女性で、ブライダルに向けたボディメイクのご相談も日常的にいただいています。</div></details>
+
+  <details class="st-faq-item"><summary><span class="q">Q</span>結婚式が終わった後も通い続けられますか？<span class="ic">+</span></summary><div class="st-faq-a">もちろんです。挙式はゴールであると同時に、新しい生活のスタートでもあります。渋谷・神泉店は毎日8:00〜23:00営業で、月4回18,000円（1回4,500円〜）から続けられるため、挙式後の体型維持や、将来の産後の体型戻しまで長く伴走できます。全国約70店舗のネットワークがあるので、引っ越しや里帰りの際も最寄りの店舗に通えます。挙式で作った習慣を、その後の暮らしにそのまま引き継いでいただけます。</div></details>
+</div>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>お客様の声</h2>
 <div class="st-rev-avg"><span class="st-stars">★★★★<span class="empty">★</span></span><b>4.9</b><span class="cnt">（58件）</span><span class="asof">※2026年7月時点</span></div>
 <p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E6%B8%8B%E8%B0%B7%E7%A5%9E%E6%B3%89%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
 <p class="st-rev-summary">NEXUS渋谷・神泉店はGoogle口コミ★4.9・58件。筋肉をつけすぎずしなやかに絞る自重トレーニングと、手ぶらで通える手軽さが評価されています。</p>
@@ -266,13 +319,50 @@
 <div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">初めてのパーソナルで緊張しましたが、丁寧な説明と楽しい雰囲気であっという間でした。短期間でも2〜3kg減り、見た目もはっきり引き締まってきて、通うのが楽しみになっています。</p><div class="who">Google口コミより</div></div>
 <div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">渋谷から徒歩10分で通いやすく、LINEで予約が手軽なのが本当に助かります。手ぶらで寄れるので、仕事帰りにふらっと立ち寄れて続いています。完全個室で人目を気にせず集中できるのも良いです。</p><div class="who">Google口コミより</div></div></div>
 <a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E6%B8%8B%E8%B0%B7%E7%A5%9E%E6%B3%89%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
+<h2>この店舗の特徴</h2>
+<p>NEXUS渋谷・神泉店は、大型ジムがひしめく渋谷にありながら、道玄坂から一本入った神泉エリアに佇む完全個室のパーソナルジム。あえて喧騒から距離を置いた立地で、「人目を気にせず、しなやかに身体を絞りたい」という20〜30代の女性に選ばれています。得意とするのは、自重中心のファンクショナルトレーニング。重いウェイトでゴツく鍛えるのではなく、身体の使い方を整えながら、細く引き締まったシルエットへと導きます。ウェア・タオル・ドリンク・プロテインまで無料提供の手ぶら通いOK、予約はLINEでサッと完結。毎日8:00〜23:00営業で、渋谷での仕事帰りにも無理なく組み込めます。</p>
+</section>
+<section>
+<h2>ムキムキにならないトレーニング</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/functional.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/functional.jpg" width="1200" height="678" alt="自重を使ったしなやかなファンクショナルトレーニング" loading="lazy"></picture><figcaption>重いウェイトで固めるのではなく、自重で身体を整える。だからゴツくならず、しなやかに絞れる。</figcaption></figure>
+<p>「筋トレを始めたらゴツくなりそう」——これは女性が抱きがちな大きな誤解です。実際には、女性がホルモンの関係でボディビルダーのような身体になることはほぼありません。渋谷・神泉店では、重量を追い込む筋肥大メニューではなく、自重中心のファンクショナルトレーニングを軸にしています。自分の体重を使って身体の使い方を整えることで、筋肉をつけすぎずにスリムなシルエットを目指せる。会員からも「自重中心のトレーニングで、ムキムキにならずスリムなシルエットになれた」という声をいただいています。「細く引き締めたい、でもゴツくはなりたくない」という方にこそ向いた通い方です。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">ムキムキになるのが嫌でパーソナルを避けていましたが、ここは自重中心でゴツくならないと聞いて入会。実際、筋肉で大きくなるのではなく、スッと細く引き締まってきました。理想のしなやかなシルエットに近づけています。</p><div class="who">Google口コミより</div></div></div>
+</section>
+<section>
+<h2>シルエットから変えるボディライン</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/body-line.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/body-line.jpg" width="1200" height="678" alt="ボディラインを整えるヒップアップトレーニング" loading="lazy"></picture><figcaption>体重の数字より、鏡に映るシルエット。ヒップや姿勢から見た目の印象を変えていく。</figcaption></figure>
+<p>目指すのは、体重計の数字ではなく「鏡に映るシルエット」の変化です。渋谷・神泉店では、ヒップアップや姿勢改善といった、見た目の印象を大きく左右する部位のトレーニングを重視。同じ体重でも、ボディラインが整うだけで細く見え、服のシルエットも変わります。自重ベースのファンクショナルな種目で、日常の動きにつながる「使える身体」をつくりながら、しなやかで引き締まった印象へと近づけていきます。極端な減量ではなく、続けられる範囲でシルエットを磨くアプローチです。</p>
+</section>
+<section>
+<h2>外食も間食もOKの食事指導</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/flexible-meal.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/flexible-meal.jpg" width="1200" height="678" alt="外食や間食も楽しみながら続ける食事指導" loading="lazy"></picture><figcaption>渋谷でのランチも、たまの間食も。禁止ではなく、続けられる食べ方を一緒に見つける。</figcaption></figure>
+<p>渋谷はおいしいお店が多く、付き合いの外食も避けられないエリア。だからこそ渋谷・神泉店では、「あれもこれも禁止」という食事指導はしません。会員からも「無理のない範囲の食事アドバイスで、外食も間食もしながらストレスなく続けられる」という声をいただいています。何をどう選べば良いかを一緒に考え、渋谷での外食も間食も楽しみながら、それでも変化を積み上げていく。ガマンで一時的に落とすのではなく、生活に無理なく溶け込む食べ方だから、リバウンドしにくく長く続きます。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">食事も外食も我慢しなきゃいけないと思っていましたが、ここは無理のない範囲でアドバイスしてくれます。外食も間食もしながら続けられているのに、ちゃんと身体は変わってきていて、ストレスなく通えています。</p><div class="who">Google口コミより</div></div></div>
+</section>
+<section>
+<h2>手ぶらで渋谷帰りに</h2>
+<figure class="st-fig"><picture><source srcset="../../images/shops/shibuya-shinsen/amenity.webp" type="image/webp"><img src="../../images/shops/shibuya-shinsen/amenity.jpg" width="1200" height="678" alt="トレーニング後の無料プロテイン" loading="lazy"></picture><figcaption>ウェアもタオルもドリンクも用意ゼロ。LINEでサッと予約して、渋谷帰りに手ぶらで寄れる。</figcaption></figure>
+<p>渋谷・神泉店は渋谷駅から徒歩10分・神泉駅からすぐ。ウェア・タオル・ドリンク・プロテインまで揃っているので、特別な準備はゼロ、仕事帰りにバッグひとつで立ち寄れます。予約はLINEで完結。トークから希望日時を送るだけなので、忙しい合間にもサッと予約・変更ができます。会員からも「LINEでサッと予約できて、手ぶらで寄れるので仕事帰りに続いている」という声。準備のハードルをとことん下げることが、渋谷勤務の忙しい毎日でも通い続けられる理由です。</p>
+</section>
+<section>
+<h2>道玄坂の喧騒から一本入った隠れ家</h2>
+<p>渋谷は大型ジムやフィットネスクラブがひしめくエリア。そのなかで渋谷・神泉店は、道玄坂の喧騒から一本入った神泉に、あえて完全個室・人目ゼロという逆張りのポジションを取っています。大勢の視線のなかで汗をかくのが苦手な方、すっぴんや部屋着感覚で気楽に通いたい方にとって、「誰にも見られない」環境は大きな安心材料。トレーニング中は担当トレーナーと二人だけの空間なので、フォームの細かい部分まで気兼ねなく質問できます。渋谷の便利さと、隠れ家の落ち着き。その両方を手に入れられるのが、この店舗の立地の強みです。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">渋谷から徒歩10分で通いやすいのに、一歩入ると静かで落ち着いた雰囲気。完全個室なので人目を気にせず集中できます。LINEで予約が手軽なのも助かっていて、仕事帰りに無理なく続けられています。</p><div class="who">Google口コミより</div></div></div>
+</section>
+<section>
+<h2>まずは無料体験から</h2>
+<p>初回は60分程度の無料体験。カウンセリングで「どこを・どんなシルエットに変えたいか」をうかがい、姿勢チェックと実際のファンクショナルトレーニングまで体験できます。「ムキムキになりたくない」「細く引き締めたい」といった希望も、遠慮なくお伝えください。渋谷・神泉店なら、その目標に合わせて自重中心の無理のないプランを設計します。無理な勧誘は一切ありません。まずは話だけでも、気軽に来てください。予約はLINEからサッとどうぞ。</p>
+</section>
+<section>
+<h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 渋谷・神泉店</dd></div><div class="row"><dt>住所</dt><dd>〒150-0043<br>東京都渋谷区道玄坂1-17-7 いちのビル 5階</dd></div><div class="row"><dt>最寄り駅</dt><dd>京王井の頭線　神泉駅すぐ／JR・東急・東京メトロ　渋谷駅 徒歩10分</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8493</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E9%81%93%E7%8E%84%E5%9D%821-17-7%20%E3%81%84%E3%81%A1%E3%81%AE%E3%83%93%E3%83%AB&z=16&output=embed" title="NEXUSパーソナルジム 渋谷・神泉店の地図"></iframe></div>
+</section>
+<section>
 <h2>渋谷・神泉店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>渋谷で女性向けの完全個室パーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。渋谷・神泉店は渋谷区道玄坂1-17-7 いちのビル5階にある完全個室のパーソナルジムです。渋谷駅から徒歩10分・神泉駅からすぐ、道玄坂の喧騒から一本入った立地で、大型ジムのように人目にさらされることがありません。女性会員が中心で、すっぴん・部屋着感覚で通っても他の会員と顔を合わせず、集中してトレーニングできます。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>筋トレでゴツくなりたくないのですが大丈夫ですか？<span class="ic">+</span></summary><div class="st-faq-a">大丈夫です。渋谷・神泉店は自重中心のファンクショナルトレーニングが得意で、筋肉をつけすぎずにしなやかなシルエットを目指します。「筋トレ＝ムキムキになる」というのは誤解で、女性が通常のパーソナルトレーニングでボディビルダーのような身体になることはほぼありません。むしろ姿勢とボディラインを整え、細く引き締まった印象へと変えていきます。「ムキムキになりたくない」という方こそ向いている店舗です。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>予約はどうやって取りますか？<span class="ic">+</span></summary><div class="st-faq-a">LINEで簡単に予約できます。専用アプリのインストールや電話は不要で、トークから希望日時を送るだけ。仕事の合間やスキマ時間にサッと予約・変更ができるので、渋谷勤務の忙しい方でも無理なく通い続けられます。6時間前まで無料でキャンセル・変更が可能です。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>挙式まで3ヶ月ですが、結婚式に間に合いますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。渋谷・神泉店では、挙式日から逆算した90日プラン・60日プランをご用意しています。まず挙式日とドレスのデザインをうかがい、背中・二の腕・デコルテ・ウエストなど、ドレスで見える部位から優先順位をつけて計画します。3ヶ月あれば体のラインは十分に変えられます。極端な食事制限ではなく、その日のコンディションから逆算した無理のない指導で、式当日にピークを合わせます。まずは無料体験で残り日数に合わせたプランをご提案します。<a class="st-ilink" href="../../bridal/">ブライダル専用ページで挙式前ボディメイクを詳しく見る</a></div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>ドレスで気になる背中や二の腕を集中的に絞れますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェディングドレスは背中・二の腕・デコルテ・ウエストが特に目立つデザインが多いため、渋谷・神泉店ではこれらの部位を優先的に整えるメニューを組みます。完全個室のマンツーマンで、体に不必要に触れないノータッチ指導を基本としているので、女性の方も安心してトレーニングに集中できます。会員の約85%が女性で、ブライダルに向けたボディメイクのご相談も日常的にいただいています。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>結婚式が終わった後も通い続けられますか？<span class="ic">+</span></summary><div class="st-faq-a">もちろんです。挙式はゴールであると同時に、新しい生活のスタートでもあります。渋谷・神泉店は毎日8:00〜23:00営業で、月4回18,000円（1回4,500円〜）から続けられるため、挙式後の体型維持や、将来の産後の体型戻しまで長く伴走できます。全国約70店舗のネットワークがあるので、引っ越しや里帰りの際も最寄りの店舗に通えます。挙式で作った習慣を、その後の暮らしにそのまま引き継いでいただけます。</div></details>
 <h2 style="font-size:17px;margin-top:36px">よくある質問（全店共通）</h2><p style="font-size:13px;color:var(--ink-faint);margin:0 0 4px">料金・制度などNEXUS全店に共通するご質問です。さらに詳しくは110問のFAQをご覧ください。</p>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>料金はいくらですか？<span class="ic">+</span></summary><div class="st-faq-a">ライト（30分）月4回18,000円〜、ベーシック（60分）月4回34,000円〜。1回あたり4,500円〜から始められます（すべて税込）。詳しくは料金プランをご覧ください。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>手ぶらで通えますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェア・水・タオル・プロテインまで無料提供で手ぶら通いOK。仕事帰りにバッグひとつで通えます。</div></details>
@@ -282,6 +372,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。20〜40代を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>渋谷・神泉で、しなやかに絞りませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>

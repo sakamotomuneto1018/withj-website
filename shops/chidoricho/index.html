@@ -205,44 +205,147 @@
 .st-fig figcaption { font-size:12.5px; color:var(--ink-faint); padding:9px 13px; background:var(--bg-soft); }
 .st-rev-summary { background:var(--bg-card); border:1px solid var(--line-accent); border-left:3px solid var(--accent1); border-radius:12px; padding:16px 18px; margin:4px 0 16px; font-size:14px; line-height:1.9; color:var(--ink); }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">千鳥町店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都大田区</p>
 <h1>NEXUSパーソナルジム 千鳥町店｜<span class="ac">自然光の入る、明るい路面店</span>の完全個室ジム</h1>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/chidoricho/hero-training.webp" type="image/webp"><img src="../../images/shops/chidoricho/hero-training.jpg" width="1200" height="678" alt="千鳥町駅近くの自然光が入るNEXUSパーソナルジム" loading="eager" fetchpriority="high"></picture><figcaption>自然光の入る、千鳥町の明るい完全個室ジム。路面店だから開放的、けれど完全予約制・1組ずつで安心。</figcaption></figure>
 <p class="st-lead">東急池上線・千鳥町駅近く、大きな窓から自然光が入る路面店の完全個室パーソナルジムです。NEXUSの多くはマンション一室の"隠れ家"ですが、千鳥町店は路面店×自然光という真逆の個性。「新しくて明るく清潔、入った瞬間に安心感がある」——そんな開放的な空間が特徴です。もちろん完全予約制・1組ずつのマンツーマンなので、隠れ家型と同じ安心感（人目を気にせず、自分のペースで）はそのまま。運動が初めての方も、まず姿勢と身体のクセを丁寧にチェックするところから。毎日8:00〜23:00・手ぶらOK・LINE予約で、無理なく続けられるジムです。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>千鳥町駅近くの路面店</li><li>大きな窓から自然光</li><li>完全予約制・1組ずつ</li><li>毎日8:00〜23:00</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS千鳥町店は、東急池上線・千鳥町駅から数分の路面店パーソナルジム。NEXUSの多くはマンションの一室にある"隠れ家"型ですが、千鳥町店はその真逆——大きな窓から自然光がたっぷり入る、明るく清潔な路面店です。「新しくて明るく、入った瞬間に居心地がいい」という声をいただく開放的な空間が、この店舗いちばんの個性。それでいて完全予約制・1組ずつの貸切マンツーマンなので、路面店でも人目は気になりません。隠れ家型の安心感（一人ひとりと丁寧に向き合う、人目を気にせず取り組める）はそのままに、空間だけを開放的にした——それが千鳥町店です。トレーニングはまず、姿勢と身体のクセを丁寧にチェックするところから。運動経験がほぼゼロの方でも、自分の弱点を知ったうえで無理なく始められます。ウェア・タオル・ドリンク・プロテインまで無料提供の手ぶら通いOK、予約はLINEでサッと完結します。</p>
-
+</section>
+<section>
 <h2>最初にやるのは、姿勢と身体のクセ探し</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/chidoricho/posture-check.webp" type="image/webp"><img src="../../images/shops/chidoricho/posture-check.jpg" width="1200" height="678" alt="姿勢と身体のクセを確認する初回チェック" loading="lazy"></picture><figcaption>いきなり追い込まない。まず姿勢と身体の使い方をチェックし、あなたのクセと弱点を見つけることから。</figcaption></figure>
 <p>「自己流で頑張ってきたけれど、なかなか変わらない」——その原因は、姿勢や身体の使い方のクセにあることが少なくありません。千鳥町店では、トレーニングを始める前に、まず姿勢と身体の動きを丁寧にチェックします。どこが硬く、どこが弱く、どんな動きのクセがあるのか。それを本人と一緒に確認するところからスタートするので、「なぜこの種目をやるのか」が納得できます。会員からは「最初に姿勢と身体の使い方を丁寧にチェックしてくれ、自分のクセと弱点が分かるのが良かった」という声をいただいています。自分の身体を知ることが、遠回りに見えていちばんの近道。狙った部位にきちんと効かせられるようになり、努力が結果に変わりやすくなります。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">最初に姿勢と身体の使い方を丁寧にチェックしてくれて、自分のクセと弱点が分かったのが良かったです。なぜこの種目をやるのか納得できるので、自己流のときより効いている実感があります。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>自然光の入る、明るい完全個室</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/chidoricho/bright-space.webp" type="image/webp"><img src="../../images/shops/chidoricho/bright-space.jpg" width="1200" height="678" alt="自然光が入る明るい完全個室でのストレッチ" loading="lazy"></picture><figcaption>大きな窓から自然光。路面店ならではの明るさ。完全予約制・1組ずつだから、開放的でも人目は気にならない。</figcaption></figure>
 <p>ジムというと「地下の薄暗い空間」「窓のないマンションの一室」を思い浮かべる方も多いかもしれません。千鳥町店は、その逆。駅から数分の路面店で、大きな窓から自然光がたっぷり入る、明るく清潔な空間です。会員からは「路面店で大きな窓から光が入り、入った瞬間に居心地がいい」「新しくて明るく清潔」という声をいただいています。明るい空間は気持ちを前向きにし、「また来たい」と思える居心地の良さにつながります。そして大切なのは、開放的でも人目が気にならないこと。千鳥町店は完全予約制・1組ずつの貸切なので、同じ時間に他の会員が居合わせることはありません。窓まわりもプライバシーに配慮した設計。明るさと安心感、その両方を諦めなくていいのが千鳥町店です。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">路面店で大きな窓から光が入り、入った瞬間に居心地がいいと感じました。新しくて明るく清潔で、通うのが楽しいです。予約制で1組ずつなので、明るい空間でも人目が気にならず集中できます。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>ドレスの似合う二の腕・背中・お腹へ</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/chidoricho/bridal.webp" type="image/webp"><img src="../../images/shops/chidoricho/bridal.jpg" width="1200" height="678" alt="ドレスラインを整えるトレーニング" loading="lazy"></picture><figcaption>結婚式で一番きれいな自分に。二の腕・背中・お腹を中心に、極端な制限なしで整えていく。</figcaption></figure>
 <p>「結婚式で、一番きれいな自分でいたい」——そんな目標で千鳥町店に通い始める方もいらっしゃいます。ドレスは、二の腕・背中・お腹まわりのラインが特に目立つもの。千鳥町店では、その気になる部位を中心に、ドレスの似合う身体づくりをサポートします。会員からは「二の腕・背中・お腹を中心に、極端な制限なしで身体が変わっていくのが嬉しい」という声をいただいています。大切にしているのは、無理な食事制限で一気に落とすのではなく、極端な我慢なしで少しずつ整えていくこと。だから当日のコンディションも良く、写真に残る一日を最高の状態で迎えられます。挙式日から逆算したプランづくりもご相談ください。ブライダルはもちろん、同窓会や特別なイベントに向けた身体づくりにも対応します。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">結婚式で一番きれいな自分でいたくて入会しました。二の腕・背中・お腹を中心に見てもらい、極端な制限がないのに身体が変わっていくのが嬉しいです。挙式日から逆算してプランを組んでくれて心強いです。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>健康診断の数字にも向き合える</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/chidoricho/health-num.webp" type="image/webp"><img src="../../images/shops/chidoricho/health-num.jpg" width="1200" height="678" alt="健康数値の改善を支える食事指導" loading="lazy"></picture><figcaption>体重・血圧・血糖値。健診で指摘された数字に、運動未経験からでも無理なく向き合える。</figcaption></figure>
 <p>「健康診断で、体重・血圧・血糖値を指摘されて一念発起した」——そんな方も、千鳥町店には多くいらっしゃいます。健康のための運動は、続かなければ意味がありません。だからこそ千鳥町店では、運動経験がほぼない方でも無理のないプランから始めます。会員からは「健診で複数の数値を指摘され入会したが、運動経験がほぼなくても無理のないプランで数ヶ月続き、健康意識が変わった」という声をいただいています。トレーニングに加えて、月額3,000円（税込）のAI食事指導なら、写真を送るだけで食べ方のアドバイスが届き、外食が多い方でも実践できます。見た目の変化はもちろん、体調が軽くなり、次の健診の数字に前向きに向き合える——そんな「続く健康習慣」を、千鳥町店は一緒につくります。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">健康診断で体重・血圧・血糖値を指摘され、一念発起して入会しました。運動経験がほぼなかったのですが、無理のないプランのおかげで数ヶ月続いています。身体が軽くなり、健康への意識も変わりました。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>NEXUSブランドの実績</h2>
 <p>千鳥町店は2026年オープンの新店舗です。口コミはまだ9件と少なめですが、NEXUSは全国約70店舗・会員継続率96%。系列店間の相互利用も可能で、他店会員の方の来店も歓迎しています。近隣では<a href="../kugahara/">久が原店</a>が★4.9（82件）、<a href="../musashi-nitta/">武蔵新田店</a>が★5.0の評価をいただいており、いずれも東急池上線・多摩川線沿線でアクセスしやすい立地です。トレーナーは全員が3ヶ月の自社教育プログラムを修了してからデビューし、「優しく寄り添う指導」を全店共通の基準としています。だから新店の千鳥町店でも、系列店と変わらない指導品質でお迎えできます。オープンしたての今だからこそ、予約も取りやすく、じっくり向き合えるタイミングです。</p>
-
-<h2>結婚式前のボディメイクを、千鳥町で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>お客様の声</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（9件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%83%E9%B3%A5%E7%94%BA%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<p class="st-rev-summary">NEXUS千鳥町店は2026年オープンの路面店型新店舗。自然光の入る明るい空間と丁寧な姿勢チェックで、既に★5.0の評価をいただいています。</p>
+<p>口コミはまだ9件と新店フェーズですが、NEXUSは全国約70店舗・会員継続率96%。近隣の系列店では<a href="../kugahara/">久が原店</a>が★4.9（82件）、<a href="../musashi-nitta/">武蔵新田店</a>が★5.0の評価をいただいており、ブランドとしての指導品質は各店で共有されています。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">結婚式に向けて、二の腕・背中・お腹を集中的にトレーニングしています。極端な制限がないのに少しずつ変わっていくのが嬉しく、当日が楽しみになりました。</p><div class="who">Google口コミより</div></div>
+<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">健康診断で複数の数値を指摘され入会しました。運動経験がほとんどありませんでしたが、無理のないプランのおかげで数ヶ月続いています。体調が軽くなってきた実感があります。</p><div class="who">Google口コミより</div></div>
+<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">路面店で自然光が入り、明るく清潔な空間が気持ちいいです。最初の姿勢チェックで自分のクセが分かったのが大きな収穫でした。予約制で1組ずつなので人目も気になりません。</p><div class="who">Google口コミより</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%83%E9%B3%A5%E7%94%BA%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>千鳥町店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_01.webp" width="1280" height="724" alt="千鳥町エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。千鳥町店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_ring_glove_02.webp" width="1280" height="724" alt="千鳥町エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -256,17 +359,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">千鳥町店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 千鳥町店</dd></div><div class="row"><dt>住所</dt><dd>〒146-0083<br>東京都大田区千鳥1-18-4 ライオンズマンション千鳥町 113号室</dd></div><div class="row"><dt>最寄り駅</dt><dd>東急池上線　千鳥町駅近く（路面店）</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8499</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E5%8D%83%E9%B3%A51-18-4%20%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3%E3%82%BA%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E5%8D%83%E9%B3%A5%E7%94%BA113&z=16&output=embed" title="NEXUSパーソナルジム 千鳥町店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（9件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%83%E9%B3%A5%E7%94%BA%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<p class="st-rev-summary">NEXUS千鳥町店は2026年オープンの路面店型新店舗。自然光の入る明るい空間と丁寧な姿勢チェックで、既に★5.0の評価をいただいています。</p>
-<p>口コミはまだ9件と新店フェーズですが、NEXUSは全国約70店舗・会員継続率96%。近隣の系列店では<a href="../kugahara/">久が原店</a>が★4.9（82件）、<a href="../musashi-nitta/">武蔵新田店</a>が★5.0の評価をいただいており、ブランドとしての指導品質は各店で共有されています。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">結婚式に向けて、二の腕・背中・お腹を集中的にトレーニングしています。極端な制限がないのに少しずつ変わっていくのが嬉しく、当日が楽しみになりました。</p><div class="who">Google口コミより</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">健康診断で複数の数値を指摘され入会しました。運動経験がほとんどありませんでしたが、無理のないプランのおかげで数ヶ月続いています。体調が軽くなってきた実感があります。</p><div class="who">Google口コミより</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">路面店で自然光が入り、明るく清潔な空間が気持ちいいです。最初の姿勢チェックで自分のクセが分かったのが大きな収穫でした。予約制で1組ずつなので人目も気になりません。</p><div class="who">Google口コミより</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%83%E9%B3%A5%E7%94%BA%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>千鳥町店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>千鳥町駅の近くにパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS千鳥町店は、東急池上線・千鳥町駅近くの完全個室パーソナルジムです。多くのNEXUSがマンション一室の隠れ家型なのに対し、千鳥町店は駅から数分の路面店。大きな窓から自然光が入る、明るく清潔な空間が特徴です。もちろん完全予約制・1組ずつのマンツーマンなので、隠れ家型と同じ安心感はそのまま、空間だけ開放的。運動が初めての方も、まず姿勢と身体のクセを丁寧にチェックするところから始めます。毎日8:00〜23:00・手ぶらOKで、無理なく続けられます。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>路面店だと外から見えませんか？<span class="ic">+</span></summary><div class="st-faq-a">ご安心ください。千鳥町店は完全予約制で、1組ずつの貸切マンツーマンです。大きな窓から自然光がたっぷり入る開放的な空間ですが、同じ時間に他の会員が居合わせることはなく、トレーナーと二人だけでトレーニングできます。窓まわりもプライバシーに配慮した設計で、通行人の視線が気になりにくいよう工夫しています。「明るく開放的な空間で気持ちよく、けれど人目は気にならない」——路面店と隠れ家、両方の良さを両立させたのが千鳥町店です。</div></details>
@@ -283,6 +382,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。20〜40代を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>自然光の入る、明るい完全個室。千鳥町から</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">まずは無料体験を予約する</a></div>

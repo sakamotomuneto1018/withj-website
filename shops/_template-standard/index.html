@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- ============================================================
+     TEMPLATE: standard （店舗ページ・通常型テンプレB／雛形）
+     これは展開用の雛形です。{{TOKEN}} を各店舗の値へ置換して使用。
+     noindex。実店舗へ流用する際は必ず robots を index,follow に戻すこと。
+
+     セクション順:
+       1. ヒーロー（エリア別訴求軸H1＋バッジ＋CTA）
+       2. この店舗の特徴（写真2枚横並び）
+       3. 料金プラン（4プラン・カード型グリッド）
+       4. CTA①
+       5. お客様の声（集約版・帯＋口コミ3件＋Googleマップ）
+       6. ブライダル簡易ブロック（2〜3文＋ブライダル専用ページへのリンク）
+       7. アクセス
+       8. FAQ（店舗＋全店を統合アコーディオン）
+       9. 最終CTA ＋ 追従フッターCTA
+
+     置換トークン一覧:
+       {{STORE_NAME}}      例: 千鳥町店
+       {{AREA_PREF}}       例: 東京都
+       {{AREA_LOCALITY}}   例: 大田区
+       {{AREA_LABEL}}      例: 東京都大田区（eyebrow用）
+       {{AREA_ANCHOR}}     例: tokyo（店舗一覧#アンカー）
+       {{H1}}              エリア訴求軸のH1（キーワード維持・変更禁止）
+       {{META_DESC}}       meta description（既存を維持・変更禁止）
+       {{OG_IMAGE}}        OGP画像URL
+       {{HERO_IMG}} {{HERO_ALT}}
+       {{FIG1_IMG}} {{FIG1_ALT}} {{FIG2_IMG}} {{FIG2_ALT}}
+       {{AFTER_IMG}} {{AFTER_ALT}}
+       {{POSTAL}} {{ADDRESS}} {{STATION}} {{TEL}}
+       {{OPENING}}         例: 8:00〜23:00（不定休）  ※schemaは 08:00-23:00
+       {{MAPS_Q}}          Googleマップ検索クエリ（店名）
+       {{MAP_EMBED_Q}}     地図iframe用の住所クエリ
+       {{REVIEW_STARS}} {{REVIEW_COUNT}} {{REVIEW_ASOF}}
+       {{REVIEW_1}}..{{REVIEW_3}} / {{REVIEW_WHO_1}}..{{REVIEW_WHO_3}}
+       {{CTA_URL}}         nexus-gym.com/adp のURL（変更禁止）
+       {{FAQ_STORE_ITEMS}} 店舗固有FAQ（schemaと本文の両方・全問維持）
+     ============================================================ -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUSパーソナルジム {{STORE_NAME}}｜{{H1}} | WITHJ</title>
+<meta name="description" content="{{META_DESC}}">
+<meta name="robots" content="noindex, nofollow"><!-- 雛形のみnoindex。実店舗では index, follow に戻す -->
+<link rel="canonical" href="https://www.withj-inc.com/shops/{{SLUG}}/">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="NEXUSパーソナルジム {{STORE_NAME}}｜{{H1}}">
+<meta property="og:description" content="{{META_DESC}}">
+<meta property="og:url" content="https://www.withj-inc.com/shops/{{SLUG}}/">
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:site_name" content="株式会社WITHJ">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "NEXUSパーソナルジム {{STORE_NAME}}",
+  "image": "{{OG_IMAGE}}",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "{{POSTAL}}",
+    "addressRegion": "{{AREA_PREF}}",
+    "addressLocality": "{{AREA_LOCALITY}}",
+    "streetAddress": "{{ADDRESS}}",
+    "addressCountry": "JP"
+  },
+  "telephone": "{{TEL}}",
+  "priceRange": "¥18,000〜/月（1回4,500円〜）",
+  "url": "https://www.withj-inc.com/shops/{{SLUG}}/",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "NEXUS Personal Gym",
+    "description": "全国71店舗（80店舗までオープン予定）の完全個室パーソナルジム"
+  },
+  "openingHours": "Mo-Su 08:00-23:00"
+}
+</script>
+<!-- FAQPage schema：店舗固有FAQ＋全店共通FAQを既存のまま全問維持（本文と一致させること） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [ {{FAQ_SCHEMA_ITEMS}} ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://www.withj-inc.com/" },
+    { "@type": "ListItem", "position": 2, "name": "店舗一覧", "item": "https://www.withj-inc.com/shops/" },
+    { "@type": "ListItem", "position": 3, "name": "{{AREA_PREF}}", "item": "https://www.withj-inc.com/shops/#{{AREA_ANCHOR}}" },
+    { "@type": "ListItem", "position": 4, "name": "{{STORE_NAME}}" }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../gym-blog/style.css">
+<style>
+/* ============ NEXUS 店舗ページ v2：ビジュアルファースト（bridal型と共通） ============ */
+.st-wrap { max-width: 860px; margin: 0 auto; padding: 8px 6% 96px; position: relative; z-index: 1; }
+.st-eyebrow { color: var(--accent1); font-weight:800; font-size:11px; letter-spacing:.28em; text-transform:uppercase; margin: 30px 0 8px; }
+.st-wrap h1 { font-size: clamp(24px,6vw,36px); font-weight:900; line-height:1.35; margin:0 0 14px; letter-spacing:.01em; }
+.st-wrap h1 .ac { color: var(--accent1); }
+.st-lead { font-size:15px; line-height:1.85; color: var(--ink-soft); border-left:3px solid var(--accent2); padding-left:16px; margin:0 0 10px; }
+.st-wrap h2 { font-size:clamp(21px,5vw,27px); font-weight:900; margin:64px 0 18px; line-height:1.3; letter-spacing:.01em; }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-wrap p { color: var(--ink-soft); line-height:1.85; font-size:14.5px; }
+.st-wrap section { scroll-margin-top:20px; }
+.st-feature-list { list-style:none; padding:0; margin:16px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+.st-feature-list li { background: var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:7px 15px; font-size:13px; color:var(--ink); }
+.st-feature-list li::before { content:"✓ "; color: var(--accent1); font-weight:800; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-info { display:grid; gap:0; margin:18px 0 0; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.st-info .row { display:grid; grid-template-columns:96px 1fr; border-bottom:1px solid var(--line); }
+.st-info .row:last-child { border-bottom:none; }
+.st-info dt { background: var(--bg-soft); color: var(--ink-faint); font-size:12px; font-weight:700; padding:14px 14px; }
+.st-info dd { margin:0; padding:14px 14px; font-size:14px; color: var(--ink); }
+.st-map { margin-top:16px; border-radius:14px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10; }
+.st-map iframe { width:100%; height:100%; border:0; display:block; }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan-cards.cols3 { grid-template-columns:repeat(3,1fr); }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:32px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards, .st-plan-cards.cols3 { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:28px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-faq-item { border:1px solid var(--line); border-radius:12px; margin-top:10px; overflow:hidden; background: var(--bg-soft); }
+.st-faq-item summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; padding:16px 16px; font-weight:700; font-size:14.5px; color:var(--ink); }
+.st-faq-item summary::-webkit-details-marker { display:none; }
+.st-faq-item summary .q { color: var(--accent1); font-weight:900; }
+.st-faq-item summary .ic { margin-left:auto; color: var(--accent1); font-weight:800; }
+.st-faq-item[open] summary .ic { transform: rotate(45deg); }
+.st-faq-a { padding:0 16px 18px 40px; color: var(--ink-soft); font-size:14px; line-height:1.9; }
+.st-common summary { color: var(--ink-soft); }
+.st-note { color: var(--ink-faint); font-size:12px; margin-top:12px; line-height:1.7; }
+.st-ilink { display:inline-flex; align-items:center; gap:6px; margin-top:16px; color: var(--accent1); font-size:14px; font-weight:700; text-decoration:none; border-bottom:1px solid var(--line-accent); padding-bottom:2px; }
+.st-ilink::after { content:"→"; }
+.st-rev-summary { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary .st-stars { font-size:20px; }
+.st-rev-summary .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary .asof { color:var(--ink-faint); font-size:11px; }
+.st-stars { color:#FBBF24; letter-spacing:1px; font-size:16px; }
+.st-stars .empty { color: rgba(255,255,255,.20); }
+.st-rev-src { color:var(--ink-faint); font-size:11.5px; margin:0 0 12px; line-height:1.7; }
+.st-rev-src a { color:var(--accent1); }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-rev-card { scroll-snap-align:start; background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px; display:flex; flex-direction:column; }
+.st-rev-card .st-rev-stars { margin-bottom:8px; }
+.st-rev-card .txt { color:var(--ink); font-size:14px; line-height:1.8; margin:0 0 12px; font-weight:600; flex:1; }
+.st-rev-card .who { color:var(--ink-faint); font-size:12px; }
+.st-rev-tag { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.05em; color:var(--accent1); background:var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:3px 10px; margin-bottom:10px; align-self:flex-start; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; }
+/* ブライダル簡易ブロック（通常型） */
+.st-bridal-mini { margin-top:44px; padding:26px 22px; border:1px solid var(--line-accent); border-radius:18px; background:radial-gradient(120% 90% at 85% 0%, rgba(255,0,170,.10), transparent 60%), var(--bg-soft); }
+.st-bridal-mini h2 { margin:0 0 8px; font-size:19px; }
+.st-bridal-mini p { margin:0; }
+.st-cta { text-align:center; margin-top:40px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:22px; padding:34px 22px; }
+.st-cta h3 { font-size:20px; font-weight:900; margin:0 0 8px; }
+.st-cta p { margin:0 0 18px; }
+.st-cta-btn { display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:16px; padding:16px 36px; border-radius:999px; text-decoration:none; box-shadow:0 10px 30px rgba(255,0,170,.28); }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
+.st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
+.st-hero-fig { margin:14px 0 4px; }
+.st-hero-fig img { width:100%; height:auto; max-height:440px; object-fit:cover; object-position:center; border-radius:18px; display:block; border:1px solid var(--line); }
+.st-fig { margin:22px 0 6px; }
+.st-fig img { width:100%; height:auto; border-radius:16px; display:block; border:1px solid var(--line); }
+.st-fig figcaption { color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:8px; text-align:center; }
+.st-fig-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0 6px; }
+.st-fig-2 img { width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; border-radius:16px; display:block; border:1px solid var(--line); }
+.st-fig-2 figcaption { grid-column:1/-1; color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:2px; text-align:center; }
+@media (max-width:600px){ .st-fig-2 { grid-template-columns:1fr; } .st-fig-2 img { aspect-ratio:16/10; } }
+@media (max-width:768px) { .st-wrap { padding:8px 20px 100px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } }
+</style>
+</head>
+<body>
+<header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
+<nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#{{AREA_ANCHOR}}">{{AREA_PREF}}</a></li><li aria-current="page">{{STORE_NAME}}</li></ol></nav>
+<main class="st-wrap" data-template="standard">
+<!-- 1. HERO（エリア別訴求軸） -->
+<figure class="st-hero-fig"><img src="{{HERO_IMG}}" width="1200" height="800" alt="{{HERO_ALT}}" loading="eager" fetchpriority="high"></figure>
+<p class="st-eyebrow">NEXUS Personal Gym ／ {{AREA_LABEL}}</p>
+<h1>{{H1}}</h1>
+<p class="st-lead">{{HERO_LEAD}}</p>
+<ul class="st-feature-list"><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>運動初心者歓迎</li><li>AI食事指導</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="{{CTA_URL}}" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<!-- 2. この店舗の特徴（写真2枚横並び） -->
+<section>
+<h2><span class="en">The Studio</span>この店舗の特徴</h2>
+<p class="st-lead">{{STUDIO_LEAD}}</p>
+<figure class="st-fig-2"><img src="{{FIG1_IMG}}" width="1200" height="800" alt="{{FIG1_ALT}}" loading="lazy"><img src="{{FIG2_IMG}}" width="1200" height="800" alt="{{FIG2_ALT}}" loading="lazy"><figcaption>{{STUDIO_CAPTION}}</figcaption></figure>
+</section>
+<!-- 3. 料金プラン（4プラン・カード型グリッド） -->
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">1回 4,500円（税込）</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">1回 8,500円（税込）</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">1回 12,000円（税込）</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回・2名</div><div class="pr">¥11,000<small>/月</small></div><div class="per">1回 5,500円（税込）</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</section>
+<!-- 4. CTA① -->
+<div class="st-cta-inline"><a href="{{CTA_URL}}" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<!-- 5. お客様の声（集約版） -->
+<section>
+<h2><span class="en">Reviews</span>お客様の声 <span class="st-swipe-hint">← スワイプ</span></h2>
+<div class="st-rev-summary"><span class="big">{{REVIEW_STARS}}</span><span class="st-stars">★★★★★</span><span class="cnt">Google口コミ {{REVIEW_COUNT}}件</span><span class="asof">（{{REVIEW_ASOF}}時点）</span></div>
+<div class="st-carousel">
+<div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">{{REVIEW_1}}</p><div class="who">{{REVIEW_WHO_1}}</div></div>
+<div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">{{REVIEW_2}}</p><div class="who">{{REVIEW_WHO_2}}</div></div>
+<div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">{{REVIEW_3}}</p><div class="who">{{REVIEW_WHO_3}}</div></div>
+</div>
+<p class="st-rev-src">実際のGoogle口コミを要約して掲載。<a href="https://www.google.com/maps/search/?api=1&amp;query={{MAPS_Q}}" target="_blank" rel="noopener">口コミをすべて見る（Googleマップ）</a></p>
+</section>
+<!-- 6. ブライダル簡易ブロック（2〜3文＋専用ページへのリンクのみ） -->
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクも</h2>
+<p>{{STORE_NAME}}は挙式日から逆算するブライダルボディメイクにも対応。背中・二の腕・デコルテ・ウエストを完全個室で整えます。女性会員85%・ノータッチ指導で、はじめての方も安心です。</p>
+<a class="st-ilink" href="../../bridal/">挙式前ダイエットの方はこちら｜ブライダル専用ページ</a>
+</section>
+<!-- 7. アクセス -->
+<section>
+<h2><span class="en">Access</span>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム {{STORE_NAME}}</dd></div><div class="row"><dt>住所</dt><dd>〒{{POSTAL}}<br>{{ADDRESS}}</dd></div><div class="row"><dt>最寄り駅</dt><dd>{{STATION}}</dd></div><div class="row"><dt>営業時間</dt><dd>{{OPENING}}</dd></div><div class="row"><dt>電話番号</dt><dd>{{TEL}}</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q={{MAP_EMBED_Q}}&z=16&output=embed" title="NEXUSパーソナルジム {{STORE_NAME}}の地図"></iframe></div>
+</section>
+<!-- 8. FAQ（店舗＋全店を統合アコーディオン・全て閉じる） -->
+<section>
+<h2><span class="en">FAQ</span>{{STORE_NAME}}のよくある質問</h2>
+{{FAQ_STORE_ITEMS}}<!-- 店舗固有FAQ（既存の全問を .st-faq-item として維持・schemaと一致） -->
+<h2 style="font-size:17px;margin-top:36px">よくある質問（全店共通）</h2><p style="font-size:13px;color:var(--ink-faint);margin:0 0 4px">料金・制度などNEXUS全店に共通するご質問です。さらに詳しくは110問のFAQをご覧ください。</p>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>料金はいくらですか？<span class="ic">+</span></summary><div class="st-faq-a">ライト（30分）月4回18,000円〜、ベーシック（60分）月4回34,000円〜など。1回あたり4,500円〜から始められます（すべて税込）。詳しくは料金プランをご覧ください。</div></details>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>手ぶらで通えますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェア・水・タオル・プロテインまで無料提供で手ぶら通いOK。仕事帰りにバッグひとつで通えます。</div></details>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>キャンセルはいつまでできますか？<span class="ic">+</span></summary><div class="st-faq-a">6時間前まで無料でキャンセル・変更が可能です。当日の急な体調不良やお子さまの発熱にも対応しやすい設計です。</div></details>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>食事指導はありますか？<span class="ic">+</span></summary><div class="st-faq-a">月額3,000円（税込）のAI食事指導があります。写真を送るだけで、無理を強いない範囲で痩せる食べ方をサポートします。</div></details>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>トレーナーはどんな人ですか？<span class="ic">+</span></summary><div class="st-faq-a">全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビュー。「優しく寄り添う指導」を全店共通の基準としています。</div></details>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。30〜40代女性を中心に、運動初心者の方が多く通っています。</div></details>
+  <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
+<a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
+<!-- 9. 最終CTA -->
+<figure class="st-fig"><img src="{{AFTER_IMG}}" width="1100" height="622" alt="{{AFTER_ALT}}" loading="lazy"><figcaption>{{AFTER_CAPTION}}</figcaption></figure>
+<div class="st-cta"><h3>{{CTA_HEADING}}</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="{{CTA_URL}}" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+</main>
+<div class="st-sticky"><a href="{{CTA_URL}}" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>
+<footer class="gb-footer"><div class="gb-footer-logo">WITHJ</div><nav style="display:flex;gap:24px;flex-wrap:wrap;"><a href="../" style="color:var(--ink-faint);font-size:12px;">店舗一覧</a><a href="../../gym-blog/" style="color:var(--ink-faint);font-size:12px;">パーソナルジムブログ</a><a href="../../faq/" style="color:var(--ink-faint);font-size:12px;">よくある質問</a><a href="../../privacy/" style="color:var(--ink-faint);font-size:12px;">プライバシーポリシー</a></nav><div>© 2026 株式会社WITHJ All Rights Reserved.</div></footer>
+</body>
+</html>

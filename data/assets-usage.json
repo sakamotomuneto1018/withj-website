@@ -126,17 +126,40 @@
       ]
     },
     {
-      "source": "来店の様子.png",
-      "count": 1,
+      "source": "退店の様子.png",
+      "count": 2,
       "stores": [
-        { "slug": "noborito", "usage": "section3 arrive" }
+        { "slug": "noborito", "usage": "section3 leave" },
+        { "slug": "omiya", "usage": "section3 leave（仕事帰りも買い物ついでもペア）" }
       ]
     },
     {
-      "source": "退店の様子.png",
+      "source": "ヒップリフト_黒髪女性②.png",
       "count": 1,
       "stores": [
-        { "slug": "noborito", "usage": "section3 leave" }
+        { "slug": "omiya", "usage": "hero + og" }
+      ]
+    },
+    {
+      "source": "カウンセリング_黒髪黒髪③.png",
+      "count": 1,
+      "stores": [
+        { "slug": "omiya", "usage": "section1 method（東京で実証済み）" }
+      ]
+    },
+    {
+      "source": "ジムのイメージ②.png",
+      "count": 1,
+      "stores": [
+        { "slug": "omiya", "usage": "section2 facility（オープン直後の通いやすさ）" }
+      ]
+    },
+    {
+      "source": "来店の様子.png",
+      "count": 2,
+      "stores": [
+        { "slug": "noborito", "usage": "section3 arrive" },
+        { "slug": "omiya", "usage": "section3 arrive（仕事帰りも買い物ついでもペア）" }
       ]
     }
   ]

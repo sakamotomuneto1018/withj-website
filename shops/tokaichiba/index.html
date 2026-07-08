@@ -204,47 +204,151 @@
 .st-fig figcaption { font-size:12.5px; color:var(--ink-faint); padding:9px 13px; background:var(--bg-soft); }
 .st-rev-summary { background:var(--bg-card); border:1px solid var(--line-accent); border-left:3px solid var(--accent1); border-radius:12px; padding:16px 18px; margin:4px 0 16px; font-size:14px; line-height:1.9; color:var(--ink); }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#kanagawa">神奈川県</a></li><li aria-current="page">十日市場店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 神奈川県横浜市緑区</p>
 <h1>NEXUSパーソナルジム 十日市場店｜<span class="ac">痩せない理由から解き明かす</span>完全個室ジム</h1>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/tokaichiba/hero-training.webp" type="image/webp"><img src="../../images/shops/tokaichiba/hero-training.jpg" width="1200" height="678" alt="十日市場・緑区のNEXUSパーソナルジムでのストレッチ・トレーニング" loading="eager" fetchpriority="high"></picture><figcaption>十日市場で、痩せない理由から解き明かす完全個室ジム。「なぜ痩せなかったのか」を科学的に説明します。</figcaption></figure>
 <p class="st-lead">横浜市緑区十日市場町、JR横浜線・十日市場駅から通いやすい完全個室パーソナルジムです。十日市場店がいちばん大切にしているのは、体重を落とす方法を売る前に「なぜ痩せなかったのか」を科学的に説明すること。置き換えダイエットも断食も試したけれどリバウンドを繰り返し、自信を失ってきた——そんなダイエット難民の方の「最終着地点」でありたいと考えています。「初回カウンセリングで“なぜ痩せられなかったのか”を科学的に説明され、初めて腑に落ちた」——そんな声のように、原因が納得できて初めて、身体は正しい方向に動き出します。デスクワークによる猫背や肩こりが気になる方の姿勢改善にも力を入れており、体重の数字だけでなく「見た目」から変わっていく手応えを大切にしています。完全個室で担当トレーナーと二人だけだから、これまでの失敗も気兼ねなく話せます。ウェア・タオル・ドリンク・プロテインまで全部込みのアメニティ完備で、手ぶら通いOK。毎日8:00〜23:00・LINE予約で、無理なく続けられます。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>十日市場駅から</li><li>痩せない理由を科学で説明</li><li>ダイエット難民の最終着地点</li><li>猫背・肩こり改善</li><li>Google口コミ★5.0</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS十日市場店は、横浜市緑区十日市場町にある完全個室パーソナルジム。JR横浜線・十日市場駅から通いやすい立地です。この店舗がいちばん大切にしているのは、いきなり厳しい食事制限やハードなトレーニングを課すことではなく、「なぜ、これまで痩せられなかったのか」を科学的に、そして分かりやすく説明することです。置き換えダイエット、断食、単品ダイエット——手軽に見える方法を試してはリバウンドし、「自分は痩せられない体質なんだ」と自信を失ってしまう。そんなダイエット難民の方が、十日市場店にはたくさん通っています。会員からは「30代でダイエットジプシー状態だったが、初回カウンセリングで“なぜ痩せられなかったのか”を科学的に説明され腑に落ちた。ここで初めて変われた」という声をいただいています。痩せられなかったのは、あなたの意志が弱かったからではありません。極端な食事制限による筋肉量の低下と代謝の落ち込み、そして「続かない仕組み」という、はっきりとした原因があります。十日市場店では、まずその原因をあなた自身が納得できる形で解き明かし、そこから筋肉を維持して代謝を上げる、続けられる方向へと導いていきます。デスクワークの猫背や肩こりの改善にも力を入れており、姿勢が整うことで見た目が大きく変わったという声も多数。完全個室のマンツーマンだから、これまでの失敗も含めてじっくり向き合えます。予約はLINEでサッと完結します。</p>
-
+</section>
+<section>
 <h2>置き換えも断食も、痩せない理由がある</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/tokaichiba/science.webp" type="image/webp"><img src="../../images/shops/tokaichiba/science.jpg" width="1200" height="678" alt="代謝・筋肉量・習慣の関係を科学的に説明するカウンセリング" loading="lazy"></picture><figcaption>置き換えも断食も、痩せない理由がある。代謝・筋肉量・習慣の関係を科学的に解き明かす。</figcaption></figure>
 <p>「食事を置き換えれば痩せる」「断食すれば体重が落ちる」——たしかに一時的には体重が減ります。しかし多くの人がリバウンドしてしまうのには、はっきりとした理由があります。ここでは、その仕組みを専門用語を使わずに説明します。私たちの身体は、極端に食事を減らすと、生命を守るために「省エネモード」に切り替わります。このとき、エネルギーを多く消費する筋肉が真っ先に削られ、筋肉量が落ちると基礎代謝——つまり何もしなくても消費するカロリー——も下がります。すると、以前と同じ量を食べただけで太りやすい身体になってしまう。これがリバウンドの正体です。さらに、我慢だけに頼ったダイエットは「続かない仕組み」でできているため、反動で食べすぎてしまうことも少なくありません。つまり、痩せるために必要なのは「食べない」ことではなく、①筋肉を維持・向上させて代謝を保つこと、②栄養をきちんと摂りながら消費と摂取のバランスを整えること、③無理なく続けられる習慣にすること、この3つです。十日市場店では、この代謝・筋肉量・習慣の関係を、あなたの生活に合わせて具体的に説明します。会員からは「科学的な説明で初めて納得できた」という声をいただいています。原因と正しい道筋が腑に落ちれば、あとは迷わず進むだけ。これは十日市場店に限らず、ダイエットに悩むすべての方に知っておいてほしい、普遍的な身体の仕組みです。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">30代でダイエットジプシー状態でした。置き換えも断食もリバウンドして自信を失っていましたが、初回カウンセリングで「なぜ痩せられなかったのか」を科学的に説明され、初めて腑に落ちました。ここで変われた気がします。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>猫背と肩こりが、見た目を変えていた</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/tokaichiba/posture.webp" type="image/webp"><img src="../../images/shops/tokaichiba/posture.jpg" width="1200" height="678" alt="デスクワークの猫背・肩こりを整える姿勢改善トレーニング" loading="lazy"></picture><figcaption>猫背と肩こりが、見た目を変えていた。姿勢が整うと、同じ体重でもすっきり見える。</figcaption></figure>
 <p>「体重はそれほど変わっていないのに、なんだか太って見える」——その原因は、姿勢にあるかもしれません。長時間のデスクワークは、肩が前に入り背中が丸まった「巻き肩・猫背」を招きがちです。姿勢が崩れると、肩こりや首の疲れが慢性化するだけでなく、お腹が前に突き出て、実際の体重以上に太って見えてしまいます。十日市場店には、こうしたデスクワークの猫背や肩こりをきっかけに通い始めた会員が多くいらっしゃいます。会員からは「デスクワークの猫背と体重増で入会したが、肩こりが減り姿勢が変わって見た目が大きく変わった。正しいフォームのおかげで体脂肪も無理なく減少した」という声をいただいています。トレーニングで背中や体幹の筋肉をバランスよく使えるようになると、自然と肩が開き、背筋が伸びていきます。姿勢が整うと、同じ体重でもすっきりと引き締まって見え、肩こりなどの不調もやわらいでいく。しかも、正しいフォームで身体を動かせるようになることで、体脂肪も無理なく落ちていきます。見た目の変化は、体重計の数字が動くよりも早く実感できることが多く、それが続ける大きなモチベーションになります。完全個室のマンツーマンだから、あなたの姿勢のクセを一つひとつ確認しながら、丁寧に整えていけます。デスクワークで身体が固まりがちな方こそ、姿勢から変えていきましょう。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">デスクワークの猫背と体重増が気になって入会しました。肩こりが減り、姿勢が変わって見た目が大きく変わったのが嬉しいです。正しいフォームを教わったおかげで、体脂肪も無理なく落ちています。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>できることから、段階的に</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/tokaichiba/gradual.webp" type="image/webp"><img src="../../images/shops/tokaichiba/gradual.jpg" width="1200" height="678" alt="今の体力に合わせて段階的に進めるストレッチとトレーニング" loading="lazy"></picture><figcaption>できることから、段階的に。今のあなたのレベルから少しずつ、無理なく積み上げる。</figcaption></figure>
 <p>「運動が苦手」「今までジムが続いたことがない」——そんな方でも大丈夫です。十日市場店の指導方針は、あなたが「今できるレベル」から少しずつ負荷を上げていくこと。最初から無理をさせないので、運動経験がない方でも安心して続けられます。ダイエットに何度も失敗してきた方の多くは、実は「頑張りすぎて続かなかった」というパターンを繰り返しています。急に高い目標を設定し、ハードな運動と厳しい食事制限を課しては、数週間で息切れしてしまう。だからこそ十日市場店では、その日のあなたの体調や体力を見ながら、無理のない範囲でメニューを組み立てます。会員からは「できるレベルから少しずつ上げてくれるので、無理なく続けられる」という声をいただいています。小さな「できた」を積み重ねていくと、身体は着実に変わっていきます。そして何より、続けられるという事実そのものが、これまで失敗を重ねてきた方にとって大きな自信になります。完全個室だから、周りのペースや目線を気にする必要はありません。あなただけのペースで、あなたのための一歩を。段階的だからこそ、気づけば遠くまで来られる。それが十日市場店の考える、リバウンドしない身体づくりです。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">運動が苦手でジムが続いたことがなかったのですが、できたことを一緒に喜んでくれるので、楽しく通えています。できるレベルから少しずつ上げてくれるので、無理なく続けられています。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>好きな音楽と一緒に</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/tokaichiba/music.webp" type="image/webp"><img src="../../images/shops/tokaichiba/music.jpg" width="1200" height="678" alt="好きな音楽をBGMにリラックスして取り組むトレーニング空間" loading="lazy"></picture><figcaption>好きな音楽と一緒に。完全個室だから、あなたの好きな曲をBGMに楽しく続けられる。</figcaption></figure>
 <p>トレーニングを続けるうえで意外と大切なのが、「その時間が楽しいかどうか」です。どんなに効果的なメニューでも、通うのが億劫になってしまえば続きません。十日市場店は完全個室だからこそ、あなたの「好き」に寄り添える環境があります。会員からは「好きな曲をBGMにかけてくれて、毎回楽しい」という声をいただいています。周りの目を気にせず、自分の好きな音楽に包まれながら身体を動かす時間は、トレーニングを「頑張るもの」から「楽しみなもの」へと変えてくれます。気分が上がると自然と身体も動きやすくなり、トレーニングの質も高まります。十日市場店が大切にしているのは、科学的な正しさと、続けられる楽しさの両立です。「なぜ痩せなかったのか」をきちんと説明する理屈の部分と、毎回通うのが楽しみになる雰囲気づくり——この両方があるからこそ、ダイエットに何度も挫折してきた方でも、ここでは続けられます。トレーナーとの会話も、堅苦しいものではありません。あなたのその日の気分や体調に合わせて、心地よい時間になるよう工夫しています。楽しく通えるから、続く。続くから、変わる。十日市場店では、その好循環を大切にしています。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">好きな曲をBGMにかけてくれるので、毎回のトレーニングが楽しみです。完全個室で周りを気にせず集中できるのも良いです。楽しく通えているうちに、身体が変わってきました。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>NEXUSブランドの実績</h2>
 <p>十日市場店の指導の背景には、全国約70店舗・会員継続率96%というNEXUSブランドの実績があります。全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビューし、十日市場店にも同じ教育を受けたトレーナーが在籍。「なぜ痩せなかったのかを科学的に説明する」という十日市場店の姿勢も、ブランド全体で積み上げてきた指導品質があってこそです。同じ横浜市内の系列店では、<a href="../yokohama-motomachi/">横浜元町店</a>が★5.0（87件）、<a href="../kishine-koen/">岸根公園店</a>が★5.0（53件）という高い評価をいただいています（2026年7月時点）。ダイエットに何度も失敗してきた方が「ここが最終着地点だった」と感じられるのは、一人ひとりの原因に科学的に向き合う指導が、ブランド全体で共有されているからです。十日市場・緑区で、リバウンドを繰り返す悩みに本気で向き合いたい方は、ぜひ一度お越しください。</p>
-
+</section>
+<section>
 <h2>まずは無料体験から</h2>
 <p>「何をやってもリバウンドしてしまう」「置き換えも断食も試したけれど続かなかった」「デスクワークの猫背や肩こりを何とかしたい」——そんな方こそ、まずは無料体験からお試しください。十日市場店の無料体験は、カウンセリングであなたのこれまでのダイエット歴や生活習慣、目標をじっくり伺うところから始まります。その上で、「なぜこれまで痩せられなかったのか」をあなた自身が納得できる形で説明し、姿勢や身体のクセをチェック。実際にトレーニングも体験していただきます。会員からは「初回カウンセリングで痩せられなかった理由が腑に落ちた」「できたことを一緒に喜んでくれるので楽しく続けられる」という声をいただいています。体験も手ぶらでOK。ウェア・タオル・ドリンクもすべてご用意しているので、仕事や予定の合間に、そのままお立ち寄りいただけます。JR横浜線・十日市場駅から通いやすく、無理な勧誘は一切ありません。まずは十日市場店で、「痩せなかった理由」を聞きにきてください。原因が分かれば、あなたのダイエットは今度こそ最後になります。</p>
-
-<h2>結婚式前のボディメイクを、十日市場で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>お客様の声</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%81%E6%97%A5%E5%B8%82%E5%A0%B4%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<p class="st-rev-summary">NEXUS十日市場店はGoogle口コミ★5.0。痩せられない原因の科学的な説明と、段階的で無理のない指導が評価されています。「置き換えも断食もリバウンドしたが、痩せなかった理由を科学的に説明され腑に落ちた」「デスクワークの猫背と肩こりが改善し、見た目が大きく変わった」「できたことを一緒に喜んでくれて楽しく続けられる」という声が多く、ダイエットを繰り返してきた方の"最終着地点"として支持されています。</p>
+<p>NEXUSは全国約70店舗・会員継続率96%。同じ横浜市内の系列店では<a href="../yokohama-motomachi/">横浜元町店</a>が★5.0（87件）、<a href="../kishine-koen/">岸根公園店</a>が★5.0（53件）の評価をいただいており、ブランドとしての指導品質は各店で共有されています。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">30代でダイエットジプシー状態でしたが、痩せられなかった理由を科学的に説明され、初めて納得できました。ここでようやく変われた気がします。もっと早く来ればよかったです。</p><div class="who">Google口コミより</div></div>
+<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">デスクワークの猫背と肩こりが改善し、見た目が大きく変わりました。正しいフォームを教わったおかげで、体脂肪も無理なく落ちています。姿勢が変わると印象まで変わりますね。</p><div class="who">Google口コミより</div></div>
+<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">運動が苦手でジムが続かなかったのですが、できたことを一緒に喜んでくれるので、楽しく続いています。好きな曲もかけてくれて、毎回のトレーニングが楽しみです。</p><div class="who">Google口コミより</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%81%E6%97%A5%E5%B8%82%E5%A0%B4%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>十日市場店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_group_01.webp" width="1280" height="724" alt="十日市場エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。十日市場店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_scale_01.webp" width="1280" height="724" alt="十日市場エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -258,17 +362,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">十日市場店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 十日市場店</dd></div><div class="row"><dt>住所</dt><dd>〒226-0025<br>神奈川県横浜市緑区十日市場町854-4 石井ビル301号</dd></div><div class="row"><dt>最寄り駅</dt><dd>JR横浜線 十日市場駅</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8487</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%A8%AA%E6%B5%9C%E5%B8%82%E7%B7%91%E5%8C%BA%E5%8D%81%E6%97%A5%E5%B8%82%E5%A0%B4%E7%94%BA854-4%20%E7%9F%B3%E4%BA%95%E3%83%93%E3%83%AB301%E5%8F%B7&z=16&output=embed" title="NEXUSパーソナルジム 十日市場店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%81%E6%97%A5%E5%B8%82%E5%A0%B4%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<p class="st-rev-summary">NEXUS十日市場店はGoogle口コミ★5.0。痩せられない原因の科学的な説明と、段階的で無理のない指導が評価されています。「置き換えも断食もリバウンドしたが、痩せなかった理由を科学的に説明され腑に落ちた」「デスクワークの猫背と肩こりが改善し、見た目が大きく変わった」「できたことを一緒に喜んでくれて楽しく続けられる」という声が多く、ダイエットを繰り返してきた方の"最終着地点"として支持されています。</p>
-<p>NEXUSは全国約70店舗・会員継続率96%。同じ横浜市内の系列店では<a href="../yokohama-motomachi/">横浜元町店</a>が★5.0（87件）、<a href="../kishine-koen/">岸根公園店</a>が★5.0（53件）の評価をいただいており、ブランドとしての指導品質は各店で共有されています。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">30代でダイエットジプシー状態でしたが、痩せられなかった理由を科学的に説明され、初めて納得できました。ここでようやく変われた気がします。もっと早く来ればよかったです。</p><div class="who">Google口コミより</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">デスクワークの猫背と肩こりが改善し、見た目が大きく変わりました。正しいフォームを教わったおかげで、体脂肪も無理なく落ちています。姿勢が変わると印象まで変わりますね。</p><div class="who">Google口コミより</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">運動が苦手でジムが続かなかったのですが、できたことを一緒に喜んでくれるので、楽しく続いています。好きな曲もかけてくれて、毎回のトレーニングが楽しみです。</p><div class="who">Google口コミより</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%8D%81%E6%97%A5%E5%B8%82%E5%A0%B4%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>十日市場店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>十日市場・緑区にパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS十日市場店は、横浜市緑区十日市場町にある完全個室パーソナルジムです。JR横浜線・十日市場駅から通いやすく、十日市場・緑区にお住まいの方、横浜線沿線で通勤される方に便利にご利用いただけます。担当トレーナーと二人だけの完全個室空間なので、人目を気にせずトレーニングに集中できます。十日市場店がいちばん大切にしているのは、体重の数字を追う前に「なぜ痩せなかったのか」を科学的に説明すること。置き換えダイエットや断食を繰り返してリバウンドしてきた方に、代謝・筋肉量・習慣の関係を平易に解き明かし、腑に落ちる形で指導します。会員からは「初回カウンセリングで“なぜ痩せられなかったのか”を科学的に説明され、初めて納得できた」という声をいただいています。ウェア・タオル・ドリンク・プロテインまで全部込みのアメニティ完備で、手ぶら通いOK。毎日8:00〜23:00・LINE予約で通えます。Googleマップの口コミは★5.0の高評価をいただいています。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>何をやってもリバウンドします。原因は分かりますか？<span class="ic">+</span></summary><div class="st-faq-a">分かります。十日市場店がいちばん力を入れているのが、まさに「なぜ痩せなかったのか」を明らかにすることです。置き換えダイエット、断食、単品ダイエット——手軽に見える方法の多くはリバウンドを繰り返してしまいます。その背景には、極端な食事制限による筋肉量の低下と代謝の落ち込み、そして続かない仕組みという共通の原因があります。十日市場店では初回カウンセリングで、あなたのこれまでのダイエット歴や生活習慣を丁寧に伺い、代謝・筋肉量・習慣の関係を科学的に、かつ専門用語を使わず平易に説明します。会員からは「30代のダイエットジプシーだったが、初回カウンセリングで“なぜ痩せられなかったのか”を科学的に説明され腑に落ちた。ここで初めて変われた」という声をいただいています。原因が腑に落ちれば、あとは正しい方向に進むだけ。無理な食事制限ではなく、筋肉を維持しながら代謝を上げ、続けられる習慣を一緒に作っていきます。ダイエットに何度も失敗してきた方こそ、まずは無料体験で「痩せなかった理由」を聞きにきてください。</div></details>
@@ -285,6 +385,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。20〜40代を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>痩せなかった理由から、始めよう。十日市場から</h3><p>まずは無料体験で、「なぜ痩せなかったのか」を科学的に確かめませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">まずは無料体験を予約する</a></div>

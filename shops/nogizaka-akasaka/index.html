@@ -37,7 +37,7 @@
     "name": "NEXUS Personal Gym",
     "description": "全国71店舗（80店舗までオープン予定）の完全個室パーソナルジム"
   },
-  "openingHours": "Mo-Su 07:00-23:00"
+  "openingHours": "Mo-Su 08:00-23:00"
 }
 </script>
 <script type="application/ld+json">
@@ -74,7 +74,7 @@
       "name": "乃木坂・赤坂店の営業時間は？仕事帰りでも通えますか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "営業時間は7:00〜23:00（不定休）です。朝の出勤前も、仕事帰りの夜間も通えます。手ぶら通いOKなので、バッグひとつで立ち寄れます。"
+        "text": "営業時間は8:00〜23:00（不定休）です。朝の出勤前も、仕事帰りの夜間も通えます。手ぶら通いOKなので、バッグひとつで立ち寄れます。"
       }
     },
     {
@@ -174,27 +174,58 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../gym-blog/style.css">
 <style>
-.st-wrap { max-width: 820px; margin: 0 auto; padding: 8px 6% 90px; position: relative; z-index: 1; }
-.st-eyebrow { color: var(--accent1); font-weight:700; font-size:12px; letter-spacing:.18em; text-transform:uppercase; margin: 26px 0 10px; }
-.st-wrap h1 { font-size: clamp(23px,5.6vw,34px); font-weight:900; line-height:1.4; margin:0 0 16px; }
+/* ============ NEXUS 店舗ページ v2：ビジュアルファースト ============ */
+.st-wrap { max-width: 860px; margin: 0 auto; padding: 8px 6% 96px; position: relative; z-index: 1; }
+.st-eyebrow { color: var(--accent1); font-weight:800; font-size:11px; letter-spacing:.28em; text-transform:uppercase; margin: 30px 0 8px; }
+.st-wrap h1 { font-size: clamp(24px,6vw,36px); font-weight:900; line-height:1.35; margin:0 0 14px; letter-spacing:.01em; }
 .st-wrap h1 .ac { color: var(--accent1); }
-.st-lead { font-size:15px; line-height:2; color: var(--ink-soft); border-left:3px solid var(--accent2); padding-left:16px; margin:0 0 8px; }
-.st-wrap h2 { font-size:20px; font-weight:800; margin:44px 0 14px; }
-.st-wrap p { color: var(--ink-soft); line-height:1.95; font-size:14.5px; }
-.st-feature-list { list-style:none; padding:0; margin:14px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
-.st-feature-list li { background: var(--bg-card); border:1px solid var(--line); border-radius:999px; padding:7px 15px; font-size:13px; color:var(--ink); }
+.st-lead { font-size:15px; line-height:1.85; color: var(--ink-soft); border-left:3px solid var(--accent2); padding-left:16px; margin:0 0 10px; }
+/* セクション見出し：英字ラベル＋大きめ和文でメリハリ */
+.st-wrap h2 { font-size:clamp(21px,5vw,27px); font-weight:900; margin:64px 0 18px; line-height:1.3; letter-spacing:.01em; }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-wrap p { color: var(--ink-soft); line-height:1.85; font-size:14.5px; }
+.st-wrap section { scroll-margin-top:20px; }
+/* feature chips */
+.st-feature-list { list-style:none; padding:0; margin:16px 0 0; display:flex; flex-wrap:wrap; gap:8px; }
+.st-feature-list li { background: var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:7px 15px; font-size:13px; color:var(--ink); }
 .st-feature-list li::before { content:"✓ "; color: var(--accent1); font-weight:800; }
-.st-info { display:grid; gap:0; margin:16px 0 0; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+/* ===== ビッグナンバー統計バー ===== */
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+/* ===== 情報テーブル ===== */
+.st-info { display:grid; gap:0; margin:18px 0 0; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
 .st-info .row { display:grid; grid-template-columns:96px 1fr; border-bottom:1px solid var(--line); }
 .st-info .row:last-child { border-bottom:none; }
 .st-info dt { background: var(--bg-soft); color: var(--ink-faint); font-size:12px; font-weight:700; padding:14px 14px; }
 .st-info dd { margin:0; padding:14px 14px; font-size:14px; color: var(--ink); }
 .st-map { margin-top:16px; border-radius:14px; overflow:hidden; border:1px solid var(--line); aspect-ratio:16/10; }
 .st-map iframe { width:100%; height:100%; border:0; display:block; }
-.st-price { display:grid; gap:10px; margin-top:14px; }
-.st-price .row { display:flex; justify-content:space-between; align-items:center; gap:12px; background: var(--bg-card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
-.st-price .cn { font-weight:700; font-size:14px; } .st-price .cn span { display:block; color: var(--ink-faint); font-size:12px; font-weight:400; }
-.st-price .cp { text-align:right; white-space:nowrap; } .st-price .cp b { color: var(--accent1); font-size:17px; } .st-price .cp small { display:block; color:var(--ink-faint); font-size:12px; }
+/* ===== 料金：3枚カード＋アコーディオン ===== */
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan-cards.cols3 { grid-template-columns:repeat(3,1fr); }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:32px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards, .st-plan-cards.cols3 { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:28px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-acc { margin-top:12px; border:1px solid var(--line); border-radius:14px; background:var(--bg-soft); overflow:hidden; }
+.st-acc summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:8px; padding:15px 16px; font-weight:700; font-size:13.5px; color:var(--ink-soft); }
+.st-acc summary::-webkit-details-marker{ display:none; }
+.st-acc summary .ic { margin-left:auto; color:var(--accent1); font-weight:800; }
+.st-acc[open] summary .ic { transform:rotate(45deg); }
+.st-acc .st-acc-body { padding:0 16px 8px; }
+.st-acc .row { display:flex; justify-content:space-between; align-items:center; gap:12px; border-top:1px solid var(--line); padding:12px 0; }
+.st-acc .row .cn { font-size:13px; color:var(--ink-soft); } .st-acc .row .cp b { color:var(--accent1); font-size:15px; }
+/* ===== FAQ ===== */
 .st-faq-item { border:1px solid var(--line); border-radius:12px; margin-top:10px; overflow:hidden; background: var(--bg-soft); }
 .st-faq-item summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; padding:16px 16px; font-weight:700; font-size:14.5px; color:var(--ink); }
 .st-faq-item summary::-webkit-details-marker { display:none; }
@@ -203,101 +234,159 @@
 .st-faq-item[open] summary .ic { transform: rotate(45deg); }
 .st-faq-a { padding:0 16px 18px 40px; color: var(--ink-soft); font-size:14px; line-height:1.9; }
 .st-common summary { color: var(--ink-soft); }
-.st-note { color: var(--ink-faint); font-size:12px; margin-top:12px; }
+.st-note { color: var(--ink-faint); font-size:12px; margin-top:12px; line-height:1.7; }
 .st-ilink { display:inline-flex; align-items:center; gap:6px; margin-top:16px; color: var(--accent1); font-size:14px; font-weight:700; text-decoration:none; border-bottom:1px solid var(--line-accent); padding-bottom:2px; }
 .st-ilink::after { content:"→"; }
-.st-rev-avg { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:6px 0 4px; }
-.st-rev-avg b { font-size:22px; color:var(--ink); }
-.st-rev-avg .cnt { color:var(--ink-soft); font-size:13px; }
-.st-rev-avg .asof { color:var(--ink-faint); font-size:12px; }
+/* ===== 口コミ：横スワイプ・カルーセル ===== */
+.st-rev-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-top:6px; }
+.st-rev-summary { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary .st-stars { font-size:20px; }
+.st-rev-summary .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary .asof { color:var(--ink-faint); font-size:11px; }
 .st-stars { color:#FBBF24; letter-spacing:1px; font-size:16px; }
 .st-stars .empty { color: rgba(255,255,255,.20); }
-.st-rev-src { color:var(--ink-faint); font-size:12px; margin:0 0 14px; }
+.st-rev-src { color:var(--ink-faint); font-size:11.5px; margin:0 0 12px; line-height:1.7; }
 .st-rev-src a { color:var(--accent1); }
-.st-rev-list { display:grid; gap:12px; grid-template-columns:1fr; }
-.st-rev-solo { margin:6px 0 2px; }
-.st-rev-card { background:var(--bg-soft); border:1px solid var(--line); border-radius:14px; padding:18px 18px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-rev-card { scroll-snap-align:start; background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px; display:flex; flex-direction:column; }
 .st-rev-card .st-rev-stars { margin-bottom:8px; }
-.st-rev-card .txt { color:var(--ink); font-size:14px; line-height:1.9; margin:0 0 10px; }
-.st-rev-card .who { color:var(--ink-faint); font-size:12.5px; }
-.st-rev-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--accent1); background:var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:3px 10px; margin-bottom:10px; }
-.st-rev-summary { display:flex; align-items:baseline; flex-wrap:wrap; gap:10px 12px; margin:6px 0 12px; padding:16px 18px; background:var(--bg-card); border:1px solid var(--line); border-radius:16px; }
-.st-rev-summary .big { font-size:34px; font-weight:900; color:var(--ink); line-height:1; }
-.st-rev-summary .st-stars { font-size:20px; }
-.st-rev-summary .cnt { color:var(--ink-soft); font-size:14px; font-weight:700; }
-.st-rev-summary .asof { color:var(--ink-faint); font-size:12px; }
-.st-cta { text-align:center; margin-top:24px; background: var(--bg-card); border:1px solid var(--line); border-radius:18px; padding:30px 22px; }
-.st-cta h3 { font-size:19px; font-weight:800; margin:0 0 8px; }
+.st-rev-card .txt { color:var(--ink); font-size:14px; line-height:1.8; margin:0 0 12px; font-weight:600; flex:1; }
+.st-rev-card .who { color:var(--ink-faint); font-size:12px; }
+.st-rev-tag { display:inline-block; font-size:11px; font-weight:800; letter-spacing:.05em; color:var(--accent1); background:var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:3px 10px; margin-bottom:10px; align-self:flex-start; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; }
+/* ===== ダークアクセント帯（ブライダル等） ===== */
+.st-band { position:relative; margin:64px -6% 0; padding:46px 6% 44px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band h2 { margin-top:0; }
+/* ブライダル・ストーリー：ステップカード（PC2カラム／スマホ縦・画像160px） */
+.st-band .st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:10px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step .st-fig { margin:0; }
+.st-step .st-fig img { width:100%; height:160px; object-fit:cover; border-radius:0; border:0; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:24px; color:var(--accent1); line-height:1; min-width:26px; }
+.st-step .cap .t { font-size:13.5px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-band .st-steps { grid-template-columns:1fr; } }
+/* ブライダルFAQ（ストーリー直下アコーディオン） */
+.st-bridal-faq { margin-top:22px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; letter-spacing:.02em; color:var(--ink-soft); margin:0 0 4px; }
+/* CTA */
+.st-cta { text-align:center; margin-top:40px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:22px; padding:34px 22px; }
+.st-cta h3 { font-size:20px; font-weight:900; margin:0 0 8px; }
 .st-cta p { margin:0 0 18px; }
-.st-cta-btn { display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:16px; padding:16px 34px; border-radius:999px; text-decoration:none; }
+.st-cta-btn { display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:16px; padding:16px 36px; border-radius:999px; text-decoration:none; box-shadow:0 10px 30px rgba(255,0,170,.28); }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
 .st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
-/* --- 画像（ビジュアル強化） --- */
-.st-hero-fig { margin:12px 0 4px; }
-.st-hero-fig img { width:100%; height:auto; max-height:460px; object-fit:cover; object-position:center; border-radius:16px; display:block; border:1px solid var(--line); }
-.st-fig { margin:20px 0 6px; }
-.st-fig img { width:100%; height:auto; border-radius:14px; display:block; border:1px solid var(--line); }
+/* --- 画像 --- */
+.st-hero-fig { margin:14px 0 4px; }
+.st-hero-fig img { width:100%; height:auto; max-height:440px; object-fit:cover; object-position:center; border-radius:18px; display:block; border:1px solid var(--line); }
+.st-fig { margin:22px 0 6px; }
+.st-fig img { width:100%; height:auto; border-radius:16px; display:block; border:1px solid var(--line); }
 .st-fig figcaption { color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:8px; text-align:center; }
 .st-fig--portrait img { max-width:400px; margin:0 auto; }
 .st-fig-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:20px 0 6px; }
-.st-fig-2 img { width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; border-radius:14px; display:block; border:1px solid var(--line); }
+.st-fig-2 img { width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; border-radius:16px; display:block; border:1px solid var(--line); }
 .st-fig-2 figcaption { grid-column:1/-1; color:var(--ink-faint); font-size:12px; line-height:1.6; margin-top:2px; text-align:center; }
+.st-gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:20px 0 6px; }
+.st-gallery img { width:100%; height:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; display:block; border:1px solid var(--line); }
 @media (max-width:600px){ .st-fig-2 { grid-template-columns:1fr; } .st-fig-2 img { aspect-ratio:16/10; } }
-@media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } }
+@media (max-width:768px) { .st-wrap { padding:8px 20px 100px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } .st-band { padding:40px 20px; } }
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">乃木坂・赤坂店</li></ol></nav>
-<main class="st-wrap">
+<!-- ============================================================
+     TEMPLATE: bridal   （店舗ページ・ブライダル型テンプレA）
+     セクション順: 1.Hero 2.Bridalストーリー+FAQ3 3.CTA① 4.Price(4)
+     5.CTA② 6.Reviews 7.Studio 8.Access 9.FAQ統合 10.最終CTA
+     ============================================================ -->
+<main class="st-wrap" data-template="bridal">
+<!-- 1. HERO（ブライダル訴求を前面に） -->
 <figure class="st-hero-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-hidden-gym-interior.webp" width="1200" height="2122" alt="乃木坂・赤坂の完全個室パーソナルジムNEXUS乃木坂・赤坂店の、マンションの一室にある隠れ家のような静かな内観" loading="eager" fetchpriority="high"></figure>
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都港区</p>
 <h1>NEXUSパーソナルジム 乃木坂・赤坂店｜<span class="ac">乃木坂・赤坂</span>の完全個室・隠れ家ジム</h1>
-<p class="st-lead">東京メトロ千代田線・乃木坂駅・赤坂駅が最寄り。港区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。女性会員85%、運動初心者の30〜40代女性がこっそり通っています。</p>
-<ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>運動初心者歓迎</li><li>AI食事指導</li></ul>
-<h2>この店舗の特徴</h2>
-<p>NEXUS乃木坂・赤坂店は、東京都港区の落ち着いた住宅街に佇む完全個室のパーソナルジム。大きな看板を出していないため、乃木坂・赤坂・港区・六本木エリアで「人目を気にせず綺麗になりたい」という30〜40代女性に選ばれています。エリアには国立新美術館、東京ミッドタウン、赤坂サカスなどがあり、ウェア・タオル・プロテインまで無料提供の手ぶら通いOKで、忙しい毎日でもバッグひとつで続けられます。</p>
-<figure class="st-fig-2"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-first-visit.webp" width="1200" height="678" alt="乃木坂・赤坂の完全個室パーソナルジムに初めて来店した女性をトレーナーが笑顔で出迎える様子" loading="lazy"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-counseling.webp" width="800" height="1415" alt="乃木坂・赤坂店の完全個室でトレーナーが女性会員に丁寧にカウンセリングする様子" loading="lazy"><figcaption>初めての来店も、完全個室だから安心。まずはカウンセリングからじっくりと。</figcaption></figure>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">最初は緊張していましたが、トレーナーが話をよく聞いてくれて心地よい距離感でした。清潔で落ち着いた雰囲気の完全個室なので、女性でも通いやすいと感じています。</p><div class="who">乃木坂・赤坂店に通う女性会員 ・ Google口コミより（内容を要約）</div></div></div>
-<h2>結婚式前のボディメイクを、乃木坂・赤坂で</h2>
-<figure class="st-fig"><img src="../../images/wedding/wedding_dress_tight_01.webp" width="1280" height="724" alt="乃木坂・赤坂エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
-<p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。乃木坂・赤坂店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
-<figure class="st-fig"><img src="../../images/wedding/wedding_effort_couple_01.webp" width="1600" height="905" alt="乃木坂・赤坂エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
-<p>残された日数によって、やるべきことは変わります。乃木坂・赤坂店では<strong>挙式日から逆算した90日プラン・60日プラン</strong>を用意し、「いつまでに、どの部位を、どこまで」を最初に設計します。極端な食事制限で当日フラフラ……ということがないよう、その日のコンディションから逆算する無理のない指導で、式当日にピークを合わせます。会員の<strong>約85%が女性</strong>で、ブライダルのご相談は日常的。体に不必要に触れない<strong>ノータッチ指導</strong>を基本にしているので、はじめての方も安心です。</p>
-<figure class="st-fig"><img src="../../images/wedding/wedding_dress_fit_01.webp" width="1280" height="724" alt="乃木坂・赤坂エリアで理想の体型に近づきドレスが似合うようになった女性" loading="lazy"><figcaption>③試着のたびに、ドレスのラインが変わっていく。</figcaption></figure>
-<p>週を追うごとに、ドレスの試着で鏡に映る自分が変わっていきます。背中がすっと伸び、二の腕のたるみが引き締まり、デコルテに華やかさが出る。<strong>「このデザインで大丈夫かな」から「このドレスを選んでよかった」へ</strong>——目標が数字ではなく“当日の自分の姿”だからこそ、モチベーションが途切れません。乃木坂・赤坂エリアで挙式を予定されている方は、エリア内の式場への下見や打ち合わせの動線に、そのままトレーニングを組み込めます。</p>
-<figure class="st-fig"><img src="../../images/wedding/wedding_aisle_01.webp" width="1600" height="905" alt="乃木坂・赤坂エリアで自信を持って挙式当日を迎えた新婦" loading="lazy"><figcaption>④当日は、自信を持ってバージンロードへ。</figcaption></figure>
-<p>迎えた挙式当日。積み重ねた90日・60日は、鏡の前の安心感になって返ってきます。姿勢よく背筋を伸ばして立ち、写真のどの角度でも堂々といられる——それは、頑張ってきた自分だけが手にできる自信です。乃木坂・赤坂店は、その一日のために全力で伴走します。</p>
-<figure class="st-fig"><img src="../../images/wedding/wedding_album_01.webp" width="1280" height="724" alt="挙式後も乃木坂・赤坂エリアのジムで体型維持を続ける夫婦" loading="lazy"><figcaption>⑤挙式はゴールではなく、はじまり。</figcaption></figure>
-<p>挙式は、新しい生活のスタートでもあります。せっかく作り上げた身体を、そのまま新生活の習慣に。乃木坂・赤坂店は毎日8:00〜23:00営業・月4回18,000円（1回4,500円〜）から続けられるので、<strong>挙式後の体型維持から、将来の産後の体型戻しまで</strong>長く伴走できます。全国約70店舗のネットワークがあるため、引っ越しや里帰りの際も最寄り店舗へ。「一生に一度」のために始めた習慣が、その後の人生を支える土台になります。</p>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">乃木坂・赤坂店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
-<p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
+<p class="st-lead">乃木坂・赤坂駅すぐ、港区の隠れ家。挙式日から逆算するブライダルボディメイクに対応する、看板のない完全個室ジムです。</p>
+<ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>挙式日から逆算</li><li>AI食事指導</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<!-- 2. ブライダルストーリー（圧縮版）＋ブライダルFAQ3問 -->
+<section class="st-band">
+<h2><span class="en">Bridal Body-make</span>結婚式前のボディメイクを、乃木坂・赤坂で</h2>
+<p class="st-lead">挙式日から逆算。背中・二の腕・デコルテ・ウエストを、完全個室で。</p>
+<div class="st-steps">
+<div class="st-step"><figure class="st-fig"><img src="../../images/wedding/wedding_dress_tight_01.webp" width="1280" height="724" alt="乃木坂・赤坂エリアで結婚式前のボディメイクを決意した女性" loading="lazy"></figure><div class="cap"><span class="no">01</span><span class="t">ドレスの試着で、はじめて「本気」になる。</span></div></div>
+<div class="st-step"><figure class="st-fig"><img src="../../images/wedding/wedding_effort_couple_01.webp" width="1600" height="905" alt="乃木坂・赤坂エリアのジムで挙式日から逆算して計画する様子" loading="lazy"></figure><div class="cap"><span class="no">02</span><span class="t">挙式日から逆算する、90日・60日プラン。</span></div></div>
+<div class="st-step"><figure class="st-fig"><img src="../../images/wedding/wedding_dress_fit_01.webp" width="1280" height="724" alt="乃木坂・赤坂エリアで理想の体型に近づきドレスが似合うようになった女性" loading="lazy"></figure><div class="cap"><span class="no">03</span><span class="t">試着のたび、ドレスのラインが変わる。</span></div></div>
+<div class="st-step"><figure class="st-fig"><img src="../../images/wedding/wedding_aisle_01.webp" width="1600" height="905" alt="乃木坂・赤坂エリアで自信を持って挙式当日を迎えた新婦" loading="lazy"></figure><div class="cap"><span class="no">04</span><span class="t">当日は、自信を持ってバージンロードへ。</span></div></div>
+<div class="st-step"><figure class="st-fig"><img src="../../images/wedding/wedding_album_01.webp" width="1280" height="724" alt="挙式後も乃木坂・赤坂エリアのジムで体型維持を続ける夫婦" loading="lazy"></figure><div class="cap"><span class="no">05</span><span class="t">挙式はゴールではなく、はじまり。産後まで伴走。</span></div></div>
+</div>
+<div class="st-carousel" style="margin-top:20px"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージ）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">残り80日で駆け込み。背中と二の腕を中心にプランを組み、当日は自信を持って写真に。</p><div class="who">挙式前ボディメイクのモデルケース</div></div></div>
+<p class="st-note">上記はモデルケース（イメージ）で、実在するお客様の口コミではありません。ノータッチ指導・女性会員85%で、はじめての方も安心です。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
-<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-couple-semi-personal.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムで夫婦セミパーソナルトレーニングを受ける様子" loading="lazy"><figcaption>ご夫婦・パートナーと一緒に通えるセミパーソナルも人気です。</figcaption></figure>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">夫婦で無料体験に参加して、そのまま入会しました。トレーナーが丁寧で話しやすく、信頼関係ができたので、二人とも無理なく通い続けられています。</p><div class="who">ご夫婦で利用 ・ Google口コミより（内容を要約）</div></div></div>
-<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-tebura-checkin.webp" width="1100" height="622" alt="乃木坂・赤坂店で無料レンタルのウェアやタオルを受け取り、仕事帰りに手ぶらで来店する女性" loading="lazy"><figcaption>ウェア・タオル・プロテインまで無料。仕事帰りに手ぶらでどうぞ。</figcaption></figure>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">通って半年でベンチプレス90kgを達成しました。トレーニングと食事管理の両立で身体が引き締まり、自信がつきました。ウェアも無料で、仕事帰りに手ぶらで通えるのが便利です。</p><div class="who">30代男性・通って半年 ・ Google口コミより（内容を要約）</div></div></div>
-<h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 乃木坂・赤坂店</dd></div><div class="row"><dt>住所</dt><dd>〒107-0052<br>東京都港区赤坂8-12-16 NOZY赤坂601</dd></div><div class="row"><dt>最寄り駅</dt><dd>東京メトロ千代田線　乃木坂駅・赤坂駅</dd></div><div class="row"><dt>営業時間</dt><dd>7:00〜23:00（不定休）</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8488</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E8%B5%A4%E5%9D%828-12-16%20NOZY%E8%B5%A4%E5%9D%82601&z=16&output=embed" title="NEXUSパーソナルジム 乃木坂・赤坂店の地図"></iframe></div>
-<h2>お客様の声（Google口コミ）</h2>
-<p>NEXUS乃木坂・赤坂店はGoogle口コミ★5.0（102件）。手ぶらで通える利便性と、女性が通いやすい完全個室の環境が、赤坂・乃木坂エリアの会員から評価されています。</p>
-<div class="st-rev-summary"><span class="big">5.0</span><span class="st-stars">★★★★★</span><span class="cnt">Google口コミ 102件</span><span class="asof">（2026年7月時点）</span></div>
-<p class="st-rev-src">実際のGoogleマップの口コミを内容を忠実に要約して掲載しています。原文と件数・評価は<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">Googleビジネスプロフィール</a>でご確認いただけます。個々の口コミは、このページの各セクションの直下に掲載しています。</p>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">口コミをすべて見る（Googleマップ）</a>
-<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-postpartum-mom.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムで産後の女性がお子さま連れでトレーニングする様子" loading="lazy"><figcaption>産後のママも、お子さま連れで無理なく通えます。</figcaption></figure>
-<h2>乃木坂・赤坂店のよくある質問</h2>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店はどこにありますか？最寄り駅は？<span class="ic">+</span></summary><div class="st-faq-a">住所は〒107-0052 東京都港区赤坂8-12-16 NOZY赤坂601です。最寄りは東京メトロ千代田線の乃木坂駅・赤坂駅。港区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂エリアで初心者向けのパーソナルジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">乃木坂・赤坂店は、運動が初めての30〜40代女性が中心の店舗です。会員の約6割が運動経験ほぼゼロからのスタート。完全個室でトレーナーがマンツーマン指導するので、周りの目を気にせず自分のペースで始められます。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂で完全個室のパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。乃木坂・赤坂店は港区の住宅街のマンションの一室にある完全個室のパーソナルジムです。すっぴん・部屋着感覚で通っても他の会員に会うことがなく、人目を気にせずトレーニングに集中できます。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の営業時間は？仕事帰りでも通えますか？<span class="ic">+</span></summary><div class="st-faq-a">営業時間は7:00〜23:00（不定休）です。朝の出勤前も、仕事帰りの夜間も通えます。手ぶら通いOKなので、バッグひとつで立ち寄れます。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の予約はどうやって取りますか？<span class="ic">+</span></summary><div class="st-faq-a">まずはWEBから無料体験をご予約ください。体験ではカウンセリング・姿勢チェック・実際のトレーニングを行います。入会後の各セッションも予約制で、6時間前まで無料でキャンセル・変更が可能です。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂周辺で女性が通いやすいジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">乃木坂・赤坂店は女性会員85%。港区の住宅街にあり、乃木坂・赤坂エリアにお住まい・お勤めの女性がこっそり通っています。完全個室・手ぶらOKで、女性が通いやすい環境を整えています。</div></details>
-  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の周辺には何がありますか？<span class="ic">+</span></summary><div class="st-faq-a">エリアには国立新美術館、東京ミッドタウン、赤坂サカスなどがあります。港区の落ち着いた住宅街に位置する、看板を控えめにした隠れ家ジムです。</div></details>
-<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-window-break.webp" width="1100" height="622" alt="乃木坂・赤坂店の窓辺の植物のそばでドリンク休憩する女性会員とトレーナー" loading="lazy"></figure>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">運動不足の解消を目的に通い始めました。肩周りがスッキリして体力も向上し、日常生活で疲れにくくなったのを実感しています。</p><div class="who">健康維持・運動不足解消が目的の会員 ・ Google口コミより（内容を要約）</div></div></div>
+<div class="st-bridal-faq">
+<p class="st-mini-h">ブライダルのよくある質問</p>
   <details class="st-faq-item"><summary><span class="q">Q</span>挙式まで3ヶ月ですが、結婚式に間に合いますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。乃木坂・赤坂店では、挙式日から逆算した90日プラン・60日プランをご用意しています。まず挙式日とドレスのデザインをうかがい、背中・二の腕・デコルテ・ウエストなど、ドレスで見える部位から優先順位をつけて計画します。3ヶ月あれば体のラインは十分に変えられます。極端な食事制限ではなく、その日のコンディションから逆算した無理のない指導で、式当日にピークを合わせます。まずは無料体験で残り日数に合わせたプランをご提案します。<a class="st-ilink" href="../../bridal/">ブライダル専用ページで挙式前ボディメイクを詳しく見る</a></div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>ドレスで気になる背中や二の腕を集中的に絞れますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェディングドレスは背中・二の腕・デコルテ・ウエストが特に目立つデザインが多いため、乃木坂・赤坂店ではこれらの部位を優先的に整えるメニューを組みます。完全個室のマンツーマンで、体に不必要に触れないノータッチ指導を基本としているので、女性の方も安心してトレーニングに集中できます。会員の約85%が女性で、ブライダルに向けたボディメイクのご相談も日常的にいただいています。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>結婚式が終わった後も通い続けられますか？<span class="ic">+</span></summary><div class="st-faq-a">もちろんです。挙式はゴールであると同時に、新しい生活のスタートでもあります。乃木坂・赤坂店は毎日8:00〜23:00営業で、月4回18,000円（1回4,500円〜）から続けられるため、挙式後の体型維持や、将来の産後の体型戻しまで長く伴走できます。全国約70店舗のネットワークがあるので、引っ越しや里帰りの際も最寄りの店舗に通えます。挙式で作った習慣を、その後の暮らしにそのまま引き継いでいただけます。</div></details>
+</div>
+</section>
+<!-- 3. CTA① -->
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<!-- 4. 料金プラン（4プラン・カード型グリッド） -->
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">1回 4,500円（税込）</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">1回 8,500円（税込）</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">1回 12,000円（税込）</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回・2名</div><div class="pr">¥11,000<small>/月</small></div><div class="per">1回 5,500円（税込）</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+<figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-couple-semi-personal.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムで夫婦セミパーソナルトレーニングを受ける様子" loading="lazy"><figcaption>ご夫婦・パートナーと一緒に通えるセミパーソナルも人気です。</figcaption></figure>
+</section>
+<!-- 5. CTA② -->
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<!-- 6. お客様の声（★5.0・102件の帯＋口コミ3件に集約） -->
+<section>
+<h2><span class="en">Reviews</span>お客様の声 <span class="st-swipe-hint">← スワイプ</span></h2>
+<div class="st-rev-summary"><span class="big">5.0</span><span class="st-stars">★★★★★</span><span class="cnt">Google口コミ 102件</span><span class="asof">（2026年7月時点）</span></div>
+<div class="st-carousel">
+<div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">心地よい距離感で、完全個室だから女性でも通いやすい。</p><div class="who">乃木坂・赤坂店の女性会員</div></div>
+<div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">夫婦で入会。丁寧で話しやすく、二人とも無理なく続けています。</p><div class="who">ご夫婦で利用</div></div>
+<div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">半年でベンチプレス90kg達成。手ぶらで仕事帰りに通えて便利。</p><div class="who">30代男性・通って半年</div></div>
+</div>
+<p class="st-rev-src">実際のGoogle口コミを要約して掲載。<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B9%83%E6%9C%A8%E5%9D%82%E3%83%BB%E8%B5%A4%E5%9D%82%E5%BA%97" target="_blank" rel="noopener">口コミをすべて見る（Googleマップ）</a></p>
+</section>
+<!-- 7. この店舗の特徴（写真2枚横並び） -->
+<section>
+<h2><span class="en">The Studio</span>この店舗の特徴</h2>
+<p class="st-lead">看板のない完全個室。人目を気にせず、こっそり綺麗になれます。</p>
+<figure class="st-fig-2"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-first-visit.webp" width="1200" height="678" alt="乃木坂・赤坂の完全個室パーソナルジムに初めて来店した女性をトレーナーが笑顔で出迎える様子" loading="lazy"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-counseling.webp" width="800" height="1415" alt="乃木坂・赤坂店の完全個室でトレーナーが女性会員に丁寧にカウンセリングする様子" loading="lazy"><figcaption>初めての来店も、完全個室だから安心。</figcaption></figure>
+</section>
+<!-- 8. アクセス -->
+<section>
+<h2><span class="en">Access</span>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 乃木坂・赤坂店</dd></div><div class="row"><dt>住所</dt><dd>〒107-0052<br>東京都港区赤坂8-12-16 NOZY赤坂601</dd></div><div class="row"><dt>最寄り駅</dt><dd>東京メトロ千代田線　乃木坂駅・赤坂駅</dd></div><div class="row"><dt>営業時間</dt><dd>8:00〜23:00（不定休）</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8488</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E8%B5%A4%E5%9D%828-12-16%20NOZY%E8%B5%A4%E5%9D%82601&z=16&output=embed" title="NEXUSパーソナルジム 乃木坂・赤坂店の地図"></iframe></div>
+</section>
+<!-- 9. FAQ（店舗＋全店を1セクションに統合・全て閉じたアコーディオン） -->
+<section>
+<h2><span class="en">FAQ</span>乃木坂・赤坂店のよくある質問</h2>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店はどこにありますか？最寄り駅は？<span class="ic">+</span></summary><div class="st-faq-a">住所は〒107-0052 東京都港区赤坂8-12-16 NOZY赤坂601です。最寄りは東京メトロ千代田線の乃木坂駅・赤坂駅。港区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂エリアで初心者向けのパーソナルジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">乃木坂・赤坂店は、運動が初めての30〜40代女性が中心の店舗です。会員の約6割が運動経験ほぼゼロからのスタート。完全個室でトレーナーがマンツーマン指導するので、周りの目を気にせず自分のペースで始められます。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂で完全個室のパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。乃木坂・赤坂店は港区の住宅街のマンションの一室にある完全個室のパーソナルジムです。すっぴん・部屋着感覚で通っても他の会員に会うことがなく、人目を気にせずトレーニングに集中できます。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の営業時間は？仕事帰りでも通えますか？<span class="ic">+</span></summary><div class="st-faq-a">営業時間は8:00〜23:00（不定休）です。朝の出勤前も、仕事帰りの夜間も通えます。手ぶら通いOKなので、バッグひとつで立ち寄れます。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の予約はどうやって取りますか？<span class="ic">+</span></summary><div class="st-faq-a">まずはWEBから無料体験をご予約ください。体験ではカウンセリング・姿勢チェック・実際のトレーニングを行います。入会後の各セッションも予約制で、6時間前まで無料でキャンセル・変更が可能です。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂周辺で女性が通いやすいジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">乃木坂・赤坂店は女性会員85%。港区の住宅街にあり、乃木坂・赤坂エリアにお住まい・お勤めの女性がこっそり通っています。完全個室・手ぶらOKで、女性が通いやすい環境を整えています。</div></details>
+  <details class="st-faq-item"><summary><span class="q">Q</span>乃木坂・赤坂店の周辺には何がありますか？<span class="ic">+</span></summary><div class="st-faq-a">エリアには国立新美術館、東京ミッドタウン、赤坂サカスなどがあります。港区の落ち着いた住宅街に位置する、看板を控えめにした隠れ家ジムです。</div></details>
 <h2 style="font-size:17px;margin-top:36px">よくある質問（全店共通）</h2><p style="font-size:13px;color:var(--ink-faint);margin:0 0 4px">料金・制度などNEXUS全店に共通するご質問です。さらに詳しくは110問のFAQをご覧ください。</p>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>料金はいくらですか？<span class="ic">+</span></summary><div class="st-faq-a">ライト（30分）月4回18,000円〜、ベーシック（60分）月4回34,000円〜など。1回あたり4,500円〜から始められます（すべて税込）。詳しくは料金プランをご覧ください。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>手ぶらで通えますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。ウェア・水・タオル・プロテインまで無料提供で手ぶら通いOK。仕事帰りにバッグひとつで通えます。</div></details>
@@ -307,6 +396,8 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。30〜40代女性を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
+<!-- 10. 最終CTA -->
 <figure class="st-fig"><img src="../../images/shops/nogizaka-akasaka/nogizaka-akasaka-after-training.webp" width="1100" height="622" alt="乃木坂・赤坂の完全個室パーソナルジムでトレーニング後にプロテインで乾杯し達成感を分かち合う様子" loading="lazy"><figcaption>「できた」を、一緒に。乃木坂・赤坂で、こっそり綺麗に。</figcaption></figure>
 <div class="st-cta"><h3>乃木坂・赤坂で、こっそり綺麗になりませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>

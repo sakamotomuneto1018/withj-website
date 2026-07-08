@@ -210,37 +210,143 @@
 .st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#osaka">大阪府</a></li><li aria-current="page">大阪茨木市・総持寺店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 大阪府茨木市</p>
 <h1>NEXUSパーソナルジム 大阪茨木市・総持寺店｜<span class="ac">総持寺</span>の完全個室・隠れ家ジム</h1>
 <p class="st-lead">阪急京都線 総持寺駅前、茨木市総持寺駅前町の完全個室パーソナルジムです。「健康診断の数値から立て直す」を軸に、体力の低下や肩こり・腰痛が気になり始めた30〜50代の男女を、年齢に合わせた無理のない指導で後押し。基礎から丁寧に体を整える指導が支持され、<strong>Google口コミ110件で★5.0を維持</strong>しています。</p>
 <div class="st-hero-stat"><div><span class="st-stars">★★★★★</span> <span class="big">5.0</span></div><div><div class="lbl">Google口コミ <strong>110件</strong>／★5.0</div><div class="asof">※2026年7月時点・100件超で満点評価</div></div></div>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>健康診断の数値改善</li><li>年齢に合わせた指導</li><li>阪急京都線 総持寺駅前</li><li>毎日8:00〜23:00</li></ul>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/sojiji/hero-training.webp" type="image/webp"><img src="../../images/shops/sojiji/hero-training.jpg" width="1200" height="750" alt="総持寺駅前のNEXUSパーソナルジムでのトレーニング" loading="eager" fetchpriority="high"></picture><figcaption>健康診断の数字は、総持寺駅前で変えられる。</figcaption></figure>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS大阪茨木市・総持寺店は、阪急京都線 総持寺駅前・茨木市総持寺駅前町にある完全個室パーソナルジム。この店舗が最も力を入れているのは、「健康診断の数値や、年齢とともに感じる体力の衰えを立て直したい」という方のサポートです。体重や血液検査の結果が気になり始めた、階段で息が切れるようになった、肩こり・腰痛が慢性化してきた——そんな30〜50代の男女が多く通っています。若い頃のような激しいトレーニングではなく、今の体力と年齢に合った運動と、続けられる食事の見直し。その両輪で、無理なく数値と体調を整えていきます。毎日8:00〜23:00営業、ウェア・タオル・プロテインまで無料の手ぶら通いOK。料金は1回4,500円〜（ライトコース30分・月4回18,000円）から始められます。</p>
+</section>
+<section>
 <h2>健康診断の結果、そのままにしない</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/sojiji/health-meal.webp" type="image/webp"><img src="../../images/shops/sojiji/health-meal.jpg" width="1200" height="678" alt="健康数値の改善を目指す食事指導" loading="lazy"></picture><figcaption>数値の改善は、運動と食事の両輪から。</figcaption></figure>
 <p>健康診断で気になる結果が出たとき、「そのうち何とかしよう」と先延ばしにしてしまう方は少なくありません。総持寺店の口コミには<strong>「健康診断で悪い結果が出てジムを探した。基礎から丁寧に教わり、体力がつき、生活に張りが出た」</strong>という声があります。数値を改善するには、運動と食事の両輪が欠かせません。まずはフォームの基礎から。正しく体を動かせるようになると、同じ運動でも効果が変わります。食事も、いきなり極端な制限をするのではなく、日々の食べ方を少しずつ整えていく。写真を送るだけのAI食事指導（月額3,000円・税込）も活用できます。健康診断の結果は、行動を変えるきっかけ。その一歩を、総持寺駅前で踏み出しませんか。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">健康診断の悪い結果をきっかけに入会しました。フォームの基礎から教わり、体力がつき、運動の習慣が身につきました。</p><div class="who">大阪茨木市・総持寺店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>ストレッチから始まる90分</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/sojiji/stretch-90.webp" type="image/webp"><img src="../../images/shops/sojiji/stretch-90.jpg" width="1200" height="678" alt="肩こり腰痛の改善を目指すストレッチ指導" loading="lazy"></picture><figcaption>硬くなった体を、ストレッチからじっくりほぐす。</figcaption></figure>
 <p>運動から長く離れていた方や、体が硬くなっている方に人気なのが、90分のプレミアムコースです。総持寺店の口コミには<strong>「90分コースはストレッチからトレーニングまで一通りで、無理なく体を動かせる。肩こり・腰痛が楽になった」</strong>という声があります。いきなり負荷をかけるのではなく、まずはストレッチで固まった筋肉をほぐし、関節を動きやすくしてから運動に入る。だから、翌日に痛みが残りにくく、続けやすいのです。デスクワークで凝り固まった肩や、慢性的な腰の張りも、正しく動かすことで少しずつ楽になっていきます。時間をかけて丁寧に体と向き合いたい方に、90分コースはぴったりです。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">90分コースでストレッチからトレーニングまで通しで見てもらえます。長年の肩こりと腰痛が気にならなくなりました。</p><div class="who">大阪茨木市・総持寺店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>50代からでも、体力は戻る</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/sojiji/strength.webp" type="image/webp"><img src="../../images/shops/sojiji/strength.jpg" width="1200" height="678" alt="年齢に合わせた強度のケトルベルトレーニング" loading="lazy"></picture><figcaption>年齢と体調に合わせた強度で、着実に体力を戻す。</figcaption></figure>
 <p>「もう歳だから」と諦める必要はありません。筋肉は、何歳からでも正しく鍛えれば応えてくれます。総持寺店の口コミには<strong>「50代で体力の低下を感じて入会したが、体調と年齢に合わせた優しい指導で疲れにくくなった」</strong>という声があります。大切なのは、若い人と同じメニューをこなすことではなく、今の自分の体力に合った負荷で、少しずつ積み上げること。マンツーマンだからこそ、その日の体調を見ながら強度を調整し、ケガをせずに続けられます。体力が戻ると、日常が変わります。階段が苦にならない、休日に疲れを持ち越さない、姿勢がよくなる——そんな小さな変化の積み重ねが、生活の質を確かに上げていきます。</p>
+</section>
+<section>
 <h2>阪急総持寺、駅前すぐ</h2>
 <p>大阪茨木市・総持寺店は、その名のとおり総持寺駅前町にあり、阪急京都線 総持寺駅から駅前すぐという通いやすい立地です。少し歩けばJR総持寺駅もあり、どちらの路線からもアクセスできます。駅前だからこそ、通勤・通学やお買い物の動線上で立ち寄りやすく、「わざわざ行く」ではなく「ついでに寄る」感覚で続けられます。毎日8:00〜23:00営業なので、朝の始業前にひと汗かいてから出勤する使い方も、仕事帰りに立ち寄る使い方も自在です。健康のための運動は、続けてこそ意味があります。駅前という近さは、その「続ける」を何より後押ししてくれます。茨木市・総持寺エリアで通いやすいパーソナルジムをお探しの方に、最適な立地です。</p>
+</section>
+<section>
 <h2>最初は現状把握のカウンセリングから</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/sojiji/counseling.webp" type="image/webp"><img src="../../images/shops/sojiji/counseling.jpg" width="1200" height="678" alt="健康状態のヒアリングから始まる初回カウンセリング" loading="lazy"></picture><figcaption>まずは今の状態を知ることから。数字を一緒に見つめます。</figcaption></figure>
 <p>初めての方は、まず無料体験へ。総持寺店では、最初に「現状把握のカウンセリング」を大切にしています。<strong>健康診断の結果を持参してのご相談も歓迎</strong>です。数値のどこが気になるか、現在の生活習慣・運動歴・体力の状態、肩こりや腰痛などの体調面をていねいにうかがい、あなたに合った無理のないプログラムを設計します。そのうえで実際のトレーニングを体験し、フォームや効かせ方を確かめていただきます。相性や雰囲気を確かめてから決めていただけるので、<strong>当日入会で入会金が通常55,000円→15,000円（税込）に割引</strong>。無理な勧誘は一切ありません。阪急総持寺駅前すぐなので、まずは話だけでも気軽にお越しください。</p>
-<h2>結婚式前のボディメイクを、大阪茨木市・総持寺で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>Google口コミ★5.0（110件）</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（口コミ110件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-summary-txt">NEXUS大阪茨木市・総持寺店はGoogle口コミ110件で★5.0を維持。健康診断をきっかけにした身体の立て直しと、年齢に合わせた無理のない指導が評価されています。</p>
+<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E8%8C%A8%E6%9C%A8%E5%B8%82%E3%83%BB%E7%B7%8F%E6%8C%81%E5%AF%BA%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">50代で体力の低下を感じていましたが、年齢と体調に合わせた丁寧な指導のおかげで、疲れにくい体になってきました。</p><div class="who">大阪茨木市・総持寺店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E8%8C%A8%E6%9C%A8%E5%B8%82%E3%83%BB%E7%B7%8F%E6%8C%81%E5%AF%BA%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>大阪茨木市・総持寺店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_group_01.webp" width="1280" height="724" alt="大阪茨木市・総持寺エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。大阪茨木市・総持寺店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_ring_glove_02.webp" width="1280" height="724" alt="大阪茨木市・総持寺エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -254,14 +360,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">大阪茨木市・総持寺店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 大阪茨木市・総持寺店</dd></div><div class="row"><dt>住所</dt><dd>〒567-0802<br>大阪府茨木市総持寺駅前町6-11 ソリティア総持寺102号</dd></div><div class="row"><dt>最寄り駅</dt><dd>阪急京都線 総持寺駅（駅前すぐ）／JR総持寺駅</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8496</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E8%8C%A8%E6%9C%A8%E5%B8%82%E7%B7%8F%E6%8C%81%E5%AF%BA%E9%A7%85%E5%89%8D%E7%94%BA6-11%20%E3%82%BD%E3%83%AA%E3%83%86%E3%82%A3%E3%82%A2%E7%B7%8F%E6%8C%81%E5%AF%BA&z=16&output=embed" title="NEXUSパーソナルジム 大阪茨木市・総持寺店の地図"></iframe></div>
-<h2>Google口コミ★5.0（110件）</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（口コミ110件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-summary-txt">NEXUS大阪茨木市・総持寺店はGoogle口コミ110件で★5.0を維持。健康診断をきっかけにした身体の立て直しと、年齢に合わせた無理のない指導が評価されています。</p>
-<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E8%8C%A8%E6%9C%A8%E5%B8%82%E3%83%BB%E7%B7%8F%E6%8C%81%E5%AF%BA%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">50代で体力の低下を感じていましたが、年齢と体調に合わせた丁寧な指導のおかげで、疲れにくい体になってきました。</p><div class="who">大阪茨木市・総持寺店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E8%8C%A8%E6%9C%A8%E5%B8%82%E3%83%BB%E7%B7%8F%E6%8C%81%E5%AF%BA%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>大阪茨木市・総持寺店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>茨木市で健康改善目的のパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS大阪茨木市・総持寺店は「健康診断の数値から立て直す」を軸にした完全個室パーソナルジムです。阪急京都線 総持寺駅前・茨木市総持寺駅前町にあります。健康診断で気になる結果が出た方、体力の低下や肩こり・腰痛を感じている30〜50代の方に選ばれています。口コミでは「健康診断で悪い結果が出てジムを探し、基礎から丁寧に教わって体力がつき、生活に張りが出た」という声をいただき、Google口コミ★5.0（110件）を維持しています。運動と食事の両輪で、無理なく数値と体力を立て直します。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>健康診断の結果が悪かったのですが、相談できますか？<span class="ic">+</span></summary><div class="st-faq-a">はい、ぜひご相談ください。総持寺店では、健康診断の結果を持参してのカウンセリングも歓迎しています。数値のどこが気になるか、現在の生活習慣や運動歴、体力の状態をうかがったうえで、あなたに合った無理のないプログラムを設計します。体重・体脂肪だけでなく、日々の疲れにくさや肩こり・腰痛といった体調面も一緒に整えていきます。いきなり厳しい運動や食事制限をするのではなく、基礎から丁寧に。健康診断をきっかけに「そろそろ立て直したい」という方の第一歩を、専門のトレーナーが伴走します。まずは無料体験へお越しください。</div></details>
@@ -276,6 +381,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>食事指導はありますか？<span class="ic">+</span></summary><div class="st-faq-a">月額3,000円（税込）のAI食事指導があります。写真を送るだけで、無理を強いない範囲で痩せる食べ方をサポートします。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>トレーナーはどんな人ですか？<span class="ic">+</span></summary><div class="st-faq-a">全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビュー。「優しく寄り添う指導」を全店共通の基準としています。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="https://www.nexus-gym.com/" target="_blank" rel="noopener">NEXUSパーソナルジム公式サイトを見る</a>
+</section>
 <div class="st-cta"><h3>総持寺駅前で、健康診断の数字を立て直しませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>

@@ -278,34 +278,138 @@
 .st-rev-tag { display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; color:var(--accent1); background:var(--bg-card); border:1px solid var(--line-accent); border-radius:999px; padding:3px 10px; margin-bottom:10px; }
 .st-rev-summary-txt { color:var(--ink-soft); font-size:14.5px; line-height:1.95; margin:0 0 10px; }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">練馬店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/nerima/hero-studio.webp" type="image/webp"><img src="../../images/shops/nerima/hero-studio.jpg" width="896" height="1200" alt="練馬駅近くのNEXUSパーソナルジム完全個室でフォーム指導を受ける女性会員" loading="eager" fetchpriority="high"></picture><figcaption>ジムが続かなかったあなたへ。練馬で口コミ★5.0の隠れ家ジム。</figcaption></figure>
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都練馬区</p>
 <h1>NEXUSパーソナルジム 練馬店｜<span class="ac">練馬</span>の完全個室・隠れ家ジム</h1>
 <p class="st-lead">西武池袋線・都営大江戸線・練馬駅が最寄り。練馬区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。女性会員85%、運動初心者の30〜40代女性がこっそり通っています。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>手ぶら通いOK</li><li>女性会員85%</li><li>運動初心者歓迎</li><li>AI食事指導</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS練馬店は、東京都練馬区の落ち着いた住宅街に佇む完全個室のパーソナルジム。大きな看板を出していないため、練馬・桜台・中村橋・豊島園エリアで「人目を気にせず綺麗になりたい」という30〜40代女性に選ばれています。ウェア・タオル・プロテインまで無料提供の手ぶら通いOKで、忙しい毎日でもバッグひとつで続けられます。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">以前はジムに入会しても通えなかった私が、初めて続いています。丁寧な指導で「今日はこのくらい」と体調に合わせてくれるので無理がなく、食生活まで一緒に見直せて身体が変わってきました。</p><div class="who">練馬店に通う女性会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>三日坊主を卒業できる理由</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nerima/kettle-training.webp" type="image/webp"><img src="../../images/shops/nerima/kettle-training.jpg" width="1200" height="679" alt="体調に合わせて強度調整するケトルベルトレーニング" loading="lazy"></picture><figcaption>その日の体調・疲労度を見て強度を調整。「きついけどできる」設計。</figcaption></figure>
 <p>「入会しても結局通わなくなる」——そんな経験を繰り返してきた方が、練馬店で初めて続いています。理由は、<strong>その日の体調・疲労度を見てトレーナーが強度を調整する仕組み</strong>。口コミでも「以前ジムに入会しても通えなかった私が、初めて続いている」「きついけどできる強度で、変な疲労が残らない」と評価されています。頑張りすぎて燃え尽きない、続くための負荷設計が三日坊主を卒業させます。</p>
+</section>
+<section>
 <h2>★5.0を支えるフォーム指導</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nerima/form-coaching.webp" type="image/webp"><img src="../../images/shops/nerima/form-coaching.jpg" width="1200" height="2122" alt="スクワットのフォームをマンツーマンで矯正する指導" loading="lazy"></picture><figcaption>自分では気づけない姿勢のクセを的確に指摘。他店会員も通う指導力。</figcaption></figure>
 <p>練馬店の最大の武器は、トレーナーのフォーム指導力です。口コミでは「自分で気づかない姿勢のクセを的確に指摘してくれる」との声が並び、<strong>普段は他店に通う方が、わざわざ練馬店の指導を受けに来る</strong>ほど。完全個室のマンツーマンで、関節の動き・重心・力の入れ方を一つひとつ矯正します。同じ種目でも効き方がまるで変わる——それが<strong>Google口コミ95件で★5.0</strong>を支えている理由です。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">普段は別の店舗を利用していますが、練馬店の指導を受けに来ました。自分では気づかなかった身体のクセを的確に指摘してもらえて、動きの精度が上がりました。指導力が本当に高いと感じます。</p><div class="who">他店舗から来店した会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>最初の一歩は無料カウンセリングから</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nerima/counseling.webp" type="image/webp"><img src="../../images/shops/nerima/counseling.jpg" width="1200" height="679" alt="パーソナルジムでの初回カウンセリングの様子" loading="lazy"></picture><figcaption>無理な目標は課さない。現実的なゴール設計から一緒にはじめる。</figcaption></figure>
 <p>再挑戦で一番大事なのは、最初のゴール設定。練馬店では無理な目標を課さず、<strong>今の生活で本当に続けられる現実的なゴール</strong>から一緒に設計します。無料カウンセリングでは、これまで続かなかった理由や身体の悩みをじっくりヒアリング。「また挫折したらどうしよう」という不安ごと受け止めたうえで、あなたに合ったペースを提案します。</p>
+</section>
+<section>
 <h2>2人で通えばもっと続く</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nerima/pair-training.webp" type="image/webp"><img src="../../images/shops/nerima/pair-training.jpg" width="1200" height="679" alt="2人で受けるセミパーソナルトレーニング" loading="lazy"></picture><figcaption>友人・家族と2人で。お互いが励みになり、継続率が上がります。</figcaption></figure>
 <p>「一人だと続かない」という方には、セミパーソナルがおすすめ。60分・月2回11,000円（税込・1回5,500円）で、友人やご家族と2人で通えます。お互いが“通う理由”になり、励まし合いながら続けられるので継続率がぐっと上がります。ひとりでの再挑戦に不安がある方こそ、2人ではじめてみてください。</p>
-<h2>結婚式前のボディメイクを、練馬で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>Google口コミ95件で、★5.0</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（95件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-summary-txt">NEXUS練馬店はGoogle口コミ95件で★5.0を維持。過去にジムが続かなかった方の再挑戦と、細やかなフォーム指導が支持されています。95件という件数で★5.0を保つのは、全店でも突出した評価です。</p>
+<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。</p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">人目を気にせず集中できる完全個室と予約制がありがたいです。トレーニングだけでなく食事の相談にも乗ってもらえるので、モチベーションが途切れず続けられています。</p><div class="who">練馬店に通う女性会員 ・ Google口コミより（内容を要約）</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E7%B7%B4%E9%A6%AC%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>練馬店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_dress_counseling_01.webp" width="1280" height="724" alt="練馬エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。練馬店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_ring_glove_02.webp" width="1280" height="724" alt="練馬エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -319,14 +423,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">練馬店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 練馬店</dd></div><div class="row"><dt>住所</dt><dd>〒176-0001<br>東京都練馬区練馬1丁目22−5 セラユートヨタマキタ 303号室</dd></div><div class="row"><dt>最寄り駅</dt><dd>西武池袋線・都営大江戸線　練馬駅</dd></div><div class="row"><dt>営業時間</dt><dd>火 9:00〜21:00／水 15:00〜22:00／木 10:00〜22:00／土日 9:00〜17:00<br>定休日：月・金</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8493</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%B7%B4%E9%A6%AC%E5%8C%BA%E7%B7%B4%E9%A6%AC1%E4%B8%81%E7%9B%AE22%E2%88%925%20%E3%82%BB%E3%83%A9%E3%83%A6%E3%83%BC%E3%83%88%E3%83%A8%E3%82%BF%E3%83%9E%E3%82%AD%E3%82%BF%20303%E5%8F%B7%E5%AE%A4&z=16&output=embed" title="NEXUSパーソナルジム 練馬店の地図"></iframe></div>
-<h2>Google口コミ95件で、★5.0</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（95件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-summary-txt">NEXUS練馬店はGoogle口コミ95件で★5.0を維持。過去にジムが続かなかった方の再挑戦と、細やかなフォーム指導が支持されています。95件という件数で★5.0を保つのは、全店でも突出した評価です。</p>
-<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。</p>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">人目を気にせず集中できる完全個室と予約制がありがたいです。トレーニングだけでなく食事の相談にも乗ってもらえるので、モチベーションが途切れず続けられています。</p><div class="who">練馬店に通う女性会員 ・ Google口コミより（内容を要約）</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E7%B7%B4%E9%A6%AC%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>練馬店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>練馬店はどこにありますか？最寄り駅は？<span class="ic">+</span></summary><div class="st-faq-a">住所は〒176-0001 東京都練馬区練馬1丁目22−5 セラユートヨタマキタ 303号室です。最寄りは西武池袋線・都営大江戸線の練馬駅。練馬区の住宅街のマンションの一室にある、大きな看板のない隠れ家パーソナルジムです。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>練馬・桜台エリアで初心者向けのパーソナルジムを探しています。<span class="ic">+</span></summary><div class="st-faq-a">練馬店は、運動が初めての30〜40代女性が中心の店舗です。会員の約6割が運動経験ほぼゼロからのスタート。完全個室でトレーナーがマンツーマン指導するので、周りの目を気にせず自分のペースで始められます。</div></details>
@@ -349,6 +452,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。30〜40代女性を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>練馬で、こっそり綺麗になりませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>

@@ -205,36 +205,142 @@
 .st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#osaka">大阪府</a></li><li aria-current="page">大阪服部天神店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 大阪府豊中市</p>
 <h1>NEXUSパーソナルジム 大阪服部天神店｜<span class="ac">服部天神</span>の完全個室・隠れ家ジム</h1>
 <p class="st-lead">阪急宝塚線 服部天神駅からすぐ、豊中市服部南町の完全個室パーソナルジムです。「24時間ジムで続かなかった人の、仕事帰りの再挑戦」を軸に、安い月会費を払い続けたまま行かなくなってしまった方の「今度こそ」をマンツーマンで後押し。30代で3ヶ月−10kgといった実例もあり、仕事帰りに通える続けやすさが支持され、Google口コミ★4.9（65件）をいただいています。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>仕事帰りの再挑戦</li><li>マンツーマン指導</li><li>阪急宝塚線 服部天神駅</li><li>毎日8:00〜23:00</li></ul>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/hattori-tenjin/hero-training.webp" type="image/webp"><img src="../../images/shops/hattori-tenjin/hero-training.jpg" width="896" height="1200" alt="服部天神駅近くのNEXUSパーソナルジムでのスクワット指導" loading="eager" fetchpriority="high"></picture><figcaption>今度こそ続く。服部天神の完全個室パーソナルジム。</figcaption></figure>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS大阪服部天神店は、阪急宝塚線 服部天神駅近く・豊中市服部南町にある完全個室パーソナルジム。この店舗が向き合っているのは、「24時間ジムに入ったものの、行かなくなってしまった」という方の再挑戦です。月会費の安いジムは、いつでも行ける代わりに「何をすればいいか分からない」「誰も見ていないからサボってしまう」という壁があります。服部天神店では、マンツーマンでメニューを組み、その日の体調に合わせて声をかけ、自宅でのトレーニング方法まで伝えます。だから、一人では続かなかった方も続けられる。毎日8:00〜23:00営業で仕事帰りにも通いやすく、ウェア・タオル・プロテインまで無料の手ぶら通いOK。料金は1回4,500円〜（ライトコース30分・月4回18,000円）から始められます。</p>
+</section>
+<section>
 <h2>24時間ジム、行かなくなっていませんか</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/hattori-tenjin/restart.webp" type="image/webp"><img src="../../images/shops/hattori-tenjin/restart.jpg" width="1200" height="678" alt="マンツーマン指導で再挑戦するトレーニング" loading="lazy"></picture><figcaption>誰かが見てくれているから、今度は続く。</figcaption></figure>
 <p>「安いから」と24時間ジムに入ったものの、最初の数回で足が遠のき、月会費だけを払い続けている——そんな経験はありませんか。服部天神店の口コミには<strong>「24時間ジムでは続かなかったが、パーソナルなら続くかもと入会した。自宅トレの方法まで教わり、モチベーションが上がっている」</strong>という声があります。続かなかったのは、あなたの意志が弱いからではありません。やり方が分からず、見てくれる人もいなかっただけです。マンツーマンなら、正しいフォーム、効かせ方、そして「今日も来てよかった」と思える声かけがあります。行かないジムの月会費を払い続けるより、結果の出る投資に切り替える——その一歩を、服部天神店が支えます。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">24時間ジムでは続かなかったのですが、優しく楽しいトレーナーのおかげで安心して通えています。自宅でのトレーニング方法まで教わりました。</p><div class="who">大阪服部天神店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>仕事帰りの1時間が、いちばん変わる</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/hattori-tenjin/after-work.webp" type="image/webp"><img src="../../images/shops/hattori-tenjin/after-work.jpg" width="1200" height="678" alt="仕事帰りでも手ぶらで通えるジムの無料プロテイン" loading="lazy"></picture><figcaption>疲れて帰る途中の1時間が、体を変える時間になる。</figcaption></figure>
 <p>体を変えるのに、特別な休日は要りません。<strong>仕事帰りの1時間</strong>——それがいちばん続けやすく、いちばん変わる時間です。服部天神店の口コミには「仕事帰りに通える場所を探していた。疲れた日も、トレーナーの声かけで自然と頑張れる」という声があります。毎日23時まで営業しているので、残業があっても間に合います。ウェア・タオル・プロテインまで無料提供の手ぶら通いOKだから、会社帰りにバッグひとつで立ち寄れます。「今日は疲れたから」と流れてしまいがちな夜も、予約とトレーナーの声かけがあれば、自然と足が向く。その積み重ねが、確かな変化になります。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">疲れた仕事帰りでも、その日に合わせたメニューと励ましで自然と続き、体力がついて仕事の調子まで上がりました。</p><div class="who">大阪服部天神店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>30代・40代の代謝の壁を越える</h2>
 <p>「若い頃と同じ生活なのに、なぜか太る」——それは、加齢とともに基礎代謝が落ちるためです。30代・40代になると、放っておくだけで少しずつ体重が増え、疲れも抜けにくくなります。服部天神店の口コミには<strong>「30代で太り、3ヶ月で10kg減った」</strong>という実例や、<strong>「40代になり同じ生活でも太るようになったが、年齢と体力に合わせた無理のないプログラムで安心できた」</strong>という声があります。大切なのは、若い頃のような無茶な追い込みではなく、今の年齢と体力に合った負荷で、筋肉を戻し代謝を上げていくこと。マンツーマンだからこそ、あなたの体の状態を見ながら、ケガをせず着実に「太りにくい体」へと変えていけます。食事も、極端な制限ではなく続けられる形で整えます。代謝の壁は、正しい方法なら何歳からでも越えられます。</p>
+</section>
+<section>
 <h2>“足の神様”の街で、足腰から健康に</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/hattori-tenjin/legs-health.webp" type="image/webp"><img src="../../images/shops/hattori-tenjin/legs-health.jpg" width="1200" height="678" alt="足腰を鍛える下半身ストレッチとトレーニング" loading="lazy"></picture><figcaption>“足の神様”のお膝元で、一生歩ける足腰を。</figcaption></figure>
 <p>服部天神といえば、古くから「足の神様」として親しまれる服部天神宮のお膝元。足腰の健康や旅の安全を祈願する人が全国から訪れる街です。その土地で体づくりをするなら、ぜひ大切にしてほしいのが「一生歩ける足腰」です。人の筋肉は下半身に約7割が集まっており、脚を鍛えることは代謝アップにも、将来の転倒予防にも直結します。服部天神店では、スクワットやヒップリフトなど下半身を軸にしたトレーニングで、太りにくい体と、いつまでも自分の足で歩ける体の両方を育てます。“足の神様”の街で、足腰から健康になる——服部天神店ならではの体づくりです。</p>
+</section>
+<section>
 <h2>セッションの流れ</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/hattori-tenjin/session.webp" type="image/webp"><img src="../../images/shops/hattori-tenjin/session.jpg" width="1200" height="678" alt="完全個室でのセッション中の休憩" loading="lazy"></picture><figcaption>完全個室で、人目を気にせず自分のペースで。</figcaption></figure>
 <p>初めての方は、まず無料体験へ。ご予約後、来店したらカウンセリングで目標や現在の体型、生活リズム、これまでのジム経験（続かなかった理由も含めて）をうかがいます。そのうえで実際のトレーニングを体験し、フォームや効かせ方を確かめていただきます。完全個室なので、体型やトレーニング姿を人に見られる心配はありません。相性や雰囲気を確かめてから決めていただけるので、<strong>当日入会で入会金が通常55,000円→15,000円（税込）に割引</strong>。無理な勧誘は一切ありません。阪急宝塚線 服部天神駅すぐなので、仕事帰りに、まずは話だけでも気軽にお越しください。</p>
-<h2>結婚式前のボディメイクを、大阪服部天神で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>Google口コミ★4.9（65件）</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>4.9</b><span class="cnt">（口コミ65件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-summary-txt">NEXUS大阪服部天神店はGoogle口コミ★4.9・65件。24時間ジムで続かなかった方の再挑戦と、仕事帰りに通える続けやすさが評価されています。</p>
+<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E6%9C%8D%E9%83%A8%E5%A4%A9%E7%A5%9E%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">30代で増えた体重が3ヶ月で10kg減りました。食事の見直しからトレーニングまで、ストレスなく続けられたのが良かったです。</p><div class="who">大阪服部天神店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E6%9C%8D%E9%83%A8%E5%A4%A9%E7%A5%9E%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>大阪服部天神店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_01.webp" width="1280" height="724" alt="大阪服部天神エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。大阪服部天神店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_ring_glove_01.webp" width="1280" height="724" alt="大阪服部天神エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -248,14 +354,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">大阪服部天神店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 大阪服部天神店</dd></div><div class="row"><dt>住所</dt><dd>〒561-0853<br>大阪府豊中市服部南町1-5-6 クレセント南町103号</dd></div><div class="row"><dt>最寄り駅</dt><dd>阪急宝塚線 服部天神駅</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8496</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E5%A4%A7%E9%98%AA%E5%BA%9C%E8%B1%8A%E4%B8%AD%E5%B8%82%E6%9C%8D%E9%83%A8%E5%8D%97%E7%94%BA1-5-6%20%E3%82%AF%E3%83%AC%E3%82%BB%E3%83%B3%E3%83%88%E5%8D%97%E7%94%BA&z=16&output=embed" title="NEXUSパーソナルジム 大阪服部天神店の地図"></iframe></div>
-<h2>Google口コミ★4.9（65件）</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>4.9</b><span class="cnt">（口コミ65件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-summary-txt">NEXUS大阪服部天神店はGoogle口コミ★4.9・65件。24時間ジムで続かなかった方の再挑戦と、仕事帰りに通える続けやすさが評価されています。</p>
-<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E6%9C%8D%E9%83%A8%E5%A4%A9%E7%A5%9E%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">30代で増えた体重が3ヶ月で10kg減りました。食事の見直しからトレーニングまで、ストレスなく続けられたのが良かったです。</p><div class="who">大阪服部天神店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E9%98%AA%E6%9C%8D%E9%83%A8%E5%A4%A9%E7%A5%9E%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>大阪服部天神店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>服部天神で仕事帰りに通えるパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS大阪服部天神店は、阪急宝塚線 服部天神駅近く・豊中市服部南町の完全個室パーソナルジムです。毎日8:00〜23:00営業で、仕事帰りに通える立地・時間帯が支持されています。口コミでも「仕事帰りに通える場所を探していた。疲れた日もトレーナーの声かけで自然と頑張れる」という声をいただいています。ウェア・タオル・プロテインまで無料の手ぶら通いOKなので、会社帰りにバッグひとつで立ち寄れます。夜23時まで対応しているため、残業後でも通いやすい店舗です。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>24時間ジムが続きませんでした。それでも変われますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。服部天神店には「24時間ジムでは続けられなかったが、パーソナルなら続くかもと入会した」という会員が多くいらっしゃいます。安い月会費のジムに入ったものの、何をすればいいか分からず足が遠のいてしまう——そんな『幽霊会員』の再挑戦こそ、当店が得意とするところです。マンツーマンでメニューを組み、その日の体調に合わせて声をかけ、自宅トレの方法まで伝えます。口コミでは「30代で増えた体重が3ヶ月で10kg減った」という実例もあります。行かなくなった月会費を払い続けるより、結果の出る投資に切り替えませんか。</div></details>
@@ -270,6 +375,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>食事指導はありますか？<span class="ic">+</span></summary><div class="st-faq-a">月額3,000円（税込）のAI食事指導があります。写真を送るだけで、無理を強いない範囲で痩せる食べ方をサポートします。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>トレーナーはどんな人ですか？<span class="ic">+</span></summary><div class="st-faq-a">全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビュー。「優しく寄り添う指導」を全店共通の基準としています。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="https://www.nexus-gym.com/" target="_blank" rel="noopener">NEXUSパーソナルジム公式サイトを見る</a>
+</section>
 <div class="st-cta"><h3>服部天神で、今度こそ続くトレーニングを始めませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>

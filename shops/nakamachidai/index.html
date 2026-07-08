@@ -193,44 +193,137 @@
 .st-brand { background:var(--bg-card); border:1px solid var(--line-accent); border-left:3px solid var(--accent1); border-radius:12px; padding:16px 18px; margin:4px 0 16px; font-size:14px; line-height:1.9; color:var(--ink); }
 .st-brand a { color:var(--accent1); }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#kanagawa">神奈川県</a></li><li aria-current="page">仲町台店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 神奈川県横浜市都筑区</p>
 <h1>NEXUSパーソナルジム 仲町台店｜<span class="ac">計画的な身体づくり</span>の完全個室ジム</h1>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/nakamachidai/hero-training.webp" type="image/webp"><img src="../../images/shops/nakamachidai/hero-training.jpg" width="1200" height="678" alt="仲町台・都筑区のNEXUSパーソナルジムでのトレーニング" loading="eager" fetchpriority="high"></picture><figcaption>仲町台の暮らしに、計画的な身体づくりを。ブルーライン仲町台駅の、完全個室パーソナルジム。</figcaption></figure>
 <p class="st-lead">横浜市都筑区仲町台、市営地下鉄ブルーライン・仲町台駅から通いやすい完全個室パーソナルジムです。仲町台は港北ニュータウンの計画都市。せせらぎ緑道が縦横に走り、街全体が「歩く」ことを前提に設計された、健康意識の高いエリアです。だからこそ仲町台店が大切にするのは、「計画性」。緑道ウォーキングだけでは変えにくい筋力や姿勢を、週1〜2回のパーソナルトレーニングで補い、3ヶ月・6ヶ月・1年という長期の設計図をトレーナーと一緒に描いていきます。計画された街に暮らすあなたに、計画的な身体づくりを。しかもオープンしたばかりの今は、予約が取りやすく、一人のトレーナーがあなたにじっくり向き合える贅沢な時期。オープニングメンバー（一期生）として、トレーナーと関係を築きながらスタートできます。ウェア・タオル・ドリンク・プロテインまで全部込みのアメニティ完備で、手ぶら通いOK。毎日8:00〜23:00・LINE予約で、家事や仕事の合間にも通えます。全国約70店舗・会員継続率96%のNEXUSブランドの指導を、計画都市・仲町台で。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>ブルーライン仲町台駅</li><li>段階目標を設計</li><li>緑道ウォーキング＋筋トレ</li><li>手ぶら通いOK</li><li>NEXUS全国約70店舗</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS仲町台店は、横浜市都筑区仲町台にある完全個室パーソナルジム。市営地下鉄ブルーライン・仲町台駅から通いやすい立地です。仲町台は港北ニュータウンの一角を成す計画都市で、せせらぎ緑道が街を縦横に走る「歩く街」。戸建てやファミリー層が多く、健康や体づくりへの意識が高い住環境が広がっています。この店舗のいちばんの特徴は、そんな仲町台の暮らしに寄り添う「計画性」です。ダイエットもボディメイクも、思いつきや短期の頑張りだけでは長続きしません。大切なのは、ゴールから逆算して、3ヶ月後・6ヶ月後・1年後にどうなっていたいかを描き、そこに向けて無理のないペースで積み重ねること。仲町台店では、初回カウンセリングで一人ひとりの目標や生活習慣を丁寧に伺い、あなただけの「身体づくりの設計図」をトレーナーと一緒に作ります。もう一つの特徴が、緑道ウォーキングとの相性の良さ。仲町台にはウォーキングを習慣にしている方が多くいらっしゃいますが、「歩いているのに体型が変わらない」という声もよく聞きます。ウォーキングは素晴らしい有酸素運動ですが、筋力や姿勢を変えるには筋力トレーニングが欠かせません。仲町台店は、その「歩くだけでは変わらない部分」を週1〜2回のパーソナルで補う場所です。そしてオープン直後の今なら、予約が取りやすく、トレーナーもあなた一人にじっくり時間をかけられます。もちろん新店でも指導品質に不安はありません。全トレーナーが3ヶ月の自社教育プログラムを修了し、全国約70店舗・会員継続率96%のNEXUSブランドの基準を満たしています。完全個室のマンツーマンだから、周りの目を気にせず、自分のペースで。予約はLINEでサッと完結します。</p>
-
+</section>
+<section>
 <h2>ゴールから逆算する、あなたの設計図</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nakamachidai/counseling.webp" type="image/webp"><img src="../../images/shops/nakamachidai/counseling.jpg" width="1200" height="678" alt="初回カウンセリングで段階目標を設計する仲町台店" loading="lazy"></picture><figcaption>ゴールから逆算する、あなたの設計図。3ヶ月・6ヶ月・1年の段階目標をトレーナーと描く。</figcaption></figure>
 <p>計画都市・仲町台にふさわしい身体づくりとは、行き当たりばったりではなく、しっかりと設計された道のりを歩むこと。NEXUS仲町台店では、トレーニングを始める前に、必ず丁寧なカウンセリングの時間を設けます。ここで伺うのは、あなたの目標だけではありません。これまでの運動経験、普段の食事や生活のリズム、体の気になる部分、お仕事や家事のスケジュール——そうした情報をもとに、無理なく続けられる「あなただけの設計図」を描いていきます。たとえば「1年後に健康診断の数値を改善したい」「半年後の家族旅行までに体を引き締めたい」といったゴールがあれば、そこから逆算して、3ヶ月ごとの中間目標を設定します。最初の3ヶ月は体を動かす習慣づくりとフォームの習得、次の3ヶ月は負荷を上げて体の変化を実感する時期、というように、段階を追って着実に前進できるよう組み立てます。目標が明確で、道筋が見えていると、モチベーションが続きやすくなります。「今日のトレーニングが、半年後・1年後のどこにつながっているのか」がわかるからです。そしてこの設計図は、一度作って終わりではありません。体の変化や生活の状況に合わせて、トレーナーが定期的に見直し、微調整していきます。計画を立て、実行し、振り返って修正する——このサイクルを一緒に回していくことが、遠回りに見えて、実は最も確実な近道です。思いつきのダイエットで挫折を繰り返してきた方こそ、計画的な身体づくりの手応えを、仲町台店で感じていただけるはずです。</p>
-
+</section>
+<section>
 <h2>緑道ウォーキングに、筋トレを足す</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nakamachidai/walking.webp" type="image/webp"><img src="../../images/shops/nakamachidai/walking.jpg" width="1200" height="678" alt="せせらぎ緑道のウォーキングに筋力トレーニングを組み合わせる提案" loading="lazy"></picture><figcaption>緑道ウォーキングに、筋トレを足す。歩くだけでは変わらない筋力・姿勢を、週1〜2回のパーソナルで。</figcaption></figure>
 <p>仲町台のせせらぎ緑道は、四季を感じながら気持ちよく歩ける、この街の宝物のような存在です。ウォーキングを日課にしている方も多く、健康維持の習慣として本当に素晴らしいものです。ただ、こんな声もよく耳にします。「毎日欠かさず歩いているのに、体型がなかなか変わらない」「お腹まわりや二の腕は、歩いても引き締まらない」。これは決してあなたの努力が足りないからではありません。ウォーキングは有酸素運動であり、心肺機能を高め、脂肪を燃やすのに優れた運動ですが、筋肉そのものを増やしたり、姿勢を根本から整えたりする効果は限定的なのです。体を引き締める、たるみを解消する、基礎代謝を上げる——これらを実現するには、筋肉に適切な負荷をかける筋力トレーニングが欠かせません。特に、お腹・下半身・背中といった大きな筋肉は、日常の歩行だけでは維持しにくく、意識的に鍛える必要があります。そこでご提案したいのが、「ウォーキングをやめる」のではなく、「ウォーキングに筋トレを足す」という考え方です。緑道での有酸素運動は続けながら、週に1〜2回だけ、仲町台店でパーソナルトレーニングを取り入れる。たったそれだけで、有酸素運動と筋力トレーニングの相乗効果が生まれ、歩くだけでは届かなかった変化が現れ始めます。姿勢が整えば、歩く姿そのものも美しくなり、緑道での散歩がもっと楽しくなるはずです。仲町台店では、あなたの体の状態に合わせて「歩くだけでは変わらない部分」にピンポイントでアプローチ。完全個室でフォームを一つひとつ確認しながら進めるので、筋トレが初めての方でも安心して取り組めます。歩く習慣に、変わる習慣を足しませんか。</p>
-
+</section>
+<section>
 <h2>オープン直後の、今だけの通いやすさ</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/nakamachidai/opening.webp" type="image/webp"><img src="../../images/shops/nakamachidai/opening.jpg" width="1200" height="678" alt="オープン直後で予約が取りやすい仲町台店でのトレーニング" loading="lazy"></picture><figcaption>オープン直後の、今だけの通いやすさ。予約が取りやすく、一期生としてじっくり始められる。</figcaption></figure>
 <p>新しくオープンした店舗には、その時期ならではの大きなメリットがあります。それが「予約の取りやすさ」と「トレーナーとの距離の近さ」です。仲町台店は2026年にオープンしたばかりの新店。会員がまだ増えすぎていない今だからこそ、日中の時間でも仕事帰りの夜でも、希望の時間帯で予約を取りやすい環境が整っています。人気のパーソナルジムでは「予約が取りにくくて通いづらい」という声もありますが、オープン直後の仲町台店なら、その心配がほとんどありません。さらに、この時期に入会される方は、いわば仲町台店の「一期生」。トレーナーがあなた一人にじっくり時間をかけられるので、身体の状態や目標、生活習慣をきめ細かく把握してもらいながら、丁寧に設計図を描いてスタートを切れます。オープニングメンバーとしてトレーナーと関係を築いていく時間は、後から入会する方には得られない、今だけの特別な体験です。「パーソナルジムは気になっていたけれど、なかなか一歩を踏み出せなかった」——そんな方にとって、地元・仲町台に新店ができた今は、始めるのに絶好のタイミング。予約が取りやすく、じっくり向き合ってもらえる今のうちに、ぜひ無料体験にお越しください。オープン直後のゆとりある環境で、あなたの身体づくりを気持ちよくスタートできます。</p>
-
+</section>
+<section>
 <h2>ブルーライン・仲町台駅からの動線</h2>
 <p>NEXUS仲町台店は、横浜市都筑区仲町台1-28-10 コンフォート仲町台201にあります。市営地下鉄ブルーライン・仲町台駅から通いやすい立地で、都筑区にお住まいの方はもちろん、ブルーライン沿線で通勤・通学される方にも便利にご利用いただけます。仲町台駅は、隣接するセンター南・センター北とブルーラインで直結。港北ニュータウンの中心エリアへも一本でアクセスでき、新羽・北新横浜方面からも通いやすい場所です。センター南・センター北でのお買い物や用事のついでに立ち寄る、という通い方もしやすいのが仲町台店の魅力。都筑区は戸建て・ファミリー層が多く、日中は主婦・主夫の方が、夜は仕事帰りの方が、それぞれの生活リズムに合わせて通えます。毎日8:00〜23:00の営業なので、お子さまを送り出した後の日中でも、お仕事帰りの夜でも、無理なく通えます。ウェア・水・タオル・プロテインまですべてアメニティとしてご用意しているので、持ち物はバッグひとつ、手ぶらのまま通えます。予約・変更はLINEで完結し、6時間前まで無料でキャンセル可能。緑道の散歩コースの延長で、生活に溶け込む完全個室ジムです。仲町台・センター南・センター北・新羽など、都筑区・ブルーライン沿線で通いやすいパーソナルジムをお探しの方は、ぜひ一度お越しください。</p>
-
+</section>
+<section>
 <h2>NEXUSブランドの実績</h2>
 <p>仲町台店はオープンしたばかりの新店のため、まだGoogleマップの口コミは集まっていません（現在収集中です）。しかし、指導の品質を裏づけるのは、NEXUSブランド全体で積み上げてきた実績です。NEXUSは全国約70店舗を展開し、会員継続率は96%。全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビューし、「優しく寄り添う指導」を全店共通の基準としています。仲町台店のトレーナーも、同じ教育を受けたメンバーです。</p>
 <p class="st-brand">同じ横浜市内の系列店では、<a href="../yokohama-motomachi/">横浜元町店</a>がGoogle口コミ★5.0（87件）、<a href="../kishine-koen/">岸根公園店</a>が★5.0（53件）、<a href="../tsunashima/">綱島店</a>が★5.0（31件）という高い評価をいただいています（2026年7月時点）。これらの評価は、ブランド全体で共有される指導品質の証です。仲町台店も、この同じ基準でみなさまをお迎えします。</p>
 <p>新店だからと不安に思う必要はありません。むしろオープン直後の今は、予約が取りやすく、一人のトレーナーがあなたにじっくり向き合える贅沢な時期です。全国で培った確かな指導を、できたばかりの仲町台店で、ゆとりある環境で受けられます。まずは無料体験で、トレーナーの質とジムの雰囲気を、あなた自身の目で確かめてみてください。仲町台店の最初のメンバーとして、一緒にこの店舗を育てていける今を、ぜひ楽しんでいただければと思います。</p>
-
+</section>
+<section>
 <h2>まずは無料体験から</h2>
 <p>「仲町台で完全個室のパーソナルジムを探していた」「緑道ウォーキングだけでは体型が変わらず悩んでいた」「計画的に体づくりを進めたい」——そんな方こそ、まずは無料体験からお試しください。仲町台店の無料体験は、カウンセリングであなたの目標や運動経験、生活習慣をじっくり伺うところから始まります。その上で、姿勢や身体のクセをチェックし、実際にトレーニングを体験。フォームを丁寧に確認しながら進めるので、運動が久しぶりの方でも安心です。オープン直後の今なら予約も取りやすく、トレーナーがあなたにたっぷり時間をかけて、身体づくりの設計図を一緒に描けます。体験も手ぶらでOK。ウェア・タオル・ドリンクもすべてご用意しているので、緑道の散歩や買い物の合間に、そのままお立ち寄りいただけます。ブルーライン・仲町台駅から通いやすく、無理な勧誘は一切ありません。計画都市・仲町台で始めるNEXUSの一期生として、気持ちのいいスタートを切りませんか。まずは気軽に、無料体験へお越しください。</p>
-
-<h2>結婚式前のボディメイクを、仲町台で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>仲町台店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_dress_tight_01.webp" width="1280" height="724" alt="仲町台エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。仲町台店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_ring_glove_01.webp" width="1280" height="724" alt="仲町台エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -244,8 +337,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">仲町台店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 仲町台店</dd></div><div class="row"><dt>住所</dt><dd>〒224-0041<br>神奈川県横浜市都筑区仲町台1-28-10 コンフォート仲町台201</dd></div><div class="row"><dt>最寄り駅</dt><dd>市営地下鉄ブルーライン 仲町台駅</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8499</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%A8%AA%E6%B5%9C%E5%B8%82%E9%83%BD%E7%AD%91%E5%8C%BA%E4%BB%B2%E7%94%BA%E5%8F%B01-28-10%20%E3%82%B3%E3%83%B3%E3%83%95%E3%82%A9%E3%83%BC%E3%83%88%E4%BB%B2%E7%94%BA%E5%8F%B0201&z=16&output=embed" title="NEXUSパーソナルジム 仲町台店の地図"></iframe></div>
+</section>
+<section>
 <h2>仲町台店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>仲町台・都筑区にパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS仲町台店は、横浜市都筑区仲町台にある完全個室パーソナルジムです。市営地下鉄ブルーライン・仲町台駅から通いやすく、港北ニュータウンの計画都市・仲町台にお住まいの方が、生活圏の中で本格的なパーソナルトレーニングを受けられます。仲町台はせせらぎ緑道が縦横に走る「歩く街」として知られ、ウォーキングを習慣にしている方が多いエリアです。仲町台店では、そうした緑道ウォーキングだけでは変えにくい筋力や姿勢を、週1〜2回のパーソナルトレーニングで補い、3ヶ月・6ヶ月・1年という段階的な設計図をトレーナーと一緒に描いていきます。担当トレーナーと二人だけの完全個室空間なので、人目を気にせずトレーニングに集中できます。オープンしたばかりなので予約も取りやすく、一人ひとりにじっくり向き合える今がチャンス。全国約70店舗・会員継続率96%のNEXUSブランドの指導品質を、そのまま仲町台の地でご提供します。ウェア・タオル・ドリンク・プロテインまで全部込みのアメニティ完備で、手ぶら通いOK。毎日8:00〜23:00・LINE予約で、家事や仕事の合間にも通えます。仲町台・都筑区で完全個室ジムをお探しの方は、ぜひ無料体験にお越しください。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>ウォーキングはしていますが体型が変わりません<span class="ic">+</span></summary><div class="st-faq-a">仲町台のせせらぎ緑道でのウォーキングは、心肺機能の維持やリフレッシュにとても良い習慣です。ただ、「毎日歩いているのに体型が変わらない」と感じている方が多いのも事実。その理由は、ウォーキングが有酸素運動であり、筋肉に十分な負荷をかけるトレーニングではないからです。歩くことで消費カロリーは増えますが、体を引き締める・姿勢を整える・基礎代謝を上げるためには、筋肉そのものに適切な刺激を与える筋力トレーニングが欠かせません。特に、加齢とともに落ちやすいお腹・下半身・背中の筋肉は、日常の歩行だけでは維持が難しく、意識的なトレーニングが必要です。NEXUS仲町台店では、あなたの体の状態を見ながら、「歩くだけでは変わらない部分」にピンポイントでアプローチするメニューを組みます。ウォーキングを続けながら、週1〜2回だけパーソナルトレーニングを足す——それだけで、姿勢が整い、体のラインが変わり、歩く姿勢まで美しくなっていきます。有酸素運動（ウォーキング）と筋力トレーニング（パーソナル）は、どちらか一方ではなく、組み合わせることで効果が最大化します。完全個室のマンツーマンで、フォームを一つひとつ確認しながら進めるので、運動が久しぶりの方でも安心です。「歩いているのに変わらない」ともどかしさを感じている方こそ、一度無料体験でその違いを体感してみてください。</div></details>
@@ -262,6 +360,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">NEXUS全店の女性会員比率は85%です。20〜40代を中心に、運動初心者の方が多く通っています。仲町台店も、女性が安心して通える完全個室環境です。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>計画都市・仲町台で、一期生になろう。</h3><p>まずは無料体験で、あなたの身体づくりの設計図を一緒に描きませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">まずは無料体験を予約する</a></div>

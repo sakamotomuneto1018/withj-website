@@ -205,43 +205,146 @@
 .st-fig figcaption { font-size:12.5px; color:var(--ink-faint); padding:9px 13px; background:var(--bg-soft); }
 .st-rev-summary { background:var(--bg-card); border:1px solid var(--line-accent); border-left:3px solid var(--accent1); border-radius:12px; padding:16px 18px; margin:4px 0 16px; font-size:14px; line-height:1.9; color:var(--ink); }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">大森北口山王店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都大田区</p>
 <h1>NEXUSパーソナルジム 大森北口山王店｜<span class="ac">大森駅徒歩2分</span>の完全個室ジム</h1>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/omori-sanno/hero-training.webp" type="image/webp"><img src="../../images/shops/omori-sanno/hero-training.jpg" width="1200" height="678" alt="大森駅近くのNEXUSパーソナルジム山王店でのトレーニング" loading="eager" fetchpriority="high"></picture><figcaption>大森駅徒歩2分。山王の洗練された完全個室ジム。2026年オープンの、明るく清潔な新店です。</figcaption></figure>
 <p class="st-lead">JR京浜東北線・大森駅北口から徒歩2分、2026年にオープンしたばかりの完全個室・隠れ家パーソナルジムです。大森北口山王店の特徴は、新店ならではの洗練された空間と清潔感。更衣室もトレーニングルームも常に綺麗で、初めての方でも気持ちよく過ごせます。山王は馬込文士村に連なる落ち着いた邸宅街。その静かな土地柄と、大森駅前からすぐという抜群のアクセスを両立しています。押し売りのない無料体験、固定曜日に縛られない予約の柔軟さで、毎日8:00〜23:00・手ぶらOK・LINE予約で通えます。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>大森駅徒歩2分</li><li>2026年オープンの新店</li><li>手ぶら通いOK</li><li>毎日8:00〜23:00</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS大森北口山王店は、JR京浜東北線・大森駅北口から徒歩2分の完全個室パーソナルジム。2026年にオープンしたばかりの新店で、更衣室もトレーニングルームも常に清潔なのが自慢です。複数のNEXUS店舗を知る会員からも「山王店は特に内装が洗練されていて明るく開放的」という声をいただいています。山王は馬込文士村に連なる邸宅街という落ち着いた土地柄ながら、大森の駅前立地で通いやすさも抜群。無料体験では丁寧にヒアリングして目的に合うメニューを提案し、入会の押し売りは一切しません。仕事の都合で固定曜日に通えない方も、セッション後にその場で次回を予約できるので計画が立てやすい設計です。運動経験がほぼゼロの方でも、基礎のフォームから丁寧に。ウェア・タオル・ドリンク・プロテインまで無料提供の手ぶら通いOK、予約はLINEでサッと完結します。</p>
-
+</section>
+<section>
 <h2>新店ならではの、洗練された空間</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/omori-sanno/refined.webp" type="image/webp"><img src="../../images/shops/omori-sanno/refined.jpg" width="1200" height="678" alt="洗練された内装の完全個室トレーニングルーム" loading="lazy"></picture><figcaption>2026年オープン。更衣室もトレーニングルームも常に清潔。明るく開放的な、気持ちのいい空間です。</figcaption></figure>
 <p>ジムを選ぶとき、意外と大きな決め手になるのが「空間の心地よさ」です。とくに更衣室やトレーニングルームの清潔感は、通い続けるうえで欠かせません。大森北口山王店は2026年にオープンしたばかりの新店。設備も内装も新しく、いつ来ても綺麗な状態を保っています。複数のNEXUS店舗を利用したことのある会員からも「山王店は特に内装が洗練されていて明るく開放的」「更衣室もトレーニングルームも常に清潔で、衛生面の安心感が高い」という声をいただいています。トレーニングに集中できるのは、こうした整った環境があってこそ。人目を気にせず、けれど閉塞感のない——新店ならではの気持ちのいい空間で、あなたのペースで続けられます。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">他のNEXUS店舗にも行ったことがありますが、山王店は特に内装が洗練されていて明るく開放的です。更衣室もトレーニングルームも常に清潔で、衛生面の安心感が高く、通うたびに気持ちよく過ごせています。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>押し売りなしの無料体験</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/omori-sanno/trial.webp" type="image/webp"><img src="../../images/shops/omori-sanno/trial.jpg" width="1200" height="678" alt="丁寧なヒアリングから始まる無料体験カウンセリング" loading="lazy"></picture><figcaption>まずは丁寧なヒアリングから。目的に合うメニューを提案。入会の押し売りは一切ありません。</figcaption></figure>
 <p>「体験に行ったら、しつこく入会を迫られそう」——そんな不安から、一歩を踏み出せない方は少なくありません。大森北口山王店の無料体験は、その逆です。まずはあなたの目標や体の悩み、生活リズムを丁寧にうかがい、それに合ったメニューをご提案します。その日のうちに入会を決める必要はまったくありません。会員からも「体験で丁寧にヒアリングし、目的に合うメニューを提案してくれた。入会の押し売りが一切なかった」という声をいただいています。合うかどうかは、実際に体験してご自身で判断してください。無理な勧誘がないからこそ、安心して「まずは話だけ」から始められます。もちろん当日入会いただくと入会金の割引特典もありますが、決めるのはあなたのペースで大丈夫です。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">体験のときに丁寧にヒアリングしてくれて、自分の目的に合うメニューを提案してもらえました。入会の押し売りが一切なかったので、安心してじっくり検討でき、納得して始めることができました。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>正しいフォームは、それだけで価値</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/omori-sanno/form-value.webp" type="image/webp"><img src="../../images/shops/omori-sanno/form-value.jpg" width="1200" height="678" alt="フォームと呼吸から見直すマンツーマン指導" loading="lazy"></picture><figcaption>正しいフォームと呼吸を知るだけで、効果は変わる。1対1だから、独学の何年分も短期間で進む。</figcaption></figure>
 <p>「自己流で何年もやっているのに、なかなか変わらない」——その原因の多くは、フォームと呼吸にあります。大森北口山王店では、まず正しいフォームと呼吸から丁寧に見直します。これを知るだけで、同じ種目でも効き方がまるで変わります。会員からは「正しいフォームと呼吸を知るだけで、普段のトレーニングの効果が変わることを実感した」「1対1だから独学の何年分も短期間で進む。価格以上の価値」という声をいただいています。マンツーマンの完全個室だから、あなたの体の動きをその場で見て、細かく修正できます。独学では気づけなかった小さなズレを一つひとつ直していくことで、努力がきちんと結果に変わる。正しいフォームは、それ自体が一生ものの価値になります。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">正しいフォームと呼吸を知るだけで、普段のトレーニングの効果が変わることを実感しました。1対1だから独学の何年分も短期間で進む感覚があり、価格以上の価値があると感じています。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>大森駅北口から徒歩2分</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/omori-sanno/amenity.webp" type="image/webp"><img src="../../images/shops/omori-sanno/amenity.jpg" width="1200" height="678" alt="手ぶらで通えるジムの無料プロテイン" loading="lazy"></picture><figcaption>ウェア・タオル・ドリンク・プロテインまで無料。手ぶらで、仕事帰りにもサッと立ち寄れる。</figcaption></figure>
 <p>大森北口山王店は、JR京浜東北線・大森駅の北口から徒歩2分。駅前からすぐの立地なので、通勤・通学の途中や仕事帰りに無理なく立ち寄れます。ウェア・タオル・ドリンク・プロテインまで無料提供なので、通勤バッグひとつで手ぶらでOK。そして、忙しい方にうれしいのが予約の柔軟さです。固定の曜日・時間に縛られず、セッションが終わったその場で次回の予約を取れるので、先の予定に合わせて計画を立てられます。会員からも「固定曜日では通えないが、セッション後に次回を予約できるので計画しやすい」という声をいただいています。予約・変更はLINEで完結し、6時間前まで無料でキャンセル可能。不規則なスケジュールでも、自分のペースで続けられます。</p>
-
+</section>
+<section>
 <h2>NEXUSブランドの実績</h2>
 <p>大森北口山王店は2026年オープンの新店ですが、その背景には全国約70店舗・会員継続率96%というNEXUSブランドの実績があります。全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビューし、山王店にも同じ教育を受けたトレーナーが在籍しています。同じ大田区の系列店では、<a href="../nagahara/">長原店</a>が★4.9（108件）、<a href="../nishi-magome/">西馬込店</a>が★4.9（92件）、<a href="../kugahara/">久が原店</a>が★4.9（82件）の評価をいただいています（2026年7月時点）。新店だからと不安に思う必要はありません。ブランド全体で積み上げてきた指導品質を、そのまま大森・山王の地でご提供します。</p>
-
-<h2>結婚式前のボディメイクを、大森北口山王で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>お客様の声</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（5件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E6%A3%AE%E5%8C%97%E5%8F%A3%E5%B1%B1%E7%8E%8B%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<p class="st-rev-summary">NEXUS大森北口山王店は2026年オープンの新店舗。洗練された空間と大森駅徒歩2分の立地で、すでに★5.0の評価をいただいています。</p>
+<p>口コミはまだ5件と新店フェーズですが、NEXUSは全国約70店舗・会員継続率96%。同じ大田区の系列店では<a href="../nagahara/">長原店</a>が★4.9（108件）、<a href="../nishi-magome/">西馬込店</a>が★4.9（92件）、<a href="../kugahara/">久が原店</a>が★4.9（82件）の評価をいただいており、ブランドとしての指導品質は各店で共有されています。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">複数のNEXUS店舗を知っていますが、山王店は特に内装が洗練されていて清潔です。更衣室もトレーニングルームも綺麗で、衛生面の安心感が高いのが気に入っています。</p><div class="who">Google口コミより</div></div>
+<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">体験時の丁寧なヒアリングと、押し売りのなさが好印象でした。自分の目的に合わせたメニューを提案してもらえ、安心して始めることができました。</p><div class="who">Google口コミより</div></div>
+<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">仕事の都合で固定曜日に通えないのですが、セッション後に次回を予約できるので計画しやすいです。大森駅からも近く、手ぶらで通えるので続けやすいです。</p><div class="who">Google口コミより</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E6%A3%AE%E5%8C%97%E5%8F%A3%E5%B1%B1%E7%8E%8B%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>大森北口山王店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_01.webp" width="1280" height="724" alt="大森北口山王エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。大森北口山王店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_effort_couple_02.webp" width="1600" height="905" alt="大森北口山王エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -255,17 +358,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">大森北口山王店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 大森北口山王店</dd></div><div class="row"><dt>住所</dt><dd>〒143-0023<br>東京都大田区山王2-1-8 山王アーバンライフ 519号室</dd></div><div class="row"><dt>最寄り駅</dt><dd>JR京浜東北線　大森駅 北口から徒歩2分</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8499</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A4%A7%E7%94%B0%E5%8C%BA%E5%B1%B1%E7%8E%8B2-1-8%20%E5%B1%B1%E7%8E%8B%E3%82%A2%E3%83%BC%E3%83%90%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%95%20519%E5%8F%B7%E5%AE%A4&z=16&output=embed" title="NEXUSパーソナルジム 大森北口山王店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（5件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E6%A3%AE%E5%8C%97%E5%8F%A3%E5%B1%B1%E7%8E%8B%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<p class="st-rev-summary">NEXUS大森北口山王店は2026年オープンの新店舗。洗練された空間と大森駅徒歩2分の立地で、すでに★5.0の評価をいただいています。</p>
-<p>口コミはまだ5件と新店フェーズですが、NEXUSは全国約70店舗・会員継続率96%。同じ大田区の系列店では<a href="../nagahara/">長原店</a>が★4.9（108件）、<a href="../nishi-magome/">西馬込店</a>が★4.9（92件）、<a href="../kugahara/">久が原店</a>が★4.9（82件）の評価をいただいており、ブランドとしての指導品質は各店で共有されています。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">複数のNEXUS店舗を知っていますが、山王店は特に内装が洗練されていて清潔です。更衣室もトレーニングルームも綺麗で、衛生面の安心感が高いのが気に入っています。</p><div class="who">Google口コミより</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">体験時の丁寧なヒアリングと、押し売りのなさが好印象でした。自分の目的に合わせたメニューを提案してもらえ、安心して始めることができました。</p><div class="who">Google口コミより</div></div>
-<div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">仕事の都合で固定曜日に通えないのですが、セッション後に次回を予約できるので計画しやすいです。大森駅からも近く、手ぶらで通えるので続けやすいです。</p><div class="who">Google口コミより</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A7%E6%A3%AE%E5%8C%97%E5%8F%A3%E5%B1%B1%E7%8E%8B%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>大森北口山王店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>大森駅の近くに完全個室のパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS大森北口山王店は、JR京浜東北線・大森駅北口から徒歩2分の完全個室のパーソナルジムです。2026年にオープンしたばかりの新店で、更衣室もトレーニングルームも常に清潔。担当トレーナーと二人だけの個室空間なので、人目を気にせず基礎から学べます。山王という邸宅街の落ち着いた立地ながら、駅前からすぐという抜群のアクセス。毎日8:00〜23:00・手ぶらOKで、無理なく続けられます。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>新しい店舗ですが、トレーナーの質は大丈夫ですか？<span class="ic">+</span></summary><div class="st-faq-a">ご安心ください。NEXUSは全国約70店舗・会員継続率96%のブランドで、全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビューします。大森北口山王店は新店ですが、在籍するのはこの同じ教育を受けたトレーナー。実際に同じ大田区の系列店では、<a href="../nagahara/">長原店</a>が★4.9（108件）、<a href="../nishi-magome/">西馬込店</a>が★4.9（92件）、<a href="../kugahara/">久が原店</a>が★4.9（82件）の評価をいただいています（2026年7月時点）。指導品質は全店で共有されているので、新店でも安心して通っていただけます。</div></details>
@@ -282,6 +381,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。20〜40代を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>大森駅徒歩2分、洗練の新店へ</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">まずは無料体験を予約する</a></div>

@@ -209,42 +209,142 @@
 .st-fig figcaption { font-size:12.5px; color:var(--ink-faint); padding:9px 13px; background:var(--bg-soft); }
 .st-rev-summary { background:var(--bg-card); border:1px solid var(--line-accent); border-left:3px solid var(--accent1); border-radius:12px; padding:16px 18px; margin:4px 0 16px; font-size:14px; line-height:1.9; color:var(--ink); }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:420px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">菊川店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都墨田区</p>
 <h1>NEXUSパーソナルジム 菊川店｜<span class="ac">急がずに確実に変わる</span>完全個室ジム</h1>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/kikukawa/hero-training.webp" type="image/webp"><img src="../../images/shops/kikukawa/hero-training.jpg" width="1200" height="678" alt="菊川駅近くのNEXUSパーソナルジムでのトレーニング" loading="eager" fetchpriority="high"></picture><figcaption>急がない。月1kgずつ、1年かけて確実に変わる。菊川の完全個室ジム。</figcaption></figure>
 <p class="st-lead">都営新宿線・菊川駅から通える、完全個室の隠れ家パーソナルジムです。菊川店が大切にしているのは「急がない」こと。2ヶ月で一気に落とす短期集中型ではなく、月1kgずつ・1年かけて確実に変わっていくスローペース設計です。飲み会が避けられなくても、できる範囲の工夫で続けられる現実的な食事指導と、雑談しながら楽しく通える雰囲気で、「何をやっても続かなかった」という方が1年通い続けています。急激な減量とちがってリバウンドしにくく、無理な我慢もいりません。家から近くて手頃な「ご近所ジム」として、菊川・住吉・森下エリアの方に親しまれています。毎日8:00〜23:00・手ぶらOK・LINE予約で、長く無理なく続けられます。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>菊川駅から</li><li>月1kgのスローペース</li><li>★4.9（85件）</li><li>毎日8:00〜23:00</li></ul>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS菊川店は、都営新宿線・菊川駅から通える完全個室パーソナルジム。落ち着いた住宅街にある隠れ家ジムです。この店舗いちばんの個性は、徹底した「スローペース設計」。世の中のパーソナルジムが「2ヶ月で−10kg」といった短期集中を打ち出すなか、菊川店はあえてその逆。月1kgずつ、1年かけて確実に変わっていくことを大切にしています。急激な減量は身体への負担が大きく、リバウンドしやすいもの。ゆるやかなペースなら筋肉を落とさず脂肪だけを減らしやすく、無理な我慢もいらないので習慣として定着します。さらに、飲み会が避けられなくても「できる範囲」で続けられる現実的な食事指導と、雑談しながら楽しく通える雰囲気が、継続を後押しします。会員からは「何をやっても続かないタイプだが、1年続いている」という声も。家から近く手頃な価格で始められる「ご近所ジム」として、菊川・住吉・森下エリアの方に長く選ばれています。ウェア・タオル・ドリンク・プロテインまで無料提供の手ぶら通いOK、予約はLINEでサッと完結します。</p>
-
+</section>
+<section>
 <h2>月1kg。それがいちばん確実</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kikukawa/slow-diet.webp" type="image/webp"><img src="../../images/shops/kikukawa/slow-diet.jpg" width="1200" height="678" alt="月1kgペースで確実に変わる食事指導" loading="lazy"></picture><figcaption>月1kgずつ、1年かけて。急がないからこそ、リバウンドせず確実に変わる。</figcaption></figure>
 <p>「早く痩せたい」——その気持ちはよくわかります。でも、急いで落とした体重ほど、あっという間に戻ってしまうもの。菊川店が提案するのは、月1kgずつ・1年かけて確実に変わっていく方法です。月1kgと聞くとゆるやかに感じるかもしれませんが、1年で12kg。しかも筋肉を落とさず脂肪だけを減らしていくので、見た目の変化はしっかり実感できます。会員からは「1年で月1kgペースの減量。見た目もかなり変わった。飲み会があっても、できる範囲での工夫を教えてくれる」という声をいただいています。急激な糖質カットや過度な食事制限は、一時的に体重を落とせてもストレスが大きく、リバウンドの引き金になりがちです。菊川店では、飲み会も楽しみながら「今のあなたにできる範囲」で少しずつ整えていきます。遅く見えて、実はいちばん確実。「遅いは強い」——それが菊川店の食事指導です。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">1年通って月1kgペースで着実に減量できました。飲み会が避けられなくても、できる範囲のアドバイスで無理なく続けられています。焦らず取り組めるのが自分に合っていました。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>隔週の体重測定→ストレッチ→トレーニング</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kikukawa/routine.webp" type="image/webp"><img src="../../images/shops/kikukawa/routine.jpg" width="1200" height="678" alt="体重測定とストレッチから始まる定例セッション" loading="lazy"></picture><figcaption>体重測定→ストレッチ→トレーニング。定点観測のルーティンが、安心して続く土台になる。</figcaption></figure>
 <p>菊川店のセッションには、心地よいルーティンがあります。まずは隔週の体重測定で、身体の変化を定点観測。数字の増減に一喜一憂するのではなく、「1ヶ月でこれくらい」という中期の流れを一緒に確認します。次に、その日のコンディションに合わせたストレッチで身体をほぐし、可動域を広げてから、無理のないトレーニングへ。会員からは「毎回トレーナーと相談しながらプランを決めて進めるルーティンが心地いい」という声をいただいています。決まった流れがあるからこそ、「今日は何をするんだろう」という不安がなく、安心して身体を動かせます。体重測定で現在地を把握し、ストレッチで整え、トレーニングで積み上げる——この一定のリズムが、長く通い続けるための土台になります。トレーナーと相談しながら少しずつ調整していくので、その日の体調に合わせて無理なく進められます。</p>
-
+</section>
+<section>
 <h2>雑談しながら、気づけば1年</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kikukawa/fun.webp" type="image/webp"><img src="../../images/shops/kikukawa/fun.jpg" width="1200" height="678" alt="楽しい雰囲気で続くトレーニングの休憩" loading="lazy"></picture><figcaption>雑談しながらの楽しい雰囲気。「続かない」を、「気づけば1年」に変える。</figcaption></figure>
 <p>ダイエットやトレーニングが続かない最大の理由は、「つらい」「楽しくない」から。菊川店では、その根本をひっくり返します。トレーナーとの雑談を楽しみながら、食事の相談も気軽にできる——そんなリラックスした雰囲気だからこそ、通うのが億劫になりません。会員からは「何をやっても続かないタイプだが、楽しい雰囲気と食事の相談のしやすさで続いている。ストレス解消にもなる」という声をいただいています。トレーニングの時間が「我慢の時間」ではなく「気分転換の時間」になれば、続けることが苦になりません。仕事や家事の合間に立ち寄って、身体を動かし、トレーナーと話してスッキリして帰る。その積み重ねが、気づけば1年、そして見た目の大きな変化につながります。「一人だと続かない」「ジムは緊張する」という方こそ、菊川店のあたたかい雰囲気を体感してみてください。楽しいから、続く。続くから、変わります。</p>
 <div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">何をやっても続かないタイプでしたが、雑談しながらの楽しいトレーニングで気づけば1年。ストレス解消にもなっていて、通うのが楽しみになっています。</p><div class="who">Google口コミより</div></div></div>
-
+</section>
+<section>
 <h2>足裏のバランスから整える</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kikukawa/balance.webp" type="image/webp"><img src="../../images/shops/kikukawa/balance.jpg" width="1200" height="678" alt="足裏の重心バランスを確認するトレーニング" loading="lazy"></picture><figcaption>足裏の感覚から重心を整える。細かい身体のクセに気づけるのが、菊川店の指導。</figcaption></figure>
 <p>「ただ体重を落とすだけ」で終わらないのが、菊川店の指導です。トレーニングのフォームや効果は、実は足裏の重心バランスから大きく影響を受けています。菊川店では、足裏の感覚を養うツールを使いながら、あなたの重心のクセを丁寧にチェックします。会員からは「足裏の感覚を養うツールで、自分の重心が左に偏っていたことに気づけた」という声をいただいています。左右どちらかに重心が偏っていると、特定の部位ばかりに負担がかかり、姿勢の崩れや肩こり・腰の張りの原因にもなります。土台である足裏から整えることで、トレーニングの効果が高まるだけでなく、日常の立ち姿勢や歩き方まで変わっていきます。体重の数字だけでなく、身体の使い方そのものを見直せるのが菊川店の強み。細かい身体のクセに気づき、根本から整えたい方にぴったりです。丁寧なフォーム指導で、効かせたい部位に確実に効かせていきます。</p>
-
+</section>
+<section>
 <h2>菊川駅・住吉・森下から通える</h2>
 <p>NEXUS菊川店は、都営新宿線・菊川駅から徒歩圏内の通いやすい立地です。菊川駅だけでなく、半蔵門線・都営新宿線の住吉駅、都営新宿線・大江戸線の森下駅からもアクセスでき、菊川・住吉・森下エリアにお住まいの方、お勤めの方の「ご近所ジム」として通えます。都営新宿線沿線なら、仕事帰りにそのまま立ち寄ることも可能です。ウェア・水・タオル・プロテインまですべて無料でご用意しているので、通勤バッグひとつで手ぶらのまま通えます。毎日8:00〜23:00の営業なので、朝の出勤前でも、残業で遅くなった夜でも、自分の生活リズムに合わせて通える時間設定です。予約・変更はLINEで完結し、6時間前まで無料でキャンセルできるので、急な予定変更にも対応しやすい設計。家や職場から近いからこそ、無理なく長く続けられます。菊川エリアで「近くて通いやすいジム」をお探しの方は、ぜひ一度お越しください。</p>
-
-<h2>結婚式前のボディメイクを、菊川で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>お客様の声</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★<span class="empty">★</span></span><b>4.9</b><span class="cnt">（85件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E8%8F%8A%E5%B7%9D%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<p class="st-rev-summary">NEXUS菊川店はGoogle口コミ★4.9・85件。飲み会があっても続けられる現実的な食事指導と、月1kgずつ確実に変わるスローペース設計が評価されています。「何をやっても続かなかった」という方が、雑談しながら楽しく1年通い続けている、あたたかい雰囲気のご近所ジムです。</p>
+<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">家から近く手頃な価格で始めましたが、フォーム指導が丁寧で見た目の変化をしっかり実感できました。足裏の重心のクセにも気づかせてもらえて、身体の使い方が変わりました。</p><div class="who">Google口コミより</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E8%8F%8A%E5%B7%9D%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>菊川店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_01.webp" width="1280" height="724" alt="菊川エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。菊川店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_ring_glove_02.webp" width="1280" height="724" alt="菊川エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -258,14 +358,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">菊川店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 菊川店</dd></div><div class="row"><dt>住所</dt><dd>〒130-0023<br>東京都墨田区立川3-6-12 ルーチェヴィラ菊川303</dd></div><div class="row"><dt>最寄り駅</dt><dd>都営新宿線 菊川駅（住吉駅・森下駅からも通えます）</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8488</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%A2%A8%E7%94%B0%E5%8C%BA%E7%AB%8B%E5%B7%9D3-6-12%20%E3%83%AB%E3%83%BC%E3%83%81%E3%82%A7%E3%83%B4%E3%82%A3%E3%83%A9%E8%8F%8A%E5%B7%9D&z=16&output=embed" title="NEXUSパーソナルジム 菊川店の地図"></iframe></div>
-<h2>Googleマップの口コミ</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★<span class="empty">★</span></span><b>4.9</b><span class="cnt">（85件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-src">出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E8%8F%8A%E5%B7%9D%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<p class="st-rev-summary">NEXUS菊川店はGoogle口コミ★4.9・85件。飲み会があっても続けられる現実的な食事指導と、月1kgずつ確実に変わるスローペース設計が評価されています。「何をやっても続かなかった」という方が、雑談しながら楽しく1年通い続けている、あたたかい雰囲気のご近所ジムです。</p>
-<div class="st-rev-list"><div class="st-rev-card"><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">家から近く手頃な価格で始めましたが、フォーム指導が丁寧で見た目の変化をしっかり実感できました。足裏の重心のクセにも気づかせてもらえて、身体の使い方が変わりました。</p><div class="who">Google口コミより</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E8%8F%8A%E5%B7%9D%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>菊川店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>菊川・住吉エリアにパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS菊川店は、都営新宿線・菊川駅から通える完全個室のパーソナルジムです。半蔵門線・都営新宿線の住吉駅、都営新宿線・大江戸線の森下駅からも通えるアクセスの良い立地で、菊川・住吉・森下エリアの「ご近所ジム」として親しまれています。落ち着いた住宅街にある隠れ家ジムで、担当トレーナーと二人だけの個室空間なので、人目を気にせずトレーニングに集中できます。会員からは「家から近く手頃な価格で始めたが、フォーム指導が丁寧で見た目の変化をしっかり実感できた」という声をいただいています。毎日8:00〜23:00・手ぶらOK・LINE予約で、無理なく続けられます。Googleマップの口コミは★4.9（85件）と高評価をいただいています。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>飲み会が多くても痩せられますか？<span class="ic">+</span></summary><div class="st-faq-a">はい、大丈夫です。菊川店の食事指導は「飲み会を我慢してゼロにする」ものではなく、避けられない会食があっても続けられる現実的なアプローチが特徴です。会員からは「飲み会が避けられなくても、できる範囲のアドバイスで無理なく続けられた」「1年通って月1kgペースで着実に減量できた」という声をいただいています。お酒の種類の選び方、食べる順番、翌日の調整の仕方など、生活の中で実践できる工夫を一緒に見つけていきます。極端な制限で一時的に落とすのではなく、飲み会も楽しみながら月1kgずつ確実に減らしていくので、リバウンドしにくく、1年後にはしっかり見た目が変わります。「お酒はやめたくないけど痩せたい」という方にこそ合っています。</div></details>
@@ -282,6 +381,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>女性会員は多いですか？<span class="ic">+</span></summary><div class="st-faq-a">女性会員比率は85%です。20〜40代を中心に、運動初心者の方が多く通っています。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>体験の流れは？<span class="ic">+</span></summary><div class="st-faq-a">無料体験は60分程度。カウンセリング → 姿勢チェック → トレーニング体験の流れです。当日入会で入会金が55,000円→15,000円（税込）に割引されます。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="../../gym-blog/gym-comparison/nexus-personal-gym/">NEXUSパーソナルジムの特徴・料金をもっと見る</a>
+</section>
 <div class="st-cta"><h3>急がずに、確実に。菊川から</h3><p>まずは無料体験で、月1kgずつ変わるスローペース設計を体感しませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener">まずは無料体験を予約する</a></div>

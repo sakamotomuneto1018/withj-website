@@ -205,36 +205,142 @@
 .st-sticky { position:fixed; left:0; right:0; bottom:0; z-index:50; background: rgba(5,5,7,.92); backdrop-filter: blur(8px); border-top:1px solid var(--line); padding:8px 14px calc(8px + env(safe-area-inset-bottom)); }
 .st-sticky a { display:flex; align-items:center; justify-content:center; height:48px; max-width:480px; margin:0 auto; background: linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; border-radius:999px; text-decoration:none; }
 @media (max-width:768px) { .st-wrap { padding:8px 18px 96px; } .st-info .row { grid-template-columns:84px 1fr; } .st-hero-fig img { max-height:360px; } }
+
+/* ===== v2 ビジュアルファースト追記（ブライダル型） ===== */
+main.st-wrap[data-template]{ }
+.st-wrap h2 .en { display:block; font-family:"Bebas Neue",sans-serif; font-weight:400; font-size:13px; letter-spacing:.22em; color:var(--accent1); margin-bottom:2px; }
+.st-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:22px 0 8px; }
+.st-stat { background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; padding:18px 8px; text-align:center; }
+.st-stat .n { font-family:"Bebas Neue",sans-serif; font-size:clamp(26px,7vw,38px); line-height:1; color:var(--accent1); letter-spacing:.02em; }
+.st-stat .n small { font-size:.5em; font-family:"Noto Sans JP",sans-serif; font-weight:700; }
+.st-stat .c { font-size:10.5px; color:var(--ink-faint); margin-top:7px; letter-spacing:.02em; }
+@media (max-width:560px){ .st-stats { grid-template-columns:repeat(2,1fr); gap:9px; } }
+.st-plan-cards { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:18px; }
+.st-plan { background:linear-gradient(170deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; padding:22px 14px; text-align:center; position:relative; }
+.st-plan.feat { border-color:var(--accent1); box-shadow:0 0 0 1px var(--line-accent), 0 10px 34px rgba(0,240,255,.10); }
+.st-plan .badge { position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-size:10px; font-weight:800; letter-spacing:.08em; padding:4px 12px; border-radius:999px; white-space:nowrap; }
+.st-plan .nm { font-size:13px; font-weight:800; color:var(--ink); }
+.st-plan .mn { font-size:11px; color:var(--ink-faint); margin:3px 0 12px; }
+.st-plan .pr { font-family:"Bebas Neue",sans-serif; font-size:30px; line-height:1; color:var(--accent1); }
+.st-plan .pr small { font-family:"Noto Sans JP",sans-serif; font-size:12px; font-weight:700; color:var(--ink-soft); }
+.st-plan .per { font-size:11px; color:var(--ink-faint); margin-top:6px; }
+@media (max-width:860px){ .st-plan-cards { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .st-plan-cards { grid-template-columns:1fr; } .st-plan { display:flex; align-items:center; justify-content:space-between; text-align:left; padding:16px 18px; } .st-plan .mn { margin:3px 0 0; } .st-plan .pr { font-size:26px; } .st-plan .badge{ left:18px; transform:none; } }
+.st-rev-summary2 { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin:8px 0 14px; padding:18px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; }
+.st-rev-summary2 .big { font-family:"Bebas Neue",sans-serif; font-size:52px; font-weight:400; color:var(--ink); line-height:.85; }
+.st-rev-summary2 .st-stars { font-size:20px; }
+.st-rev-summary2 .cnt { color:var(--ink); font-size:14px; font-weight:800; }
+.st-rev-summary2 .asof { color:var(--ink-faint); font-size:11px; }
+.st-carousel { display:grid; grid-auto-flow:column; grid-auto-columns:78%; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding:4px 0 14px; margin:2px -6% 0; padding-left:6%; padding-right:6%; scrollbar-width:none; }
+.st-carousel::-webkit-scrollbar{ display:none; }
+@media (min-width:560px){ .st-carousel { grid-auto-columns:46%; } }
+.st-carousel .st-rev-card { scroll-snap-align:start; margin:0; display:flex; flex-direction:column; }
+.st-carousel .st-rev-card .txt { flex:1; }
+.st-swipe-hint { color:var(--ink-faint); font-size:11px; letter-spacing:.05em; font-weight:400; }
+.st-wrap .st-rev-avg { padding:16px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line-accent); border-radius:18px; margin:8px 0 14px; gap:10px 14px; }
+.st-wrap .st-rev-avg b { font-family:"Bebas Neue",sans-serif; font-size:44px; font-weight:400; line-height:.9; color:var(--ink); }
+.st-wrap .st-rev-avg .st-stars { font-size:19px; }
+.st-band { position:relative; margin:40px -6% 0; padding:40px 6% 38px; background:radial-gradient(120% 90% at 80% 0%, rgba(255,0,170,.10), transparent 60%), radial-gradient(120% 90% at 0% 100%, rgba(0,240,255,.08), transparent 55%), #08080b; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.st-band > h2:first-child { margin-top:0; }
+.st-steps { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:10px 0 6px; }
+.st-step { background:linear-gradient(165deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; }
+.st-step img { width:100%; height:160px; object-fit:cover; display:block; }
+.st-step .cap { display:flex; gap:10px; align-items:baseline; padding:13px 15px 15px; }
+.st-step .cap .no { font-family:"Bebas Neue",sans-serif; font-size:22px; color:var(--accent1); line-height:1; min-width:24px; }
+.st-step .cap .t { font-size:13px; font-weight:700; color:var(--ink); line-height:1.5; }
+@media (max-width:600px){ .st-steps { grid-template-columns:1fr; } }
+.st-band .st-fig { margin:10px 0 4px; }
+.st-band .st-fig img { max-height:200px; object-fit:cover; }
+.st-band > p { font-size:14px; }
+.st-bridal-faq { margin-top:20px; }
+.st-bridal-faq .st-mini-h { font-size:13px; font-weight:800; color:var(--ink-soft); margin:0 0 4px; }
+.st-cta-inline { text-align:center; margin-top:26px; }
+.st-cta-inline a { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--accent1),var(--accent2)); color:#fff; font-weight:800; font-size:15px; padding:15px 34px; border-radius:999px; text-decoration:none; box-shadow:0 8px 26px rgba(255,0,170,.24); }
+.st-plan-cards + .st-note { margin-top:14px; }
+
+/* ===== 通常型 追記 ===== */
+.st-bridal-mini { margin-top:34px; padding:22px 20px; background:linear-gradient(160deg,var(--bg-card),var(--bg-soft)); border:1px solid var(--line); border-radius:18px; }
+.st-bridal-mini h2 { margin:0 0 8px; }
+.st-bridal-mini > p { margin:0 0 10px; }
+.st-bridal-mini details { margin-top:12px; border-top:1px solid var(--line); padding-top:6px; }
+.st-bridal-mini details > summary { list-style:none; cursor:pointer; color:var(--accent1); font-weight:700; font-size:13.5px; padding:8px 0; display:flex; align-items:center; gap:6px; }
+.st-bridal-mini details > summary::-webkit-details-marker { display:none; }
+.st-bridal-mini details > summary::after { content:"＋ 詳しく読む"; color:var(--ink-faint); font-size:12px; font-weight:400; margin-left:auto; }
+.st-bridal-mini details[open] > summary::after { content:"− 閉じる"; }
+.st-bridal-mini details .st-fig img { max-height:200px; object-fit:cover; }
+
 </style>
 </head>
 <body>
 <header class="gb-header"><a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a><nav class="gb-nav"><a href="../../">TOP</a><a href="../../gym-blog/">BLOG</a><a href="../">店舗一覧</a><a href="../../faq/">FAQ</a></nav></header>
 <nav class="gb-breadcrumb" aria-label="パンくず"><ol><li><a href="../../">ホーム</a></li><li><a href="../">店舗一覧</a></li><li><a href="../#tokyo">東京都</a></li><li aria-current="page">上板橋店</li></ol></nav>
-<main class="st-wrap">
+<main class="st-wrap" data-template="standard">
 <p class="st-eyebrow">NEXUS Personal Gym ／ 東京都板橋区</p>
 <h1>NEXUSパーソナルジム 上板橋店｜<span class="ac">上板橋</span>の完全個室・隠れ家ジム</h1>
 <p class="st-lead">東武東上線・上板橋駅すぐ。女性トレーナーが在籍する板橋区の完全個室パーソナルジムです。「女性に見てもらえる安心感」と、リバウンドを繰り返した方が習慣から変われる指導が支持され、Google口コミ★5.0（60件）をいただいています。</p>
 <ul class="st-feature-list"><li>ブライダル対応</li><li>完全個室</li><li>女性トレーナー在籍</li><li>上板橋駅すぐ</li><li>手ぶら通いOK</li><li>AI食事指導</li></ul>
 <figure class="st-hero-fig"><picture><source srcset="../../images/shops/kami-itabashi/hero-training.webp" type="image/webp"><img src="../../images/shops/kami-itabashi/hero-training.jpg" width="1200" height="678" alt="上板橋駅近くのNEXUSパーソナルジムでの女性向けトレーニング" loading="eager" fetchpriority="high"></picture><figcaption>上板橋に、女性トレーナーがいる完全個室ジム。</figcaption></figure>
+<div class="st-stats">
+<div class="st-stat"><div class="n">85<small>%</small></div><div class="c">女性会員比率</div></div>
+<div class="st-stat"><div class="n">¥4,500<small>〜</small></div><div class="c">1回あたり</div></div>
+<div class="st-stat"><div class="n">8-23<small>時</small></div><div class="c">営業時間</div></div>
+<div class="st-stat"><div class="n">71<small>店</small></div><div class="c">全国ネットワーク</div></div>
+</div>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>この店舗の特徴</h2>
 <p>NEXUS上板橋店は、東武東上線・上板橋駅からすぐの完全個室パーソナルジム。女性トレーナーが在籍し、「男性トレーナーには相談しにくい」という方や、これまで自己流のダイエットで挫折を繰り返してきた方に選ばれています。ウェア・タオル・プロテインまで無料提供の手ぶら通いOKで、池袋方面へのお勤め帰りにもバッグひとつで立ち寄れます。料金は1回4,500円〜（ライトコース30分・月4回18,000円）から始められます。</p>
+</section>
+<section>
 <h2>女性トレーナーが在籍しています</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kami-itabashi/counseling.webp" type="image/webp"><img src="../../images/shops/kami-itabashi/counseling.jpg" width="1200" height="678" alt="女性トレーナーによる入会前カウンセリング" loading="lazy"></picture><figcaption>女性に見てもらえる安心感。体の悩みも、生理周期に合わせた調整も相談できます。</figcaption></figure>
 <p>上板橋店には女性トレーナーが在籍しています。口コミでも「女性トレーナーに見てもらえる安心感で入会を決めた」という声をいただいています。<strong>男性トレーナーには相談しにくい体の悩みや、生理周期に合わせた強度の調整</strong>も、遠慮なく相談できるのが女性トレーナーならではの強み。体調やコンディションの波を理解したうえで、その日にちょうどいい負荷を組み立てます。完全個室のマンツーマンなので、人目を気にせず本音で相談しながら進められます。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">何度もリバウンドを繰り返してきましたが、女性トレーナーに見てもらえる安心感の中で、食事や運動の習慣そのものから変えることができました。</p><div class="who">上板橋店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>リバウンドのループを終わらせる</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kami-itabashi/meal-habit.webp" type="image/webp"><img src="../../images/shops/kami-itabashi/meal-habit.jpg" width="1200" height="678" alt="無理な制限をしない食習慣づくりの食事指導" loading="lazy"></picture><figcaption>制限して痩せて戻る、を終わらせる。習慣そのものを整えます。</figcaption></figure>
 <p>「20歳を過ぎてから痩せにくくなり、食事制限や流行のダイエットを繰り返しては挫折してきた」——上板橋店には、そんなリバウンドのループに悩んできた方が多く通っています。極端な制限で一時的に体重を落としても、続かなければ必ず戻ってしまいます。<strong>上板橋店が変えるのは体重の数字ではなく、食べ方と生活のリズムそのもの</strong>。無理のない食事指導で「何を・どう食べ続けるか」を一緒に組み立て、戻らない身体づくりを目指します。口コミでも「ここで習慣から変わった」と実感いただいています。</p>
+</section>
+<section>
 <h2>1年で−10kgの実例</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kami-itabashi/training.webp" type="image/webp"><img src="../../images/shops/kami-itabashi/training.jpg" width="1200" height="678" alt="マンツーマンで行うサイドレイズのフォーム指導" loading="lazy"></picture><figcaption>短期の無理ではなく、1年かけて確実に。だから戻らない。</figcaption></figure>
 <p>上板橋店の会員からは「無理のない食事指導と丁寧なトレーニングで、1年かけて10kg減。もっと早く始めればよかった」という声をいただいています。ポイントは、短期の過酷な減量ではなく<strong>1年という時間をかけて習慣化しながら落としたこと</strong>。急いで絞った体重はリバウンドしやすい一方、生活に馴染ませながら変えた身体は元に戻りにくいのが特徴です。正しいフォームのトレーニングと無理のない食事を積み重ね、月額3,000円（税込）のAI食事指導も組み合わせれば、持続する変化を実現できます。</p>
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">無理のない食事指導と丁寧なトレーニングで、1年かけて10kg減らすことができました。もっと早く始めればよかったと思っています。</p><div class="who">上板橋店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+</section>
+<section>
 <h2>東武東上線ユーザーの通いやすさ</h2>
 <p>上板橋店は東武東上線・上板橋駅からすぐ。上板橋にお住まい・お勤めの方はもちろん、<strong>ときわ台・東武練馬方面からも東武東上線一本で通える広域アクセス</strong>が魅力です。毎日8:00〜23:00営業・無休なので、朝の出勤前のトレーニングも、池袋方面へのお勤め帰りに一駅手前で降りて立ち寄る通い方も可能。手ぶら通いOKなので、仕事帰りでも荷物を気にせずバッグひとつで立ち寄れます。「近いから続く」を、無理なく実現できる立地です。</p>
+</section>
+<section>
 <h2>まずは無料体験から</h2>
 <figure class="st-fig"><picture><source srcset="../../images/shops/kami-itabashi/first-visit.webp" type="image/webp"><img src="../../images/shops/kami-itabashi/first-visit.jpg" width="1200" height="678" alt="NEXUS上板橋店の無料体験の様子" loading="lazy"></picture><figcaption>初回は60分の無料体験。当日入会で入会金が55,000円→15,000円に。</figcaption></figure>
 <p>「女性トレーナーに相談したい」「今度こそリバウンドを止めたい」——不安や悩みがあれば、まずは無料体験でお話を聞かせてください。カウンセリングで目標やこれまでのダイエット歴をうかがったうえで、実際のトレーニングまで体験できます。当日入会で入会金が通常55,000円→15,000円（税込）に割引。無理な勧誘は一切ありません。まずは話だけでも、気軽に来てください。</p>
-<h2>結婚式前のボディメイクを、上板橋で</h2>
+</section>
+<section>
+<h2><span class="en">Price</span>料金プラン</h2>
+<div class="st-plan-cards">
+<div class="st-plan"><div class="nm">ライト</div><div class="mn">30分 / 月4回</div><div class="pr">¥18,000<small>/月</small></div><div class="per">税込 / 1回4,500円</div></div>
+<div class="st-plan feat"><div class="badge">人気No.1</div><div class="nm">ベーシック</div><div class="mn">60分 / 月4回</div><div class="pr">¥34,000<small>/月</small></div><div class="per">税込 / 1回8,500円</div></div>
+<div class="st-plan"><div class="nm">プレミアム</div><div class="mn">90分 / 月4回</div><div class="pr">¥48,000<small>/月</small></div><div class="per">税込 / 1回12,000円</div></div>
+<div class="st-plan"><div class="nm">セミパーソナル</div><div class="mn">60分 / 月2回</div><div class="pr">¥11,000<small>/月</small></div><div class="per">税込 / 1回5,500円</div></div>
+</div>
+<p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
+<h2><span class="en">Reviews</span>Google口コミ★5.0（60件）</h2>
+<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（60件）</span><span class="asof">※2026年7月時点</span></div>
+<p class="st-rev-summary-txt">NEXUS上板橋店はGoogle口コミ★5.0・60件。女性トレーナーの在籍と、リバウンドを繰り返した方が結果を出せる指導が評価されています。</p>
+<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B8%8A%E6%9D%BF%E6%A9%8B%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
+<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">淡々と集中して取り組みたい自分には、簡潔で的確な指導スタイルがちょうど良く、毎回無駄なくトレーニングに向き合えています。</p><div class="who">上板橋店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
+<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B8%8A%E6%9D%BF%E6%A9%8B%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section class="st-bridal-mini">
+<h2><span class="en">Bridal</span>結婚式前のボディメイクにも対応</h2>
+<p>上板橋店では、挙式日から逆算した<strong>結婚式前のボディメイク</strong>にも対応しています。背中・二の腕・デコルテ・ウエストなど、ドレスで視線が集まる部位を完全個室のマンツーマンで整えます。挙式日から逆算した90日・60日プランで、式当日にピークを合わせます。</p>
+<a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
+<details><summary>この店舗のブライダル対応をくわしく</summary>
 <figure class="st-fig"><img src="../../images/wedding/wedding_commit_01.webp" width="1280" height="724" alt="上板橋エリアで結婚式前のボディメイクを決意した女性" loading="lazy"><figcaption>①ドレスの試着で、はじめて「本気」になる。</figcaption></figure>
 <p>「ドレスの試着で二の腕が気になった」「背中の開いたデザインを、体型を理由に諦めたくない」——挙式という<strong>動かせない期日</strong>があるからこそ、ボディメイクは最後までやり切れます。上板橋店では、まず挙式日とドレスのデザインをうかがい、<strong>背中・二の腕・デコルテ・ウエスト</strong>という、ドレスでもっとも視線が集まる部位から優先順位をつけていきます。完全個室のマンツーマンだから、人目を気にせず自分の身体とだけ向き合えます。</p>
 <figure class="st-fig"><img src="../../images/wedding/wedding_effort_couple_01.webp" width="1600" height="905" alt="上板橋エリアのジムで挙式日から逆算して計画する様子" loading="lazy"><figcaption>②挙式日から逆算する、90日・60日プラン。</figcaption></figure>
@@ -248,14 +354,13 @@
 <div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">モデルケース（イメージストーリー）</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">挙式まで残り80日で駆け込みました。背中の開いたドレスに合わせて、二の腕と背中を中心にプランを組んでもらい、当日は自信を持って写真に写れました。式後もそのまま通っています。</p><div class="who">上板橋店／挙式前ボディメイクのモデルケース ※実在の口コミではなく、想定される利用イメージです</div></div></div>
 <p class="st-note">上記はサービス内容をわかりやすく伝えるためのモデルケース（イメージ）であり、実在するお客様の口コミではありません。Google口コミは本ページ内の該当セクションに実際の内容を要約して掲載しています。</p>
 <a class="st-ilink" href="../../bridal/">挙式日からの逆算タイムライン｜ブライダル専用ページを見る</a>
-<h2>料金プラン</h2><div class="st-price"><div class="row"><div class="cn">ライトコース<span>30分 / 月4回</span></div><div class="cp"><b>18,000円</b><small>税込 / 1回4,500円</small></div></div><div class="row"><div class="cn">ベーシックコース<span>60分 / 月4回</span></div><div class="cp"><b>34,000円</b><small>税込 / 1回8,500円</small></div></div><div class="row"><div class="cn">プレミアムコース<span>90分 / 月4回</span></div><div class="cp"><b>48,000円</b><small>税込 / 1回12,000円</small></div></div><div class="row"><div class="cn">セミパーソナル<span>60分 / 月2回</span></div><div class="cp"><b>11,000円</b><small>税込 / 1回5,500円</small></div></div></div><p class="st-note">入会金は通常55,000円、無料体験当日入会で15,000円（税込）に割引。AI食事指導は月額3,000円（税込）。全店舗共通の料金です。</p>
+</details>
+</section>
+<div class="st-cta-inline"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
+<section>
 <h2>アクセス</h2><dl class="st-info"><div class="row"><dt>店舗名</dt><dd>NEXUSパーソナルジム 上板橋店</dd></div><div class="row"><dt>住所</dt><dd>〒174-0076<br>東京都板橋区上板橋2-3-6 MIZUKIHOME301号</dd></div><div class="row"><dt>最寄り駅</dt><dd>東武東上線　上板橋駅</dd></div><div class="row"><dt>営業時間</dt><dd>毎日 8:00〜23:00（無休）</dd></div><div class="row"><dt>電話番号</dt><dd>050-1790-8493</dd></div></dl><div class="st-map"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%9D%BF%E6%A9%8B%E5%8C%BA%E4%B8%8A%E6%9D%BF%E6%A9%8B2-3-6%20MIZUKI%20HOME301&z=16&output=embed" title="NEXUSパーソナルジム 上板橋店の地図"></iframe></div>
-<h2>Google口コミ★5.0（60件）</h2>
-<div class="st-rev-avg"><span class="st-stars">★★★★★</span><b>5.0</b><span class="cnt">（60件）</span><span class="asof">※2026年7月時点</span></div>
-<p class="st-rev-summary-txt">NEXUS上板橋店はGoogle口コミ★5.0・60件。女性トレーナーの在籍と、リバウンドを繰り返した方が結果を出せる指導が評価されています。</p>
-<p class="st-rev-src">※お客様の声はGoogle口コミの内容を要約して掲載しています。出典：<a href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B8%8A%E6%9D%BF%E6%A9%8B%E5%BA%97" target="_blank" rel="noopener">Google マップ</a></p>
-<div class="st-rev-list st-rev-solo"><div class="st-rev-card"><span class="st-rev-tag">Google口コミより</span><div class="st-rev-stars"><span class="st-stars">★★★★★</span></div><p class="txt">淡々と集中して取り組みたい自分には、簡潔で的確な指導スタイルがちょうど良く、毎回無駄なくトレーニングに向き合えています。</p><div class="who">上板橋店に通う会員 ・ Google口コミより（内容を要約）</div></div></div>
-<a class="st-ilink" href="https://www.google.com/maps/search/?api=1&amp;query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E4%B8%8A%E6%9D%BF%E6%A9%8B%E5%BA%97" target="_blank" rel="noopener">すべての口コミはGoogleマップでご覧いただけます</a>
+</section>
+<section>
 <h2>上板橋店のよくある質問</h2>
   <details class="st-faq-item"><summary><span class="q">Q</span>板橋区で女性トレーナーがいるパーソナルジムはありますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。NEXUS上板橋店は女性トレーナーが在籍する完全個室パーソナルジムです。男性には相談しにくい体の悩みや、生理周期に合わせた強度調整も相談でき、口コミでも「女性トレーナーに見てもらえる安心感で入会を決めた」と評価されています。東武東上線・上板橋駅すぐ、料金は1回4,500円〜（ライトコース30分・月4回18,000円）で手ぶら通いにも対応しています。</div></details>
   <details class="st-faq-item"><summary><span class="q">Q</span>何度もリバウンドしていますが変われますか？<span class="ic">+</span></summary><div class="st-faq-a">はい。上板橋店には、食事制限や流行のダイエットを繰り返して挫折してきた方が多く通っています。短期の無理な減量ではなく、無理のない食習慣とトレーニングを積み重ねて「習慣そのもの」を変えていくため、リバウンドしにくいのが特徴です。「1年かけて10kg減、もっと早く始めればよかった」という口コミもいただいています。まずは無料体験でご相談ください。</div></details>
@@ -270,6 +375,7 @@
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>食事指導はありますか？<span class="ic">+</span></summary><div class="st-faq-a">月額3,000円（税込）のAI食事指導があります。写真を送るだけで、無理を強いない範囲で痩せる食べ方をサポートします。</div></details>
   <details class="st-faq-item st-common"><summary><span class="q">Q</span>トレーナーはどんな人ですか？<span class="ic">+</span></summary><div class="st-faq-a">全トレーナーが3ヶ月の厳しい自社教育プログラムを修了してからデビュー。「優しく寄り添う指導」を全店共通の基準としています。</div></details>
 <a class="st-ilink" href="../../faq/">パーソナルジムの疑問を110問FAQで解決する</a><br><a class="st-ilink" href="https://www.nexus-gym.com/" target="_blank" rel="noopener">NEXUSパーソナルジム公式サイトを見る</a>
+</section>
 <div class="st-cta"><h3>上板橋で、今度こそ変わりませんか？</h3><p>まずは無料体験で、話だけ聞きに来ませんか？<br>※無理な勧誘は一切ありません</p><a class="st-cta-btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a></div>
 </main>
 <div class="st-sticky"><a href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">まずは無料体験を予約する</a></div>
