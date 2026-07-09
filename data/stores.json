@@ -2063,14 +2063,14 @@
       }
     },
     {
-      "slug": "tenjin",
-      "name": "天神店",
+      "slug": "tenjin-minami",
+      "name": "天神南店",
       "prefecture": "福岡県",
       "city": "中央区",
       "postal": "〒810-0004",
       "address": "福岡県福岡市中央区渡辺通5-24-37 天神JOEビル503",
-      "stations": null,
-      "area_keywords": null,
+      "stations": "地下鉄七隈線 天神南駅／西鉄天神大牟田線 西鉄福岡（天神）駅・薬院駅",
+      "area_keywords": "天神 天神南 渡辺通 薬院 中央区",
       "tel": "050-1790-8487",
       "hours": "8:00〜23:00",
       "features": [
@@ -2082,10 +2082,35 @@
       ],
       "nearby_landmarks": null,
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
-      "has_page": false,
-      "priority": null,
-      "published": false,
-      "google": null
+      "has_page": true,
+      "priority": 0.7,
+      "published": true,
+      "google": {
+        "place_url": "https://www.google.com/maps/search/?api=1&query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%A4%A9%E7%A5%9E%E5%8D%97%E5%BA%97",
+        "rating": 4.8,
+        "review_count": 93,
+        "rating_as_of": "2026-07",
+        "reviews": [
+          {
+            "author_initial": "天神南店の会員さま",
+            "rating": 5,
+            "text": "料金プランが多様で、スケジュール調整がしやすいのが本当に助かります。これまで多くのジムを試してきましたが、仕事の都合に合わせて組めるここが、一番自分に合っていると感じました。",
+            "date": null
+          },
+          {
+            "author_initial": "天神南店の会員さま",
+            "rating": 5,
+            "text": "体調がすぐれない日は、ストレッチ中心に組み替えてくれます。無理なく、でもやれる日はしっかり追い込めるので、忙しくても通い続けられています。押し付けがましくないのが良いです。",
+            "date": null
+          },
+          {
+            "author_initial": "天神南店の会員さま",
+            "rating": 5,
+            "text": "自己流ではまったく変わりませんでしたが、フォームと食事を見てもらったことで、体重・体脂肪率、そして見た目まで変わりました。正しくやることの大切さを実感しています。",
+            "date": null
+          }
+        ]
+      }
     },
     {
       "slug": "hirao",

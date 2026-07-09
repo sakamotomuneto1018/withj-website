@@ -156,11 +156,15 @@
     },
     {
       "source": "サイドレイズ_黒髪女性.webp",
-      "count": 1,
+      "count": 2,
       "stores": [
         {
           "slug": "hiyoshi",
           "usage": "section2 trainer"
+        },
+        {
+          "slug": "tenjin-minami",
+          "usage": "section1 plan（自分仕様に組めるプラン）"
         }
       ]
     },
@@ -401,6 +405,36 @@
         {
           "slug": "motoyama",
           "usage": "section3 arrive（仕事帰りの減量ルーティン）"
+        }
+      ]
+    },
+    {
+      "source": "カウンセリング.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "tenjin-minami",
+          "usage": "hero + og（明るいカウンセリング系・柔軟プラン軸）"
+        }
+      ]
+    },
+    {
+      "source": "押し付けず、今日の体調に合わせる１.png",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "tenjin-minami",
+          "usage": "section2 adapt（体調に合わせて組み替え）"
+        }
+      ]
+    },
+    {
+      "source": "追い込んだ後の達成感１.png",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "tenjin-minami",
+          "usage": "section3 effort（やれる日は脚が震えるまで）"
         }
       ]
     }
