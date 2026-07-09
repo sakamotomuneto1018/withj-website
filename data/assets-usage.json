@@ -70,9 +70,10 @@
     },
     {
       "source": "ダンベルカール_黒髪女性.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "hiyoshi", "usage": "hero + og" }
+        { "slug": "hiyoshi", "usage": "hero + og" },
+        { "slug": "nagoya-imaike", "usage": "section2 menu（オーダーメイド・毎回変わるメニュー）" }
       ]
     },
     {
@@ -129,11 +130,12 @@
     },
     {
       "source": "退店の様子.png",
-      "count": 3,
+      "count": 4,
       "stores": [
         { "slug": "noborito", "usage": "section3 leave" },
         { "slug": "omiya", "usage": "section3 leave（仕事帰りも買い物ついでもペア）" },
-        { "slug": "fukui-ashikaga", "usage": "section3 leave（手ぶらで通える気軽さ）" }
+        { "slug": "fukui-ashikaga", "usage": "section3 leave（手ぶらで通える気軽さ）" },
+        { "slug": "nagoya-imaike", "usage": "section3 leave（LINE予約・手ぶらで来店ペア）" }
       ]
     },
     {
@@ -160,10 +162,11 @@
     },
     {
       "source": "来店の様子.png",
-      "count": 2,
+      "count": 3,
       "stores": [
         { "slug": "noborito", "usage": "section3 arrive" },
-        { "slug": "omiya", "usage": "section3 arrive（仕事帰りも買い物ついでもペア）" }
+        { "slug": "omiya", "usage": "section3 arrive（仕事帰りも買い物ついでもペア）" },
+        { "slug": "nagoya-imaike", "usage": "section3 arrive（LINE予約・手ぶらで来店ペア）" }
       ]
     },
     {
@@ -206,6 +209,20 @@
       "count": 1,
       "stores": [
         { "slug": "fukui-ashikaga", "usage": "section3 arrive（手ぶらで通える気軽さ）" }
+      ]
+    },
+    {
+      "source": "カウンセリング_黒髪２.webp",
+      "count": 1,
+      "stores": [
+        { "slug": "nagoya-imaike", "usage": "hero + og（高額ジム経験者が納得・明るいカウンセリング系）" }
+      ]
+    },
+    {
+      "source": "健康的な食事.png",
+      "count": 1,
+      "stores": [
+        { "slug": "nagoya-imaike", "usage": "section1 method（食事管理込みで高額ジムと同内容）" }
       ]
     }
   ]

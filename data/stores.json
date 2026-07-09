@@ -1951,8 +1951,8 @@
       "city": "名古屋市",
       "postal": "〒464-0850",
       "address": "愛知県名古屋市千種区今池4丁目4-20 ナゴヤマンション6A",
-      "stations": null,
-      "area_keywords": null,
+      "stations": "地下鉄東山線・桜通線 今池駅",
+      "area_keywords": "今池 千種区 池下 千種 栄",
       "tel": "080-9740-2267",
       "hours": "8:00〜23:00",
       "features": [
@@ -1964,10 +1964,20 @@
       ],
       "nearby_landmarks": null,
       "booking_url": "https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9",
-      "has_page": false,
-      "priority": null,
-      "published": false,
-      "google": null
+      "has_page": true,
+      "priority": 0.7,
+      "published": true,
+      "google": {
+        "place_url": "https://www.google.com/maps/search/?api=1&query=NEXUS%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B8%E3%83%A0%20%E5%90%8D%E5%8F%A4%E5%B1%8B%E4%BB%8A%E6%B1%A0%E5%BA%97",
+        "rating": 4.9,
+        "review_count": 104,
+        "rating_as_of": "2026-07",
+        "reviews": [
+          {"author_initial": "名古屋今池店の会員さま", "rating": 5, "text": "東京の有名な高額ジムで痩せた経験がありますが、とても高額でした。名古屋に引っ越して再開するにあたりNEXUSへ。食事管理まで含めて同じ内容が、この価格で受けられて大満足です。もっと早く知りたかった。", "date": null},
+          {"author_initial": "名古屋今池店の会員さま", "rating": 5, "text": "自己流で「これで合ってる？」とずっと不安でしたが、フォームから丁寧に教わり、正しい効かせ方が分かってきました。完全個室のマンツーマンなので質問もしやすく、少しずつ身体が変わり始めています。", "date": null},
+          {"author_initial": "名古屋今池店の会員さま", "rating": 5, "text": "月4回で続くか不安でしたが、毎回メニューが変わって飽きず、その日の体調に合わせて調整してもらえるので通うのが楽しみに。いつの間にか、トレーニングが生活の一部になっていました。", "date": null}
+        ]
+      }
     },
     {
       "slug": "motoyama",
