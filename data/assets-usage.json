@@ -6,223 +6,402 @@
       "source": "スクワット_ショートカット.webp",
       "count": 2,
       "stores": [
-        { "slug": "ofuna", "usage": "hero + og" },
-        { "slug": "mitsuzawa-kamicho", "usage": "section2 legs" }
+        {
+          "slug": "ofuna",
+          "usage": "hero + og"
+        },
+        {
+          "slug": "mitsuzawa-kamicho",
+          "usage": "section2 legs"
+        }
       ]
     },
     {
       "source": "ドリンク休憩①.png",
       "count": 4,
       "stores": [
-        { "slug": "ofuna", "usage": "section1 commute" },
-        { "slug": "hiyoshi", "usage": "section3 clean" },
-        { "slug": "kibogaoka", "usage": "section2 opening" },
-        { "slug": "kashimada-shinkawasaki", "usage": "section1 intensity" }
+        {
+          "slug": "ofuna",
+          "usage": "section1 commute"
+        },
+        {
+          "slug": "hiyoshi",
+          "usage": "section3 clean"
+        },
+        {
+          "slug": "kibogaoka",
+          "usage": "section2 opening"
+        },
+        {
+          "slug": "kashimada-shinkawasaki",
+          "usage": "section1 intensity"
+        }
       ]
     },
     {
       "source": "サイドレイズ_黒髪女性②.webp",
       "count": 3,
       "stores": [
-        { "slug": "ofuna", "usage": "section2 opening" },
-        { "slug": "kashimada-shinkawasaki", "usage": "hero + og" },
-        { "slug": "nogizaka-akasaka", "usage": "hero + og（通常型テンプレート）" }
+        {
+          "slug": "ofuna",
+          "usage": "section2 opening"
+        },
+        {
+          "slug": "kashimada-shinkawasaki",
+          "usage": "hero + og"
+        },
+        {
+          "slug": "nogizaka-akasaka",
+          "usage": "hero + og（通常型テンプレート）"
+        }
       ]
     },
     {
       "source": "トレーニング後のプロテイン無料.png",
       "count": 3,
       "stores": [
-        { "slug": "ofuna", "usage": "section3 amenity" },
-        { "slug": "kibogaoka", "usage": "section3 amenity" },
-        { "slug": "kashimada-shinkawasaki", "usage": "section3 amenity" }
+        {
+          "slug": "ofuna",
+          "usage": "section3 amenity"
+        },
+        {
+          "slug": "kibogaoka",
+          "usage": "section3 amenity"
+        },
+        {
+          "slug": "kashimada-shinkawasaki",
+          "usage": "section3 amenity"
+        }
       ]
     },
     {
       "source": "女性_ストレッチ.png",
       "count": 1,
       "stores": [
-        { "slug": "nakamachidai", "usage": "hero + og" }
+        {
+          "slug": "nakamachidai",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "夫婦同士のカウンセリング.png",
       "count": 1,
       "stores": [
-        { "slug": "nakamachidai", "usage": "section1 counseling" }
+        {
+          "slug": "nakamachidai",
+          "usage": "section1 counseling"
+        }
       ]
     },
     {
       "source": "ストレッチ_黒髪女性.png",
-      "count": 2,
+      "count": 3,
       "stores": [
-        { "slug": "nakamachidai", "usage": "section2 walking" },
-        { "slug": "noborito", "usage": "section1 recovery" }
+        {
+          "slug": "nakamachidai",
+          "usage": "section2 walking"
+        },
+        {
+          "slug": "noborito",
+          "usage": "section1 recovery"
+        },
+        {
+          "slug": "motoyama",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "ドリンク休憩②.png",
       "count": 2,
       "stores": [
-        { "slug": "nakamachidai", "usage": "section3 opening" },
-        { "slug": "mitsuzawa-kamicho", "usage": "section3 opening" }
+        {
+          "slug": "nakamachidai",
+          "usage": "section3 opening"
+        },
+        {
+          "slug": "mitsuzawa-kamicho",
+          "usage": "section3 opening"
+        }
       ]
     },
     {
       "source": "ダンベルカール_黒髪女性.png",
       "count": 2,
       "stores": [
-        { "slug": "hiyoshi", "usage": "hero + og" },
-        { "slug": "nagoya-imaike", "usage": "section2 menu（オーダーメイド・毎回変わるメニュー）" }
+        {
+          "slug": "hiyoshi",
+          "usage": "hero + og"
+        },
+        {
+          "slug": "nagoya-imaike",
+          "usage": "section2 menu（オーダーメイド・毎回変わるメニュー）"
+        }
       ]
     },
     {
       "source": "ケトルトレーニング.png",
       "count": 2,
       "stores": [
-        { "slug": "hiyoshi", "usage": "section1 concentration" },
-        { "slug": "mitsuzawa-kamicho", "usage": "section1 observe" }
+        {
+          "slug": "hiyoshi",
+          "usage": "section1 concentration"
+        },
+        {
+          "slug": "mitsuzawa-kamicho",
+          "usage": "section1 observe"
+        }
       ]
     },
     {
       "source": "サイドレイズ_黒髪女性.webp",
       "count": 1,
       "stores": [
-        { "slug": "hiyoshi", "usage": "section2 trainer" }
+        {
+          "slug": "hiyoshi",
+          "usage": "section2 trainer"
+        }
       ]
     },
     {
       "source": "ヒップリフト_黒髪女性.png",
       "count": 1,
       "stores": [
-        { "slug": "kibogaoka", "usage": "hero + og" }
+        {
+          "slug": "kibogaoka",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "女性スクワット画像.png",
       "count": 2,
       "stores": [
-        { "slug": "kibogaoka", "usage": "section1 motivation" },
-        { "slug": "mitsuzawa-kamicho", "usage": "hero + og" }
+        {
+          "slug": "kibogaoka",
+          "usage": "section1 motivation"
+        },
+        {
+          "slug": "mitsuzawa-kamicho",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "食事指導①.png",
       "count": 1,
       "stores": [
-        { "slug": "kashimada-shinkawasaki", "usage": "section2 counseling" }
+        {
+          "slug": "kashimada-shinkawasaki",
+          "usage": "section2 counseling"
+        }
       ]
     },
     {
       "source": "ベンチプレス_黒髪女性.png",
       "count": 1,
       "stores": [
-        { "slug": "noborito", "usage": "hero + og" }
+        {
+          "slug": "noborito",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "ジムの内装イメージ①.png",
       "count": 2,
       "stores": [
-        { "slug": "noborito", "usage": "section2 opening" },
-        { "slug": "ota-gunma", "usage": "section3 facility（オープン直後の通いやすさ）" }
+        {
+          "slug": "noborito",
+          "usage": "section2 opening"
+        },
+        {
+          "slug": "ota-gunma",
+          "usage": "section3 facility（オープン直後の通いやすさ）"
+        }
       ]
     },
     {
       "source": "退店の様子.png",
-      "count": 4,
+      "count": 5,
       "stores": [
-        { "slug": "noborito", "usage": "section3 leave" },
-        { "slug": "omiya", "usage": "section3 leave（仕事帰りも買い物ついでもペア）" },
-        { "slug": "fukui-ashikaga", "usage": "section3 leave（手ぶらで通える気軽さ）" },
-        { "slug": "nagoya-imaike", "usage": "section3 leave（LINE予約・手ぶらで来店ペア）" }
+        {
+          "slug": "noborito",
+          "usage": "section3 leave"
+        },
+        {
+          "slug": "omiya",
+          "usage": "section3 leave（仕事帰りも買い物ついでもペア）"
+        },
+        {
+          "slug": "fukui-ashikaga",
+          "usage": "section3 leave（手ぶらで通える気軽さ）"
+        },
+        {
+          "slug": "nagoya-imaike",
+          "usage": "section3 leave（LINE予約・手ぶらで来店ペア）"
+        },
+        {
+          "slug": "motoyama",
+          "usage": "section3 leave（仕事帰りの減量ルーティン・手ぶらペア）"
+        }
       ]
     },
     {
       "source": "ヒップリフト_黒髪女性②.png",
-      "count": 1,
+      "count": 2,
       "stores": [
-        { "slug": "omiya", "usage": "hero + og" }
+        {
+          "slug": "omiya",
+          "usage": "hero + og"
+        },
+        {
+          "slug": "motoyama",
+          "usage": "section1 beginner（久しぶりの運動でも無理のない）"
+        }
       ]
     },
     {
       "source": "カウンセリング_黒髪黒髪③.png",
       "count": 1,
       "stores": [
-        { "slug": "omiya", "usage": "section1 method（東京で実証済み）" }
+        {
+          "slug": "omiya",
+          "usage": "section1 method（東京で実証済み）"
+        }
       ]
     },
     {
       "source": "ジムのイメージ②.png",
       "count": 2,
       "stores": [
-        { "slug": "omiya", "usage": "section2 facility（オープン直後の通いやすさ）" },
-        { "slug": "fukui-ashikaga", "usage": "section2 facility（オープン直後の通いやすさ）" }
+        {
+          "slug": "omiya",
+          "usage": "section2 facility（オープン直後の通いやすさ）"
+        },
+        {
+          "slug": "fukui-ashikaga",
+          "usage": "section2 facility（オープン直後の通いやすさ）"
+        }
       ]
     },
     {
       "source": "来店の様子.png",
       "count": 3,
       "stores": [
-        { "slug": "noborito", "usage": "section3 arrive" },
-        { "slug": "omiya", "usage": "section3 arrive（仕事帰りも買い物ついでもペア）" },
-        { "slug": "nagoya-imaike", "usage": "section3 arrive（LINE予約・手ぶらで来店ペア）" }
+        {
+          "slug": "noborito",
+          "usage": "section3 arrive"
+        },
+        {
+          "slug": "omiya",
+          "usage": "section3 arrive（仕事帰りも買い物ついでもペア）"
+        },
+        {
+          "slug": "nagoya-imaike",
+          "usage": "section3 arrive（LINE予約・手ぶらで来店ペア）"
+        }
       ]
     },
     {
       "source": "女性ダンベル.png",
       "count": 1,
       "stores": [
-        { "slug": "ota-gunma", "usage": "hero + og" }
+        {
+          "slug": "ota-gunma",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "デッドリフト１.png",
       "count": 1,
       "stores": [
-        { "slug": "ota-gunma", "usage": "section1 method（ものづくりの街に身体づくり）" }
+        {
+          "slug": "ota-gunma",
+          "usage": "section1 method（ものづくりの街に身体づくり）"
+        }
       ]
     },
     {
       "source": "姿勢改善①.png",
       "count": 1,
       "stores": [
-        { "slug": "ota-gunma", "usage": "section2 posture（立ち仕事の腰肩ケア）" }
+        {
+          "slug": "ota-gunma",
+          "usage": "section2 posture（立ち仕事の腰肩ケア）"
+        }
       ]
     },
     {
       "source": "デッドリフト２.png",
       "count": 1,
       "stores": [
-        { "slug": "fukui-ashikaga", "usage": "hero + og" }
+        {
+          "slug": "fukui-ashikaga",
+          "usage": "hero + og"
+        }
       ]
     },
     {
       "source": "理屈で納得できるロジカル指導１.png",
       "count": 1,
       "stores": [
-        { "slug": "fukui-ashikaga", "usage": "section1 method（学びの街で身体を学び直す・フォーム指導）" }
+        {
+          "slug": "fukui-ashikaga",
+          "usage": "section1 method（学びの街で身体を学び直す・フォーム指導）"
+        }
       ]
     },
     {
       "source": "初めての来店①.png",
       "count": 1,
       "stores": [
-        { "slug": "fukui-ashikaga", "usage": "section3 arrive（手ぶらで通える気軽さ）" }
+        {
+          "slug": "fukui-ashikaga",
+          "usage": "section3 arrive（手ぶらで通える気軽さ）"
+        }
       ]
     },
     {
       "source": "カウンセリング_黒髪２.webp",
       "count": 1,
       "stores": [
-        { "slug": "nagoya-imaike", "usage": "hero + og（高額ジム経験者が納得・明るいカウンセリング系）" }
+        {
+          "slug": "nagoya-imaike",
+          "usage": "hero + og（高額ジム経験者が納得・明るいカウンセリング系）"
+        }
       ]
     },
     {
       "source": "健康的な食事.png",
       "count": 1,
       "stores": [
-        { "slug": "nagoya-imaike", "usage": "section1 method（食事管理込みで高額ジムと同内容）" }
+        {
+          "slug": "nagoya-imaike",
+          "usage": "section1 method（食事管理込みで高額ジムと同内容）"
+        }
+      ]
+    },
+    {
+      "source": "カウンセリング１.png",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "motoyama",
+          "usage": "section2 counseling（話しやすいトレーナー・分かりやすい指導）"
+        }
+      ]
+    },
+    {
+      "source": "初めての来店②.png",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "motoyama",
+          "usage": "section3 arrive（仕事帰りの減量ルーティン）"
+        }
       ]
     }
   ]
