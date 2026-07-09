@@ -1,0 +1,68 @@
+{
+  "updated": "2026-04",
+  "note": "全プラン食事指導プレミアム付き・税込",
+  "tabs": [
+    {
+      "id": "60min",
+      "label": "60分プラン",
+      "default": true,
+      "plans": [
+        {
+          "sessions": 24,
+          "catch": "挙式まで約3ヶ月",
+          "sub": "週2回×12週で間に合わせる",
+          "regular": 253400,
+          "price": 192000,
+          "perSession": 7000,
+          "off": 61400,
+          "badge": null,
+          "image": "../../images/wedding/wedding_dress_tight_01.webp",
+          "alt": "結婚式に向けて支度室でドレスのファスナーを確かめる花嫁"
+        },
+        {
+          "sessions": 36,
+          "catch": "挙式まで4〜5ヶ月",
+          "sub": "余裕をもって理想のドレス姿へ",
+          "regular": 343400,
+          "price": 258000,
+          "perSession": 6500,
+          "off": 85400,
+          "badge": "人気No.1",
+          "image": "../../images/wedding/wedding_dress_fit_01.webp",
+          "alt": "結婚式のドレス試着でファスナーがすっと上がり喜ぶ花嫁"
+        }
+      ]
+    },
+    {
+      "id": "90min",
+      "label": "90分プラン（しっかり派）",
+      "default": false,
+      "plans": [
+        {
+          "sessions": 24,
+          "catch": "挙式まで約3ヶ月",
+          "sub": "1回でトレーニング＋ケアまで",
+          "regular": 327800,
+          "price": 249600,
+          "perSession": 9400,
+          "off": 78200,
+          "badge": null,
+          "image": "../../images/wedding/wedding_dress_tight_01.webp",
+          "alt": "結婚式に向けて支度室でドレスのファスナーを確かめる花嫁"
+        },
+        {
+          "sessions": 36,
+          "catch": "挙式まで4〜5ヶ月",
+          "sub": "余裕をもって理想のドレス姿へ",
+          "regular": 447800,
+          "price": 348000,
+          "perSession": 9000,
+          "off": 99800,
+          "badge": "人気No.1",
+          "image": "../../images/wedding/wedding_dress_fit_01.webp",
+          "alt": "結婚式のドレス試着でファスナーがすっと上がり喜ぶ花嫁"
+        }
+      ]
+    }
+  ]
+}
