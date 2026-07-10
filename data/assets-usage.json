@@ -612,6 +612,106 @@
           "usage": "記事⑩本文：花びらの中で祝福される新郎新婦"
         }
       ]
+    },
+    {
+      "source": "images/wedding/wedding_aisle_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-schedule",
+          "usage": "記事⑪カバー：バージンロードを歩く花嫁の後ろ姿（逆算スケジュール）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_welcome_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-schedule",
+          "usage": "記事⑪本文：ウェルカムボード前に立つ花嫁"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_bouquet_02.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "wedding-dress-body-parts",
+          "usage": "記事⑫カバー：ブーケを持つ花嫁の上半身（部位別トレーニング）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_ring_glove_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "wedding-dress-body-parts",
+          "usage": "記事⑫本文：グローブの手元とリング（二の腕アングル）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_walk_couple_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-esthetic-vs-gym",
+          "usage": "記事⑬カバー：光の中を歩く新郎新婦（エステvsジム比較）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_cake_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-esthetic-vs-gym",
+          "usage": "記事⑬本文：ウェディングケーキと明るい会場"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_ring_exchange_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-cost",
+          "usage": "記事⑭カバー：指輪交換の手元（費用相場）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_speech_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-cost",
+          "usage": "記事⑭本文：明るい会場でのスピーチシーン"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_eve_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-meal",
+          "usage": "記事⑮カバー：式前夜の落ち着いた室内（食事法）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_toast_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-meal",
+          "usage": "記事⑮本文：乾杯のグラスを持つ手元"
+        }
+      ]
     }
   ]
 }
