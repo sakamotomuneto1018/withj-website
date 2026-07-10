@@ -444,14 +444,19 @@
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "ヒーロー画像 ＋ STORY 01 ドレスが入らなかった日（試着室で背中ファスナーが上がらず悔しそうな花嫁・主役画像を2箇所使用）"
+          "usage": "① ヒーロー（og:image指定）／完全個室で純白ドレスを前に準備する花嫁"
         }
       ]
     },
     {
       "source": "images/wedding/wedding_dress_tight_01.webp",
-      "count": 0,
-      "stores": []
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "③ 料金・24回カード画像（plans-bridal.json／支度室でファスナーを確かめる花嫁）"
+        }
+      ]
     },
     {
       "source": "images/wedding/wedding_dress_counseling_01.webp",
@@ -459,7 +464,7 @@
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 02 挙式日から逆算（iPadでドレス画像・完全個室カウンセリング）"
+          "usage": "② 逆算カウンセリング（招待状と婚約指輪を前に挙式日から逆算するカウンセリング）"
         }
       ]
     },
@@ -469,7 +474,7 @@
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 03 夫が一緒にやる（新郎新婦セミパーソナル）"
+          "usage": "④ 選ばれる理由・二連右（2名でセミパーソナルに取り組む新郎新婦）"
         }
       ]
     },
@@ -479,7 +484,7 @@
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 04 挙式当日（DAY 0）二連の左：背中の開いたドレスでバージンロードを歩く後ろ姿"
+          "usage": "⑤ REAL VOICE（背中の開いたウェディングドレスの後ろ姿）"
         }
       ]
     },
@@ -489,7 +494,7 @@
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 04 挙式当日（DAY 0）二連の右：ブーケを手に人生でいちばんの笑顔"
+          "usage": "⑨ クロージングCTA（ブーケを手に人生でいちばんの笑顔）"
         }
       ]
     },
@@ -499,27 +504,26 @@
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 05 式後も続けている（トレーニング写真×ウェディングフォトの二連フレーム）"
+          "usage": "⑦ アフターストーリー（式後もふたりでトレーニングを続ける夫婦）"
         }
       ]
     },
     {
       "source": "images/wedding/wedding_smile_couple_01.webp",
       "count": 1,
-      "stores": [
-        {
-          "slug": "gym-blog/bridal",
-          "usage": "最終CTAセクション（花びらの中を笑顔で歩く新郎新婦）※STORY 04でブーケ画像を使うため重複回避で差し替え"
-        }
-      ]
+      "stores": []
     },
     {
       "source": "images/wedding/wedding_dress_fit_01.webp",
-      "count": 1,
+      "count": 2,
       "stores": [
         {
           "slug": "bridal-diet-last-month",
           "usage": "記事⑥カバー：ドレス試着でファスナーが上がり祝福される花嫁"
+        },
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "③ 料金・36回カード画像（plans-bridal.json／ファスナーがすっと上がり喜ぶ花嫁）"
         }
       ]
     },
@@ -555,11 +559,15 @@
     },
     {
       "source": "images/wedding/wedding_effort_couple_02.webp",
-      "count": 1,
+      "count": 2,
       "stores": [
         {
           "slug": "groom-wedding-workout",
           "usage": "記事⑧カバー：ふたり一緒にトレーニングする新郎新婦"
+        },
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "④ 選ばれる理由・二連左（二の腕・背中のドレス対策トレーニング）"
         }
       ]
     },
