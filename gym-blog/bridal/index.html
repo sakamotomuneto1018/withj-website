@@ -261,7 +261,7 @@ footer a:hover{color:#fff}
 .ch-fig{margin:0 0 18px;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 34px rgba(160,130,90,.12)}
 .ch-fig img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
 .ch-fig.duo{display:grid;grid-template-columns:1fr 1fr;gap:7px;border:none;box-shadow:none;overflow:visible}
-.ch-fig.duo img{border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 26px rgba(160,130,90,.1);aspect-ratio:3/4}
+.ch-fig.duo img{border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 26px rgba(160,130,90,.1);aspect-ratio:16/10;object-position:center}
 
 /* セリフ吹き出し */
 .bubble{position:relative;background:var(--white);border:1.5px solid var(--gold-line);border-radius:16px;padding:15px 20px 16px;margin:0 0 18px;font-size:clamp(16px,4.2vw,19px);font-weight:800;color:var(--ink);line-height:1.65;box-shadow:0 8px 20px rgba(160,130,90,.09)}
@@ -290,6 +290,8 @@ footer a:hover{color:#fff}
 @media(max-width:560px){
   .reasons{grid-template-columns:1fr}
   .plan-grid{grid-template-columns:1fr}
+  .ch-fig.duo{grid-template-columns:1fr}
+  .ch-fig.duo img{aspect-ratio:16/9}
 }
 </style>
 </head>
@@ -299,7 +301,7 @@ footer a:hover{color:#fff}
 
 <!-- ① HERO -->
 <section class="hero" style="padding-top:0">
-  <div class="hero-media"><img src="../../images/wedding/nexus-bridal-story01.webp" width="1280" height="720" alt="結婚式のドレス試着で背中のファスナーが上がらず悔しそうな表情の花嫁" loading="eager" fetchpriority="high"></div>
+  <div class="hero-media"><img src="../../images/wedding/wedding_aisle_bride_01.webp" width="1600" height="905" alt="純白のウェディングドレスとブーケを手に晴れやかな笑顔でバージンロードを歩く花嫁" loading="eager" fetchpriority="high"></div>
   <div class="hero-copy">
     <p class="eyebrow">BRIDAL INTENSIVE PLAN</p>
     <h1>結婚式までに、<br>人生でいちばん<span class="g">綺麗な私</span>へ。</h1>
@@ -393,11 +395,13 @@ footer a:hover{color:#fff}
     <div class="countdown day0">挙式当日（<span class="num">DAY 0</span>）</div>
     <h2 class="ch-title"><span class="no">STORY 04</span><span class="bar">｜</span>ファスナーは、すっと上がった</h2>
     <figure class="ch-fig duo">
-      <img src="../../images/wedding/wedding_back_01.webp" width="1280" height="720" alt="挙式当日、背中の開いたウェディングドレスでバージンロードを歩く花嫁と新郎の後ろ姿" loading="lazy">
-      <img src="../../images/wedding/wedding_bouquet_01.webp" width="1280" height="720" alt="ブーケを手に人生でいちばんの笑顔を見せる花嫁" loading="lazy">
+      <img src="../../images/wedding/wedding_effort_couple_02.webp" width="1600" height="905" alt="結婚式に向けてパーソナルジムでバーベルスクワットに励む花嫁とサポートするトレーナー" loading="lazy">
+      <img src="../../images/wedding/wedding_princess_carry_01.webp" width="1280" height="724" alt="挙式後フラワーシャワーの中、新郎にお姫様抱っこされ心から笑う花嫁を参列者が祝福する退場シーン" loading="lazy">
     </figure>
     <p class="bubble"><span class="qm">“</span>人生でいちばん、綺麗かも</p>
     <div class="ch-copy"><p>最終フィッティングの日、あのファスナーは、すっと上がった。<br>バージンロードで彼が泣いていたのは、内緒。</p></div>
+    <figure class="ch-fig"><img src="../../images/wedding/wedding_reception_movie_01.webp" width="1280" height="724" alt="披露宴でふたりのパーソナルジムでのトレーニング映像をスクリーンに上映し笑顔で見つめる花嫁と新郎、拍手で祝福する参列者" loading="lazy"></figure>
+    <div class="ch-copy"><p>披露宴では、ふたりで頑張ったトレーニングの映像がスクリーンに。<br>「花嫁になるための120日」は、いちばんの思い出になった。</p></div>
     <p class="ch-link">▶ 関連記事：<a href="photo-wedding-diet/">前撮り・フォトウェディングまでに整えたい！写真に残る花嫁の体づくり完全ガイド</a></p>
   </div>
 
@@ -406,7 +410,7 @@ footer a:hover{color:#fff}
     <div class="tl-node" aria-hidden="true"></div>
     <div class="countdown">式から <span class="num">180</span>日後</div>
     <h2 class="ch-title"><span class="no">STORY 05</span><span class="bar">｜</span>式が終わっても、ふたりは続けている</h2>
-    <figure class="ch-fig"><img src="../../images/wedding/wedding_photo_frame_01.webp" width="1280" height="720" alt="棚に飾ったウェディングフォトの横で挙式後もふたりでトレーニングを続ける夫婦" loading="lazy"></figure>
+    <figure class="ch-fig"><img src="../../images/wedding/wedding_photo_frame_02.webp" width="1280" height="724" alt="ジムでのトレーニング写真と挙式当日のふたりの写真を並べて棚に飾ったペアの写真立て" loading="lazy"></figure>
     <p class="bubble"><span class="qm">“</span>結婚式に向けて、ふたりで筋トレ頑張ったよね</p>
     <div class="ch-copy"><p>あれから半年。ふたりは今も、同じジムに通っている。<br>綺麗は、式のあとも続いていく。</p></div>
     <p class="ch-note">※記載は一般的な利用イメージであり、特定の効果を保証するものではありません。将来の産後の再開も全国71店舗のネットワークで、里帰り先でも最寄り店舗に通えます。</p>
