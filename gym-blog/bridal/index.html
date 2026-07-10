@@ -232,6 +232,60 @@ footer{background:var(--ink);color:#cfc6bd;padding:34px 0 96px;text-align:center
 footer a{color:#cfc6bd;margin:0 12px}
 footer a:hover{color:#fff}
 
+/* ===== 120日の物語：ストーリー・タイムライン ===== */
+.intro-story{text-align:center;padding:42px 22px 6px}
+.intro-story .rule-line{max-width:540px;margin:0 auto;padding:22px 0;border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line)}
+.intro-story .rule-line b{font-family:'Noto Sans JP',sans-serif;font-size:clamp(17px,4.8vw,24px);font-weight:900;color:var(--ink);letter-spacing:.03em;line-height:1.7}
+.intro-story .rule-line b em{font-style:normal;color:var(--gold);font-family:'Poppins',sans-serif;font-weight:800;margin:0 3px}
+.intro-story .disc{font-size:11.5px;color:var(--ink-faint);margin-top:16px;line-height:1.8}
+
+.timeline{position:relative;max-width:720px;margin:6px auto 0;padding:8px 22px 0}
+.tl-rail{position:absolute;left:29px;top:38px;bottom:46px;width:2px;background:var(--gold-line);z-index:0;border-radius:2px}
+.tl-fill{position:absolute;left:29px;top:38px;width:2px;height:0;background:linear-gradient(180deg,var(--gold-2),var(--gold));z-index:1;border-radius:2px;transition:height .3s ease-out}
+.tl-item,.tl-price,.tl-end{position:relative;padding:30px 0 30px 46px}
+.tl-node{position:absolute;left:22px;top:42px;width:14px;height:14px;background:var(--white);border:2px solid var(--gold);transform:rotate(45deg);z-index:2;box-shadow:0 0 0 5px var(--white);transition:background .4s ease}
+.reveal .tl-node{background:var(--gold)}
+
+/* カウントダウンバッジ */
+.countdown{display:inline-flex;align-items:baseline;gap:7px;background:linear-gradient(135deg,var(--gold-2),var(--gold));color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.05em;padding:8px 18px;border-radius:999px;box-shadow:0 6px 16px rgba(194,161,90,.28);margin:0 0 15px}
+.countdown .num{font-family:'Poppins',sans-serif;font-size:17px;font-weight:900;letter-spacing:0}
+.countdown.day0{background:linear-gradient(135deg,#c29a4e,#8a6a2c);box-shadow:0 6px 16px rgba(138,106,44,.32)}
+
+/* 章タイトル（STORY 01｜…） */
+.ch-title{font-size:clamp(20px,5vw,28px);font-weight:900;line-height:1.55;color:var(--ink);margin:0 0 18px}
+.ch-title .no{font-family:'Poppins',sans-serif;color:var(--gold);font-weight:800;font-size:.86em}
+.ch-title .bar{color:var(--gold-line);margin:0 9px;font-weight:400}
+
+/* 章画像 */
+.ch-fig{margin:0 0 18px;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 14px 34px rgba(160,130,90,.12)}
+.ch-fig img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.ch-fig.duo{display:grid;grid-template-columns:1fr 1fr;gap:7px;border:none;box-shadow:none;overflow:visible}
+.ch-fig.duo img{border-radius:16px;border:1px solid var(--line);box-shadow:0 10px 26px rgba(160,130,90,.1);aspect-ratio:3/4}
+
+/* セリフ吹き出し */
+.bubble{position:relative;background:var(--white);border:1.5px solid var(--gold-line);border-radius:16px;padding:15px 20px 16px;margin:0 0 18px;font-size:clamp(16px,4.2vw,19px);font-weight:800;color:var(--ink);line-height:1.65;box-shadow:0 8px 20px rgba(160,130,90,.09)}
+.bubble::after{content:"";position:absolute;left:34px;bottom:-9px;width:15px;height:15px;background:var(--white);border-right:1.5px solid var(--gold-line);border-bottom:1.5px solid var(--gold-line);transform:rotate(45deg)}
+.bubble .qm{color:var(--gold);font-family:'Poppins',sans-serif;font-weight:900;margin-right:5px;font-size:1.05em}
+.bubble.sm{display:inline-block;font-size:14px;padding:11px 18px 12px;margin:0 auto 18px;text-align:center}
+
+/* 章の本文・補足 */
+.ch-copy p{font-size:15px;color:var(--ink);line-height:2.05;margin:0}
+.ch-note{font-size:11.5px;color:var(--ink-faint);margin-top:14px;line-height:1.75}
+.ch-link{margin-top:16px;font-size:12.5px;color:var(--ink-faint)}
+.ch-link a{color:var(--gold)}
+
+/* 料金（タイムライン内） */
+.tl-price .price-inner{background:var(--ivory);border:1px solid var(--gold-line);border-radius:22px;padding:26px 20px 24px;text-align:center}
+.tl-price .tl-node{top:42px}
+
+/* クロージング（線の終点） */
+.tl-end{text-align:left;padding-bottom:8px}
+.tl-end .tl-node{top:50px;width:18px;height:18px;background:var(--gold);left:20px}
+.tl-end .fin-eyebrow{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.28em;color:var(--gold);font-weight:700;margin:0 0 12px}
+.tl-end h2{font-size:clamp(21px,5.4vw,29px);font-weight:900;line-height:1.6;color:var(--ink);margin:0 0 14px}
+.tl-end h2 .g{color:var(--gold)}
+.tl-end p{font-size:14px;color:var(--ink-soft);margin:0 0 22px}
+
 @media(max-width:560px){
   .reasons{grid-template-columns:1fr}
   .plan-grid{grid-template-columns:1fr}
@@ -244,7 +298,7 @@ footer a:hover{color:#fff}
 
 <!-- ① HERO -->
 <section class="hero" style="padding-top:0">
-  <div class="hero-media"><img src="../../images/wedding/wedding_aisle_01.webp" width="1600" height="905" alt="結婚式に向けてトレーニングし理想のドレス姿を目指す花嫁" loading="eager" fetchpriority="high"></div>
+  <div class="hero-media"><img src="../../images/wedding/nexus-bridal-story01.webp" width="1280" height="720" alt="結婚式のドレス試着で背中のファスナーが上がらず悔しそうな表情の花嫁" loading="eager" fetchpriority="high"></div>
   <div class="hero-copy">
     <p class="eyebrow">BRIDAL INTENSIVE PLAN</p>
     <h1>結婚式までに、<br>人生でいちばん<span class="g">綺麗な私</span>へ。</h1>
@@ -261,108 +315,111 @@ footer a:hover{color:#fff}
   </div>
 </div>
 
-<!-- ストーリー注記 -->
-<div class="wrap" style="margin-top:6px"><p class="story-disc">※本ストーリーはブライダル集中プランの利用イメージです。写真はイメージです。実在の会員の体験談ではありません。</p></div>
+<!-- 導入：これは、ある花嫁の120日の物語。 -->
+<div class="intro-story">
+  <div class="rule-line"><b>これは、ある花嫁の <em>120日</em> の物語。</b></div>
+  <p class="disc">※本ストーリーはブライダル集中プランの利用イメージです。写真はイメージです。実在の会員の体験談ではありません。</p>
+</div>
 
-<!-- STORY 01 -->
-<section class="story">
-  <div class="wrap">
-    <p class="story-label">STORY 01</p>
-    <h2 class="story-h">ドレスが、入らなかった日</h2>
-    <figure class="story-fig"><img src="../../images/wedding/wedding_dress_tight_01.webp" width="1280" height="720" alt="結婚式のドレス試着で背中のファスナーが上がらず悔しそうな表情の花嫁" loading="lazy"></figure>
-    <div class="story-copy">
-      <p>楽しみにしていた、ドレスの試着。<br>でも、背中のファスナーが上がらない。<br>「サイズを上げますか？」——その一言が、悔しかった。<br>式まで、あと4ヶ月。このままじゃ、終われない。</p>
-    </div>
-    <p class="chapter-link">▶ 関連記事は準備中です（<a href="../diet-bodymake/">ダイエット・ボディメイク</a>）</p>
+<!-- ストーリー・タイムライン -->
+<div class="timeline">
+  <div class="tl-rail" aria-hidden="true"></div>
+  <div class="tl-fill" id="tlFill" aria-hidden="true"></div>
+
+  <!-- STORY 01 -->
+  <div class="tl-item">
+    <div class="tl-node" aria-hidden="true"></div>
+    <div class="countdown">挙式まで あと<span class="num">120</span>日</div>
+    <h2 class="ch-title"><span class="no">STORY 01</span><span class="bar">｜</span>ドレスが、入らなかった日</h2>
+    <figure class="ch-fig"><img src="../../images/wedding/nexus-bridal-story01.webp" width="1280" height="720" alt="結婚式のドレス試着で背中のファスナーが上がらず悔しそうな表情の花嫁" loading="lazy"></figure>
+    <p class="bubble"><span class="qm">“</span>……サイズ、上げますか？って言われた。</p>
+    <div class="ch-copy"><p>楽しみにしていた、はじめてのドレス試着。<br>鏡の前で、背中のファスナーは途中で止まった。<br>悔しい。でも——このままじゃ、終われない。</p></div>
+    <p class="ch-link">▶ 関連記事：<a href="bridal-diet-last-month/">結婚式まであと1ヶ月！駆け込みブライダルダイエットでできること・やってはいけないこと</a></p>
   </div>
-</section>
 
-<!-- STORY 02 -->
-<section class="story alt">
-  <div class="wrap">
-    <p class="story-label">STORY 02</p>
-    <h2 class="story-h">挙式日から、逆算してくれた</h2>
-    <figure class="story-fig"><img src="../../images/wedding/wedding_dress_counseling_01.webp" width="1280" height="720" alt="完全個室のカウンセリングで挙式日から逆算したプランを相談する花嫁と新郎とトレーナー" loading="lazy"></figure>
-    <div class="story-copy">
-      <p>見つけたのは、家の近くの隠れ家パーソナルジム。<br>トレーナーはiPadを開いて、挙式日から逆算したプランを見せてくれた。<br>「ブライダル集中プランなら、式に向けてここまで一緒に整えていけます」。<br>ぼんやりしていた不安が、初めて“予定”に変わった瞬間だった。</p>
-    </div>
-    <p class="story-note">※効果には個人差があります。特定の減量結果を保証するものではありません。</p>
-    <p class="chapter-link">▶ 関連記事は準備中です（<a href="../gym-comparison/">ジム選び・比較</a>）</p>
-  </div>
-</section>
-
-<!-- STORY 03 -->
-<section class="story">
-  <div class="wrap">
-    <p class="story-label">STORY 03</p>
-    <h2 class="story-h">夫が言った。<br>「俺も一緒にやるよ」</h2>
-    <figure class="story-fig"><img src="../../images/wedding/wedding_effort_couple_01.webp" width="1280" height="720" alt="明るい完全個室でふたり並んでセミパーソナルトレーニングに取り組む新郎新婦" loading="lazy"></figure>
-    <div class="story-copy">
-      <p>その夜、プランを見せたら夫が言った。「俺も一緒にやるよ」。<br>NEXUSは、ふたりで通えるセミパーソナル。<br>仕事帰りの22時でも、並んでトレーニング。<br>つらい日も、隣に相方がいると笑えた。</p>
-    </div>
+  <!-- STORY 02 -->
+  <div class="tl-item">
+    <div class="tl-node" aria-hidden="true"></div>
+    <div class="countdown">挙式まで あと<span class="num">110</span>日</div>
+    <h2 class="ch-title"><span class="no">STORY 02</span><span class="bar">｜</span>挙式日から、逆算してくれた</h2>
+    <figure class="ch-fig"><img src="../../images/wedding/wedding_dress_counseling_01.webp" width="1280" height="720" alt="完全個室のカウンセリングでiPadを見せ挙式日から逆算したプランを説明するトレーナーと花嫁と新郎" loading="lazy"></figure>
+    <p class="bubble"><span class="qm">“</span>式の日から逆算して、プランを組みましょう</p>
+    <div class="ch-copy"><p>見つけたのは、家の近くの隠れ家パーソナルジム。<br>iPadに映っていたのは、挙式日から逆算されたわたし専用のプラン。<br>不安が、はじめて“予定”に変わった。</p></div>
     <div class="specbar">
       <span><b>完全個室</b>の隠れ家</span>
       <span>女性会員 約<b>85%</b></span>
       <span><b>ノータッチ</b>指導</span>
-      <span>全店 <b class="en">8:00〜23:00</b></span>
+    </div>
+    <p class="ch-note">※効果には個人差があります。特定の減量結果を保証するものではありません。</p>
+    <p class="ch-link">▶ 関連記事：<a href="busy-bride-workout/">仕事も式準備も諦めない。忙しい花嫁のための週1〜2回ブライダルトレーニング術</a></p>
+  </div>
+
+  <!-- STORY 03 -->
+  <div class="tl-item">
+    <div class="tl-node" aria-hidden="true"></div>
+    <div class="countdown">挙式まで あと<span class="num">90</span>日</div>
+    <h2 class="ch-title"><span class="no">STORY 03</span><span class="bar">｜</span>夫が言った。「俺も一緒にやるよ」</h2>
+    <figure class="ch-fig"><img src="../../images/wedding/wedding_effort_couple_01.webp" width="1280" height="720" alt="明るい完全個室でふたり並んでセミパーソナルトレーニングに取り組む新郎新婦とトレーナー" loading="lazy"></figure>
+    <p class="bubble"><span class="qm">“</span>俺も一緒にやるよ</p>
+    <div class="ch-copy"><p>その夜、プランを見せたら夫が笑った。<br>NEXUSはふたりで通えるセミパーソナル。<br>仕事帰りの22時、隣に相方がいるだけで、きつい日も笑えた。</p></div>
+    <div class="specbar">
+      <span><b>2名</b>OKのセミパーソナル</span>
       <span><b>手ぶら</b>OK</span>
-      <span><b>2名</b>セミパーソナル</span>
+      <span>全店 <b class="en">8:00〜23:00</b></span>
     </div>
-    <p class="specbar-note">ウェア・シューズ完備。準備で忙しい時期も、仕事帰りにふたりで立ち寄れます。</p>
-    <p class="chapter-link">▶ 関連記事は準備中です（<a href="../beginner/">初心者向け</a>）</p>
+    <p class="ch-link">▶ 関連記事：<a href="groom-wedding-workout/">新郎こそ準備が9割！タキシードが似合う体づくりと「ふたりで通う」ブライダルダイエット</a></p>
   </div>
-</section>
 
-<!-- 料金（ストーリーの山場直後） -->
-<section class="alt">
-  <div class="wrap">
-    <p class="sec-eyebrow">PRICE</p>
-    <h2 class="sec">ふたりが選んだ、<br>ブライダル集中プラン</h2>
-    <p class="conc">ブライダル集中プランは60分・90分の2タイプ。いずれも食事指導プレミアム付きで、人気は挙式4〜5ヶ月前から通える36回プランです。</p>
-    <div class="tabbar" id="tabbar" role="tablist"></div>
-    <div class="plan-grid" id="planGrid"></div>
-    <p class="pnote">※2026年4月改定の正規料金に基づく特別価格です。全プラン食事指導プレミアム付き・税込。効果には個人差があります。</p>
-    <div style="text-align:center;margin-top:22px"><a class="btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験でプランを相談する</a></div>
-  </div>
-</section>
-
-<!-- STORY 04 -->
-<section class="story">
-  <div class="wrap">
-    <p class="story-label">STORY 04</p>
-    <h2 class="story-h">ファスナーは、<br>すっと上がった</h2>
-    <figure class="story-fig"><img src="../../images/wedding/wedding_dress_fit_01.webp" width="1280" height="720" alt="結婚式のドレス試着でファスナーがすっと上がり喜ぶ花嫁と拍手する新郎とスタッフ" loading="lazy"></figure>
-    <div class="story-copy">
-      <p>最終フィッティングの日。<br>あのファスナーは、すっと上がった。<br>当日、バージンロードで彼が泣いていたのは、内緒。<br>写真の中の私は、人生でいちばん綺麗だった。</p>
+  <!-- 料金（ストーリーの山場直後） -->
+  <div class="tl-price">
+    <div class="tl-node" aria-hidden="true"></div>
+    <div class="price-inner">
+      <p class="bubble sm"><span class="qm">“</span>わたしたちは36回プランにしました</p>
+      <p class="sec-eyebrow">PRICE</p>
+      <h2 class="sec">ふたりが選んだ、<br>ブライダル集中プラン</h2>
+      <p class="conc">ブライダル集中プランは60分・90分の2タイプ。いずれも食事指導プレミアム付きで、人気は挙式4〜5ヶ月前から通える36回プランです。</p>
+      <div class="tabbar" id="tabbar" role="tablist"></div>
+      <div class="plan-grid" id="planGrid"></div>
+      <p class="pnote">※2026年4月改定の正規料金に基づく特別価格です。全プラン食事指導プレミアム付き・税込。効果には個人差があります。</p>
+      <div style="text-align:center;margin-top:22px"><a class="btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験でプランを相談する</a></div>
     </div>
-    <p class="chapter-link">▶ 関連記事は準備中です（<a href="../experience/">体験談</a>）</p>
   </div>
-</section>
 
-<!-- STORY 05 -->
-<section class="story alt">
-  <div class="wrap">
-    <p class="story-label">STORY 05</p>
-    <h2 class="story-h">式が終わっても、<br>ふたりは続けている</h2>
-    <figure class="story-fig"><img src="../../images/wedding/wedding_photo_frame_01.webp" width="1280" height="720" alt="棚に飾ったトレーニング写真とウェディングフォトを並べ挙式後もトレーニングを続ける夫婦" loading="lazy"></figure>
-    <div class="story-copy">
-      <p>あれから半年。ふたりは今も、同じジムに通っている。<br>集中プランはそのまま通常プランへ。棚に飾ったウェディングフォトを見るたび思い出す。<br>「結婚式に向けて、ふたりで筋トレ頑張ったよね」って。<br>綺麗は、式のあとも続いていく。</p>
-    </div>
-    <p class="story-note">※記載は一般的な利用イメージであり、特定の効果を保証するものではありません。将来の産後の再開も全国71店舗のネットワークで、里帰り先でも最寄り店舗に通えます。</p>
-    <p class="chapter-link">▶ 関連記事は準備中です（<a href="../nutrition/">食事・栄養</a>）</p>
+  <!-- STORY 04 -->
+  <div class="tl-item">
+    <div class="tl-node" aria-hidden="true"></div>
+    <div class="countdown day0">挙式当日（<span class="num">DAY 0</span>）</div>
+    <h2 class="ch-title"><span class="no">STORY 04</span><span class="bar">｜</span>ファスナーは、すっと上がった</h2>
+    <figure class="ch-fig duo">
+      <img src="../../images/wedding/wedding_back_01.webp" width="1280" height="720" alt="挙式当日、背中の開いたウェディングドレスでバージンロードを歩く花嫁と新郎の後ろ姿" loading="lazy">
+      <img src="../../images/wedding/wedding_bouquet_01.webp" width="1280" height="720" alt="ブーケを手に人生でいちばんの笑顔を見せる花嫁" loading="lazy">
+    </figure>
+    <p class="bubble"><span class="qm">“</span>人生でいちばん、綺麗かも</p>
+    <div class="ch-copy"><p>最終フィッティングの日、あのファスナーは、すっと上がった。<br>バージンロードで彼が泣いていたのは、内緒。</p></div>
+    <p class="ch-link">▶ 関連記事：<a href="photo-wedding-diet/">前撮り・フォトウェディングまでに整えたい！写真に残る花嫁の体づくり完全ガイド</a></p>
   </div>
-</section>
 
-<!-- クロージングメッセージ -->
-<section class="final">
-  <div class="wrap">
-    <h2>挙式まで2〜3ヶ月。<br>いちばん追い込める、<br>いちばん輝ける期間。</h2>
+  <!-- STORY 05 -->
+  <div class="tl-item">
+    <div class="tl-node" aria-hidden="true"></div>
+    <div class="countdown">式から <span class="num">180</span>日後</div>
+    <h2 class="ch-title"><span class="no">STORY 05</span><span class="bar">｜</span>式が終わっても、ふたりは続けている</h2>
+    <figure class="ch-fig"><img src="../../images/wedding/wedding_photo_frame_01.webp" width="1280" height="720" alt="棚に飾ったウェディングフォトの横で挙式後もふたりでトレーニングを続ける夫婦" loading="lazy"></figure>
+    <p class="bubble"><span class="qm">“</span>結婚式に向けて、ふたりで筋トレ頑張ったよね</p>
+    <div class="ch-copy"><p>あれから半年。ふたりは今も、同じジムに通っている。<br>綺麗は、式のあとも続いていく。</p></div>
+    <p class="ch-note">※記載は一般的な利用イメージであり、特定の効果を保証するものではありません。将来の産後の再開も全国71店舗のネットワークで、里帰り先でも最寄り店舗に通えます。</p>
+    <p class="ch-link">▶ 関連記事：<a href="bridal-diet-rebound/">結婚式後にリバウンドしないために。ブライダルダイエットを「一生モノ」にする方法</a></p>
+  </div>
+
+  <!-- クロージング（線の終点） -->
+  <div class="tl-end">
+    <div class="tl-node" aria-hidden="true"></div>
+    <p class="fin-eyebrow">TO YOUR BIG DAY</p>
+    <h2>挙式まで<span class="g">2〜3ヶ月</span>。<br>いちばん追い込める、<br>いちばん輝ける期間。</h2>
     <p>ブライダル集中プランで、最高の結婚式を迎えよう。</p>
-    <div class="btns">
-      <a class="btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a>
-    </div>
+    <a class="btn" href="https://www.nexus-gym.com/adp/?cid=c01ktyakbz3fk61hg56s6zwrryn&p=pidbwutz6pb9" target="_blank" rel="noopener noreferrer">無料体験を予約する</a>
   </div>
-</section>
+</div>
 
 <!-- ⑧ FAQ -->
 <section class="faq">
@@ -529,6 +586,22 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
+<!-- ブライダル記事一覧 -->
+<section>
+  <div class="wrap">
+    <p class="sec-eyebrow">BRIDAL ARTICLES</p>
+    <h2 class="sec">ブライダル記事一覧</h2>
+    <p class="conc" style="font-weight:400;color:var(--ink-soft)">目的別に、花嫁・新郎のための体づくりの知見をまとめました。</p>
+    <div style="display:grid;gap:10px;margin-top:6px">
+      <a href="bridal-diet-last-month/" style="display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;color:var(--ink);font-weight:700;font-size:14px;line-height:1.7">結婚式まであと1ヶ月！駆け込みブライダルダイエットでできること・やってはいけないこと<span style="display:block;font-size:12px;color:var(--ink-faint);font-weight:400;margin-top:4px">直前1ヶ月でできること／NG3選／優先部位</span></a>
+      <a href="photo-wedding-diet/" style="display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;color:var(--ink);font-weight:700;font-size:14px;line-height:1.7">前撮り・フォトウェディングまでに整えたい！写真に残る花嫁の体づくり完全ガイド<span style="display:block;font-size:12px;color:var(--ink-faint);font-weight:400;margin-top:4px">前撮りは“本当の締切”／ポーズ別・衣装別の逆算</span></a>
+      <a href="groom-wedding-workout/" style="display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;color:var(--ink);font-weight:700;font-size:14px;line-height:1.7">新郎こそ準備が9割！タキシードが似合う体づくりと「ふたりで通う」ブライダルダイエット<span style="display:block;font-size:12px;color:var(--ink-faint);font-weight:400;margin-top:4px">タキシード3部位／2名セミパーソナルの活用</span></a>
+      <a href="bridal-diet-rebound/" style="display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;color:var(--ink);font-weight:700;font-size:14px;line-height:1.7">結婚式後にリバウンドしないために。ブライダルダイエットを「一生モノ」にする方法<span style="display:block;font-size:12px;color:var(--ink-faint);font-weight:400;margin-top:4px">式をゴールにしない設計／夫婦で習慣化</span></a>
+      <a href="busy-bride-workout/" style="display:block;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px;color:var(--ink);font-weight:700;font-size:14px;line-height:1.7">仕事も式準備も諦めない。忙しい花嫁のための週1〜2回ブライダルトレーニング術<span style="display:block;font-size:12px;color:var(--ink-faint);font-weight:400;margin-top:4px">週1〜2回でいい理由／出勤前・仕事帰りの通い方</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- REAL VOICE（ストーリーとは別枠） -->
 <section class="alt">
   <div class="wrap">
@@ -550,7 +623,7 @@ footer a:hover{color:#fff}
 <!-- 最終CTA -->
 <section class="final">
   <div class="wrap">
-    <figure class="figure" style="max-width:520px;margin:0 auto 24px"><img src="../../images/wedding/wedding_bouquet_01.webp" width="1280" height="720" alt="ブーケを手に最高の笑顔を見せる花嫁" loading="lazy"></figure>
+    <figure class="figure" style="max-width:520px;margin:0 auto 24px"><img src="../../images/wedding/wedding_smile_couple_01.webp" width="1280" height="720" alt="挙式を終え花びらの中を笑顔で歩く新郎新婦" loading="lazy"></figure>
     <h2>一生残る写真だから。<br>まずは無料体験から始めませんか？</h2>
     <p>挙式日までの残り日数に合わせて、あなた専用のプランをご提案します。<br>※無理な勧誘は一切ありません。</p>
     <div class="btns">
@@ -604,6 +677,31 @@ footer a:hover{color:#fff}
   fetch('../../data/plans-bridal.json').then(function(r){return r.json();}).then(render).catch(function(e){
     document.getElementById('planGrid').innerHTML='<p class="lead">料金情報を読み込めませんでした。</p>';
   });
+})();
+
+/* タイムライン：スクロールに応じてゴールドの線が伸び、節点が点灯する軽量演出 */
+(function(){
+  var tl=document.querySelector('.timeline');
+  if(!tl) return;
+  var fill=document.getElementById('tlFill');
+  var items=[].slice.call(tl.querySelectorAll('.tl-item,.tl-price,.tl-end'));
+  var ticking=false;
+  function update(){
+    ticking=false;
+    var r=tl.getBoundingClientRect();
+    var vh=window.innerHeight||document.documentElement.clientHeight;
+    var span=Math.max(tl.offsetHeight-96,0);
+    var passed=Math.min(Math.max(vh*0.5-r.top-38,0),span);
+    if(fill) fill.style.height=passed+'px';
+    for(var i=0;i<items.length;i++){
+      var ir=items[i].getBoundingClientRect();
+      if(ir.top<vh*0.78) items[i].classList.add('reveal');
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  update();
 })();
 </script>
 </body>

@@ -439,14 +439,19 @@
       ]
     },
     {
-      "source": "images/wedding/wedding_dress_tight_01.webp",
+      "source": "nexus-sozai/ドレスがきつくて悔しい.webp → images/wedding/nexus-bridal-story01.webp",
       "count": 1,
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 01 ドレスが入らなかった日（背中ファスナーを直す試着室・悔しさの暗示）"
+          "usage": "ヒーロー画像 ＋ STORY 01 ドレスが入らなかった日（試着室で背中ファスナーが上がらず悔しそうな花嫁・主役画像を2箇所使用）"
         }
       ]
+    },
+    {
+      "source": "images/wedding/wedding_dress_tight_01.webp",
+      "count": 0,
+      "stores": []
     },
     {
       "source": "images/wedding/wedding_dress_counseling_01.webp",
@@ -469,12 +474,22 @@
       ]
     },
     {
-      "source": "images/wedding/wedding_dress_fit_01.webp",
+      "source": "images/wedding/wedding_back_01.webp",
       "count": 1,
       "stores": [
         {
           "slug": "gym-blog/bridal",
-          "usage": "STORY 04 ファスナーがすっと上がった（試着で歓喜・拍手）／料金36回カード"
+          "usage": "STORY 04 挙式当日（DAY 0）二連の左：背中の開いたドレスでバージンロードを歩く後ろ姿"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_bouquet_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "STORY 04 挙式当日（DAY 0）二連の右：ブーケを手に人生でいちばんの笑顔"
         }
       ]
     },
@@ -485,6 +500,116 @@
         {
           "slug": "gym-blog/bridal",
           "usage": "STORY 05 式後も続けている（トレーニング写真×ウェディングフォトの二連フレーム）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_smile_couple_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "最終CTAセクション（花びらの中を笑顔で歩く新郎新婦）※STORY 04でブーケ画像を使うため重複回避で差し替え"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_dress_fit_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-last-month",
+          "usage": "記事⑥カバー：ドレス試着でファスナーが上がり祝福される花嫁"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_scale_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-last-month",
+          "usage": "記事⑥本文：完全個室で目標を確認する女性"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_album_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "photo-wedding-diet",
+          "usage": "記事⑦カバー：前撮り撮影でカメラに向かう新郎新婦"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_frame_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "photo-wedding-diet",
+          "usage": "記事⑦本文：飾られたウェディングフォトのフレーム"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_effort_couple_02.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "groom-wedding-workout",
+          "usage": "記事⑧カバー：ふたり一緒にトレーニングする新郎新婦"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_commit_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "groom-wedding-workout",
+          "usage": "記事⑧本文：トレーナーとカウンセリングで握手するカップル"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_walk_couple_02.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-rebound",
+          "usage": "記事⑨カバー：挙式を終え花びらの中を歩く新郎新婦"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_blessed_couple_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "bridal-diet-rebound",
+          "usage": "記事⑨本文：ゲストに祝福される新郎新婦"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_smile_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "busy-bride-workout",
+          "usage": "記事⑩カバー：バージンロードを笑顔で歩く花嫁"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_carry_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "busy-bride-workout",
+          "usage": "記事⑩本文：花びらの中で祝福される新郎新婦"
         }
       ]
     }
