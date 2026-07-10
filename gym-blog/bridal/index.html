@@ -190,10 +190,15 @@ p.lead{font-size:14px;color:var(--ink-soft)}
 
 /* real voice */
 .voice-note{background:var(--white);border:1px dashed var(--gold-line);border-radius:16px;padding:20px 22px;text-align:center;color:var(--ink-soft);font-size:13px}
-.voice-cards{display:grid;gap:12px;margin-top:14px}
+.voice-cards{display:grid;gap:12px;margin-top:16px}
 .vcard{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
 .vcard .vh{font-size:12.5px;color:var(--gold);font-weight:700;margin:0 0 6px}
 .vcard p{font-size:13px;color:var(--ink-soft);margin:0}
+.vcard-main{border:1px solid var(--gold-line);border-radius:16px;padding:22px 22px 18px;position:relative}
+.vcard-main .vstore{font-size:12.5px;color:var(--gold);font-weight:700;letter-spacing:.02em;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--gold-line)}
+.vcard-main .vbody{font-size:14px;line-height:1.95;color:var(--ink);margin:0}
+.vcard-main .vmeta{margin:14px 0 0;font-size:12px;color:var(--ink-faint);text-align:right}
+.voice-disc{margin:12px 2px 0;font-size:11.5px;color:var(--ink-faint)}
 
 /* stores */
 .pref{background:var(--white);border:1px solid var(--line);border-radius:14px;margin:0 0 10px;overflow:hidden}
@@ -610,16 +615,16 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <p class="sec-eyebrow">REAL VOICE</p>
     <h2 class="sec">会員の、<br>実際の声</h2>
-    <p class="conc" style="font-weight:400;color:var(--ink-soft)">上のストーリーはプランの利用イメージです。こちらには、確認できた実際の口コミだけを掲載します。</p>
-    <!-- verified: true のGBP口コミが確認できたものだけ表示。bridal-reviews.md 追加後にカードを差し替える。捏造掲載は行わない。 -->
-    <div class="voice-note">
-      挙式・ドレス・前撮りに関する会員の実際の口コミを、確認でき次第このスペースに掲載します（掲載は本人確認済みのものに限ります）。
+    <p class="conc" style="font-weight:400;color:var(--ink-soft)">上のストーリーはプランの利用イメージです。こちらには、Googleマップで確認できた実際の口コミを掲載します。</p>
+    <!-- verified: Googleマップ原投稿で確認できた口コミのみ掲載。原文は改変しない。捏造掲載は行わない。 -->
+    <div class="voice-cards">
+      <div class="vcard vcard-main">
+        <p class="vstore">NEXUS 蒲田・蓮沼店</p>
+        <p class="vbody">結婚式に向けて通い始めました。理想の体を伝えると、それに向けて必要なトレーニングを提示してくださり、式当日までにかなり見た目を変えることができました。<br>今後は少し目標を変え、気になる部分痩せを目指していますが、それに関してもすぐに対応してくださり、メニューを変えて丁寧に指導してくださいます。<br>トレーニング中は、私がどのような声掛けでやる気が出るのかなど考えながら対応してくださるのが伝わってきて、頑張ろうと思えます。<br>予約なども取りやすく、日程変更もしやすいため気軽に通えると思うのでおすすめです！</p>
+        <p class="vmeta">M 様（女性）／2023年11月・Googleマップの口コミより</p>
+      </div>
     </div>
-    <div class="voice-cards" id="voiceCards" hidden>
-      <!-- 実文が用意でき次第、以下のスロットに差し替え（verified: true のみ）
-      <div class="vcard"><p class="vh">◯◯店・30代／挙式◯ヶ月前から</p><p>口コミ本文（実文）</p></div>
-      -->
-    </div>
+    <p class="voice-disc">※個人の感想であり、効果を保証するものではありません。</p>
   </div>
 </section>
 
