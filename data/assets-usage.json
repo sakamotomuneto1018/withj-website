@@ -437,6 +437,56 @@
           "usage": "section3 effort（やれる日は脚が震えるまで）"
         }
       ]
+    },
+    {
+      "source": "images/wedding/wedding_dress_tight_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "STORY 01 ドレスが入らなかった日（背中ファスナーを直す試着室・悔しさの暗示）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_dress_counseling_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "STORY 02 挙式日から逆算（iPadでドレス画像・完全個室カウンセリング）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_effort_couple_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "STORY 03 夫が一緒にやる（新郎新婦セミパーソナル）"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_dress_fit_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "STORY 04 ファスナーがすっと上がった（試着で歓喜・拍手）／料金36回カード"
+        }
+      ]
+    },
+    {
+      "source": "images/wedding/wedding_photo_frame_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/bridal",
+          "usage": "STORY 05 式後も続けている（トレーニング写真×ウェディングフォトの二連フレーム）"
+        }
+      ]
     }
   ]
 }
