@@ -720,6 +720,36 @@
           "usage": "記事⑮本文：乾杯のグラスを持つ手元"
         }
       ]
+    },
+    {
+      "source": "nexus-sozai/ドリンク休憩①.png → images/nexus/category-keepgoing-drink-break.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog（トップ）",
+          "usage": "カテゴリカード（続けるコツ／5-reasons-not-continuing）：明るい個室でドリンク休憩しながらトレーナーと談笑する女性。旧gym-room.jpg（器具のみ）を差し替え"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/子連れOK①.png → images/nexus/category-mom-stretch-child.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog（トップ）",
+          "usage": "カテゴリカード（産後・ママ向け／postpartum-diet-when-to-start）：明るい個室で子どものそばでストレッチする女性。旧gym-mirror.jpg（器具のみ）を差し替え"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/サイドレイズ_黒髪女性②.webp → images/nexus/category-diet-woman-dumbbell.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog（トップ）",
+          "usage": "カテゴリカード（ダイエット・ボディメイク／30s-40s-diet-routine）：明るい個室でダンベルトレーニングをする女性。旧gym-mirror.jpg（器具のみ）を差し替え"
+        }
+      ]
     }
   ]
 }
