@@ -449,6 +449,9 @@ footer a:hover{color:#fff}
     <p class="sec-eyebrow">STUDIOS</p>
     <h2 class="sec">花嫁プランは<br>全国71店舗すべてで</h2>
     <p class="conc">花嫁プランは特定店舗限定ではなく、NEXUSパーソナルジム全71店舗すべてで受けられます。</p>
+    <!-- 共通コンポーネント：全国店舗一覧アコーディオン（/shops/stores-accordion.html を読み込み） -->
+    <div id="storeAccordion" data-store-accordion></div>
+<template id="__legacyStoreAccordion" hidden>
 <details class="pref"><summary><span class="pn">東京都</span><span class="pc">41店</span><span class="pt">＋</span></summary><div class="prefbody">
 <div class="subhead first">足立区 <span class="cnt">1店</span></div>
 <div class="shoplinks"><a href="../../shops/umejima-nishiarai/">梅島/西新井店</a></div>
@@ -460,7 +463,7 @@ footer a:hover{color:#fff}
 <div class="shoplinks">
 <a href="../../shops/ikegami/">池上店</a>
 <a href="../../shops/ishikawadai/">石川台店</a>
-<a href="../../shops/omori-kitaguchi-sanno/">大森北口山王店</a>
+<a href="../../shops/omori-sanno/">大森北口山王店</a>
 <a href="../../shops/kamata-hasunuma/">蒲田・蓮沼店</a>
 <a href="../../shops/kita-senzoku/">北千束店</a>
 <a href="../../shops/kugahara/">久が原店</a>
@@ -541,7 +544,7 @@ footer a:hover{color:#fff}
 </div>
 <div class="subhead">横浜市港北区 <span class="cnt">4店</span></div>
 <div class="shoplinks">
-<a href="../../shops/kishinekoen/">岸根公園店</a>
+<a href="../../shops/kishine-koen/">岸根公園店</a>
 <a href="../../shops/takata-ekimae/">高田駅前店</a>
 <a href="../../shops/tsunashima/">綱島店</a>
 <a href="../../shops/hiyoshi/">日吉店</a>
@@ -553,7 +556,7 @@ footer a:hover{color:#fff}
 <div class="subhead">横浜市都筑区 <span class="cnt">1店</span></div>
 <div class="shoplinks"><a href="../../shops/nakamachidai/">仲町台店</a></div>
 <div class="subhead">横浜市中区 <span class="cnt">1店</span></div>
-<div class="shoplinks"><a href="../../shops/yokohama/">横浜店</a></div>
+<div class="shoplinks"><a href="../../shops/yokohama-motomachi/">横浜店</a></div>
 <div class="subhead">横浜市緑区 <span class="cnt">1店</span></div>
 <div class="shoplinks"><a href="../../shops/tokaichiba/">十日市場店</a></div>
 <div class="subhead">横浜市南区 <span class="cnt">1店</span></div>
@@ -590,6 +593,7 @@ footer a:hover{color:#fff}
 <a href="../../shops/hirao/">平尾店</a>
 <a href="../../shops/tenjin-minami/">天神南店</a>
 </div></details>
+</template>
     <p class="allshops">▶ <a href="../../shops/">全店舗一覧ページを見る</a></p>
   </div>
 </section>
@@ -710,6 +714,21 @@ footer a:hover{color:#fff}
   window.addEventListener('scroll',onScroll,{passive:true});
   window.addEventListener('resize',onScroll);
   update();
+})();
+</script>
+<!-- 共通コンポーネント：店舗一覧アコーディオンの読み込み -->
+<script>
+(function(){
+  var mount=document.getElementById('storeAccordion');
+  if(!mount) return;
+  function fallback(){
+    var tpl=document.getElementById('__legacyStoreAccordion');
+    if(tpl) mount.innerHTML=tpl.innerHTML;
+  }
+  fetch('/shops/stores-accordion.html')
+    .then(function(r){ return r.ok?r.text():Promise.reject(); })
+    .then(function(html){ mount.innerHTML=html; })
+    .catch(fallback);
 })();
 </script>
 </body>
