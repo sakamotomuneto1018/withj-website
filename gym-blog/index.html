@@ -3,29 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>パーソナルジムブログ | NEXUS 71店舗の現場から発信する女性のための知見 | WITHJ</title>
+<title>パーソナルジムブログ｜入会は、読んでから。NEXUS 71店舗の一次情報 | WITHJ</title>
 
-<meta name="description" content="NEXUSパーソナルジム71店舗のFC加盟開発を主導した坂本宗瞳が、30〜40代女性のためのパーソナルジム選び・継続のコツ・ダイエット・産後ボディメイクをお届けします。">
+<meta name="description" content="入会して後悔する前に。ジム選び・継続のコツ・産後ダイエット・ブライダルまで、NEXUS 71店舗の現場から30〜40代女性のための一次情報をお届けします。">
 <meta name="keywords" content="パーソナルジム,30代女性,40代女性,ダイエット,産後,ママ,初心者,NEXUS,WITHJ">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.withj-inc.com/gym-blog/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="パーソナルジムブログ | NEXUS 71店舗の現場から発信する女性のための知見">
-<meta property="og:description" content="30〜40代女性のためのパーソナルジム選び・継続のコツ・ダイエット・産後ボディメイク。NEXUS 71店舗の現場で観察した一次情報。">
+<meta property="og:title" content="パーソナルジムブログ｜入会は、読んでから。NEXUS 71店舗の一次情報">
+<meta property="og:description" content="入会して後悔する前に。ジム選び・継続のコツ・産後ダイエット・ブライダルまで、NEXUS 71店舗の現場から30〜40代女性のための一次情報をお届けします。">
 <meta property="og:url" content="https://www.withj-inc.com/gym-blog/">
-<meta property="og:image" content="https://www.withj-inc.com/images/nexus/gym-bright.jpg">
+<meta property="og:image" content="https://www.withj-inc.com/images/nexus/hero-blog.webp">
 <meta property="og:site_name" content="株式会社WITHJ">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="パーソナルジムブログ｜入会は、読んでから。NEXUS 71店舗の一次情報">
+<meta name="twitter:description" content="入会して後悔する前に。ジム選び・継続のコツ・産後ダイエット・ブライダルまで、NEXUS 71店舗の現場から30〜40代女性のための一次情報をお届けします。">
+<meta name="twitter:image" content="https://www.withj-inc.com/images/nexus/hero-blog.webp">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "パーソナルジムブログ",
-  "description": "30〜40代女性のためのパーソナルジム選び・継続のコツ・ダイエット・産後ボディメイクをお届けするメディア。",
+  "name": "パーソナルジムブログ｜入会は、読んでから。NEXUS 71店舗の一次情報",
+  "description": "入会して後悔する前に。ジム選び・継続のコツ・産後ダイエット・ブライダルまで、NEXUS 71店舗の現場から30〜40代女性のための一次情報をお届けします。",
   "url": "https://www.withj-inc.com/gym-blog/",
+  "image": "https://www.withj-inc.com/images/nexus/hero-blog.webp",
   "inLanguage": "ja-JP",
   "publisher": {
     "@type": "Organization",
@@ -60,32 +64,118 @@
   --tm: #e0399b;   /* magenta */
 }
 
-/* --- ヒーロー背景ラッパー（フルブリード） --- */
+/* --- ヒーロー背景ラッパー（フルブリード背景画像＋オーバーレイ） --- */
 .gb-hero-wrap {
   position: relative;
   width: 100%;
   z-index: 1;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(61,214,232,0.08), transparent 60%),
-    linear-gradient(180deg, #0a0a0f 0%, #1a0a1f 100%);
+  overflow: hidden;
+  background: #0a0a0f;
 }
-.gb-hero-wrap .gb-hero { padding-bottom: 92px; }
+/* 背景画像 */
+.gb-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.gb-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+  filter: saturate(0.6) brightness(0.7);
+}
+/* 斜めオーバーレイ（左を濃く） */
+.gb-hero-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(105deg, #0a0a0f 0%, rgba(10,10,15,0.92) 35%, rgba(26,10,31,0.55) 70%, rgba(10,10,15,0.85) 100%);
+  pointer-events: none;
+}
+/* 下端フェード */
+.gb-hero-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, #0a0a0f 0%, transparent 30%);
+  pointer-events: none;
+}
+/* 透かし英字 NEXUS */
+.gb-hero-watermark {
+  position: absolute;
+  right: -1.5%;
+  bottom: 2%;
+  z-index: 1;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(90px, 18vw, 260px);
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.06);
+  pointer-events: none;
+  user-select: none;
+}
+/* ヒーロー本体（左寄せ・単カラム） */
+.gb-hero-wrap .gb-hero {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: 1fr;
+  min-height: 76vh;
+  align-content: center;
+  padding-top: 80px;
+  padding-bottom: 104px;
+}
+.gb-hero-content { max-width: 720px; }
+/* メインコピー */
+.gb-hero h1 {
+  font-size: clamp(48px, 9vw, 120px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+.gb-hero h1 .w { color: #ffffff; }
 .gb-hero h1 .accent {
-  background: linear-gradient(90deg, var(--tc), var(--tp) 55%, var(--tm));
+  background: linear-gradient(90deg, var(--tc), var(--tm));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 24px rgba(61,214,232,0.35));
 }
+/* サブコピー */
+.gb-hero p { max-width: 640px; }
 .gb-hero-71 {
-  background: linear-gradient(90deg, var(--tc), var(--tm));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  font-size: 1.15em;
+  color: var(--tc);
+  font-weight: 700;
   letter-spacing: 0.02em;
 }
+.gb-sp-br { display: none; }
+/* CTA */
+.gb-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 36px;
+  padding: 16px 34px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, var(--tc), var(--tm));
+  color: #000;
+  font-family: 'Poppins', 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.gb-hero-cta::after { content: '↓'; font-size: 15px; transition: 0.3s ease; }
+.gb-hero-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(224,57,155,0.35);
+  color: #000;
+}
+.gb-hero-cta:hover::after { transform: translateY(3px); }
 
 /* --- スクロールインジケータ --- */
 .gb-scroll {
@@ -262,20 +352,32 @@
 .gb-hidden { display: none !important; }
 
 /* --- レスポンシブ --- */
+@media (max-width: 1024px) {
+  .gb-hero-bg img { object-position: 74% center; }
+}
 @media (max-width: 900px) {
   .gb-grid { grid-template-columns: repeat(2, 1fr); }
   .gb-featured-inner { grid-template-columns: 1fr; }
   .gb-featured-img { min-height: 220px; aspect-ratio: 16 / 9; }
   .gb-featured-body { padding: 28px 26px; }
+  .gb-hero-wrap .gb-hero { min-height: 68vh; }
 }
 @media (max-width: 768px) {
-  .gb-hero-wrap .gb-hero { padding-bottom: 80px; }
+  .gb-hero-wrap .gb-hero { min-height: 60vh; padding-top: 56px; padding-bottom: 72px; }
+  .gb-hero-bg img { object-position: 72% center; filter: saturate(0.6) brightness(0.78); }
+  .gb-hero h1 { font-size: clamp(40px, 13vw, 72px); }
+  .gb-sp-br { display: inline; }
+  .gb-hero-cta { margin-top: 26px; padding: 14px 28px; font-size: 12px; }
+  .gb-hero-watermark { font-size: clamp(70px, 24vw, 150px); }
   .gb-filter { gap: 8px; margin-bottom: 30px; }
   .gb-tab { padding: 8px 16px; font-size: 12px; }
 }
 @media (max-width: 640px) {
   .gb-grid { grid-template-columns: 1fr; }
   .gb-featured-body h2 { font-size: 19px; }
+}
+@media (max-width: 400px) {
+  .gb-hero h1 { font-size: 40px; }
 }
 </style>
 </head>
@@ -299,14 +401,16 @@
 </nav>
 
 <div class="gb-hero-wrap">
+  <div class="gb-hero-bg">
+    <img src="../images/nexus/hero-blog.webp" alt="明るいパーソナルジムのスタジオでストレッチをする女性会員とトレーナー" loading="eager">
+  </div>
+  <span class="gb-hero-watermark" aria-hidden="true">NEXUS</span>
   <section class="gb-hero">
-    <div>
+    <div class="gb-hero-content">
       <div class="tag">Personal Gym Blog</div>
-      <h1><span class="accent">ジム選び</span>を、<br>変える。</h1>
-      <p>NEXUS<span class="gb-hero-71">71店舗</span>の現場から、<br>30〜40代女性のための一次情報。</p>
-    </div>
-    <div class="gb-hero-img">
-      <img src="../images/nexus/gym-bright.jpg" alt="完全個室のパーソナルジムの店内" loading="eager">
+      <h1><span class="w">入会は、</span><br><span class="accent">読んでから。</span></h1>
+      <p>後悔しないジム選びも、続くダイエットも。<br class="gb-sp-br">NEXUS<span class="gb-hero-71">71店舗</span>の現場が答えます。</p>
+      <a href="#categories" class="gb-hero-cta">最新の記事を読む</a>
     </div>
   </section>
   <div class="gb-scroll" aria-hidden="true"><span>SCROLL</span></div>
