@@ -642,6 +642,9 @@ h2 {
   margin-bottom: 12px;
 }
 .blog-card-cat { color: var(--accent1); font-weight: 700; }
+.blog-card.bridal { border-color: rgba(194,161,90,0.35); }
+.blog-card.bridal:hover { border-color: rgba(194,161,90,0.65); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+.blog-card.bridal .blog-card-cat { color: #C2A15A; }
 .blog-card h3 {
   font-size: 18px;
   line-height: 1.5;
@@ -983,11 +986,21 @@ footer .logo { font-size: 24px; }
   <h2>パーソナルジムブログ</h2>
   <p class="lead">女性会員85%・全国71店舗（80店舗までオープン予定）の隠れ家パーソナルジム「NEXUS」公式メディア。<br>運動が初めての方・産後ママ・働く女性へ、現場のリアルな知見をやさしくお届けします。</p>
   <div class="blog-cards">
+    <a href="gym-blog/bridal/" class="blog-card bridal">
+      <div class="blog-card-img"><img src="images/wedding/nexus-bridal-story01.webp" alt="花嫁プラン・ブライダル" loading="lazy"></div>
+      <div class="blog-card-body">
+        <div class="blog-card-meta">
+          <span class="blog-card-cat">01 / Bridal</span>
+          <span>式の日から、逆算する</span>
+        </div>
+        <h3>花嫁プラン・ブライダル</h3>
+      </div>
+    </a>
     <a href="gym-blog/diet-bodymake/" class="blog-card">
       <div class="blog-card-img"><img src="images/nexus/before-after-1.jpg" alt="ダイエット・ボディメイク" loading="lazy"></div>
       <div class="blog-card-body">
         <div class="blog-card-meta">
-          <span class="blog-card-cat">01 / Diet</span>
+          <span class="blog-card-cat">02 / Diet</span>
           <span>続く・結果が出る</span>
         </div>
         <h3>ダイエット・ボディメイク</h3>
@@ -997,7 +1010,7 @@ footer .logo { font-size: 24px; }
       <div class="blog-card-img"><img src="images/nexus/gym-mirror.jpg" alt="産後・ママ向け" loading="lazy"></div>
       <div class="blog-card-body">
         <div class="blog-card-meta">
-          <span class="blog-card-cat">02 / Mom</span>
+          <span class="blog-card-cat">03 / Mom</span>
           <span>妊娠前の私に戻る</span>
         </div>
         <h3>産後・ママ向け</h3>
@@ -1007,7 +1020,7 @@ footer .logo { font-size: 24px; }
       <div class="blog-card-img"><img src="images/nexus/gym-room.jpg" alt="運動初心者向け" loading="lazy"></div>
       <div class="blog-card-body">
         <div class="blog-card-meta">
-          <span class="blog-card-cat">03 / Beginner</span>
+          <span class="blog-card-cat">04 / Beginner</span>
           <span>運動ゼロでも怖くない</span>
         </div>
         <h3>初心者向け</h3>
