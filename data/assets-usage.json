@@ -750,6 +750,36 @@
           "usage": "カテゴリカード（ダイエット・ボディメイク／30s-40s-diet-routine）：明るい個室でダンベルトレーニングをする女性。旧gym-mirror.jpg（器具のみ）を差し替え"
         }
       ]
+    },
+    {
+      "source": "nexus-sozai/ケトルトレーニング.png → images/nexus/home-blog-diet-kettlebell.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "コーポレートトップ（index.html）",
+          "usage": "06/BLOGセクション 02/Dietカード：明るい個室でケトルベルトレーニングに取り組む女性。旧before-after-1.jpgを差し替え。gym-blog Diet（サイドレイズ）と別カット"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/ヒップリフト_黒髪女性.png → images/nexus/home-blog-mom-hiplift.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "コーポレートトップ（index.html）",
+          "usage": "06/BLOGセクション 03/Momカード：明るい個室で床のヒップリフトに取り組む女性。旧gym-mirror.jpg（器具のみ）を差し替え。gym-blog Mom（子連れストレッチ）と別カット"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/初めての来店①.png → images/nexus/home-blog-beginner-firstvisit.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "コーポレートトップ（index.html）",
+          "usage": "06/BLOGセクション 04/Beginnerカード：明るい個室に初めて来店しトレーナーに迎えられる女性。旧gym-room.jpg（器具のみ）を差し替え"
+        }
+      ]
     }
   ]
 }
