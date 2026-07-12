@@ -664,7 +664,7 @@ footer .logo { font-size: 24px; }
 (function(){
   var mount = document.getElementById('storeAccordion');
   if(!mount) return;
-  fetch('/shops/stores-accordion.html')
+  fetch('/shops/stores-accordion/')
     .then(function(r){ return r.ok ? r.text() : Promise.reject(); })
     .then(function(html){ mount.innerHTML = html; })
     .catch(function(){
