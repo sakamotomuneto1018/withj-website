@@ -725,7 +725,7 @@ footer a:hover{color:#fff}
     var tpl=document.getElementById('__legacyStoreAccordion');
     if(tpl) mount.innerHTML=tpl.innerHTML;
   }
-  fetch('/shops/stores-accordion/')
+  fetch('/shops/stores-accordion.html')
     .then(function(r){ return r.ok?r.text():Promise.reject(); })
     .then(function(html){ mount.innerHTML=html; })
     .catch(fallback);
