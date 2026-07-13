@@ -780,6 +780,46 @@
           "usage": "06/BLOGセクション 04/Beginnerカード：明るい個室に初めて来店しトレーナーに迎えられる女性。旧gym-room.jpg（器具のみ）を差し替え"
         }
       ]
+    },
+    {
+      "source": "nexus-sozai/ベンチプレス_黒髪女性.png → images/nexus/category-diet-hero.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/diet-bodymake/（カテゴリトップ）",
+          "usage": "没入型HERO背景＋OGP：明るいベージュスタジオでベンチプレスを補助される黒髪女性"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/ダンベルカール_黒髪女性.png → images/nexus/diet-3month-goal.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/diet-bodymake/3month-realistic-goal/",
+          "usage": "記事カバー＋カード＋OGP：トレーナー指導でダンベルカールをする黒髪女性"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/ストレッチ_黒髪女性.png → images/nexus/diet-visual-change.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/diet-bodymake/visual-change-timing/",
+          "usage": "記事カバー＋カード＋OGP：明るいスタジオでストレッチする黒髪女性"
+        }
+      ]
+    },
+    {
+      "source": "nexus-sozai/ヒップリフト_黒髪女性②.png → images/nexus/diet-plateau.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/diet-bodymake/30s-plateau-breakthrough/",
+          "usage": "記事カバー＋カード＋OGP：ヒップリフトに取り組む黒髪女性"
+        }
+      ]
     }
   ]
 }

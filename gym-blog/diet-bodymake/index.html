@@ -18,7 +18,7 @@
 <meta property="og:title" content="ダイエット・ボディメイク | パーソナルジムブログ">
 <meta property="og:description" content="無理なく続く、結果が出る。30〜40代の体に合わせたダイエットの本質を現場目線で。">
 <meta property="og:url" content="https://www.withj-inc.com/gym-blog/diet-bodymake/">
-<meta property="og:image" content="https://www.withj-inc.com/images/nexus/before-after-1.jpg">
+<meta property="og:image" content="https://www.withj-inc.com/images/nexus/category-diet-hero.webp">
 <meta property="og:site_name" content="株式会社WITHJ">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
@@ -52,8 +52,87 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
+<style>
+/* ===== diet-bodymake カテゴリトップ 専用 没入型レイアウト ===== */
+.dbm{--cy:#3dd6e8;--mg:#e0399b}
+/* HERO */
+.dbm-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;
+  padding:clamp(28px,6vw,90px) clamp(20px,6vw,80px) clamp(40px,7vw,90px);
+  overflow:hidden;isolation:isolate;background:#0a0a0f}
+.dbm-hero-bg{position:absolute;inset:0;z-index:-2}
+.dbm-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.dbm-hero::before{content:'';position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg,rgba(10,10,15,.35) 0%,rgba(10,10,15,.55) 45%,rgba(12,6,20,.94) 100%),
+    linear-gradient(90deg,rgba(10,10,15,.72) 0%,rgba(10,10,15,.28) 55%,rgba(224,57,155,.14) 100%)}
+.dbm-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;z-index:0;
+  background:linear-gradient(90deg,transparent,var(--cy),var(--mg),transparent);opacity:.8}
+.dbm-hero-inner{position:relative;z-index:1;max-width:840px}
+.dbm-tag{display:inline-flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;
+  font-weight:700;font-size:.72rem;letter-spacing:.22em;color:var(--cy);
+  text-transform:uppercase;margin-bottom:22px}
+.dbm-tag::before{content:'';width:26px;height:2px;background:var(--cy);box-shadow:0 0 12px var(--cy)}
+.dbm-hero h1{font-family:'Poppins','Noto Sans JP',sans-serif;font-weight:900;
+  font-size:clamp(2.7rem,8vw,5.4rem);line-height:1.02;letter-spacing:-.01em;
+  color:#fff;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+.dbm-hero h1 .g{background:linear-gradient(92deg,var(--cy),var(--mg));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dbm-hero-lead{margin-top:26px;font-size:clamp(1rem,2.4vw,1.24rem);line-height:1.9;
+  color:#e7e7f0;font-weight:500;max-width:640px;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.dbm-hero-lead b{color:#fff;font-weight:700}
+.dbm-stats{display:flex;flex-wrap:wrap;gap:clamp(18px,4vw,46px);margin-top:34px}
+.dbm-stat .n{font-family:'Poppins',sans-serif;font-weight:900;line-height:1;
+  font-size:clamp(2.1rem,5.4vw,3.2rem);
+  background:linear-gradient(92deg,var(--cy),#8fe9f3);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  text-shadow:0 0 30px rgba(61,214,232,.35)}
+.dbm-stat .n small{font-size:.5em;font-weight:800;-webkit-text-fill-color:var(--cy);margin-left:2px}
+.dbm-stat .l{margin-top:7px;font-size:.82rem;letter-spacing:.04em;color:#c8c8d4;font-weight:500}
+/* ARTICLES */
+.dbm-wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;
+  padding:clamp(56px,9vw,110px) clamp(20px,5vw,40px)}
+.dbm-eyebrow{font-family:'Poppins',sans-serif;font-weight:700;font-size:.74rem;
+  letter-spacing:.22em;color:var(--cy);text-transform:uppercase;margin-bottom:12px}
+.dbm-h2{font-family:'Poppins','Noto Sans JP',sans-serif;font-weight:900;
+  font-size:clamp(1.7rem,4.4vw,2.5rem);line-height:1.2;color:#fff;margin-bottom:42px}
+.dbm-h2 span{color:var(--cy)}
+.dbm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(20px,3vw,30px)}
+.dbm-card{position:relative;display:flex;flex-direction:column;border-radius:20px;
+  overflow:hidden;background:#12101a;text-decoration:none;
+  border:1px solid rgba(255,255,255,.08);transition:transform .4s cubic-bezier(.2,.7,.3,1),box-shadow .4s}
+.dbm-card::before{content:'';position:absolute;inset:0;border-radius:20px;padding:1.4px;z-index:3;
+  background:linear-gradient(130deg,var(--cy),var(--mg));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s;pointer-events:none}
+.dbm-card:hover{transform:translateY(-8px);box-shadow:0 24px 60px -20px rgba(224,57,155,.35),0 10px 30px -15px rgba(61,214,232,.3)}
+.dbm-card:hover::before{opacity:1}
+.dbm-card-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0a0a0f}
+.dbm-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+.dbm-card:hover .dbm-card-img img{transform:scale(1.06)}
+.dbm-card-img::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(18,16,26,.8) 100%)}
+.dbm-cat{position:absolute;top:14px;left:14px;z-index:2;font-family:'Poppins',sans-serif;
+  font-weight:700;font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
+  color:#fff;padding:6px 12px;border-radius:999px;
+  background:rgba(10,10,15,.55);backdrop-filter:blur(6px);
+  border:1px solid rgba(61,214,232,.5)}
+.dbm-card-body{padding:22px 24px 26px;display:flex;flex-direction:column;flex:1}
+.dbm-card-date{font-family:'Poppins',sans-serif;font-size:.76rem;letter-spacing:.05em;
+  color:#8a8a97;margin-bottom:10px}
+.dbm-card-body h3{font-family:'Poppins','Noto Sans JP',sans-serif;font-weight:800;
+  font-size:clamp(1.12rem,2.5vw,1.32rem);line-height:1.5;color:#fff;margin-bottom:12px}
+.dbm-card:hover .dbm-card-body h3{background:linear-gradient(92deg,var(--cy),var(--mg));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dbm-card-body p{font-size:.9rem;line-height:1.8;color:#b3b3bf;margin:0}
+.dbm-card-arrow{margin-top:16px;font-family:'Poppins',sans-serif;font-weight:700;
+  font-size:.82rem;color:var(--cy);letter-spacing:.05em}
+@media(max-width:720px){
+  .dbm-hero{min-height:72vh}
+  .dbm-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
-<body>
+<body class="dbm">
 
 <header class="gb-header">
   <a href="../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a>
@@ -72,61 +151,92 @@
   </ol>
 </nav>
 
-<section class="gb-hero">
-  <div>
-    <div class="tag">01 / Diet & Body Make</div>
-    <h1>続く方法、<br><span class="accent">だけ</span>。</h1>
-    <p>20代のやり方では、もう変わらない。<br>NEXUS<strong>71店舗</strong>で観察した、30〜40代の体に効く方法。</p>
+<section class="dbm-hero">
+  <div class="dbm-hero-bg">
+    <img src="../../images/nexus/category-diet-hero.webp" alt="明るいスタジオで女性がトレーナーとトレーニングする様子" loading="eager">
   </div>
-  <div class="gb-hero-img">
-    <img src="../../images/nexus/before-after-1.jpg" alt="ダイエットで変化していく体型のイメージ" loading="eager">
+  <div class="dbm-hero-inner">
+    <div class="dbm-tag">01 / Diet &amp; Body Make</div>
+    <h1>続く方法、<br><span class="g">だけ</span>。</h1>
+    <p class="dbm-hero-lead">20代のやり方では、もう変わらない。<br>
+      <b>30〜40代の体</b>には、その年代に効く仕組みがあります。NEXUSの現場で見てきた、無理なく続いて結果が出るダイエットの本質だけを、ここに。</p>
+    <div class="dbm-stats">
+      <div class="dbm-stat">
+        <div class="n">71<small>店舗</small></div>
+        <div class="l">全国の現場で観察した一次情報</div>
+      </div>
+      <div class="dbm-stat">
+        <div class="n">85<small>%</small></div>
+        <div class="l">会員は女性中心の隠れ家ジム</div>
+      </div>
+      <div class="dbm-stat">
+        <div class="n">30-40<small>代</small></div>
+        <div class="l">主役はこの年代の女性たち</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="gb-section">
-  <div class="gb-section-title">— Articles</div>
-  <h2 class="gb-heading">このカテゴリの記事</h2>
+<main class="dbm-wrap">
+  <div class="dbm-eyebrow">— Articles</div>
+  <h2 class="dbm-h2">このカテゴリの<span>記事</span></h2>
 
-  <div class="gb-grid">
-    <a href="30s-40s-diet-routine/" class="gb-card">
-      <div class="gb-card-img">
-        <img src="../../images/nexus/gym-mirror.jpg" alt="完全個室パーソナルジムの店内" loading="lazy">
+  <div class="dbm-grid">
+
+    <a href="30s-plateau-breakthrough/" class="dbm-card">
+      <div class="dbm-card-img">
+        <span class="dbm-cat">Diet &amp; Body Make</span>
+        <img src="../../images/nexus/diet-plateau.webp" alt="停滞期を抜け出すためにヒップリフトに取り組む女性" loading="lazy">
       </div>
-      <div class="gb-card-body">
-        <div class="gb-card-meta">
-          <span>ダイエット・ボディメイク</span>
-          <time datetime="2026-05-12">2026.05.12</time>
-        </div>
-        <h3>30〜40代女性のための「無理なく続く」ダイエットルーティン</h3>
-        <p>共働きで時間がない毎日でも、無理なく続けられるダイエット習慣を、NEXUSのトレーナー監修でお届けします。</p>
+      <div class="dbm-card-body">
+        <div class="dbm-card-date">2026.07.08</div>
+        <h3>30代女性の停滞期、抜け出した方法</h3>
+        <p>頑張っているのに体重が動かない。それは代謝適応という体の防御反応です。停滞期のメカニズムと、食事・トレーニングの変え方を実体験で。</p>
+        <span class="dbm-card-arrow">続きを読む →</span>
       </div>
     </a>
-  </div>
-</section>
 
-<section class="upcoming-articles">
-  <h2>近日公開予定の記事</h2>
-  <p class="lead">このカテゴリでは、以下のテーマで順次記事を公開予定です。<br>
-  71店舗の現場で見てきたリアルな知見を、坂本宗瞳が執筆中です。</p>
-  <ul class="upcoming-list">
-    <li>
-      <span class="status writing">執筆中</span>
-      <h3>3ヶ月でどこまで痩せる?現実的な目標設定</h3>
-      <p>30〜40代女性の現実的なダイエット目標と、達成のための具体的な道筋。</p>
-    </li>
-    <li>
-      <span class="status planned">予定</span>
-      <h3>体重よりも「見た目」が変わるタイミングはいつ?</h3>
-      <p>体重数値より大事な、見た目の変化を実感するタイミング。</p>
-    </li>
-    <li>
-      <span class="status planned">予定</span>
-      <h3>30代女性の停滞期、抜け出した方法</h3>
-      <p>停滞期を3ヶ月で抜け出した30代女性の実体験から学ぶ突破方法。</p>
-    </li>
-  </ul>
-  <p class="upcoming-cta-note">公開のタイミングは、<a href="../../faq/" style="color:var(--accent1)">FAQページ</a>や本ブログをご確認ください。</p>
-</section>
+    <a href="visual-change-timing/" class="dbm-card">
+      <div class="dbm-card-img">
+        <span class="dbm-cat">Diet &amp; Body Make</span>
+        <img src="../../images/nexus/diet-visual-change.webp" alt="明るいスタジオでストレッチする女性" loading="lazy">
+      </div>
+      <div class="dbm-card-body">
+        <div class="dbm-card-date">2026.06.24</div>
+        <h3>体重よりも「見た目」が変わるタイミングはいつ？</h3>
+        <p>体重が止まっても、サイズは変わり続けます。写真記録のすすめと、周囲に「痩せた？」と気づかれる時期の目安を、現場の観察からお伝えします。</p>
+        <span class="dbm-card-arrow">続きを読む →</span>
+      </div>
+    </a>
+
+    <a href="3month-realistic-goal/" class="dbm-card">
+      <div class="dbm-card-img">
+        <span class="dbm-cat">Diet &amp; Body Make</span>
+        <img src="../../images/nexus/diet-3month-goal.webp" alt="トレーナーの指導でダンベルカールをする女性" loading="lazy">
+      </div>
+      <div class="dbm-card-body">
+        <div class="dbm-card-date">2026.06.10</div>
+        <h3>3ヶ月でどこまで痩せる？現実的な目標設定</h3>
+        <p>減量ペースは体重の3〜5%／月が現実ライン。無理な目標がなぜリバウンドを生むのか、筋肉量と代謝の関係から、続く目標の立て方を解説します。</p>
+        <span class="dbm-card-arrow">続きを読む →</span>
+      </div>
+    </a>
+
+    <a href="30s-40s-diet-routine/" class="dbm-card">
+      <div class="dbm-card-img">
+        <span class="dbm-cat">Diet &amp; Body Make</span>
+        <img src="../../images/nexus/gym-mirror.jpg" alt="完全個室パーソナルジムの店内" loading="lazy">
+      </div>
+      <div class="dbm-card-body">
+        <div class="dbm-card-date">2026.05.12</div>
+        <h3>30〜40代女性のための「無理なく続く」ダイエットルーティン</h3>
+        <p>共働きで時間がない毎日でも、無理なく続けられるダイエット習慣を、NEXUSの現場で見てきた4つの仕組みからお届けします。</p>
+        <span class="dbm-card-arrow">続きを読む →</span>
+      </div>
+    </a>
+
+  </div>
+</main>
 
 <footer class="gb-footer">
   <div class="gb-footer-logo">WITHJ</div>
