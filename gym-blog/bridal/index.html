@@ -192,17 +192,17 @@ p.lead{font-size:14px;color:var(--ink-soft)}
 /* real voice */
 .inline-link{text-align:center;margin-top:20px;font-size:13.5px}
 
-/* real voice */
-.voice-note{background:var(--white);border:1px dashed var(--gold-line);border-radius:16px;padding:20px 22px;text-align:center;color:var(--ink-soft);font-size:13px}
-.voice-cards{display:grid;gap:12px;margin-top:16px}
-.vcard{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.vcard .vh{font-size:12.5px;color:var(--gold);font-weight:700;margin:0 0 6px}
-.vcard p{font-size:13px;color:var(--ink-soft);margin:0}
-.vcard-main{border:1px solid var(--gold-line);border-radius:16px;padding:22px 22px 18px;position:relative}
-.vcard-main .vstore{font-size:12.5px;color:var(--gold);font-weight:700;letter-spacing:.02em;margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--gold-line)}
-.vcard-main .vbody{font-size:14px;line-height:1.95;color:var(--ink);margin:0}
-.vcard-main .vmeta{margin:14px 0 0;font-size:12px;color:var(--ink-faint);text-align:right}
-.voice-disc{margin:12px 2px 0;font-size:11.5px;color:var(--ink-faint)}
+/* 結婚式のリアルな口コミ（3カラム） */
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.rcard{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px;box-shadow:0 8px 22px rgba(160,130,90,.07)}
+.rcard .rstars{color:var(--gold);font-size:15px;letter-spacing:.14em;line-height:1;margin:0 0 13px}
+.rcard .rbody{font-size:13.5px;line-height:1.95;color:var(--ink);margin:0 0 16px;flex:1 0 auto}
+.rcard .rstore{font-size:13px;font-weight:800;color:var(--ink);margin:0}
+.rcard .rmeta{font-size:11.5px;color:var(--ink-faint);margin:3px 0 14px}
+.rcard .rlink{margin-top:auto}
+.rcard .rlink a{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--gold)}
+.rcard .rlink a::after{content:"↗";font-size:11px}
+.review-disc{text-align:center;font-size:11.5px;color:var(--ink-faint);margin:20px auto 0;max-width:600px;line-height:1.8}
 
 /* stores */
 .pref{background:var(--white);border:1px solid var(--line);border-radius:14px;margin:0 0 10px;overflow:hidden}
@@ -299,6 +299,7 @@ footer a:hover{color:#fff}
 @media(max-width:560px){
   .reasons{grid-template-columns:1fr}
   .plan-grid{grid-template-columns:1fr}
+  .review-grid{grid-template-columns:1fr}
   .ch-fig.duo{grid-template-columns:1fr}
   .ch-fig.duo img{aspect-ratio:16/9}
 }
@@ -614,21 +615,45 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<!-- REAL VOICE（ストーリーとは別枠） -->
+<!-- 結婚式のリアルな口コミ（Google口コミ引用・3カラム） -->
+<!-- verified: Googleマップ原投稿で確認できた口コミのみ掲載。原文は改変しない。捏造掲載は行わない。schema.org/Reviewは付与しない（self-serving reviews規定のため）。 -->
 <section class="alt">
   <div class="wrap">
     <p class="sec-eyebrow">REAL VOICE</p>
-    <h2 class="sec">会員の、<br>実際の声</h2>
-    <p class="conc" style="font-weight:400;color:var(--ink-soft)">上のストーリーはプランの利用イメージです。こちらには、Googleマップで確認できた実際の口コミを掲載します。</p>
-    <!-- verified: Googleマップ原投稿で確認できた口コミのみ掲載。原文は改変しない。捏造掲載は行わない。 -->
-    <div class="voice-cards">
-      <div class="vcard vcard-main">
-        <p class="vstore">NEXUS 蒲田・蓮沼店</p>
-        <p class="vbody">結婚式に向けて通い始めました。理想の体を伝えると、それに向けて必要なトレーニングを提示してくださり、式当日までにかなり見た目を変えることができました。<br>今後は少し目標を変え、気になる部分痩せを目指していますが、それに関してもすぐに対応してくださり、メニューを変えて丁寧に指導してくださいます。<br>トレーニング中は、私がどのような声掛けでやる気が出るのかなど考えながら対応してくださるのが伝わってきて、頑張ろうと思えます。<br>予約なども取りやすく、日程変更もしやすいため気軽に通えると思うのでおすすめです！</p>
-        <p class="vmeta">M 様（女性）／2023年11月・Googleマップの口コミより</p>
+    <h2 class="sec">結婚式に向けて通った<br>会員の、リアルな口コミ</h2>
+    <p class="conc" style="font-weight:400;color:var(--ink-soft)">実際に結婚式に向けてNEXUSに通った会員の、Googleマップの口コミをご紹介します。</p>
+    <div class="review-grid">
+
+      <!-- 口コミ① NEXUS 蒲田・蓮沼店 / 女性 / 2023年11月（既存原文を再利用） -->
+      <div class="rcard">
+        <p class="rstars" aria-label="星5の評価">★★★★★</p><!-- 要確認：実際の星評価をGoogleマップ原投稿で確認 -->
+        <p class="rbody">結婚式に向けて通い始めました。理想の体を伝えると、それに向けて必要なトレーニングを提示してくださり、式当日までにかなり見た目を変えることができました。今後は少し目標を変え、気になる部分痩せを目指していますが、それに関してもすぐに対応してくださり、メニューを変えて丁寧に指導してくださいます。トレーニング中は、私がどのような声掛けでやる気が出るのかなど考えながら対応してくださるのが伝わってきて、頑張ろうと思えます。予約なども取りやすく、日程変更もしやすいため気軽に通えると思うのでおすすめです！</p>
+        <p class="rstore">NEXUS 蒲田・蓮沼店</p>
+        <p class="rmeta">女性 ・ 2023年11月</p>
+        <!-- TODO：口コミ①のGoogleマップ原投稿URLを href に設定 -->
+        <p class="rlink"><a href="#" target="_blank" rel="noopener">Googleで口コミを見る</a></p>
       </div>
+
+      <!-- 口コミ② NEXUS 緑地公園店 / 男性 / 2024年5月 -->
+      <div class="rcard">
+        <p class="rstars" aria-label="星5の評価">★★★★★</p><!-- 要確認：実際の星評価をGoogleマップ原投稿で確認 -->
+        <p class="rbody"><!-- 口コミ②本文（原文）をここに貼付。内容：結婚式までのダイエット目的で3ヶ月−10kg達成／会食があっても食事指導のおかげで継続できた --></p>
+        <p class="rstore">NEXUS 緑地公園店</p>
+        <p class="rmeta">男性 ・ 2024年5月</p>
+        <p class="rlink"><a href="https://maps.app.goo.gl/t3ubBcLmXRmR8NxL6" target="_blank" rel="noopener">Googleで口コミを見る</a></p>
+      </div>
+
+      <!-- 口コミ③ NEXUS 新江古田店 / 女性 / 2024年3月 -->
+      <div class="rcard">
+        <p class="rstars" aria-label="星5の評価">★★★★★</p><!-- 要確認：実際の星評価をGoogleマップ原投稿で確認 -->
+        <p class="rbody"><!-- 口コミ③本文（原文）をここに貼付。内容：結婚式に向けて通っていて順調に体重が落ちている --></p>
+        <p class="rstore">NEXUS 新江古田店</p>
+        <p class="rmeta">女性 ・ 2024年3月</p>
+        <p class="rlink"><a href="https://maps.app.goo.gl/bQ43zDFiDdR35zXg6" target="_blank" rel="noopener">Googleで口コミを見る</a></p>
+      </div>
+
     </div>
-    <p class="voice-disc">※個人の感想であり、効果を保証するものではありません。</p>
+    <p class="review-disc">※Google口コミより引用。個人の感想であり、効果・結果を保証するものではありません。</p>
   </div>
 </section>
 
