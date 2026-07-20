@@ -47,21 +47,21 @@
 - [x] okusawa
 - [x] omiya
 - [x] omori-sanno
-- [ ] osaka-fukushima
-- [ ] ota-gunma
-- [ ] sasazuka
-- [ ] sendagi
-- [ ] shibuya-shinsen
-- [ ] shirokanedai
-- [ ] sojiji
-- [ ] sone
-- [ ] taishido
-- [ ] takata-ekimae
-- [ ] tenjin-minami
-- [ ] tokaichiba
-- [ ] toyonaka
-- [ ] tsukishima
-- [ ] tsunashima
+- [x] osaka-fukushima
+- [x] ota-gunma
+- [x] sasazuka
+- [x] sendagi
+- [x] shibuya-shinsen
+- [x] shirokanedai
+- [x] sojiji
+- [x] sone
+- [x] taishido
+- [x] takata-ekimae
+- [x] tenjin-minami
+- [x] tokaichiba
+- [x] toyonaka
+- [x] tsukishima
+- [x] tsunashima
 - [ ] ueno
 - [ ] umejima-nishiarai
 - [ ] yukigaya-otsuka
