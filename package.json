@@ -1,0 +1,11 @@
+{
+  "name": "withj-inc-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "withj-inc.com 静的サイト（IndexNow 送信スクリプト等の運用ツール）",
+  "type": "module",
+  "scripts": {
+    "indexnow": "node scripts/indexnow-submit.mjs",
+    "indexnow:urls": "node scripts/indexnow-submit.mjs"
+  }
+}
