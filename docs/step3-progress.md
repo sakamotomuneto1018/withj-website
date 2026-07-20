@@ -1,0 +1,67 @@
+# STEP3/5 進捗：比較検討層向けセクション新設
+
+対象63店（改修済み8店を除く全店）。1回の実行で最大15店ずつ処理。
+
+- [x] chidoricho
+- [x] gumyoji
+- [x] hakuraku
+- [x] hakusan
+- [x] hattori-tenjin
+- [x] higashi-nihonbashi
+- [x] hirao
+- [x] hiyoshi
+- [x] ichigao
+- [x] ikegami
+- [x] ikenoue
+- [x] ishikawadai
+- [x] kamata-hasunuma
+- [x] kami-itabashi
+- [x] kashimada-shinkawasaki
+- [ ] kibogaoka
+- [ ] kikukawa
+- [ ] kishine-koen
+- [ ] kita-senzoku
+- [ ] kiyosumi-shirakawa
+- [ ] kugahara
+- [ ] magome
+- [ ] meidaimae
+- [ ] mita
+- [ ] mitsukyo
+- [ ] mitsuzawa-kamicho
+- [ ] motoyama
+- [ ] nagahara
+- [ ] nagoya-imaike
+- [ ] nakano-fujimicho
+- [ ] nakano-shimbashi
+- [ ] nakano
+- [ ] nerima
+- [ ] nishi-kasai
+- [ ] nishi-magome-annex
+- [ ] nishi-magome
+- [ ] nishi-ogikubo
+- [ ] noborito
+- [ ] nogizaka-akasaka
+- [ ] numabukuro
+- [ ] ofuna
+- [ ] oguchi
+- [ ] okusawa
+- [ ] omiya
+- [ ] omori-sanno
+- [ ] osaka-fukushima
+- [ ] ota-gunma
+- [ ] sasazuka
+- [ ] sendagi
+- [ ] shibuya-shinsen
+- [ ] shirokanedai
+- [ ] sojiji
+- [ ] sone
+- [ ] taishido
+- [ ] takata-ekimae
+- [ ] tenjin-minami
+- [ ] tokaichiba
+- [ ] toyonaka
+- [ ] tsukishima
+- [ ] tsunashima
+- [ ] ueno
+- [ ] umejima-nishiarai
+- [ ] yukigaya-otsuka
