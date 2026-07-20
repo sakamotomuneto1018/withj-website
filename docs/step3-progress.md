@@ -32,21 +32,21 @@
 - [x] nagahara
 - [x] nagoya-imaike
 - [x] nakano-fujimicho
-- [ ] nakano-shimbashi
-- [ ] nakano
-- [ ] nerima
-- [ ] nishi-kasai
-- [ ] nishi-magome-annex
-- [ ] nishi-magome
-- [ ] nishi-ogikubo
-- [ ] noborito
-- [ ] nogizaka-akasaka
-- [ ] numabukuro
-- [ ] ofuna
-- [ ] oguchi
-- [ ] okusawa
-- [ ] omiya
-- [ ] omori-sanno
+- [x] nakano-shimbashi
+- [x] nakano
+- [x] nerima
+- [x] nishi-kasai
+- [x] nishi-magome-annex
+- [x] nishi-magome
+- [x] nishi-ogikubo
+- [x] noborito
+- [x] nogizaka-akasaka
+- [x] numabukuro
+- [x] ofuna
+- [x] oguchi
+- [x] okusawa
+- [x] omiya
+- [x] omori-sanno
 - [ ] osaka-fukushima
 - [ ] ota-gunma
 - [ ] sasazuka
