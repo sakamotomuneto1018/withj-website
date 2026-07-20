@@ -8,7 +8,7 @@
   --gym: #00ffa0;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   background: var(--bg);
@@ -17,6 +17,8 @@ body {
   line-height: 1.9;
   -webkit-font-smoothing: antialiased;
 }
+
+img { max-width: 100%; }
 
 a { color: var(--accent1); text-decoration: none; }
 a:hover { text-decoration: underline; }

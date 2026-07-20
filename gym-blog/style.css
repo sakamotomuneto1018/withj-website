@@ -16,7 +16,7 @@
   --line-accent: rgba(0,240,255,0.25);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   background: var(--bg);
