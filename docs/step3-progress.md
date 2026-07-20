@@ -17,21 +17,21 @@
 - [x] kamata-hasunuma
 - [x] kami-itabashi
 - [x] kashimada-shinkawasaki
-- [ ] kibogaoka
-- [ ] kikukawa
-- [ ] kishine-koen
-- [ ] kita-senzoku
-- [ ] kiyosumi-shirakawa
-- [ ] kugahara
-- [ ] magome
-- [ ] meidaimae
-- [ ] mita
-- [ ] mitsukyo
-- [ ] mitsuzawa-kamicho
-- [ ] motoyama
-- [ ] nagahara
-- [ ] nagoya-imaike
-- [ ] nakano-fujimicho
+- [x] kibogaoka
+- [x] kikukawa
+- [x] kishine-koen
+- [x] kita-senzoku
+- [x] kiyosumi-shirakawa
+- [x] kugahara
+- [x] magome
+- [x] meidaimae
+- [x] mita
+- [x] mitsukyo
+- [x] mitsuzawa-kamicho
+- [x] motoyama
+- [x] nagahara
+- [x] nagoya-imaike
+- [x] nakano-fujimicho
 - [ ] nakano-shimbashi
 - [ ] nakano
 - [ ] nerima
