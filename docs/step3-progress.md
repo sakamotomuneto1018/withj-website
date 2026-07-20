@@ -62,6 +62,6 @@
 - [x] toyonaka
 - [x] tsukishima
 - [x] tsunashima
-- [ ] ueno
-- [ ] umejima-nishiarai
-- [ ] yukigaya-otsuka
+- [x] ueno
+- [x] umejima-nishiarai
+- [x] yukigaya-otsuka
