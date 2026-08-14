@@ -77,15 +77,26 @@
   --accent3: #ffcc00;
 }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+html { scroll-behavior: smooth; overflow-x: hidden; overscroll-behavior-x: none; }
 
 body {
   background: var(--bg);
   color: #fff;
   font-family: 'Noto Sans JP', sans-serif;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  position: relative;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+/* 装飾グロー(blob)をレイアウト位置を保ったまま画面外はみ出しだけクリップ */
+.blob-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
 }
 
 body::before {
@@ -678,6 +689,8 @@ h2 {
   letter-spacing: 0.3em;
 }
 .company-info dd { font-size: 15px; }
+.company-info dd a { color: var(--accent1); text-decoration: none; border-bottom: 1px solid rgba(0,240,255,0.35); }
+.company-info dd a:hover { color: var(--accent2); border-bottom-color: rgba(255,0,170,0.5); }
 .company-info > *:last-child { border-bottom: 1px solid rgba(255,255,255,0.08); }
 
 /* お問い合わせ */
@@ -831,9 +844,11 @@ footer .logo { font-size: 24px; }
 <body>
 
 <div class="noise"></div>
-<div class="blob b1"></div>
-<div class="blob b2"></div>
-<div class="blob b3"></div>
+<div class="blob-layer">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+</div>
 
 <header class="header">
   <div class="logo">WITHJ</div>
@@ -979,6 +994,8 @@ footer .logo { font-size: 24px; }
     <dd>東京都渋谷区道玄坂1丁目10-8<br>渋谷道玄坂東急ビル 2F-C</dd>
     <dt>BUSINESS</dt>
     <dd>営業BPO事業 / パーソナルジム運営 / 採用イベント運営</dd>
+    <dt>RECRUIT</dt>
+    <dd><a href="recruit/">採用情報（アポインター／パーソナルトレーナー募集中）</a></dd>
   </dl>
 </section>
 
@@ -1092,7 +1109,7 @@ footer .logo { font-size: 24px; }
     <a href="gym-blog/" style="font-size:12px;opacity:0.6;">パーソナルジムブログ</a>
     <a href="faq/" style="font-size:12px;opacity:0.6;">よくある質問</a>
     <a href="nexus-fc/" style="font-size:12px;opacity:0.6;">NEXUS FC</a>
-    <a href="privacy/" style="font-size:12px;opacity:0.6;">プライバシーポリシー</a>
+    <a href="privacy/" style="font-size:12px;opacity:0.6;">プライバシーポリシー</a><a href="recruit/" style="font-size:12px;opacity:0.6;">採用情報</a>
   </nav>
   <div>© 2026 株式会社WITHJ All Rights Reserved.</div>
 </footer>
