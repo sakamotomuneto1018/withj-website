@@ -132,6 +132,28 @@
 .rc-cta .fallback { color: var(--ink-faint); font-size: 12.5px; margin: 14px 0 0; line-height: 1.85; }
 .rc-cta .fallback a { color: var(--rc1); word-break: break-all; }
 
+/* 応募フォーム */
+.rc-form { display: grid; gap: 14px; text-align: left; margin: 4px 0 0; }
+.rc-field label { display: block; font-size: 13px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+.rc-field .req { color: var(--rc2); font-size: 11px; font-weight: 700; margin-left: 6px; }
+.rc-field input, .rc-field select, .rc-field textarea {
+  width: 100%; box-sizing: border-box; background: var(--bg-soft); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px;
+  font-size: 16px; font-family: inherit; line-height: 1.6;
+}
+.rc-field textarea { min-height: 110px; resize: vertical; }
+.rc-field input:focus, .rc-field select:focus, .rc-field textarea:focus { outline: none; border-color: var(--rc1); }
+.rc-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.rc-submit {
+  width: 100%; border: none; cursor: pointer; margin-top: 4px;
+  background: linear-gradient(135deg, var(--rc1), var(--rc2)); color: #fff;
+  font-weight: 800; font-size: 16px; font-family: inherit; padding: 16px 24px; border-radius: 999px;
+}
+.rc-submit:disabled { opacity: .6; cursor: default; }
+.rc-form-msg { font-size: 13.5px; line-height: 1.9; margin: 0; }
+.rc-form-msg.ok { color: var(--rc1); }
+.rc-form-msg.ng { color: #ff8f8f; }
+
 .rc-ilink { display: inline-flex; align-items: center; gap: 6px; margin-top: 26px; color: var(--rc1); font-size: 14px; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(61,214,232,.25); padding-bottom: 2px; }
 .rc-ilink::after { content: "→"; }
 
@@ -241,21 +263,68 @@
   </ul>
 
   <h2><span class="en">Apply</span>応募方法</h2>
-  <p>下の「応募する」ボタンからメールソフトが起動します。テンプレートの各項目をご記入のうえ、そのまま送信してください。</p>
+  <p>下のフォームに必要事項をご記入のうえ送信してください。内容を確認し、担当者より2〜3営業日以内にご連絡いたします。</p>
 
-  <div class="rc-cta">
+  <div class="rc-cta" id="apply">
     <h3>この求人に応募する</h3>
     <p>ご応募をお待ちしています。</p>
-    <a class="rc-cta-btn" href="mailto:info@withj-inc.com?subject=%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E5%BF%9C%E5%8B%9F%EF%BC%88%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%89&body=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEWITH%20J%20%E6%8E%A1%E7%94%A8%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E6%A7%98%0A%0A%E5%9C%A8%E5%AE%85%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%AE%E6%B1%82%E4%BA%BA%E3%81%AB%E5%BF%9C%E5%8B%9F%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%0A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E5%B9%B4%E9%BD%A2%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E4%BD%8F%E3%81%BE%E3%81%84%E3%81%AE%E5%B8%82%E5%8C%BA%EF%BC%9A%0A%E2%96%A0%E5%9C%9F%E6%97%A5%E3%81%AE%E5%8B%A4%E5%8B%99%E5%8F%AF%E5%90%A6%EF%BC%9A%0A%E2%96%A0%E7%B0%A1%E5%8D%98%E3%81%AA%E8%81%B7%E6%AD%B4%EF%BC%9A%0A%0A%E3%81%94%E7%A2%BA%E8%AA%8D%E3%81%AE%E3%81%BB%E3%81%A9%E3%80%81%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82">応募する</a>
-    <p class="fallback">メールが開かない場合は <a href="mailto:info@withj-inc.com">info@withj-inc.com</a> まで上記項目（お名前／年齢／お住まいの市区／土日の勤務可否／簡単な職歴）をお送りください。</p>
+
+    <form class="rc-form" id="applyForm" action="https://formspree.io/f/mnjwqyjd" method="POST" novalidate>
+      <input type="hidden" name="position" value="インサイドセールス（アポインター）">
+      <input type="hidden" name="_subject" value="【応募】インサイドセールス（アポインター）">
+      <div class="rc-hp" aria-hidden="true">
+        <label for="company">会社名</label>
+        <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off">
+      </div>
+      <div class="rc-field">
+        <label for="name">お名前<span class="req">必須</span></label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+      </div>
+      <div class="rc-field">
+        <label for="age">年齢<span class="req">必須</span></label>
+        <input type="number" id="age" name="age" min="16" max="99" required inputmode="numeric">
+      </div>
+      <div class="rc-field">
+        <label for="city">お住まいの市区<span class="req">必須</span></label>
+        <input type="text" id="city" name="city" required placeholder="例：東京都渋谷区">
+      </div>
+      <div class="rc-field">
+        <label for="weekend">土日の勤務可否<span class="req">必須</span></label>
+        <select id="weekend" name="weekend" required>
+          <option value="">選択してください</option>
+          <option value="土日どちらも勤務可能">土日どちらも勤務可能</option>
+          <option value="土曜のみ勤務可能">土曜のみ勤務可能</option>
+          <option value="日曜のみ勤務可能">日曜のみ勤務可能</option>
+          <option value="土日とも難しい">土日とも難しい</option>
+        </select>
+      </div>
+      <div class="rc-field">
+        <label for="tel">電話番号<span class="req">必須</span></label>
+        <input type="tel" id="tel" name="tel" required autocomplete="tel" placeholder="09012345678">
+      </div>
+      <div class="rc-field">
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+      </div>
+      <div class="rc-field">
+        <label for="career">簡単な職歴</label>
+        <textarea id="career" name="career" placeholder="例：コールセンターで2年勤務（アウトバウンド）"></textarea>
+      </div>
+      <button type="submit" class="rc-submit" id="applySubmit">応募する</button>
+      <p class="rc-form-msg" id="applyMsg" role="status" aria-live="polite"></p>
+      <p class="fallback">ご入力内容は応募受付の目的にのみ使用します。詳しくは<a href="../../privacy/">プライバシーポリシー</a>をご確認ください。</p>
+    </form>
+
+    <p class="fallback">フォームが送信できない場合は <a href="mailto:info@withj-inc.com">info@withj-inc.com</a> まで上記項目（お名前／年齢／お住まいの市区／土日の勤務可否／簡単な職歴）をお送りください。</p>
   </div>
+
 
   <a class="rc-ilink" href="../">採用情報トップに戻る</a>
 
 </main>
 
 <div class="rc-sticky">
-  <a href="mailto:info@withj-inc.com?subject=%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E5%BF%9C%E5%8B%9F%EF%BC%88%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%89&body=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEWITH%20J%20%E6%8E%A1%E7%94%A8%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E6%A7%98%0A%0A%E5%9C%A8%E5%AE%85%E3%82%A2%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%81%AE%E6%B1%82%E4%BA%BA%E3%81%AB%E5%BF%9C%E5%8B%9F%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82%0A%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E2%96%A0%E5%B9%B4%E9%BD%A2%EF%BC%9A%0A%E2%96%A0%E3%81%8A%E4%BD%8F%E3%81%BE%E3%81%84%E3%81%AE%E5%B8%82%E5%8C%BA%EF%BC%9A%0A%E2%96%A0%E5%9C%9F%E6%97%A5%E3%81%AE%E5%8B%A4%E5%8B%99%E5%8F%AF%E5%90%A6%EF%BC%9A%0A%E2%96%A0%E7%B0%A1%E5%8D%98%E3%81%AA%E8%81%B7%E6%AD%B4%EF%BC%9A%0A%0A%E3%81%94%E7%A2%BA%E8%AA%8D%E3%81%AE%E3%81%BB%E3%81%A9%E3%80%81%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82">応募する</a>
+  <a href="#apply">応募する</a>
 </div>
 
 <footer class="gb-footer">
@@ -269,6 +338,41 @@
   </nav>
   <div>© 2026 株式会社WITHJ All Rights Reserved.</div>
 </footer>
+
+<script>
+document.getElementById('applyForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = document.getElementById('applySubmit');
+  var msg = document.getElementById('applyMsg');
+
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+
+  btn.disabled = true;
+  btn.textContent = '送信中...';
+  msg.className = 'rc-form-msg';
+  msg.textContent = '';
+
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+    .then(function(res) {
+      if (!res.ok) throw new Error('failed');
+      form.reset();
+      msg.className = 'rc-form-msg ok';
+      msg.textContent = 'ご応募ありがとうございます。担当者より2〜3営業日以内にご連絡いたします。';
+      btn.textContent = '送信完了';
+    })
+    .catch(function() {
+      btn.disabled = false;
+      btn.textContent = '応募する';
+      msg.className = 'rc-form-msg ng';
+      msg.textContent = '送信に失敗しました。お手数ですが info@withj-inc.com までご連絡ください。';
+    });
+});
+</script>
 
 </body>
 </html>
