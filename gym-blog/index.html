@@ -355,6 +355,81 @@
 /* --- フィルタ非表示 --- */
 .gb-hidden { display: none !important; }
 
+/* --- カテゴリナビ（主要4＋その他） --- */
+.gb-catnav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.gb-catnav-card {
+  display: block;
+  padding: 26px 24px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  background: var(--bg-card, #15151c);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.gb-catnav-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(61,214,232,0.4);
+  box-shadow: 0 8px 28px rgba(61,214,232,0.2);
+}
+.gb-catnav-card .en {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  color: var(--tc);
+  margin-bottom: 10px;
+}
+.gb-catnav-card h3 {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.gb-catnav-card p {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.65);
+}
+.gb-catnav-others {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.gb-catnav-others .label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--ink-faint, #888892);
+  margin-right: 4px;
+}
+.gb-catnav-others a {
+  padding: 8px 18px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 50px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--ink-soft, #c9c9d1);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.gb-catnav-others a:hover {
+  border-color: var(--tc);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .gb-catnav-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .gb-catnav-grid { grid-template-columns: 1fr; }
+}
+
 /* --- レスポンシブ --- */
 @media (max-width: 1024px) {
   .gb-hero-bg img { object-position: 74% center; }
@@ -419,6 +494,46 @@
   </section>
   <div class="gb-scroll" aria-hidden="true"><span>SCROLL</span></div>
 </div>
+
+<section class="gb-section">
+  <div class="gb-section-title">— Categories</div>
+  <h2 class="gb-heading">カテゴリから探す</h2>
+
+  <div class="gb-catnav-grid">
+    <a href="personal-gym/" class="gb-catnav-card">
+      <span class="en">PERSONAL GYM</span>
+      <h3>パーソナルジム</h3>
+      <p>料金・効果・選び方。広告ではなく現場の数字で解説。</p>
+    </a>
+    <a href="pilates/" class="gb-catnav-card">
+      <span class="en">PILATES</span>
+      <h3>ピラティス</h3>
+      <p>ジムとどっちが向いているか、正直に比較します。</p>
+    </a>
+    <a href="nutrition/" class="gb-catnav-card">
+      <span class="en">NUTRITION</span>
+      <h3>食事・栄養</h3>
+      <p>続けられる食事の整え方を現場目線で。</p>
+    </a>
+    <a href="bridal/" class="gb-catnav-card">
+      <span class="en">BRIDAL</span>
+      <h3>ブライダル</h3>
+      <p>挙式日から逆算するボディメイク。</p>
+    </a>
+  </div>
+
+  <div class="gb-catnav-others">
+    <span class="label">その他のカテゴリ：</span>
+    <a href="gym-comparison/">ジム選び・比較</a>
+    <a href="keep-going/">続けるコツ</a>
+    <a href="diet-bodymake/">ダイエット・ボディメイク</a>
+    <a href="postpartum-mom/">産後・ママ向け</a>
+    <a href="beginner/">初心者向け</a>
+    <a href="mental-habit/">メンタル・継続のコツ</a>
+    <a href="experience/">体験談</a>
+    <a href="trainer-column/">トレーナー監修コラム</a>
+  </div>
+</section>
 
 <section id="categories" class="gb-section">
   <div class="gb-section-title">— Latest Articles</div>
