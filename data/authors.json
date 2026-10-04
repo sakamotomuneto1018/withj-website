@@ -1,0 +1,16 @@
+{
+  "_comment": "記事著者ボックスの一元管理。build_article.py が参照し、--rebuild-all で全生成記事に反映。2026-10-09 文言確定。",
+  "disclosure": "当メディアは株式会社WITH Jが運営し、記事内のリンクから申込があった場合に報酬を受け取ることがあります。",
+  "authors": {
+    "sakamoto": {
+      "name": "坂本宗瞳",
+      "name_en": "Muneto Sakamoto",
+      "title": "株式会社WITH J 代表取締役",
+      "bio": "全国約70店舗を展開するパーソナルジム「NEXUS」のフランチャイズ開拓に携わりながら、自身も加盟店オーナーとして1店舗を運営。自分自身のダイエット成功体験が原点。記事はジム運営側の立場で書いていますが、数字を良く見せず、現場で実際に起きていることを基準にしています。",
+      "supervisor": "運動監修：NEXUSパーソナルジム",
+      "image": "images/代表取締役CEOの画像.jpg",
+      "url": "https://www.withj-inc.com/#ceo",
+      "organization": "株式会社WITH J"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "ASPリンクの一元管理。記事側はキー参照のみ。URL変更はこのファイルだけ修正し build_article.py --rebuild-all で全記事に反映。nexus_seo の i= はASP管理画面で確認中、確定後に値だけ差し替える。",
+  "links": {
+    "nexus_seo": {
+      "url": "https://bubble-asp.com/link.php?i=pidd6u8h1rdu&m=midd6qsqqwv1",
+      "label": "無料カウンセリングを予約する",
+      "note": "【SEO】ネクサスジム_直フォームV2"
+    },
+    "fiber_01": {
+      "url": "",
+      "label": "",
+      "note": "食物繊維食品ASP枠（URL未定・予約のみ。空のままなら記事に出力しない）"
+    },
+    "gut_01": {
+      "url": "",
+      "label": "",
+      "note": "腸活サプリ／腸内検査ASP枠（URL未定・予約のみ。空のままなら記事に出力しない）"
+    }
+  }
+}
