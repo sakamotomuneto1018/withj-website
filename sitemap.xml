@@ -213,7 +213,7 @@
   </url>
   <url>
     <loc>https://www.withj-inc.com/gym-blog/gym-comparison/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -222,6 +222,42 @@
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/gym-comparison/ashikaga-personal-gym/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/gym-comparison/zoshiki-personal-gym/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/gym-comparison/musashi-nitta-personal-gym/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/gym-comparison/shin-egota-personal-gym/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/gym-comparison/ryokuchi-koen-personal-gym/</loc>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/keep-going/5-reasons-not-continuing/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.withj-inc.com/gym-blog/personal-gym-tsuzukanai/</loc>
