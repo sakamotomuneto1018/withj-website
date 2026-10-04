@@ -340,11 +340,15 @@
     },
     {
       "source": "デッドリフト２.png",
-      "count": 1,
+      "count": 2,
       "stores": [
         {
           "slug": "fukui-ashikaga",
           "usage": "hero + og"
+        },
+        {
+          "slug": "gym-blog/gym-comparison/ashikaga-personal-gym/",
+          "usage": "blog-cover"
         }
       ]
     },
@@ -818,6 +822,46 @@
         {
           "slug": "gym-blog/diet-bodymake/30s-plateau-breakthrough/",
           "usage": "記事カバー＋カード＋OGP：ヒップリフトに取り組む黒髪女性"
+        }
+      ]
+    },
+    {
+      "source": "images/shops/zoshiki/first-visit.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/gym-comparison/zoshiki-personal-gym/",
+          "usage": "blog-cover"
+        }
+      ]
+    },
+    {
+      "source": "images/shops/musashi-nitta/habit.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/gym-comparison/musashi-nitta-personal-gym/",
+          "usage": "blog-cover"
+        }
+      ]
+    },
+    {
+      "source": "images/shops/shin-egota/goal.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/gym-comparison/shin-egota-personal-gym/",
+          "usage": "blog-cover"
+        }
+      ]
+    },
+    {
+      "source": "images/lifestyle/kids_ok_01.webp",
+      "count": 1,
+      "stores": [
+        {
+          "slug": "gym-blog/gym-comparison/ryokuchi-koen-personal-gym/",
+          "usage": "blog-cover"
         }
       ]
     }
