@@ -11,6 +11,7 @@ cta_heading: 自分に必要なタンパク質量を知りたい方へ
 cta_text: NEXUSの無料カウンセリングでは、今の食事内容から「足りているか・足りていないか」をその場で見ます。プロテインが要らない人には、要らないと言います。
 author: sakamoto
 supervisor: 運動監修：NEXUSパーソナルジム
+related: fiber-before-protein,glp1-experience-gym-owner,personal-gym-2months-how-many-kg
 ---
 
 「プロテインって結局どれがいいの？」は、ジムで一番よく聞かれる質問の一つです。
@@ -86,11 +87,6 @@ supervisor: 運動監修：NEXUSパーソナルジム
 
 食事で足りているなら、無理に買う必要はありません。足りていないなら、小袋から始めてください。
 
-<!-- 内部リンク（公開後に設置）：
-- 記事「GLP-1で13kg痩せた私が〜」（食事量が落ちている人の導線）
-- 記事「パーソナルジムは2ヶ月で何キロ痩せる？」
-- 記事「プロテインより先に食物繊維」
--->
 
 <!-- 画像 フォルダ：images/gym-blog/protein-trainer-recommend/
 ① cover.jpg（1200×630）未着。仮カバーで公開中

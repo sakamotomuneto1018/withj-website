@@ -238,8 +238,23 @@ def build(md_path, force=False):
       <a href="{esc(link['url'])}" target="_blank" rel="noopener sponsored" class="gb-cta-btn">{esc(link['label'])}</a>
     </div>"""
 
-    # 関連リンク（固定3枠：カテゴリ一覧／NEXUS紹介／FAQ）
-    related_cards = f"""        <a href="../" class="gb-related-card">
+    # 関連リンク（frontmatter related: slug,slug,slug 指定時は記事カード。
+    # 未指定時は固定3枠：カテゴリ一覧／NEXUS紹介／FAQ）
+    related_slugs = [s.strip() for s in fm.get("related", "").split(",") if s.strip()]
+    if related_slugs:
+        cards = []
+        for rslug in related_slugs:
+            rmd = os.path.join(ROOT, "content", "articles", f"{rslug}.md")
+            if not os.path.isfile(rmd):
+                fail(f"{md_path}: related の '{rslug}' が content/articles/ にありません")
+            rfm, _ = parse_frontmatter(open(rmd, encoding="utf-8").read(), rmd)
+            cards.append(f"""        <a href="../../{rfm['category']}/{rslug}/" class="gb-related-card">
+          <div class="cat">{esc(CATEGORIES[rfm['category']])}</div>
+          <h3>{esc(rfm['title'])}</h3>
+        </a>""")
+        related_cards = "\n".join(cards)
+    else:
+        related_cards = f"""        <a href="../" class="gb-related-card">
           <div class="cat">カテゴリ</div>
           <h3>{esc(cat_name)}の記事一覧</h3>
         </a>
