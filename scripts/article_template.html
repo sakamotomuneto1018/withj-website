@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-48x48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title} | {category_name} | パーソナルジムブログ | WITHJ</title>
+
+<meta name="description" content="{description}">
+<meta name="robots" content="index, follow">
+<meta name="author" content="{author_name}">
+<link rel="canonical" href="{url}">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{og_image}">
+<meta property="og:site_name" content="株式会社WITHJ">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="{date}">
+<meta property="article:modified_time" content="{date}">
+<meta property="article:author" content="{author_name}">
+<meta property="article:section" content="{category_name}">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{jsonld_blogposting}
+</script>
+
+<script type="application/ld+json">
+{jsonld_breadcrumb}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Noto+Sans+JP:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css">
+<style>
+.gb-body table { width: 100%; border-collapse: collapse; margin: 0 0 28px; font-size: 14px; }
+.gb-body table th, .gb-body table td { border: 1px solid rgba(255,255,255,0.14); padding: 10px 14px; text-align: left; line-height: 1.7; }
+.gb-body table th { background: rgba(255,255,255,0.06); font-weight: 700; white-space: nowrap; }
+@media (max-width: 640px) { .gb-body table { font-size: 12.5px; } .gb-body table th, .gb-body table td { padding: 8px 10px; } }
+</style>
+</head>
+<body>
+
+<header class="gb-header">
+  <a href="../../../" class="gb-logo">WITHJ<span class="accent"> / Gym Blog</span></a>
+  <nav class="gb-nav"><a href="../../../">TOP</a><a href="../../">CATEGORIES</a><a href="../../../nexus-fc/">FC</a><a href="../../../faq/">FAQ</a></nav>
+</header>
+
+<nav class="gb-breadcrumb" aria-label="パンくず">
+  <ol>
+    <li><a href="../../../">ホーム</a></li>
+    <li><a href="../../">パーソナルジムブログ</a></li>
+    <li><a href="../">{category_name}</a></li>
+    <li aria-current="page">{title}</li>
+  </ol>
+</nav>
+
+<article class="gb-article-wrap">
+  <div class="gb-article-meta">
+    <span class="cat">{category_name}</span>
+    <time datetime="{date}">公開: {date_dot}</time>
+  </div>
+  <h1 class="gb-article-title">{title}</h1>
+
+  <div class="gb-article-cover">
+    <img src="{cover_src}" alt="{cover_alt}" loading="eager">
+  </div>
+
+  <div class="gb-disclosure">
+    <strong>DISCLOSURE</strong>
+    {disclosure}
+  </div>
+
+  <div class="gb-author">
+    <div class="gb-author-img">
+      <img src="../../../{author_image}" alt="{author_name}" loading="lazy">
+    </div>
+    <div class="gb-author-info">
+      <div class="gb-author-name">{author_name} / {author_name_en}</div>
+      <div class="gb-author-role">{author_title}</div>
+      <div class="gb-author-bio">{author_bio}</div>
+      <div class="gb-author-bio" style="margin-top:6px;">{supervisor}</div>
+    </div>
+  </div>
+
+  <nav class="gb-toc" aria-label="目次">
+    <div class="gb-toc-title">— Contents</div>
+    <ol>
+{toc_items}
+    </ol>
+  </nav>
+
+  <div class="gb-body">
+{body}
+{cta_block}
+    <div class="gb-related">
+      <h2>あわせて読みたい</h2>
+      <div class="gb-related-grid">
+{related_cards}
+      </div>
+    </div>
+  </div>
+</article>
+
+<footer class="gb-footer">
+  <div class="gb-footer-logo">WITHJ</div>
+  <nav style="display:flex;gap:24px;flex-wrap:wrap;"><a href="../../../recruit/" style="color:var(--ink-faint,#888892);font-size:12px;">採用情報</a></nav>
+  <div>© 2026 株式会社WITHJ All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
