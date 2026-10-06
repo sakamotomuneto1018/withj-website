@@ -1,8 +1,8 @@
 {
-  "_comment": "ASPリンクの一元管理。記事側はキー参照のみ。URL変更はこのファイルだけ修正し build_article.py --rebuild-all で全記事に反映。nexus_seo の i= はASP管理画面で確認中、確定後に値だけ差し替える。",
+  "_comment": "ASPリンクの一元管理。記事側はキー参照のみ。URL変更はこのファイルだけ修正し build_article.py --rebuild-all で全記事に反映。nexus_seo の i= は 2026-08-18 坂本さん確定値 pig80rz6w5kd。",
   "links": {
     "nexus_seo": {
-      "url": "https://bubble-asp.com/link.php?i=pidd6u8h1rdu&m=midd6qsqqwv1",
+      "url": "https://bubble-asp.com/link.php?i=pig80rz6w5kd&m=midd6qsqqwv1",
       "label": "無料カウンセリングを予約する",
       "note": "【SEO】ネクサスジム_直フォームV2"
     },
