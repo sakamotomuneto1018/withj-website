@@ -57,7 +57,7 @@
 
   <url>
     <loc>https://www.withj-inc.com/gym-blog/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -135,7 +135,7 @@
   </url>
   <url>
     <loc>https://www.withj-inc.com/gym-blog/pilates/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -148,6 +148,12 @@
   <url>
     <loc>https://www.withj-inc.com/gym-blog/pilates/machine-pilates-weight-loss/</loc>
     <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/pilates/pilates-studio-trial-checklist/</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
