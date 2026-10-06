@@ -85,7 +85,7 @@ related: glp1-rebound-after-quitting,protein-trainer-recommend,fiber-before-prot
 この続きは、シリーズとして分けて書いていきます。
 
 - [GLP-1をやめた後にリバウンドする人・しない人の違い](../glp1-rebound-after-quitting/)
-- GLP-1で落ちるのは脂肪だけじゃない。筋肉を守る食事と運動（準備中）
+- [GLP-1で落ちるのは脂肪だけじゃない。筋肉を守る食事と運動](../glp1-keep-muscle-diet-exercise/)
 - [食欲が消えた人のタンパク質の取り方（プロテインの選び方）](../../nutrition/protein-trainer-recommend/)
 
 私は「薬か運動か」の二択だとは思っていません。薬を使うなら使うで、その後の体づくりまで含めて設計する。それを手伝うのがジムの仕事だと思っています。
