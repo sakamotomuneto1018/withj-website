@@ -57,7 +57,7 @@
 
   <url>
     <loc>https://www.withj-inc.com/gym-blog/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -124,6 +124,12 @@
   <url>
     <loc>https://www.withj-inc.com/gym-blog/nutrition/protein-timing-when-to-drink/</loc>
     <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.withj-inc.com/gym-blog/nutrition/glp1-diet-what-to-eat/</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -297,7 +303,7 @@
   </url>
   <url>
     <loc>https://www.withj-inc.com/gym-blog/nutrition/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
