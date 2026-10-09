@@ -158,8 +158,27 @@ def md_to_html(md):
 
 # ---------- 画像 ----------
 
+# cover.jpg 未着時の仮カバー写真（カテゴリ別・重複使用禁止）。cover.jpg が届けば自動で差し替わる。
+STOCK_COVERS = {
+    # personal-gym：ジム内装・トレーニング系
+    "glp1-keep-muscle-diet-exercise": "images/lifestyle/achievement_01.webp",
+    "personal-gym-not-losing-weight": "images/lifestyle/achievement_02.webp",
+    "personal-gym-once-a-week": "images/lifestyle/logical_01.webp",
+    "personal-gym-price-total": "images/nexus/gym-interior-4.jpg",
+    "postpartum-personal-gym-when": "images/lifestyle/logical_02.webp",
+    # nutrition：食事・キッチン系
+    "glp1-diet-what-to-eat": "images/nexus/ai-meal.webp",
+    "protein-timing-when-to-drink": "images/lifestyle/protein_refresh_02.webp",
+    "meal-replacement-reality": "images/lifestyle/protein_refresh_01.webp",
+    "intermittent-fasting-strength-training": "images/lifestyle/sleep_quality_02.webp",
+    # pilates：ストレッチ・スタジオ系
+    "machine-pilates-weight-loss": "images/lifestyle/target_area_02.webp",
+    "pilates-studio-trial-checklist": "images/lifestyle/home_stretch_01.webp",
+}
+
+
 def build_cover(slug, fm):
-    """cover.jpg→cover.webp 変換。無ければプレースホルダを生成して仮公開可にする。"""
+    """cover.jpg→cover.webp 変換。無ければ仮カバー写真（STOCK_COVERS）、それも無ければプレースホルダ。"""
     from PIL import Image
     img_dir = os.path.join(ROOT, "images", "gym-blog", slug)
     os.makedirs(img_dir, exist_ok=True)
@@ -172,6 +191,19 @@ def build_cover(slug, fm):
         im.save(webp, "WEBP", quality=82)
         print(f"  cover: {os.path.relpath(jpg, ROOT)} → cover.webp")
         return "placeholder" if False else "real"
+    stock = STOCK_COVERS.get(slug)
+    if stock and os.path.exists(os.path.join(ROOT, stock)):
+        im = Image.open(os.path.join(ROOT, stock)).convert("RGB")
+        # 1200x630 に中央クロップ
+        tw, th = 1200, 630
+        r = max(tw / im.width, th / im.height)
+        im = im.resize((round(im.width * r), round(im.height * r)))
+        x = (im.width - tw) // 2
+        y = (im.height - th) // 2
+        im = im.crop((x, y, x + tw, y + th))
+        im.save(webp, "WEBP", quality=82)
+        print(f"  cover: 仮カバー写真 {stock} → cover.webp")
+        return "stock"
     # プレースホルダ（記事ごとに色相を変えた文字なしグラデーション）
     w, h = 1200, 630
     import hashlib
