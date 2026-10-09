@@ -220,6 +220,15 @@ def build(md_path, force=False):
 
     # 本文
     body_html, h2s = md_to_html(body_md)
+    # 最初のH2直後に「この記事を書いた人」1行を挿入
+    byline = (f'<p class="gb-byline" style="font-size:12.5px;color:var(--ink-faint,#888892);'
+              f'margin:-10px 0 24px;">この記事を書いた人：'
+              f'<a href="../../author/{fm["author"]}/" style="color:var(--accent1,#c3f53c);">'
+              f'{esc(author["name"])}</a>（NEXUS加盟店オーナー）</p>')
+    idx = body_html.find("</h2>")
+    if idx != -1:
+        p = idx + len("</h2>")
+        body_html = body_html[:p] + "\n" + byline + body_html[p:]
     toc_items = "\n".join(
         f'      <li><a href="#{hid}">{esc(t)}</a></li>' for hid, t in h2s)
 
@@ -319,6 +328,7 @@ def build(md_path, force=False):
         cover_src=cover_rel,
         cover_alt=esc(fm.get("cover_alt", fm["title"])),
         disclosure=esc(authors["disclosure"]),
+        author_key=fm["author"],
         author_name=esc(author["name"]),
         author_name_en=esc(author["name_en"]),
         author_title=esc(author["title"]),
