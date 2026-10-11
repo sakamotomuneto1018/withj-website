@@ -156,6 +156,80 @@ def md_to_html(md):
     return "\n".join(out), h2s
 
 
+# ---------- 共通部品（:::cta / :::compare ショートコード） ----------
+# md中の :::cta / :::compare ブロックをHTML部品に変換する。gym-blog / clinic 共通。
+#
+# CTAボックス（URLは後差し込みOK。url が # または空なら li をボタンなしで出力）:
+#   :::cta
+#   service: サービス名
+#   copy: 一言説明
+#   button: ボタン文言
+#   url: https://...
+#   :::
+#
+# 比較表（1行目がヘッダ。列は サービス名/料金/成果地点/特徴/情報取得日 を推奨）:
+#   :::compare
+#   | サービス名 | 料金 | 成果地点 | 特徴 | 情報取得日 |
+#   | A社 | 月◯円 | 無料カウンセリング | ... | 2026年10月時点・公式サイトより |
+#   :::
+
+def _render_cta_part(body):
+    kv = {}
+    for line in body.strip().splitlines():
+        k, _, v = line.partition(":")
+        kv[k.strip()] = v.strip()
+    url = kv.get("url", "").strip()
+    btn = ""
+    if url and url != "#":
+        btn = (f'\n      <a href="{esc(url)}" target="_blank" rel="noopener sponsored" '
+               f'class="gb-cta-btn">{esc(kv.get("button", "公式サイトを見る"))}</a>')
+    else:
+        btn = (f'\n      <span class="gb-cta-btn" style="opacity:.45;cursor:default;">'
+               f'{esc(kv.get("button", "公式サイトを見る"))}（リンク準備中）</span>')
+    return (f'    <div class="gb-cta gb-cta-box">\n'
+            f'      <h3>{esc(kv.get("service", ""))}</h3>\n'
+            f'      <p>{esc(kv.get("copy", ""))}</p>{btn}\n'
+            f'    </div>')
+
+
+def _render_compare_part(body):
+    rows = [l for l in body.strip().splitlines() if l.strip().startswith("|")]
+    if not rows:
+        return ""
+    header = [c.strip() for c in rows[0].strip("|").split("|")]
+    data = [r for r in rows[1:] if not re.match(r"^\|[\s:|-]+\|$", r.strip())]
+    html = ['    <div class="gb-compare">', "      <table>",
+            "        <thead><tr>" + "".join(f"<th>{inline(c)}</th>" for c in header) + "</tr></thead>",
+            "        <tbody>"]
+    for r in data:
+        cells = [c.strip() for c in r.strip("|").split("|")]
+        html.append("          <tr>" + "".join(
+            (f'<th scope="row">{inline(c)}</th>' if i == 0 else f"<td>{inline(c)}</td>")
+            for i, c in enumerate(cells)) + "</tr>")
+    html += ["        </tbody>", "      </table>", "    </div>"]
+    return "\n".join(html)
+
+
+def extract_parts(md):
+    """:::cta / :::compare ブロックをプレースホルダコメントに退避し、HTMLを別途返す。"""
+    parts = []
+
+    def repl(m):
+        kind, body = m.group(1), m.group(2)
+        html = _render_cta_part(body) if kind == "cta" else _render_compare_part(body)
+        parts.append(html)
+        return f"<!--PART{len(parts) - 1}-->"
+
+    md = re.sub(r":::(cta|compare)\n(.*?)\n:::", repl, md, flags=re.S)
+    return md, parts
+
+
+def inject_parts(html, parts):
+    for i, p in enumerate(parts):
+        html = html.replace(f"    <!--PART{i}-->", p)
+    return html
+
+
 # ---------- 画像 ----------
 
 # cover.jpg 未着時の仮カバー写真（カテゴリ別・重複使用禁止）。cover.jpg が届けば自動で差し替わる。
@@ -250,8 +324,10 @@ def build(md_path, force=False):
     cover_rel = f"../../../images/gym-blog/{slug}/cover.webp"
     og_image = f"{SITE}/images/gym-blog/{slug}/cover.webp"
 
-    # 本文
+    # 本文（:::cta / :::compare 部品を先に退避）
+    body_md, parts = extract_parts(body_md)
     body_html, h2s = md_to_html(body_md)
+    body_html = inject_parts(body_html, parts)
     # 最初のH2直後に「この記事を書いた人」1行を挿入
     byline = (f'<p class="gb-byline" style="font-size:12.5px;color:var(--ink-faint,#888892);'
               f'margin:-10px 0 24px;">この記事を書いた人：'
